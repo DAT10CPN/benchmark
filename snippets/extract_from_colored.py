@@ -3,11 +3,9 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 LOGGING = True
-#final_to_file = f""
-def write_log(string, final_to_file=''):
-    final_to_file = final_to_file + string
-    if LOGGING:
-        print(string)
+TESTING = True
+test_model = 'AirplaneLD-COL-0010'
+
 
 def main():
     NAMESPACE = '{http://www.pnml.org/version-2009/grammar/pnml}'
@@ -20,10 +18,11 @@ def main():
     if not os.path.isdir(graph_dir):
         os.makedirs(graph_dir)
     for test_folder in os.listdir(MCC_DIRECTORY):
-        if test_folder != 'SafeBus-COL-03':
-            continue
+        if TESTING:
+            if test_folder != test_model:
+                continue
 
-
+        final_to_file = ""
         final_to_file = final_to_file + (f"Test: {test_folder}")
         if LOGGING:
             print(f"Test: {test_folder}")
@@ -38,39 +37,13 @@ def main():
         structure = declaration[0].findall(f'{NAMESPACE}' + 'structure')
         declarations = structure[0].findall(f'{NAMESPACE}' + 'declarations')
 
-        # ALL conditions on transitions
-        final_to_file = final_to_file + "\n" + "-------GUARDS-------"
-        if LOGGING:
-            print("-------GUARDS-------")
-
-        transitions = page.findall(f'{NAMESPACE}' + 'transition')
-        for transition in transitions:
-            conditions = transition.findall(f'{NAMESPACE}' + 'condition')
-            for condition in conditions:
-                text = condition.find(f'{NAMESPACE}' + 'text').text
-
-                if text == "":
-                    text = "No guard"
-                final_to_file = final_to_file + "\n" + text
-                if LOGGING:
-                    print(text)
-
-        # Find all variables used
-        final_to_file = final_to_file + "\n" + "-------VARIABLES-------"
-        if LOGGING:
-            print("-------VARIABLES-------")
-        for variabledecl in declarations[0].findall(f'{NAMESPACE}' + 'variabledecl'):
-            for usersort in variabledecl.findall(f'{NAMESPACE}' + 'usersort'):
-                variable_declaration = f"Variable decl attrib: {variabledecl.attrib}, with declaration: {usersort.attrib}"
-                final_to_file = final_to_file + "\n" + variable_declaration
-                if LOGGING:
-                    print(variable_declaration)
-
+        named_sort_ids = []
         # Find ranges of colors
         final_to_file = final_to_file + "\n" + "-------SORTS-------"
         if LOGGING:
             print("-------SORTS-------")
         for named_sort in declarations[0].findall(f'{NAMESPACE}' + 'namedsort'):
+            named_sort_ids.append(named_sort.attrib['id'])
             if named_sort.attrib['id'] == "dot":
                 final_to_file = final_to_file + "\n" + f"Named sort: {named_sort.attrib}"
                 if LOGGING:
@@ -79,7 +52,18 @@ def main():
             min_range = None
             max_range = None
             for cyclicenumeration in named_sort.findall(f'{NAMESPACE}' + 'cyclicenumeration'):
-                for feconstant in cyclicenumeration.findall(f'{NAMESPACE}' + 'feconstant'):
+                feconstants = cyclicenumeration.findall(f'{NAMESPACE}' + 'feconstant')
+                if not feconstants[0].attrib['name'].isdigit():
+                    values = []
+                    for feconstant in feconstants:
+                        values.append(feconstant.attrib['name'])
+
+                    final_to_file = final_to_file + "\n" + f"Named sort: {named_sort.attrib} has values: {values}"
+                    if LOGGING:
+                        print(f"Named sort: {named_sort.attrib} has values: {values}")
+                    continue
+
+                for feconstant in feconstants:
                     if min_range is None or int(feconstant.attrib['name']) < min_range:
                         min_range = int(feconstant.attrib['name'])
                     if max_range is None or int(feconstant.attrib['name']) > max_range:
@@ -99,14 +83,45 @@ def main():
                     product = []
                     for usersort in productsort.findall(f'{NAMESPACE}' + 'usersort'):
                         product.append(usersort.attrib['declaration'])
-                    final_to_file = final_to_file + "\n" + f"Usersort {named_sort.attrib} has product: {product}"
+                    final_to_file = final_to_file + "\n" + f"Usersort {named_sort.attrib} is a product: {product}"
                     if LOGGING:
-                        print(f"Usersort {named_sort.attrib} has product: {product}")
+                        print(f"Usersort {named_sort.attrib} is a product: {product}")
             var_range = f"{named_sort.attrib['id']} has Range: [{str(min_range)},{str(max_range)}]"
             if str(min_range) is None and str(max_range) is None:
                 final_to_file = final_to_file + "\n" + var_range
                 if LOGGING:
                     print(var_range)
+
+        # Find all variables used
+        final_to_file = final_to_file + "\n" + "-------VARIABLES-------"
+        if LOGGING:
+            print("-------VARIABLES-------")
+        for variabledecl in declarations[0].findall(f'{NAMESPACE}' + 'variabledecl'):
+            for usersort in variabledecl.findall(f'{NAMESPACE}' + 'usersort'):
+                variable_declaration = f"Variable decl attrib: {variabledecl.attrib}, with declaration: {usersort.attrib}"
+                final_to_file = final_to_file + "\n" + variable_declaration
+                if LOGGING:
+                    print(variable_declaration)
+
+        # ALL conditions on transitions
+        final_to_file = final_to_file + "\n" + "-------GUARDS-------"
+        if LOGGING:
+            print("-------GUARDS-------")
+
+        transitions = page.findall(f'{NAMESPACE}' + 'transition')
+        for transition in transitions:
+            transition_id = transition.attrib['id']
+            conditions = transition.findall(f'{NAMESPACE}' + 'condition')
+            for condition in conditions:
+                text = condition.find(f'{NAMESPACE}' + 'text').text
+
+                if text == "":
+                    text = "No guard"
+                final_to_file = final_to_file + "\n" + text
+                if LOGGING:
+                    print(text)
+
+
 
         final_to_file = final_to_file + "\n" + "-------ARCS-------"
         if LOGGING:
