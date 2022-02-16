@@ -2,6 +2,7 @@ Test: Sudoku-COL-AN09
 Transitions: 1
 Arcs: 4
 -------SORTS-------
+Usersort {'id': 'N', 'name': 'N'} has Range: [1,9]
 Usersort {'id': 'N3', 'name': 'N3'} is a product: ['N', 'N', 'N']
 Usersort {'id': 'N2', 'name': 'N2'} is a product: ['N', 'N']
 -------VARIABLES-------

@@ -4,7 +4,7 @@ from pathlib import Path
 
 LOGGING = False
 TESTING = False
-test_model = 'CSRepetitions-COL-02'
+test_model = 'Sudoku-COL-AN16'
 
 
 def main():
@@ -88,6 +88,13 @@ def main():
                         print("Multiple finiteintranges")
                     min_range = finiteintrange.attrib['start']
                     max_range = finiteintrange.attrib['end']
+
+                var_range = f"Usersort {named_sort.attrib} has Range: [{str(min_range)},{str(max_range)}]"
+                if min_range and max_range:
+                    final_to_file = final_to_file + "\n" + var_range
+                    if LOGGING:
+                        print(var_range)
+
             if min_range is None and max_range is None:
                 for productsort in named_sort.findall(f'{NAMESPACE}' + 'productsort'):
                     product = []
@@ -96,11 +103,6 @@ def main():
                     final_to_file = final_to_file + "\n" + f"Usersort {named_sort.attrib} is a product: {product}"
                     if LOGGING:
                         print(f"Usersort {named_sort.attrib} is a product: {product}")
-            var_range = f"{named_sort.attrib['id']} has Range: [{str(min_range)},{str(max_range)}]"
-            if str(min_range) is None and str(max_range) is None:
-                final_to_file = final_to_file + "\n" + var_range
-                if LOGGING:
-                    print(var_range)
 
         # Find all variables used
         final_to_file = final_to_file + "\n" + "-------VARIABLES-------"

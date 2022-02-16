@@ -3,8 +3,10 @@ Transitions: 12
 Arcs: 37
 -------SORTS-------
 Named sort: {'id': 'dot', 'name': 'Dot'}
+Usersort {'id': 'Z', 'name': 'Z'} has Range: [1,4]
 Usersort {'id': 'ZxZ', 'name': 'ZxZ'} is a product: ['Z', 'Z']
 Usersort {'id': 'AxZ1xZ', 'name': 'AxZ1xZ'} is a product: ['Z', 'Z', 'Z']
+Usersort {'id': 'Cli', 'name': 'Cli'} has Range: [1,6]
 Usersort {'id': 'CxZ', 'name': 'CxZ'} is a product: ['Cli', 'Z']
 Usersort {'id': 'CxZxZ', 'name': 'CxZxZ'} is a product: ['Cli', 'Z', 'Z']
 -------VARIABLES-------
