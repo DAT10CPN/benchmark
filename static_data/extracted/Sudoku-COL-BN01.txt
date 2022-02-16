@@ -17,11 +17,11 @@ Variable decl attrib: {'id': 'd', 'name': 'd'}, with declaration: {'declaration'
 Transition 'select'
 Guard: (x==1 and y==1 and d==1)
 Arcs:
-Outgoing arc: <x,v>
-Ingoing arc: <x,y,v>
-Outgoing arc: <d,v>
-Outgoing arc: <x,y>
-Outgoing arc: <y,v>
+Ingoing arc: <x,v>
+Outgoing arc: <x,y,v>
+Ingoing arc: <d,v>
+Ingoing arc: <x,y>
+Ingoing arc: <y,v>
 -------ARCS-------
 <x,v>
 <x,y,v>

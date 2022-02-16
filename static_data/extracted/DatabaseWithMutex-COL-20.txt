@@ -14,56 +14,56 @@ Variable decl attrib: {'id': 'varf', 'name': 'f'}, with declaration: {'declarati
 Transition 'SendMsg'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(s),(f)]
 Ingoing arc: 1'[(s),(f)]
+Outgoing arc: 1'[(s),(f)]
 
 Transition 'SendReply'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(s),(f)]
 Ingoing arc: 1'[(s),(f)]
+Outgoing arc: 1'[(s),(f)]
 
 Transition 'Change'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(site.all),(f)] - 1'[(s),(f)]
-Ingoing arc: 1'[(s),(f)]
+Outgoing arc: 1'[(site.all),(f)] - 1'[(s),(f)]
 Outgoing arc: 1'[(s),(f)]
+Ingoing arc: 1'[(s),(f)]
 
 Transition 'Acquire'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(s),(f)]
-Outgoing arc: 1'[(f)]
 Ingoing arc: 1'[(s),(f)]
+Ingoing arc: 1'[(f)]
+Outgoing arc: 1'[(s),(f)]
 
 Transition 'Release'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(s),(f)]
-Ingoing arc: 1'[(f)]
-Outgoing arc: 1'[(site.all),(f)] - 1'[(s),(f)]
-Ingoing arc: 1'[(s)]
+Ingoing arc: 1'[(s),(f)]
+Outgoing arc: 1'[(f)]
+Ingoing arc: 1'[(site.all),(f)] - 1'[(s),(f)]
+Outgoing arc: 1'[(s)]
 
 Transition 'Update'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(s),(f)]
-Outgoing arc: 1'[(s)]
 Outgoing arc: 1'[(s),(f)]
+Ingoing arc: 1'[(s)]
+Ingoing arc: 1'[(s),(f)]
 
 Transition 'end_update'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(s),(f)]
 Ingoing arc: 1'[(s),(f)]
-Ingoing arc: 1'[(s)]
+Outgoing arc: 1'[(s),(f)]
+Outgoing arc: 1'[(s)]
 
 Transition 'Start'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(s)]
-Ingoing arc: 1'[(s),(f)]
+Ingoing arc: 1'[(s)]
+Outgoing arc: 1'[(s),(f)]
 -------ARCS-------
 1'[(s)]
 1'[(site.all),(f)] - 1'[(s),(f)]

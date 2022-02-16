@@ -11,37 +11,37 @@ Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declarati
 Transition 'FF1a'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(x)
-Outgoing arc: 1'(x--1)
 Ingoing arc: 1'(x)
+Ingoing arc: 1'(x--1)
+Outgoing arc: 1'(x)
 
 Transition 'FF1b'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(x)
-Outgoing arc: 1'(x)
 Ingoing arc: 1'(x)
+Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
 
 Transition 'FF2a'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(x)
-Outgoing arc: 1'(x)
 Ingoing arc: 1'(x)
+Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
 
 Transition 'FF2b'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(x--1)
-Outgoing arc: 1'(x)
+Ingoing arc: 1'(x--1)
 Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
 
 Transition 'End'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(x)
 Ingoing arc: 1'(x)
-Ingoing arc: 1'(x) + 1'(x--1)
+Outgoing arc: 1'(x)
+Outgoing arc: 1'(x) + 1'(x--1)
 -------ARCS-------
 1'(x)
 1'(x)

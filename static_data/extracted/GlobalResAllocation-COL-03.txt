@@ -17,59 +17,59 @@ Variable decl attrib: {'id': 'varr4', 'name': 'r4'}, with declaration: {'declara
 Transition 'enter1'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(p)
-Ingoing arc: 3'(p)
 Ingoing arc: 1'(p)
-Ingoing arc: 1'(p,r1)
-Outgoing arc: 1'(r1)
+Outgoing arc: 3'(p)
+Outgoing arc: 1'(p)
+Outgoing arc: 1'(p,r1)
+Ingoing arc: 1'(r1)
 
 Transition 'enter2'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(p)
-Ingoing arc: 2'(p)
-Ingoing arc: 2'(p)
-Ingoing arc: 1'(p,r1) + 1'(p,r2)
-Outgoing arc: 1'(r1) + 1'(r2)
+Ingoing arc: 1'(p)
+Outgoing arc: 2'(p)
+Outgoing arc: 2'(p)
+Outgoing arc: 1'(p,r1) + 1'(p,r2)
+Ingoing arc: 1'(r1) + 1'(r2)
 
 Transition 'enter3'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(p)
 Ingoing arc: 1'(p)
-Ingoing arc: 3'(p)
-Ingoing arc: 1'(p,r1) + 1'(p,r2) + 1'(p,r3)
-Outgoing arc: 1'(r1) + 1'(r2) + 1'(r3)
+Outgoing arc: 1'(p)
+Outgoing arc: 3'(p)
+Outgoing arc: 1'(p,r1) + 1'(p,r2) + 1'(p,r3)
+Ingoing arc: 1'(r1) + 1'(r2) + 1'(r3)
 
 Transition 'enter4'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(p)
-Ingoing arc: 4'(p)
-Ingoing arc: 1'(p,r1) + 1'(p,r2) + 1'(p,r3) + 1'(p,r4)
-Outgoing arc: 1'(r1) + 1'(r2) + 1'(r3) + 1'(r4)
+Ingoing arc: 1'(p)
+Outgoing arc: 4'(p)
+Outgoing arc: 1'(p,r1) + 1'(p,r2) + 1'(p,r3) + 1'(p,r4)
+Ingoing arc: 1'(r1) + 1'(r2) + 1'(r3) + 1'(r4)
 
 Transition 'exit'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'(p)
-Outgoing arc: 4'(p)
+Outgoing arc: 1'(p)
+Ingoing arc: 4'(p)
 
 Transition 'release1'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'(p)
-Ingoing arc: 1'(r1)
 Outgoing arc: 1'(p)
-Outgoing arc: 1'(p,r1)
+Outgoing arc: 1'(r1)
+Ingoing arc: 1'(p)
+Ingoing arc: 1'(p,r1)
 
 Transition 'release2'
 Guard: No guard
 Arcs:
-Ingoing arc: 2'(p)
-Ingoing arc: 1'(r1) + 1'(r2)
 Outgoing arc: 2'(p)
-Outgoing arc: 1'(p,r1) + 1'(p,r2)
+Outgoing arc: 1'(r1) + 1'(r2)
+Ingoing arc: 2'(p)
+Ingoing arc: 1'(p,r1) + 1'(p,r2)
 -------ARCS-------
 1'(p)
 1'(p)

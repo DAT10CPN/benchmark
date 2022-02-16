@@ -27,118 +27,118 @@ Variable decl attrib: {'id': 'varS', 'name': 'S'}, with declaration: {'declarati
 Transition 'SpeedLW'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(S)]
+Ingoing arc: 1'(dot)
 Outgoing arc: 1'[(S)]
 Ingoing arc: 1'[(S)]
+Outgoing arc: 1'[(S)]
 
 Transition 'SpeedRW'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(S)]
-Ingoing arc: 1'[(S)]
+Ingoing arc: 1'(dot)
 Outgoing arc: 1'[(S)]
+Outgoing arc: 1'[(S)]
+Ingoing arc: 1'[(S)]
 
 Transition 'getAlt'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(A)]
-Ingoing arc: 1'[(A)]
+Ingoing arc: 1'(dot)
 Outgoing arc: 1'[(A)]
+Outgoing arc: 1'[(A)]
+Ingoing arc: 1'[(A)]
 
 Transition 'SampleRW'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(W)]
-Ingoing arc: 1'[(W)]
+Ingoing arc: 1'(dot)
 Outgoing arc: 1'[(W)]
+Outgoing arc: 1'[(W)]
+Ingoing arc: 1'[(W)]
 
 Transition 'SampleLW'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
 Outgoing arc: 1'[(W)]
-Ingoing arc: 1'[(W)]
-Ingoing arc: 1'[(W)]
+Outgoing arc: 1'[(W)]
 
 Transition 't5_2'
 Guard: (S) lte (Speed10) or (S) eq (Speed20)
 Arcs:
-Outgoing arc: 1'[(S)]
-Ingoing arc: 1'(dot)
-Ingoing arc: 1'[(SignalF)]
+Ingoing arc: 1'[(S)]
 Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalF)]
+Ingoing arc: 1'(dot)
 
 Transition 't5_1'
 Guard: (S) gt (Speed10) and (S) ineq (Speed20)
 Arcs:
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'[(S)]
 Ingoing arc: 1'(dot)
-Ingoing arc: 1'[(SignalT)]
+Ingoing arc: 1'[(S)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalT)]
 
 Transition 't4_2'
 Guard: (S) lte (Speed10) or (S) eq (Speed20)
 Arcs:
-Outgoing arc: 1'[(S)]
-Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(S)]
 Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
 
 Transition 't4_1'
 Guard: (S) gt (Speed10) and (S) ineq (Speed20)
 Arcs:
-Outgoing arc: 1'[(S)]
-Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(S)]
 Ingoing arc: 1'(dot)
-Ingoing arc: 1'[(SignalT)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalT)]
 
 Transition 't3_2'
 Guard: (A) gte (Altitude20) or (A) eq (Altitude40)
 Arcs:
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'[(A)]
 Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(A)]
+Outgoing arc: 1'(dot)
 
 Transition 't3_1'
 Guard: (A) lt (Altitude20) and (A) ineq (Altitude40)
 Arcs:
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'[(A)]
 Ingoing arc: 1'(dot)
-Ingoing arc: 1'[(SignalT)]
+Ingoing arc: 1'[(A)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalT)]
 
 Transition 't2_2'
 Guard: (W) eq (Weightoff)
 Arcs:
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'[(W)]
 Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
+Outgoing arc: 1'(dot)
 
 Transition 't2_1'
 Guard: (W) eq (Weighton)
 Arcs:
-Ingoing arc: 1'[(SignalT)]
-Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalT)]
 Ingoing arc: 1'(dot)
-Outgoing arc: 1'[(W)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
 
 Transition 't1_2'
 Guard: (W) eq (Weightoff)
 Arcs:
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'[(W)]
 Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
+Outgoing arc: 1'(dot)
 
 Transition 't1_1'
 Guard: (W) eq (Weighton)
 Arcs:
-Ingoing arc: 1'[(SignalT)]
-Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalT)]
 Outgoing arc: 1'(dot)
-Outgoing arc: 1'[(W)]
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
 -------ARCS-------
 1'[(S)]
 1'(dot)

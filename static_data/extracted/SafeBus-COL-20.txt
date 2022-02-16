@@ -24,126 +24,126 @@ Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declarati
 Transition 'loss_a'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'(dot)
-Outgoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
 Ingoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'I_reemit'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(i),(r)]
 Outgoing arc: 1'[(i),(r)]
-Ingoing arc: 1'[(r)]
-Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(i),(r)]
+Outgoing arc: 1'[(r)]
+Ingoing arc: 1'(dot)
 
 Transition 'C_refuse'
 Guard: (x) eq (y)
 Arcs:
-Ingoing arc: 1'[(x++)]
-Outgoing arc: 1'[(y)]
-Outgoing arc: 1'[(i),(x)]
-Ingoing arc: 1'[(j)]
+Outgoing arc: 1'[(x++)]
+Ingoing arc: 1'[(y)]
+Ingoing arc: 1'[(i),(x)]
 Outgoing arc: 1'[(j)]
-Ingoing arc: 1'[(i)]
-Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(j)]
+Outgoing arc: 1'[(i)]
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'C_free'
 Guard: (i) eq (j)
 Arcs:
-Outgoing arc: 1'[(j)]
-Ingoing arc: 1'(dot)
-Outgoing arc: 1'[(i)]
-Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(j)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(i)]
+Outgoing arc: 1'(dot)
 
 Transition 'C_provide'
 Guard: (x) eq (y)
 Arcs:
-Ingoing arc: 1'[(x++)]
-Outgoing arc: 1'[(y)]
-Outgoing arc: 1'[(i),(x)]
-Ingoing arc: 1'[(i)]
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(i)]
-Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(x++)]
+Ingoing arc: 1'[(y)]
+Ingoing arc: 1'[(i),(x)]
+Outgoing arc: 1'[(i)]
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'I_rec1'
 Guard: (r) eq (i)
 Arcs:
-Ingoing arc: 1'[(i)]
 Outgoing arc: 1'[(i)]
-Outgoing arc: 1'[(r)]
-Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(r)]
+Outgoing arc: 1'(dot)
 
 Transition 'I_free'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(i),(r)]
-Ingoing arc: 1'[(i)]
-Ingoing arc: 1'[(i)]
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(i),(r)]
+Outgoing arc: 1'[(i)]
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
 
 Transition 'I_emit'
 Guard: (i) eq (j) and (r) ineq (i)
 Arcs:
-Ingoing arc: 1'[(r)]
 Outgoing arc: 1'[(r)]
-Outgoing arc: 1'[(i)]
-Ingoing arc: 1'[(i),(r)]
 Ingoing arc: 1'[(r)]
-Outgoing arc: 1'[(j)]
+Ingoing arc: 1'[(i)]
+Outgoing arc: 1'[(i),(r)]
+Outgoing arc: 1'[(r)]
+Ingoing arc: 1'[(j)]
 
 Transition 'I_refused'
 Guard: (i) eq (j)
 Arcs:
-Outgoing arc: 1'[(i)]
-Outgoing arc: 1'[(j)]
 Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(j)]
+Outgoing arc: 1'[(i)]
 
 Transition 'I_ask1'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(x++)]
-Outgoing arc: 1'[(x)]
-Outgoing arc: 1'[(i)]
+Outgoing arc: 1'[(x++)]
+Ingoing arc: 1'[(x)]
 Ingoing arc: 1'[(i)]
-Ingoing arc: 1'[(i),(x)]
+Outgoing arc: 1'[(i)]
+Outgoing arc: 1'[(i),(x)]
 
 Transition 'loss_m'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(r)]
-Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(r)]
 Outgoing arc: 1'(dot)
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'Gto'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(i)]
 Ingoing arc: 1'[(i)]
-Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(i)]
 Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
 
 Transition 'I_rec2'
 Guard: (r) eq (i)
 Arcs:
-Outgoing arc: 1'[(i)]
-Outgoing arc: 1'[(r)]
-Ingoing arc: 1'(dot)
 Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(r)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(i)]
 
 Transition 'I_ask2'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(x++)]
-Outgoing arc: 1'[(x)]
-Ingoing arc: 1'[(i)]
-Ingoing arc: 1'[(i),(x)]
+Outgoing arc: 1'[(x++)]
+Ingoing arc: 1'[(x)]
 Outgoing arc: 1'[(i)]
+Outgoing arc: 1'[(i),(x)]
+Ingoing arc: 1'[(i)]
 -------ARCS-------
 1'[(x++)]
 1'[(x++)]

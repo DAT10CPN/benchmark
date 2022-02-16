@@ -35,188 +35,188 @@ Variable decl attrib: {'id': 'V-i-POS', 'name': 'i'}, with declaration: {'declar
 Transition 'T-poll__end'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAI1'
 Guard: (m >= s)
 Arcs:
-Outgoing arc: <( m, r, CO )>
-Ingoing arc: <( m, r, DONE )>
-Outgoing arc: <( m, s, AI, 0 )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, r, CO )>
+Outgoing arc: <( m, r, DONE )>
+Ingoing arc: <( m, s, AI, 0 )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAI2'
 Guard: (m < s)
 Arcs:
-Outgoing arc: <( m, iam, pm )>
-Ingoing arc: <( m, F, pm )>
-Outgoing arc: <( m, r, CO )>
-Ingoing arc: <( m, r, DONE )>
-Outgoing arc: <( m, s, AI, 0 )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, iam, pm )>
+Outgoing arc: <( m, F, pm )>
+Ingoing arc: <( m, r, CO )>
+Outgoing arc: <( m, r, DONE )>
+Ingoing arc: <( m, s, AI, 0 )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAnnP1'
 Guard: (pm != m)
 Arcs:
-Outgoing arc: <( m, iam, pm )>
-Ingoing arc: <( m, F, s )>
-Outgoing arc: <( m, s, AnnP, 0 )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, iam, pm )>
+Outgoing arc: <( m, F, s )>
+Ingoing arc: <( m, s, AnnP, 0 )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAnnP2'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m, T, m )>
-Ingoing arc: <( m, T, 0 )>
-Outgoing arc: <( m, s, AnnP, 0 )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, T, m )>
+Outgoing arc: <( m, T, 0 )>
+Ingoing arc: <( m, s, AnnP, 0 )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAnsP1'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m, s, AnsP, 0 )>
-Ingoing arc: <( s, m, RI, 0 )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, s, AnsP, 0 )>
+Outgoing arc: <( s, m, RI, 0 )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAnsP2'
 Guard: (p != 0)
 Arcs:
-Outgoing arc: <( m, iam, p )>
-Ingoing arc: <( m, F, p )>
-Outgoing arc: <( m, s, AnsP, p )>
-Ingoing arc: <( s, m, RI, 0 )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, iam, p )>
+Outgoing arc: <( m, F, p )>
+Ingoing arc: <( m, s, AnsP, p )>
+Outgoing arc: <( s, m, RI, 0 )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAnsP3'
 Guard: (((p != 0) and (pm != 0)) and (pm != p))
 Arcs:
-Outgoing arc: <( m, iam, pm )>
-Ingoing arc: <( m, T, 0 )>
-Outgoing arc: <( m, s, AnsP, p )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, iam, pm )>
+Outgoing arc: <( m, T, 0 )>
+Ingoing arc: <( m, s, AnsP, p )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAnsP4'
 Guard: (p != 0)
 Arcs:
-Outgoing arc: <( m, iam, 0 )>
-Ingoing arc: <( m, F, p )>
-Ingoing arc: <( s, m, RI, 0 )>
-Outgoing arc: <( m )>
-Outgoing arc: <( m, s, AnsP, p )>
+Ingoing arc: <( m, iam, 0 )>
+Outgoing arc: <( m, F, p )>
+Outgoing arc: <( s, m, RI, 0 )>
 Ingoing arc: <( m )>
+Ingoing arc: <( m, s, AnsP, p )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleAskP'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m, iam, pm )>
 Ingoing arc: <( m, iam, pm )>
-Outgoing arc: <( m, s, AskP, 0 )>
-Ingoing arc: <( s, m, AnsP, pm )>
-Outgoing arc: <( m )>
+Outgoing arc: <( m, iam, pm )>
+Ingoing arc: <( m, s, AskP, 0 )>
+Outgoing arc: <( s, m, AnsP, pm )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleRI'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m, s, RI, 0 )>
-Ingoing arc: <( s, m, AI, 0 )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, s, RI, 0 )>
+Outgoing arc: <( s, m, AI, 0 )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__handleRP'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m, s, RP, 0 )>
-Outgoing arc: <( m )>
+Ingoing arc: <( m, s, RP, 0 )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 
 Transition 'T-poll__iAmPrimary'
 Guard: No guard
 Arcs:
-Ingoing arc: <( m )>
-Outgoing arc: <( m, T, 0 )>
-Ingoing arc: <( m, T, m )>
-Outgoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
-Ingoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
 Outgoing arc: <( m )>
-Outgoing arc: <( m, NEG )>
-Ingoing arc: <( m, PRIM )>
+Ingoing arc: <( m, T, 0 )>
+Outgoing arc: <( m, T, m )>
+Ingoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
+Outgoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
+Ingoing arc: <( m )>
+Ingoing arc: <( m, NEG )>
+Outgoing arc: <( m, PRIM )>
 
 Transition 'T-poll__iAmSecondary'
 Guard: No guard
 Arcs:
-Ingoing arc: <( m )>
-Outgoing arc: <( m, F, pm )>
-Ingoing arc: <( m, F, pm )>
-Outgoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
-Ingoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
 Outgoing arc: <( m )>
-Outgoing arc: <( m, NEG )>
-Ingoing arc: <( m, SEC )>
+Ingoing arc: <( m, F, pm )>
+Outgoing arc: <( m, F, pm )>
+Ingoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
+Outgoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
+Ingoing arc: <( m )>
+Ingoing arc: <( m, NEG )>
+Outgoing arc: <( m, SEC )>
 
 Transition 'T-poll__start'
 Guard: No guard
 Arcs:
-Ingoing arc: <( m )>
 Outgoing arc: <( m )>
+Ingoing arc: <( m )>
 
 Transition 'T-sendAnnPs__end'
 Guard: No guard
 Arcs:
-Ingoing arc: <( m )>
-Outgoing arc: <( m, 2 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m, 2 )>
 
 Transition 'T-sendAnnPs__send'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m, i, r )>
 Ingoing arc: <( m, i, r )>
-Ingoing arc: <( r, m, AnnP, 0 )>
-Outgoing arc: <( m, i )>
-Ingoing arc: <( m, (succ i) )>
+Outgoing arc: <( m, i, r )>
+Outgoing arc: <( r, m, AnnP, 0 )>
+Ingoing arc: <( m, i )>
+Outgoing arc: <( m, (succ i) )>
 
 Transition 'T-sendAnnPs__start'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m )>
-Ingoing arc: <( m, 1 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m, 1 )>
 
 Transition 'T-startNeg__end'
 Guard: No guard
 Arcs:
-Ingoing arc: <( m )>
-Outgoing arc: <( m, 2 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m, 2 )>
 
 Transition 'T-startNeg__send'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m, i, r )>
 Ingoing arc: <( m, i, r )>
-Outgoing arc: <( m, r, NONE )>
-Ingoing arc: <( m, r, CO )>
-Ingoing arc: <( r, m, AskP, 0 )>
-Outgoing arc: <( m, i )>
-Ingoing arc: <( m, (succ i) )>
+Outgoing arc: <( m, i, r )>
+Ingoing arc: <( m, r, NONE )>
+Outgoing arc: <( m, r, CO )>
+Outgoing arc: <( r, m, AskP, 0 )>
+Ingoing arc: <( m, i )>
+Outgoing arc: <( m, (succ i) )>
 
 Transition 'T-startNeg__start'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m )>
-Ingoing arc: <( m, 1 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m, 1 )>
 
 Transition 'T-startSec'
 Guard: No guard
 Arcs:
-Outgoing arc: <( m )>
 Ingoing arc: <( m )>
+Outgoing arc: <( m )>
 -------ARCS-------
 <( m )>
 <( m )>

@@ -24,102 +24,102 @@ Variable decl attrib: {'id': 'varcB', 'name': 'cB'}, with declaration: {'declara
 Transition 'enregistrement_A'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
 Ingoing arc: 1'(dot)
-Outgoing arc: 1'[(cA)]
-Ingoing arc: 1'[(cA++)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(cA)]
+Outgoing arc: 1'[(cA++)]
 
 Transition 'liberation_A'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'(dot)
-Ingoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
 
 Transition 'autorisation_B'
 Guard: (s) eq (sens2) and (cB) gt (voitureB0)
 Arcs:
-Outgoing arc: 1'[(s)]
 Ingoing arc: 1'[(s)]
+Outgoing arc: 1'[(s)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(cB)]
+Outgoing arc: 1'[(cB--)]
 Ingoing arc: 1'(dot)
-Outgoing arc: 1'[(cB)]
-Ingoing arc: 1'[(cB--)]
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
 
 Transition 'basculement'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(s)]
 Outgoing arc: 1'[(s)]
-Ingoing arc: 50'(dot)
+Ingoing arc: 1'[(s)]
 Outgoing arc: 50'(dot)
+Ingoing arc: 50'(dot)
 
 Transition 'liberation_B'
 Guard: No guard
 Arcs:
+Ingoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
-Ingoing arc: 1'(dot)
-Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'enregistrement_B'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(cB)]
-Ingoing arc: 1'[(cB++)]
-Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(cB)]
+Outgoing arc: 1'[(cB++)]
 Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
 
 Transition 'decision'
 Guard: (cpt) lt (compteur50)
 Arcs:
-Ingoing arc: 1'[(s)]
 Outgoing arc: 1'[(s)]
-Ingoing arc: 1'[(cpt++)]
-Outgoing arc: 1'[(cpt)]
+Ingoing arc: 1'[(s)]
+Outgoing arc: 1'[(cpt++)]
+Ingoing arc: 1'[(cpt)]
 
 Transition 'altern_cpt'
 Guard: (cpt) eq (compteur50)
 Arcs:
-Outgoing arc: 1'[(s)]
-Outgoing arc: 1'[(cpt)]
-Ingoing arc: 1'[(compteur0)]
-Ingoing arc: 1'[(s++)]
+Ingoing arc: 1'[(s)]
+Ingoing arc: 1'[(cpt)]
+Outgoing arc: 1'[(compteur0)]
+Outgoing arc: 1'[(s++)]
 
 Transition 'timeout_A'
 Guard: (s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
 Arcs:
-Ingoing arc: 1'[(cB)]
 Outgoing arc: 1'[(cB)]
-Outgoing arc: 1'[(s)]
-Outgoing arc: 1'[(cpt)]
-Ingoing arc: 1'[(compteur0)]
-Ingoing arc: 1'[(s++)]
-Outgoing arc: 1'[(cA)]
+Ingoing arc: 1'[(cB)]
+Ingoing arc: 1'[(s)]
+Ingoing arc: 1'[(cpt)]
+Outgoing arc: 1'[(compteur0)]
+Outgoing arc: 1'[(s++)]
 Ingoing arc: 1'[(cA)]
+Outgoing arc: 1'[(cA)]
 
 Transition 'timeout_B'
 Guard: (s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
 Arcs:
-Ingoing arc: 1'[(cA)]
 Outgoing arc: 1'[(cA)]
-Outgoing arc: 1'[(s)]
-Outgoing arc: 1'[(cpt)]
-Ingoing arc: 1'[(compteur0)]
-Ingoing arc: 1'[(s++)]
-Outgoing arc: 1'[(cB)]
+Ingoing arc: 1'[(cA)]
+Ingoing arc: 1'[(s)]
+Ingoing arc: 1'[(cpt)]
+Outgoing arc: 1'[(compteur0)]
+Outgoing arc: 1'[(s++)]
 Ingoing arc: 1'[(cB)]
+Outgoing arc: 1'[(cB)]
 
 Transition 'autorisation_A'
 Guard: (s) eq (sens1) and (cA) gt (voitureA0)
 Arcs:
-Ingoing arc: 1'[(cA--)]
-Outgoing arc: 1'[(cA)]
+Outgoing arc: 1'[(cA--)]
+Ingoing arc: 1'[(cA)]
+Outgoing arc: 1'(dot)
 Ingoing arc: 1'(dot)
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(s)]
+Ingoing arc: 1'(dot)
 Outgoing arc: 1'[(s)]
+Ingoing arc: 1'[(s)]
 -------ARCS-------
 1'[(cA)]
 1'[(cB)]

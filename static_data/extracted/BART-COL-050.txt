@@ -27,56 +27,56 @@ Variable decl attrib: {'id': 'vards', 'name': 'ds'}, with declaration: {'declara
 Transition 'TrainStop'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(tid),(speed0),(distance0)]
-Outgoing arc: 1'[(tid),(speed1),(distance1)]
+Outgoing arc: 1'[(tid),(speed0),(distance0)]
+Ingoing arc: 1'[(tid),(speed1),(distance1)]
 
 Transition 'AtStation'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(tid),(speed0),(distance0)]
-Ingoing arc: 1'[(tid),(speed1),(da)]
-Ingoing arc: 1'[(da)]
+Ingoing arc: 1'[(tid),(speed0),(distance0)]
+Outgoing arc: 1'[(tid),(speed1),(da)]
 Outgoing arc: 1'[(da)]
+Ingoing arc: 1'[(da)]
 
 Transition 'MissStation'
 Guard: (tsp) gt (speed0) and (db) eq (distance0)
 Arcs:
-Outgoing arc: 1'[(tid),(tsp),(db)]
+Ingoing arc: 1'[(tid),(tsp),(db)]
 
 Transition 'TooEarly'
 Guard: (tsp) eq (speed0) and (db) gt (distance0)
 Arcs:
-Outgoing arc: 1'[(tid),(tsp),(db)]
+Ingoing arc: 1'[(tid),(tsp),(db)]
 
 Transition 'TrainAcc'
 Guard: (da2) gt (ds2) and (tsp) lt (speed4)
 Arcs:
-Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
-Ingoing arc: 1'[(tsp++),(ds2)]
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(tsp++),(ds2)]
-Outgoing arc: 1'[(tid),(tsp),(db)]
-Ingoing arc: 1'[(tid),(tsp++),(da)]
+Ingoing arc: 1'[(tsp++),(ds2)]
+Ingoing arc: 1'[(tid),(tsp),(db)]
+Outgoing arc: 1'[(tid),(tsp++),(da)]
 
 Transition 'TrainDecc'
 Guard: (da) lte (ds) and (tsp) gt (speed1)
 Arcs:
-Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
-Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
-Outgoing arc: 1'[(tid),(tsp),(db)]
-Ingoing arc: 1'[(tid),(tsp--),(da)]
+Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Ingoing arc: 1'[(tid),(tsp),(db)]
+Outgoing arc: 1'[(tid),(tsp--),(da)]
 
 Transition 'TrainStable'
 Guard: (da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
 Arcs:
-Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
-Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
-Outgoing arc: 1'[(tid),(tsp),(db)]
-Ingoing arc: 1'[(tid),(tsp),(da)]
+Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Ingoing arc: 1'[(tid),(tsp),(db)]
+Outgoing arc: 1'[(tid),(tsp),(da)]
 -------ARCS-------
 1'[(tid),(speed0),(distance0)]
 1'[(tid),(speed1),(distance1)]

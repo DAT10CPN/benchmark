@@ -152,9 +152,9 @@ def main():
                 hlinscription = arc.find(f'{NAMESPACE}' + 'hlinscription')
                 text = hlinscription.find(f'{NAMESPACE}' + 'text').text
                 if transition_id == arc.attrib['source']:
-                    arcs_descriptions.append(f"Ingoing arc: {text}")
-                if transition_id == arc.attrib['target']:
                     arcs_descriptions.append(f"Outgoing arc: {text}")
+                if transition_id == arc.attrib['target']:
+                    arcs_descriptions.append(f"Ingoing arc: {text}")
 
             final_to_file = final_to_file + "\n\n" + f"Transition '{transition_id}'"
             final_to_file = final_to_file + "\n" + f"Guard: {guard}"

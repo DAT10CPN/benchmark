@@ -21,58 +21,58 @@ Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declarati
 Transition 'addOption'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(o1)]
 Ingoing arc: 1'[(o1)]
+Outgoing arc: 1'[(o1)]
 
 Transition 'addProduct'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
 
 Transition 'elaborate0'
 Guard: (x) lte (Quality98)
 Arcs:
-Ingoing arc: 1'[(x)]
 Outgoing arc: 1'[(x)]
-Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(x)]
 Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
 
 Transition 'serve'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(x)]
 Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(x)]
 
 Transition 'elaborate1'
 Guard: (x) gt (Quality98) and (x) lte (Quality196)
 Arcs:
-Ingoing arc: 1'[(o1)]
 Outgoing arc: 1'[(o1)]
-Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(o1)]
 Outgoing arc: 1'[(p)]
-Ingoing arc: 1'[(x)]
+Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(x)]
 
 Transition 'elaborate2'
 Guard: (x) gt (Quality196) and (x) lte (Quality294)
 Arcs:
-Ingoing arc: 1'[(o1)] + 1'[(o2)]
 Outgoing arc: 1'[(o1)] + 1'[(o2)]
-Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(o1)] + 1'[(o2)]
 Outgoing arc: 1'[(p)]
-Ingoing arc: 1'[(x)]
+Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(x)]
 
 Transition 'elaborate3'
 Guard: (x) gt (Quality294) and (x) lte (Quality392)
 Arcs:
-Ingoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
 Outgoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
-Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
 Outgoing arc: 1'[(p)]
-Ingoing arc: 1'[(x)]
+Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(x)]
 -------ARCS-------
 1'[(x)]
 1'[(x)]

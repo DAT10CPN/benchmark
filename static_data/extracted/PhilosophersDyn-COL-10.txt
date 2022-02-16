@@ -16,63 +16,63 @@ Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declarati
 Transition 'Initialize'
 Guard: (p) ineq (q)
 Arcs:
-Ingoing arc: 1'[(p)] + 1'[(q)]
-Ingoing arc: 1'[(p),(q)] + 1'[(q),(p)]
-Ingoing arc: 1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
-Ingoing arc: 1'[(p)] + 1'[(q)]
-Outgoing arc: 1'[(Philosopher.all)]
+Outgoing arc: 1'[(p)] + 1'[(q)]
+Outgoing arc: 1'[(p),(q)] + 1'[(q),(p)]
+Outgoing arc: 1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
+Outgoing arc: 1'[(p)] + 1'[(q)]
+Ingoing arc: 1'[(Philosopher.all)]
 
 Transition 'Join'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(l)] + 1'[(r)]
 Outgoing arc: 1'[(l)] + 1'[(r)]
-Ingoing arc: 1'[(p)]
-Ingoing arc: 1'[(l),(p)] + 1'[(p),(r)]
-Outgoing arc: 1'[(l),(r)]
+Ingoing arc: 1'[(l)] + 1'[(r)]
 Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(l),(p)] + 1'[(p),(r)]
+Ingoing arc: 1'[(l),(r)]
+Ingoing arc: 1'[(p)]
 
 Transition 'Leave'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(l),(r)]
-Outgoing arc: 1'[(l),(p)] + 1'[(p),(r)]
+Outgoing arc: 1'[(l),(r)]
+Ingoing arc: 1'[(l),(p)] + 1'[(p),(r)]
+Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(p)]
-Outgoing arc: 1'[(p)]
-Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
 
 Transition 'TakeLeft'
 Guard: No guard
 Arcs:
+Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(p)]
-Outgoing arc: 1'[(p)]
-Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
 
 Transition 'TakeRight'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(p),(q)]
 Outgoing arc: 1'[(p),(q)]
-Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(p),(q)]
 Outgoing arc: 1'[(p)]
-Outgoing arc: 1'[(q)]
+Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(q)]
 
 Transition 'Eat'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(p),(q)]
 Outgoing arc: 1'[(p),(q)]
-Ingoing arc: 1'[(p)] + 1'[(q)]
+Ingoing arc: 1'[(p),(q)]
+Outgoing arc: 1'[(p)] + 1'[(q)]
+Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(p)]
-Outgoing arc: 1'[(p)]
-Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
 
 Transition 'SearchForks'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(p)]
-Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
 -------ARCS-------
 1'[(p),(q)]
 1'[(p),(q)]

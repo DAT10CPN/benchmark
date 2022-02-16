@@ -46,294 +46,294 @@ Variable decl attrib: {'id': 'vart2', 'name': 't2'}, with declaration: {'declara
 Transition 'fi3'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(t)]
-Outgoing arc: 1'[(t),(j)]
-Ingoing arc: 1'[(j)]
-Outgoing arc: 1'(dot)
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t),(j)]
+Outgoing arc: 1'[(j)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'fo3'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'(dot)
-Ingoing arc: 1'[(t),(j)]
-Outgoing arc: 1'[(t)]
-Outgoing arc: 1'[(j)]
 Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t),(j)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'[(j)]
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'fo2'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'(dot)
-Ingoing arc: 1'[(t),(j)]
-Outgoing arc: 1'[(t)]
-Outgoing arc: 1'[(j)]
 Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t),(j)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'[(j)]
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'fo1'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'(dot)
-Ingoing arc: 1'[(t),(j)]
-Outgoing arc: 1'[(t)]
-Outgoing arc: 1'[(j)]
 Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t),(j)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'[(j)]
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'fi2'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(t)]
-Outgoing arc: 1'[(t),(j)]
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(j)]
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t),(j)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(j)]
+Outgoing arc: 1'(dot)
 
 Transition 'fi1'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(t)]
-Outgoing arc: 1'[(t),(j)]
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'[(j)]
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t),(j)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(j)]
+Outgoing arc: 1'(dot)
 
 Transition 'trans_689'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t),(j)]
 Outgoing arc: 1'[(t),(j)]
-Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t),(j)]
 Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
 
 Transition 'trans_685'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
 
 Transition 'trans_534'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
 
 Transition 'trans_533'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
-Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
 
 Transition 'NotifyEventEndOfCheckSources'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
 
 Transition 'trans_511'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
-Outgoing arc: 4'[(t)]
-Ingoing arc: 6'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 4'[(t)]
+Outgoing arc: 6'(dot)
 
 Transition 'trans_510'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
-Outgoing arc: 3'[(t)]
-Ingoing arc: 7'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 3'[(t)]
+Outgoing arc: 7'(dot)
 
 Transition 'trans_509'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
-Outgoing arc: 2'[(t)]
-Ingoing arc: 8'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 2'[(t)]
+Outgoing arc: 8'(dot)
 
 Transition 'trans_508'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
-Ingoing arc: 9'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 9'(dot)
 
 Transition 'LeaveCSTCS'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
 
 Transition 'EnterCSTCS'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
 
 Transition 'trans_489'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)] + 1'[(t),(ms4)]
-Ingoing arc: 4'(dot)
-Outgoing arc: 6'(dot)
-Outgoing arc: 1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)] + 1'[(ms4)]
-Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)] + 1'[(t),(ms4)]
+Outgoing arc: 4'(dot)
+Ingoing arc: 6'(dot)
+Ingoing arc: 1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)] + 1'[(ms4)]
+Ingoing arc: 1'[(t)]
 
 Transition 'trans_488'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)]
-Ingoing arc: 3'(dot)
-Outgoing arc: 7'(dot)
-Outgoing arc: 1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)]
-Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)]
+Outgoing arc: 3'(dot)
+Ingoing arc: 7'(dot)
+Ingoing arc: 1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)]
+Ingoing arc: 1'[(t)]
 
 Transition 'trans_487'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)]
-Ingoing arc: 2'(dot)
-Outgoing arc: 8'(dot)
-Outgoing arc: 1'[(ms1)] + 1'[(ms2)]
-Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)]
+Outgoing arc: 2'(dot)
+Ingoing arc: 8'(dot)
+Ingoing arc: 1'[(ms1)] + 1'[(ms2)]
+Ingoing arc: 1'[(t)]
 
 Transition 'trans_486'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t),(ms1)]
-Ingoing arc: 1'(dot)
-Outgoing arc: 9'(dot)
-Outgoing arc: 1'[(ms1)]
-Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(t),(ms1)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 9'(dot)
+Ingoing arc: 1'[(ms1)]
+Ingoing arc: 1'[(t)]
 
 Transition 'trans_478'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t),(j)]
-Ingoing arc: 1'[(j),(s)]
-Outgoing arc: 1'[(j)]
-Outgoing arc: 1'[(t),(s)]
+Outgoing arc: 1'[(t),(j)]
+Outgoing arc: 1'[(j),(s)]
+Ingoing arc: 1'[(j)]
+Ingoing arc: 1'[(t),(s)]
 
 Transition 'trans_463'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
-Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
 
 Transition 'trans_461'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
-Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
 
 Transition 'trans_459'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
-Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
 
 Transition 'trans_457'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
-Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
 
 Transition 'trans_376'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'[(s)]
-Outgoing arc: 1'[(s)]
 Ingoing arc: 1'(dot)
-Outgoing arc: 1'(dot)
 Ingoing arc: 1'[(s)]
+Ingoing arc: 1'[(s)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(s)]
 
 Transition 'IsEvt'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(dot)
-Outgoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
 Ingoing arc: 1'[(t)]
-Ingoing arc: 1'[(s)]
+Outgoing arc: 1'[(t)]
 Outgoing arc: 1'[(s)]
+Ingoing arc: 1'[(s)]
 
 Transition 'WillPerformWork'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t),(j)]
-Ingoing arc: 1'[(t),(StatesPerformWork),(j)]
+Ingoing arc: 1'[(t),(j)]
+Outgoing arc: 1'[(t),(StatesPerformWork),(j)]
 
 Transition 'trans_776'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
 
 Transition 'JobExist'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
-Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
 Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
 
 Transition 'NoJob'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
-Ingoing arc: 10'(dot)
+Ingoing arc: 1'[(t)]
 Outgoing arc: 10'(dot)
+Ingoing arc: 10'(dot)
 
 Transition 'MustCheck'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
-Ingoing arc: 1'[(t),(StatesCheckSource),(Jobs0)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t),(StatesCheckSource),(Jobs0)]
 
 Transition 'Run'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(s)]
-Ingoing arc: 1'[(s)]
-Outgoing arc: 1'[(j),(s)]
-Outgoing arc: 1'[(t),(j)]
-Ingoing arc: 1'[(t)]
-Ingoing arc: 1'[(j)]
+Outgoing arc: 1'[(s)]
+Outgoing arc: 1'[(s)]
+Ingoing arc: 1'[(j),(s)]
+Ingoing arc: 1'[(t),(j)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(j)]
 
 Transition 'GoPerformWork'
 Guard: (st) eq (StatesPerformWork)
 Arcs:
-Ingoing arc: 1'[(t),(j)]
-Outgoing arc: 1'[(t),(st),(j)]
+Outgoing arc: 1'[(t),(j)]
+Ingoing arc: 1'[(t),(st),(j)]
 
 Transition 'GoCheckSource'
 Guard: (st) eq (StatesCheckSource)
 Arcs:
-Outgoing arc: 1'[(t),(st),(j)]
-Ingoing arc: 1'[(t)]
+Ingoing arc: 1'[(t),(st),(j)]
+Outgoing arc: 1'[(t)]
 
 Transition 'DummyOR1'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
 
 Transition 'DummyOR2'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
 -------ARCS-------
 1'(dot)
 1'(dot)

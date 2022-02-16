@@ -12,20 +12,20 @@ Variable decl attrib: {'id': 'varv', 'name': 'v'}, with declaration: {'declarati
 Transition 'start'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(Voters.all)]
-Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(Voters.all)]
+Ingoing arc: 1'(dot)
 
 Transition 'no'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(v)]
 Outgoing arc: 1'[(v)]
+Ingoing arc: 1'[(v)]
 
 Transition 'yes'
 Guard: No guard
 Arcs:
-Ingoing arc: 1'[(v)]
 Outgoing arc: 1'[(v)]
+Ingoing arc: 1'[(v)]
 -------ARCS-------
 1'[(Voters.all)]
 1'(dot)

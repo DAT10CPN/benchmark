@@ -17,38 +17,38 @@ Variable decl attrib: {'id': 'varm', 'name': 'm'}, with declaration: {'declarati
 Transition 'Begin_Own_Acc'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(x)
 Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
 
 Transition 'Req_Ext_Acc'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(x)
 Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
 
 Transition 'End_Ext_Acc'
 Guard: No guard
 Arcs:
-Outgoing arc: 1'(x)
-Ingoing arc: 1'(y)
 Ingoing arc: 1'(x)
-Ingoing arc: 1'(dot)
+Outgoing arc: 1'(y)
+Outgoing arc: 1'(x)
+Outgoing arc: 1'(dot)
 
 Transition 'End_Own_Acc'
 Guard: [m eq x]
 Arcs:
-Outgoing arc: 1'(x)
-Outgoing arc: 1'(m)
-Ingoing arc: 1'(m)
 Ingoing arc: 1'(x)
+Ingoing arc: 1'(m)
+Outgoing arc: 1'(m)
+Outgoing arc: 1'(x)
 
 Transition 'Begin_Ext_Acc'
 Guard: [x ineq m]
 Arcs:
-Outgoing arc: 1'(m)
-Outgoing arc: 1'(x)
-Outgoing arc: 1'(dot)
-Ingoing arc: 1'(x,m)
+Ingoing arc: 1'(m)
+Ingoing arc: 1'(x)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(x,m)
 -------ARCS-------
 1'(x)
 1'(m)

@@ -44,302 +44,302 @@ pt==rts
 Transition 'PacketArrival'
 Guard: sa!=sb
 Arcs:
-Outgoing arc: <sa,p>
-Ingoing arc: <sa,sb,p,rts>
+Ingoing arc: <sa,p>
+Outgoing arc: <sa,sb,p,rts>
 
 Transition 'WaitAIFS1'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,pr1,rts>
 Ingoing arc: <sa,sb,pr1,rts>
+Outgoing arc: <sa,sb,pr1,rts>
 
 Transition 'BeginSending'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p,pt>
-Ingoing arc: 1
+Outgoing arc: <sa,sb,p,pt>
 Outgoing arc: 1
+Ingoing arc: 1
 
 Transition 'SendRTS'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,rts>
 Ingoing arc: <sa,sb,p,rts>
+Outgoing arc: <sa,sb,p,rts>
 
 Transition 'SendCTS'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,cts>
 Ingoing arc: <sa,sb,p,cts>
+Outgoing arc: <sa,sb,p,cts>
 
 Transition 'SendData'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,data>
 Ingoing arc: <sa,sb,p,data>
+Outgoing arc: <sa,sb,p,data>
 
 Transition 'SendAck'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,ack>
-Ingoing arc: <sa,sb,p,rts>
-Outgoing arc: 1
 Ingoing arc: <sa,sb,p,ack>
+Outgoing arc: <sa,sb,p,rts>
 Ingoing arc: 1
+Outgoing arc: <sa,sb,p,ack>
+Outgoing arc: 1
 
 Transition 'SenderSenseCollision'
 Guard: pt==rts||pt==data
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
-Ingoing arc: <sa,sb,p>
-Outgoing arc: 1
+Ingoing arc: <sa,sb,p,pt>
+Outgoing arc: <sa,sb,p>
 Ingoing arc: 1
+Outgoing arc: 1
 
 Transition 'SenderTimeout'
 Guard: pt==cts||pt==ack
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
-Ingoing arc: <sa,sb,p>
+Ingoing arc: <sa,sb,p,pt>
+Outgoing arc: <sa,sb,p>
 
 Transition 'BeginReceiving'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p,pt>
-Outgoing arc: 1
+Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: 1
 Outgoing arc: 1
 Ingoing arc: 1
+Outgoing arc: 1
 
 Transition 'GettingGarbled'
 Guard: No guard
 Arcs:
-Outgoing arc: 2
-Ingoing arc: 1
 Ingoing arc: 2
 Outgoing arc: 1
+Outgoing arc: 2
+Ingoing arc: 1
 
 Transition 'EndingGarbled'
 Guard: No guard
 Arcs:
-Outgoing arc: 1
 Ingoing arc: 1
-Outgoing arc: 4
+Outgoing arc: 1
 Ingoing arc: 4
+Outgoing arc: 4
 
 Transition 'SenderGarbled'
 Guard: pt==cts||pt==ack
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
-Ingoing arc: <sa,sb,p>
-Ingoing arc: 1
+Ingoing arc: <sa,sb,p,pt>
+Outgoing arc: <sa,sb,p>
 Outgoing arc: 1
+Ingoing arc: 1
 
 Transition 'BeginWaitingForResponse'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
-Ingoing arc: <sa,sb,p,pt++>
 Ingoing arc: <sa,sb,p,pt>
-Outgoing arc: 1
+Outgoing arc: <sa,sb,p,pt++>
+Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: 1
+Outgoing arc: 1
 
 Transition 'StopReceiving'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p,pt>
-Outgoing arc: 4
+Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: 4
+Outgoing arc: 4
 
 Transition 'ReceiverGarbled'
 Guard: pt==rts||pt==data
 Arcs:
-Ingoing arc: 1
 Outgoing arc: 1
-Outgoing arc: <sa,sb,p,pt>
-Ingoing arc: <sa,sb,p,rts>
+Ingoing arc: 1
+Ingoing arc: <sa,sb,p,pt>
+Outgoing arc: <sa,sb,p,rts>
 
 Transition 'ReceiverTimeout'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,data>
-Ingoing arc: <sa,sb,p,rts>
+Ingoing arc: <sa,sb,p,data>
+Outgoing arc: <sa,sb,p,rts>
 
 Transition 'ReceiverWrongPacket'
 Guard: pt==rts||pt==data
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
-Ingoing arc: <sa,sb,p,rts>
+Ingoing arc: <sa,sb,p,pt>
+Outgoing arc: <sa,sb,p,rts>
 
 Transition 'SenderWrongPacket'
 Guard: pt==cts||pt==ack
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
-Ingoing arc: <sa,sb,p>
+Ingoing arc: <sa,sb,p,pt>
+Outgoing arc: <sa,sb,p>
 
 Transition 'CorrectPacketButAck'
 Guard: pt!=ack && pt!=rts && p2==p
 Arcs:
-Outgoing arc: <sa,sb,p2,pt>
-Ingoing arc: <sa,sb,p,pt++>
-Outgoing arc: <sb,sa,p,pt>
+Ingoing arc: <sa,sb,p2,pt>
+Outgoing arc: <sa,sb,p,pt++>
+Ingoing arc: <sb,sa,p,pt>
 
 Transition 'CorrectPacketAck'
 Guard: pt==ack && (pt==rts||p2==p)
 Arcs:
-Outgoing arc: <sa,sb,p2,pt>
-Outgoing arc: <sb,sa,p,pt>
-Ingoing arc: <sa,p>
+Ingoing arc: <sa,sb,p2,pt>
+Ingoing arc: <sb,sa,p,pt>
+Outgoing arc: <sa,p>
 
 Transition 'ShortEnterVulnerable'
 Guard: pt!=rts
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p,pt>
+Outgoing arc: <sa,sb,p,pt>
 
 Transition 'ReceiverSenseCollision'
 Guard: pt==cts||pt==ack
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
-Ingoing arc: <sa,sb,p,rts>
-Ingoing arc: 1
+Ingoing arc: <sa,sb,p,pt>
+Outgoing arc: <sa,sb,p,rts>
 Outgoing arc: 1
+Ingoing arc: 1
 
 Transition 'GoToBackoff'
 Guard: No guard
 Arcs:
-Ingoing arc: <sa,sb,p>
 Outgoing arc: <sa,sb,p>
-Ingoing arc: <sa,sb,p,tx1>
+Ingoing arc: <sa,sb,p>
+Outgoing arc: <sa,sb,p,tx1>
 
 Transition 'ExitBackoff'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,b1>
-Ingoing arc: <sa,sb,p,rts>
+Ingoing arc: <sa,sb,p,b1>
+Outgoing arc: <sa,sb,p,rts>
 
 Transition 'PauseBackoff'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p,b>
 Ingoing arc: <sa,sb,p,b>
-Ingoing arc: 1
+Outgoing arc: <sa,sb,p,b>
 Outgoing arc: 1
+Ingoing arc: 1
 
 Transition 'ResumeBackoff1'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,pr1,b>
 Ingoing arc: <sa,sb,pr1,b>
-Outgoing arc: 4
+Outgoing arc: <sa,sb,pr1,b>
 Ingoing arc: 4
+Outgoing arc: 4
 
 Transition 'DecrementBackoff'
 Guard: b!=b1
 Arcs:
-Outgoing arc: <sa,sb,p,b>
-Ingoing arc: <sa,sb,p,b-->
+Ingoing arc: <sa,sb,p,b>
+Outgoing arc: <sa,sb,p,b-->
 
 Transition 'WaitAIFS2'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,pr2,rts>
 Ingoing arc: <sa,sb,pr2,rts>
+Outgoing arc: <sa,sb,pr2,rts>
 
 Transition 'InternalCollision'
 Guard: p>p2
 Arcs:
-Outgoing arc: <sa,sb,p,pt>+<sa,sc,p2,pt>
-Ingoing arc: <sa,sb,p>
-Ingoing arc: <sa,sc,p2,pt>
+Ingoing arc: <sa,sb,p,pt>+<sa,sc,p2,pt>
+Outgoing arc: <sa,sb,p>
+Outgoing arc: <sa,sc,p2,pt>
 
 Transition 'ResumeBackoff2'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,pr2,b>
 Ingoing arc: <sa,sb,pr2,b>
-Outgoing arc: 4
+Outgoing arc: <sa,sb,pr2,b>
 Ingoing arc: 4
+Outgoing arc: 4
 
 Transition 'WaitAIFS3'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,pr3,rts>
 Ingoing arc: <sa,sb,pr3,rts>
+Outgoing arc: <sa,sb,pr3,rts>
 
 Transition 'WaitAIFS4'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,pr4,rts>
 Ingoing arc: <sa,sb,pr4,rts>
+Outgoing arc: <sa,sb,pr4,rts>
 
 Transition 'ReturnToBackoff'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p>
-Ingoing arc: <sa,sb,p,tx++>
-Outgoing arc: <sa,sb,p,tx>
 Ingoing arc: <sa,sb,p>
+Outgoing arc: <sa,sb,p,tx++>
+Ingoing arc: <sa,sb,p,tx>
+Outgoing arc: <sa,sb,p>
 
 Transition 'ChooseBackoff'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p>
-Ingoing arc: <p,tx,b>
-Outgoing arc: <sa,sb,p,tx>
-Ingoing arc: <sa,sb,p,tx>
+Ingoing arc: <sa,sb,p>
 Outgoing arc: <p,tx,b>
-Ingoing arc: <sa,sb,p,b>
+Ingoing arc: <sa,sb,p,tx>
+Outgoing arc: <sa,sb,p,tx>
+Ingoing arc: <p,tx,b>
+Outgoing arc: <sa,sb,p,b>
 
 Transition 'DropPacket'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,p>
-Outgoing arc: <sa,sb,p,tx>
-Ingoing arc: <sa,p>
+Ingoing arc: <sa,sb,p>
+Ingoing arc: <sa,sb,p,tx>
+Outgoing arc: <sa,p>
 
 Transition 'ResumeBackoff3'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,pr3,b>
 Ingoing arc: <sa,sb,pr3,b>
-Outgoing arc: 4
+Outgoing arc: <sa,sb,pr3,b>
 Ingoing arc: 4
+Outgoing arc: 4
 
 Transition 'ResumeBackoff4'
 Guard: No guard
 Arcs:
-Outgoing arc: <sa,sb,pr4,b>
 Ingoing arc: <sa,sb,pr4,b>
-Outgoing arc: 4
+Outgoing arc: <sa,sb,pr4,b>
 Ingoing arc: 4
+Outgoing arc: 4
 
 Transition 'EnteringErrorSpike'
 Guard: No guard
 Arcs:
-Outgoing arc: 1
-Ingoing arc: 1
-Ingoing arc: 1
 Ingoing arc: 1
 Outgoing arc: 1
 Outgoing arc: 1
+Outgoing arc: 1
+Ingoing arc: 1
+Ingoing arc: 1
 
 Transition 'ExitingErrorSpike'
 Guard: No guard
 Arcs:
-Outgoing arc: 1
 Ingoing arc: 1
 Outgoing arc: 1
 Ingoing arc: 1
+Outgoing arc: 1
 
 Transition 'CorrectPacketRts'
 Guard: pt==rts
 Arcs:
-Outgoing arc: <sa,sb,p,pt>
-Outgoing arc: <sc,sa,p2,pt>
-Ingoing arc: <sa,sc,p2,pt++>
+Ingoing arc: <sa,sb,p,pt>
+Ingoing arc: <sc,sa,p2,pt>
+Outgoing arc: <sa,sc,p2,pt++>
 -------ARCS-------
 <sa,p>
 <sa,sb,p,rts>
