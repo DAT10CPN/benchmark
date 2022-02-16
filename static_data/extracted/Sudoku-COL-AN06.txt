@@ -13,19 +13,14 @@ Variable decl attrib: {'id': 'v', 'name': 'v'}, with declaration: {'declaration'
 Transition 'select'
 Guard: No guard
 Arcs:
-
-Transition 'select'
-Guard: No guard
-Arcs:
-
-Transition 'select'
-Guard: No guard
-Arcs:
-
-Transition 'select'
-Guard: No guard
-Arcs:
 Outgoing arc: <x,v>
 Ingoing arc: <x,y,v>
 Outgoing arc: <x,y>
 Outgoing arc: <y,v>
+-------GUARDS-------
+-------ARCS-------
+<x,v>
+<x,y,v>
+<x,y>
+<y,v>
+------------------------------------------------------------------

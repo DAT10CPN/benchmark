@@ -138,9 +138,9 @@ def main():
                 if transition_id == arc.attrib['target']:
                     arcs_descriptions.append(f"Outgoing arc: {text}")
 
-                final_to_file = final_to_file + "\n\n" + f"Transition '{transition_id}'"
-                final_to_file = final_to_file + "\n" + f"Guard: {guard}"
-                final_to_file = final_to_file + "\n" + "Arcs:"
+            final_to_file = final_to_file + "\n\n" + f"Transition '{transition_id}'"
+            final_to_file = final_to_file + "\n" + f"Guard: {guard}"
+            final_to_file = final_to_file + "\n" + "Arcs:"
 
             for arc in arcs_descriptions:
                 final_to_file = final_to_file + "\n" + arc
@@ -151,7 +151,7 @@ def main():
                 for arc in arcs_descriptions:
                     print(arc)
 
-        """# ALL conditions on transitions
+        # ALL conditions on transitions
         final_to_file = final_to_file + "\n" + "-------GUARDS-------"
         if LOGGING:
             print("-------GUARDS-------")
@@ -179,7 +179,7 @@ def main():
 
         final_to_file = final_to_file + "\n" + "------------------------------------------------------------------"
         if LOGGING:
-            print("------------------------------------------------------------------")"""
+            print("------------------------------------------------------------------")
 
         with open(f"{extracted_folder}/{test_folder}.txt", "w") as file:
             # Writing data to a file

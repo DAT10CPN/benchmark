@@ -13,35 +13,19 @@ Variable decl attrib: {'id': 'vary', 'name': 'y'}, with declaration: {'declarati
 Transition 'MainProcess'
 Guard: No guard
 Arcs:
-
-Transition 'MainProcess'
-Guard: No guard
-Arcs:
-
-Transition 'MainProcess'
-Guard: No guard
-Arcs:
-
-Transition 'MainProcess'
-Guard: No guard
-Arcs:
 Ingoing arc: 1'(0, x++1) + 1'(40, x)
 Outgoing arc: 1'(0, x) + 1'(40,x)
 
 Transition 'OtherProcess'
 Guard: [i ineq 0 and x ineq y]
 Arcs:
-
-Transition 'OtherProcess'
-Guard: [i ineq 0 and x ineq y]
-Arcs:
-
-Transition 'OtherProcess'
-Guard: [i ineq 0 and x ineq y]
-Arcs:
-
-Transition 'OtherProcess'
-Guard: [i ineq 0 and x ineq y]
-Arcs:
 Ingoing arc: 1'(i, y) + 1'(i--1, y)
 Outgoing arc: 1'(i, x) + 1'(i--1, y)
+-------GUARDS-------
+[i ineq 0 and x ineq y]
+-------ARCS-------
+1'(0, x++1) + 1'(40, x)
+1'(0, x) + 1'(40,x)
+1'(i, y) + 1'(i--1, y)
+1'(i, x) + 1'(i--1, y)
+------------------------------------------------------------------
