@@ -104,13 +104,43 @@ def main():
                     print(variable_declaration)
 
         # ALL conditions on transitions
+        final_to_file = final_to_file + "\n" + "-------TRANSITIONS-------"
+        if LOGGING:
+            print("-------TRANSITIONS-------")
+
+        transitions = page.findall(f'{NAMESPACE}' + 'transition')
+        for transition in transitions:
+            transition_id = transition.attrib['id']
+
+            conditions = transition.findall(f'{NAMESPACE}' + 'condition')
+            for condition in conditions:
+                text = condition.find(f'{NAMESPACE}' + 'text').text
+
+                if text == "":
+                    text = "No guard"
+
+                arcs = []
+                for arc in page.findall(f'{NAMESPACE}' + 'arc'):
+                    hlinscription = arc.find(f'{NAMESPACE}' + 'hlinscription')
+                    text = hlinscription.find(f'{NAMESPACE}' + 'text').text
+                    if transition_id == arc.attrib['source']:
+                        arcs.append(f"Ingoing arc: {text}")
+                    if transition_id == arc.attrib['target']:
+                        arcs.append(f"Outgoing arc: {text}")
+
+                final_to_file = final_to_file + "\n" + f"{transition_id} has Guard: {text} and Arcs: {arcs}"
+                if LOGGING:
+                    print(f"\nTransition: {transition_id} has Guard: {text} and Arcs: ")
+                    for arc in arcs:
+                        print(arc)
+
+        # ALL conditions on transitions
         final_to_file = final_to_file + "\n" + "-------GUARDS-------"
         if LOGGING:
             print("-------GUARDS-------")
 
         transitions = page.findall(f'{NAMESPACE}' + 'transition')
         for transition in transitions:
-            transition_id = transition.attrib['id']
             conditions = transition.findall(f'{NAMESPACE}' + 'condition')
             for condition in conditions:
                 text = condition.find(f'{NAMESPACE}' + 'text').text
@@ -120,8 +150,6 @@ def main():
                 final_to_file = final_to_file + "\n" + text
                 if LOGGING:
                     print(text)
-
-
 
         final_to_file = final_to_file + "\n" + "-------ARCS-------"
         if LOGGING:
