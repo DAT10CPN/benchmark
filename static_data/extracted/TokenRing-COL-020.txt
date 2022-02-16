@@ -1,0 +1,31 @@
+Test: TokenRing-COL-020
+Transitions: 2
+Arcs: 4
+-------SORTS-------
+Named sort: {'id': 'process', 'name': 'Process'} has ranges: [0,20]
+Usersort {'id': 'couple', 'name': 'Couple'} is a product: ['process', 'process']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'process'}
+Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'process'}
+Variable decl attrib: {'id': 'vary', 'name': 'y'}, with declaration: {'declaration': 'process'}
+-------GUARDS-------
+[i ineq 0 and x ineq y]
+-------TRANSITIONS-------
+
+Transition 'MainProcess'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(0, x++1) + 1'(20, x)
+Ingoing arc: 1'(0, x) + 1'(20,x)
+
+Transition 'OtherProcess'
+Guard: [i ineq 0 and x ineq y]
+Arcs:
+Outgoing arc: 1'(i, y) + 1'(i--1, y)
+Ingoing arc: 1'(i, x) + 1'(i--1, y)
+-------ARCS-------
+1'(0, x++1) + 1'(20, x)
+1'(0, x) + 1'(20,x)
+1'(i, y) + 1'(i--1, y)
+1'(i, x) + 1'(i--1, y)
+------------------------------------------------------------------

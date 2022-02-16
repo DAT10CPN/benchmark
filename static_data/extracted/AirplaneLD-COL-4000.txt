@@ -1,0 +1,199 @@
+Test: AirplaneLD-COL-4000
+Transitions: 15
+Arcs: 56
+-------SORTS-------
+Named sort: {'id': 'weight', 'name': 'Weight'} has values: ['on', 'off']
+Named sort: {'id': 'Speed', 'name': 'Speed'} has ranges: [1,4000]
+Named sort: {'id': 'Altitude', 'name': 'Altitude'} has ranges: [1,8000]
+Named sort: {'id': 'signal', 'name': 'Signal'} has values: ['T', 'F']
+Named sort: {'id': 'dot', 'name': 'Dot'}
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varW', 'name': 'W'}, with declaration: {'declaration': 'weight'}
+Variable decl attrib: {'id': 'varA', 'name': 'A'}, with declaration: {'declaration': 'Altitude'}
+Variable decl attrib: {'id': 'varS', 'name': 'S'}, with declaration: {'declaration': 'Speed'}
+-------GUARDS-------
+(S) lte (Speed2000) or (S) eq (Speed4000)
+(S) gt (Speed2000) and (S) ineq (Speed4000)
+(S) lte (Speed2000) or (S) eq (Speed4000)
+(S) gt (Speed2000) and (S) ineq (Speed4000)
+(A) gte (Altitude4000) or (A) eq (Altitude8000)
+(A) lt (Altitude4000) and (A) ineq (Altitude8000)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+-------TRANSITIONS-------
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(S)]
+Ingoing arc: 1'[(S)]
+Outgoing arc: 1'[(S)]
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(S)]
+Outgoing arc: 1'[(S)]
+Ingoing arc: 1'[(S)]
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(A)]
+Outgoing arc: 1'[(A)]
+Ingoing arc: 1'[(A)]
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(W)]
+Outgoing arc: 1'[(W)]
+Ingoing arc: 1'[(W)]
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
+Outgoing arc: 1'[(W)]
+Outgoing arc: 1'[(W)]
+
+Transition 't5_2'
+Guard: (S) lte (Speed2000) or (S) eq (Speed4000)
+Arcs:
+Ingoing arc: 1'[(S)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalF)]
+Ingoing arc: 1'(dot)
+
+Transition 't5_1'
+Guard: (S) gt (Speed2000) and (S) ineq (Speed4000)
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(S)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalT)]
+
+Transition 't4_2'
+Guard: (S) lte (Speed2000) or (S) eq (Speed4000)
+Arcs:
+Ingoing arc: 1'[(S)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 't4_1'
+Guard: (S) gt (Speed2000) and (S) ineq (Speed4000)
+Arcs:
+Ingoing arc: 1'[(S)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalT)]
+
+Transition 't3_2'
+Guard: (A) gte (Altitude4000) or (A) eq (Altitude8000)
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(A)]
+Outgoing arc: 1'(dot)
+
+Transition 't3_1'
+Guard: (A) lt (Altitude4000) and (A) ineq (Altitude8000)
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(A)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(SignalT)]
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
+Outgoing arc: 1'(dot)
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+Outgoing arc: 1'[(SignalT)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
+Outgoing arc: 1'(dot)
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+Outgoing arc: 1'[(SignalT)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
+-------ARCS-------
+1'[(S)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(S)]
+1'[(S)]
+1'[(S)]
+1'[(S)]
+1'[(S)]
+1'[(S)]
+1'[(A)]
+1'[(A)]
+1'[(A)]
+1'[(W)]
+1'[(W)]
+1'[(W)]
+1'[(W)]
+1'[(W)]
+1'[(W)]
+1'[(SignalT)]
+1'[(SignalT)]
+1'(dot)
+1'(dot)
+1'[(W)]
+1'(dot)
+1'[(W)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(W)]
+1'[(W)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(A)]
+1'[(A)]
+1'(dot)
+1'[(SignalT)]
+1'(dot)
+1'[(S)]
+1'[(S)]
+1'(dot)
+1'(dot)
+1'[(SignalT)]
+1'(dot)
+1'(dot)
+1'[(S)]
+1'(dot)
+1'[(SignalT)]
+1'(dot)
+1'[(SignalF)]
+1'(dot)
+1'(dot)
+------------------------------------------------------------------

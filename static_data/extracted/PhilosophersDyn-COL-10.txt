@@ -1,0 +1,110 @@
+Test: PhilosophersDyn-COL-10
+Transitions: 7
+Arcs: 33
+-------SORTS-------
+Named sort: {'id': 'Philosopher', 'name': 'Philosopher'} has ranges: [1,10]
+Usersort {'id': 'neighbourhood', 'name': 'Neighbourhood'} is a product: ['Philosopher', 'Philosopher']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declaration': 'Philosopher'}
+Variable decl attrib: {'id': 'varl', 'name': 'l'}, with declaration: {'declaration': 'Philosopher'}
+Variable decl attrib: {'id': 'varq', 'name': 'q'}, with declaration: {'declaration': 'Philosopher'}
+Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'Philosopher'}
+-------GUARDS-------
+(p) ineq (q)
+-------TRANSITIONS-------
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+Outgoing arc: 1'[(p)] + 1'[(q)]
+Outgoing arc: 1'[(p),(q)] + 1'[(q),(p)]
+Outgoing arc: 1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
+Outgoing arc: 1'[(p)] + 1'[(q)]
+Ingoing arc: 1'[(Philosopher.all)]
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(l)] + 1'[(r)]
+Ingoing arc: 1'[(l)] + 1'[(r)]
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(l),(p)] + 1'[(p),(r)]
+Ingoing arc: 1'[(l),(r)]
+Ingoing arc: 1'[(p)]
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(l),(r)]
+Ingoing arc: 1'[(l),(p)] + 1'[(p),(r)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(p),(q)]
+Ingoing arc: 1'[(p),(q)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(q)]
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(p),(q)]
+Ingoing arc: 1'[(p),(q)]
+Outgoing arc: 1'[(p)] + 1'[(q)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+-------ARCS-------
+1'[(p),(q)]
+1'[(p),(q)]
+1'[(p)] + 1'[(q)]
+1'[(p),(q)]
+1'[(p),(q)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(q)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(l),(r)]
+1'[(l),(p)] + 1'[(p),(r)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)] + 1'[(q)]
+1'[(l)] + 1'[(r)]
+1'[(l)] + 1'[(r)]
+1'[(p)]
+1'[(l),(p)] + 1'[(p),(r)]
+1'[(l),(r)]
+1'[(p)]
+1'[(p),(q)] + 1'[(q),(p)]
+1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
+1'[(p)] + 1'[(q)]
+1'[(Philosopher.all)]
+------------------------------------------------------------------

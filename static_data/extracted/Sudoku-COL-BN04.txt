@@ -1,0 +1,31 @@
+Test: Sudoku-COL-BN04
+Transitions: 1
+Arcs: 5
+-------SORTS-------
+Usersort {'id': 'N', 'name': 'N'} has Range: [1,4]
+Usersort {'id': 'N3', 'name': 'N3'} is a product: ['N', 'N', 'N']
+Usersort {'id': 'N2', 'name': 'N2'} is a product: ['N', 'N']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'x', 'name': 'x'}, with declaration: {'declaration': 'N'}
+Variable decl attrib: {'id': 'y', 'name': 'y'}, with declaration: {'declaration': 'N'}
+Variable decl attrib: {'id': 'v', 'name': 'v'}, with declaration: {'declaration': 'N'}
+Variable decl attrib: {'id': 'd', 'name': 'd'}, with declaration: {'declaration': 'N'}
+-------GUARDS-------
+(x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
+-------TRANSITIONS-------
+
+Transition 'select'
+Guard: (x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
+Arcs:
+Ingoing arc: <x,v>
+Outgoing arc: <x,y,v>
+Ingoing arc: <d,v>
+Ingoing arc: <x,y>
+Ingoing arc: <y,v>
+-------ARCS-------
+<x,v>
+<x,y,v>
+<d,v>
+<x,y>
+<y,v>
+------------------------------------------------------------------

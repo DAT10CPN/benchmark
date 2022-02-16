@@ -1,0 +1,249 @@
+Test: PermAdmissibility-COL-50
+Transitions: 16
+Arcs: 83
+-------SORTS-------
+Named sort: {'id': 'input', 'name': 'input'} has ranges: [0,7]
+Named sort: {'id': 'dot', 'name': 'Dot'}
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varn8', 'name': 'n8'}, with declaration: {'declaration': 'input'}
+Variable decl attrib: {'id': 'varn7', 'name': 'n7'}, with declaration: {'declaration': 'input'}
+Variable decl attrib: {'id': 'varn6', 'name': 'n6'}, with declaration: {'declaration': 'input'}
+Variable decl attrib: {'id': 'varn5', 'name': 'n5'}, with declaration: {'declaration': 'input'}
+Variable decl attrib: {'id': 'varn4', 'name': 'n4'}, with declaration: {'declaration': 'input'}
+Variable decl attrib: {'id': 'varn3', 'name': 'n3'}, with declaration: {'declaration': 'input'}
+Variable decl attrib: {'id': 'varn2', 'name': 'n2'}, with declaration: {'declaration': 'input'}
+Variable decl attrib: {'id': 'varn1', 'name': 'n1'}, with declaration: {'declaration': 'input'}
+-------GUARDS-------
+-------TRANSITIONS-------
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n3)] + 1'[(n4)]
+Ingoing arc: 1'[(n4)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(n3)]
+Ingoing arc: 1'(dot)
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n1)] + 1'[(n2)]
+Ingoing arc: 1'[(n2)]
+Ingoing arc: 1'[(n1)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n7)] + 1'[(n8)]
+Ingoing arc: 1'[(n7)]
+Ingoing arc: 1'[(n8)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n5)] + 1'[(n6)]
+Ingoing arc: 1'[(n5)]
+Ingoing arc: 1'[(n6)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n1)] + 1'[(n5)]
+Ingoing arc: 1'[(n1)]
+Ingoing arc: 1'[(n5)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(n6)]
+Outgoing arc: 1'[(n2)] + 1'[(n6)]
+Ingoing arc: 1'[(n2)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(n7)]
+Outgoing arc: 1'[(n3)] + 1'[(n7)]
+Ingoing arc: 1'[(n3)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(n8)]
+Outgoing arc: 1'[(n4)] + 1'[(n8)]
+Ingoing arc: 1'[(n4)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(n4)]
+Outgoing arc: 1'[(n2)] + 1'[(n4)]
+Ingoing arc: 1'[(n2)]
+Ingoing arc: 1'(dot)
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(n8)]
+Outgoing arc: 1'[(n6)] + 1'[(n8)]
+Ingoing arc: 1'[(n6)]
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(n1)]
+Ingoing arc: 1'[(n3)]
+Outgoing arc: 1'[(n1)] + 1'[(n3)]
+Outgoing arc: 1'(dot)
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(n5)]
+Ingoing arc: 1'[(n7)]
+Outgoing arc: 1'[(n5)] + 1'[(n7)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(n7)]
+Outgoing arc: 1'[(n3)]
+Ingoing arc: 1'[(n7)]
+Ingoing arc: 1'[(n3)]
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(n4)]
+Outgoing arc: 1'[(n8)]
+Ingoing arc: 1'[(n4)]
+Ingoing arc: 1'[(n8)]
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(n5)]
+Outgoing arc: 1'[(n1)]
+Ingoing arc: 1'[(n5)]
+Ingoing arc: 1'[(n1)]
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(n2)]
+Outgoing arc: 1'[(n6)]
+Ingoing arc: 1'[(n2)]
+Ingoing arc: 1'[(n6)]
+-------ARCS-------
+1'[(n7)]
+1'[(n6)]
+1'[(n3)] + 1'[(n7)]
+1'[(n2)] + 1'[(n6)]
+1'[(n3)]
+1'[(n2)]
+1'[(n1)] + 1'[(n5)]
+1'[(n1)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(n1)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(n5)]
+1'[(n3)]
+1'[(n8)]
+1'[(n4)]
+1'[(n7)]
+1'(dot)
+1'[(n8)]
+1'[(n4)] + 1'[(n8)]
+1'[(n7)]
+1'[(n3)] + 1'[(n4)]
+1'[(n5)] + 1'[(n6)]
+1'[(n5)]
+1'(dot)
+1'[(n4)]
+1'[(n7)] + 1'[(n8)]
+1'[(n3)]
+1'[(n1)] + 1'[(n2)]
+1'[(n2)]
+1'[(n8)]
+1'[(n7)]
+1'[(n4)]
+1'[(n7)]
+1'[(n6)]
+1'[(n1)]
+1'(dot)
+1'[(n2)]
+1'[(n8)]
+1'[(n5)]
+1'[(n4)]
+1'[(n2)]
+1'[(n3)]
+1'[(n5)]
+1'[(n8)]
+1'[(n5)] + 1'[(n7)]
+1'(dot)
+1'[(n6)]
+1'[(n6)]
+1'[(n1)]
+1'[(n1)]
+1'[(n6)] + 1'[(n8)]
+1'[(n2)] + 1'[(n4)]
+1'(dot)
+1'(dot)
+1'[(n1)] + 1'[(n3)]
+1'[(n3)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(n4)]
+1'[(n5)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(n2)]
+1'[(n6)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+------------------------------------------------------------------

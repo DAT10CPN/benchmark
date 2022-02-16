@@ -1,0 +1,105 @@
+Test: DrinkVendingMachine-COL-48
+Transitions: 7
+Arcs: 28
+-------SORTS-------
+Named sort: {'id': 'Quality', 'name': 'Quality'} has ranges: [1,192]
+Named sort: {'id': 'Products', 'name': 'Products'} has ranges: [1,48]
+Named sort: {'id': 'Options', 'name': 'Options'} has ranges: [1,48]
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'Products'}
+Variable decl attrib: {'id': 'varo3', 'name': 'o3'}, with declaration: {'declaration': 'Options'}
+Variable decl attrib: {'id': 'varo2', 'name': 'o2'}, with declaration: {'declaration': 'Options'}
+Variable decl attrib: {'id': 'varo1', 'name': 'o1'}, with declaration: {'declaration': 'Options'}
+Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'Quality'}
+-------GUARDS-------
+(x) gt (Quality144) and (x) lte (Quality192)
+(x) gt (Quality96) and (x) lte (Quality144)
+(x) gt (Quality48) and (x) lte (Quality96)
+(x) lte (Quality48)
+-------TRANSITIONS-------
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality144) and (x) lte (Quality192)
+Arcs:
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
+Ingoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality96) and (x) lte (Quality144)
+Arcs:
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(o1)] + 1'[(o2)]
+Outgoing arc: 1'[(o1)] + 1'[(o2)]
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(x)]
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality48) and (x) lte (Quality96)
+Arcs:
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(o1)]
+Outgoing arc: 1'[(o1)]
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(x)]
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality48)
+Arcs:
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(o1)]
+Outgoing arc: 1'[(o1)]
+-------ARCS-------
+1'[(p)]
+1'[(p)]
+1'[(o1)] + 1'[(o2)]
+1'[(o1)] + 1'[(o2)]
+1'[(x)]
+1'[(x)]
+1'[(p)]
+1'[(p)]
+1'[(o1)]
+1'[(o1)]
+1'[(x)]
+1'[(x)]
+1'[(x)]
+1'[(x)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(o1)]
+1'[(o1)]
+1'[(p)]
+1'[(p)]
+1'[(x)]
+1'[(x)]
+1'[(x)]
+1'[(x)]
+1'[(o1)] + 1'[(o2)] + 1'[(o3)]
+1'[(o1)] + 1'[(o2)] + 1'[(o3)]
+------------------------------------------------------------------
