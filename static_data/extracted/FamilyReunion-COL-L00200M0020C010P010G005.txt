@@ -20,6 +20,8 @@ Variable decl attrib: {'id': 'varc', 'name': 'c'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'PublicAdminOffice'}
 Variable decl attrib: {'id': 'varg', 'name': 'g'}, with declaration: {'declaration': 'GovernmentCommission'}
 Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declaration': 'response'}
+-------GUARDS-------
+(r) eq (ResponseY)
 -------TRANSITIONS-------
 
 Transition 'Gate2ANDJoin'
@@ -483,8 +485,6 @@ Guard: No guard
 Arcs:
 Outgoing arc: 1'[(l)]
 Ingoing arc: 1'[(l)]
--------GUARDS-------
-(r) eq (ResponseY)
 -------ARCS-------
 1'[(l)]
 1'[(l)]

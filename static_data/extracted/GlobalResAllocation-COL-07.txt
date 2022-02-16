@@ -11,6 +11,7 @@ Variable decl attrib: {'id': 'varr1', 'name': 'r1'}, with declaration: {'declara
 Variable decl attrib: {'id': 'varr2', 'name': 'r2'}, with declaration: {'declaration': 'reclass'}
 Variable decl attrib: {'id': 'varr3', 'name': 'r3'}, with declaration: {'declaration': 'reclass'}
 Variable decl attrib: {'id': 'varr4', 'name': 'r4'}, with declaration: {'declaration': 'reclass'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'enter1'
@@ -69,7 +70,6 @@ Ingoing arc: 2'(p)
 Ingoing arc: 1'(r1) + 1'(r2)
 Outgoing arc: 2'(p)
 Outgoing arc: 1'(p,r1) + 1'(p,r2)
--------GUARDS-------
 -------ARCS-------
 1'(p)
 1'(p)

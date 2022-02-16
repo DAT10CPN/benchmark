@@ -9,6 +9,8 @@ Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varl', 'name': 'l'}, with declaration: {'declaration': 'Philosopher'}
 Variable decl attrib: {'id': 'varq', 'name': 'q'}, with declaration: {'declaration': 'Philosopher'}
 Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'Philosopher'}
+-------GUARDS-------
+(p) ineq (q)
 -------TRANSITIONS-------
 
 Transition 'SearchForks'
@@ -71,8 +73,6 @@ Ingoing arc: 1'[(p)] + 1'[(q)]
 Ingoing arc: 1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
 Ingoing arc: 1'[(p),(q)] + 1'[(q),(p)]
 Ingoing arc: 1'[(p)] + 1'[(q)]
--------GUARDS-------
-(p) ineq (q)
 -------ARCS-------
 1'[(Philosopher.all)]
 1'[(p)] + 1'[(q)]

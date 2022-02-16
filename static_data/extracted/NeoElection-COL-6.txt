@@ -23,6 +23,13 @@ Variable decl attrib: {'id': 'V-iam-BOOL', 'name': 'iam'}, with declaration: {'d
 Variable decl attrib: {'id': 'V-pm-M', 'name': 'pm'}, with declaration: {'declaration': 'T-M'}
 Variable decl attrib: {'id': 'V-p-M', 'name': 'p'}, with declaration: {'declaration': 'T-M'}
 Variable decl attrib: {'id': 'V-i-POS', 'name': 'i'}, with declaration: {'declaration': 'T-POS'}
+-------GUARDS-------
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
 -------TRANSITIONS-------
 
 Transition 'T-poll__end'
@@ -210,13 +217,6 @@ Guard: No guard
 Arcs:
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
--------GUARDS-------
-(m >= s)
-(m < s)
-(pm != m)
-(p != 0)
-(((p != 0) and (pm != 0)) and (pm != p))
-(p != 0)
 -------ARCS-------
 <( m )>
 <( m )>

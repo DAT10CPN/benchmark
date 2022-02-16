@@ -9,6 +9,8 @@ Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varl', 'name': 'l'}, with declaration: {'declaration': 'Philosopher'}
 Variable decl attrib: {'id': 'varq', 'name': 'q'}, with declaration: {'declaration': 'Philosopher'}
 Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'Philosopher'}
+-------GUARDS-------
+(p) ineq (q)
 -------TRANSITIONS-------
 
 Transition 'Initialize'
@@ -71,8 +73,6 @@ Arcs:
 Ingoing arc: 1'[(p)]
 Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(p)]
--------GUARDS-------
-(p) ineq (q)
 -------ARCS-------
 1'[(p),(q)]
 1'[(p),(q)]

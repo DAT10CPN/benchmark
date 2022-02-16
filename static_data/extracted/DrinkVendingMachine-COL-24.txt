@@ -11,6 +11,11 @@ Variable decl attrib: {'id': 'varo3', 'name': 'o3'}, with declaration: {'declara
 Variable decl attrib: {'id': 'varo2', 'name': 'o2'}, with declaration: {'declaration': 'Options'}
 Variable decl attrib: {'id': 'varo1', 'name': 'o1'}, with declaration: {'declaration': 'Options'}
 Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'Quality'}
+-------GUARDS-------
+(x) lte (Quality24)
+(x) gt (Quality24) and (x) lte (Quality48)
+(x) gt (Quality48) and (x) lte (Quality72)
+(x) gt (Quality72) and (x) lte (Quality96)
 -------TRANSITIONS-------
 
 Transition 'addOption'
@@ -68,11 +73,6 @@ Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(x)]
 Outgoing arc: 1'[(x)]
--------GUARDS-------
-(x) lte (Quality24)
-(x) gt (Quality24) and (x) lte (Quality48)
-(x) gt (Quality48) and (x) lte (Quality72)
-(x) gt (Quality72) and (x) lte (Quality96)
 -------ARCS-------
 1'[(x)]
 1'[(x)]

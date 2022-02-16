@@ -9,6 +9,9 @@ Usersort {'id': 'pDomainId', 'name': 'PxP'} is a product: ['pclass', 'pclass']
 Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'pclass'}
 Variable decl attrib: {'id': 'vary', 'name': 'y'}, with declaration: {'declaration': 'pclass'}
 Variable decl attrib: {'id': 'varm', 'name': 'm'}, with declaration: {'declaration': 'pclass'}
+-------GUARDS-------
+[m eq x]
+[x ineq m]
 -------TRANSITIONS-------
 
 Transition 'Begin_Own_Acc'
@@ -46,9 +49,6 @@ Outgoing arc: 1'(m)
 Outgoing arc: 1'(x)
 Outgoing arc: 1'(dot)
 Ingoing arc: 1'(x,m)
--------GUARDS-------
-[m eq x]
-[x ineq m]
 -------ARCS-------
 1'(x)
 1'(m)

@@ -8,6 +8,7 @@ Usersort {'id': 'sf', 'name': 'SF'} is a product: ['site', 'file']
 -------VARIABLES-------
 Variable decl attrib: {'id': 'vars', 'name': 's'}, with declaration: {'declaration': 'site'}
 Variable decl attrib: {'id': 'varf', 'name': 'f'}, with declaration: {'declaration': 'file'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'SendMsg'
@@ -63,7 +64,6 @@ Guard: No guard
 Arcs:
 Outgoing arc: 1'[(s)]
 Ingoing arc: 1'[(s),(f)]
--------GUARDS-------
 -------ARCS-------
 1'[(s)]
 1'[(site.all),(f)] - 1'[(s),(f)]

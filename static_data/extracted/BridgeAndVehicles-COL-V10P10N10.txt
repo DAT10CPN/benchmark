@@ -12,6 +12,13 @@ Variable decl attrib: {'id': 'vars', 'name': 's'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varcpt', 'name': 'cpt'}, with declaration: {'declaration': 'compteur'}
 Variable decl attrib: {'id': 'varcA', 'name': 'cA'}, with declaration: {'declaration': 'voitureA'}
 Variable decl attrib: {'id': 'varcB', 'name': 'cB'}, with declaration: {'declaration': 'voitureB'}
+-------GUARDS-------
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur10)
+(cpt) eq (compteur10)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
 -------TRANSITIONS-------
 
 Transition 'enregistrement_A'
@@ -113,13 +120,6 @@ Outgoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
 Ingoing arc: 1'[(s)]
 Outgoing arc: 1'[(s)]
--------GUARDS-------
-(s) eq (sens2) and (cB) gt (voitureB0)
-(cpt) lt (compteur10)
-(cpt) eq (compteur10)
-(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
-(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
-(s) eq (sens1) and (cA) gt (voitureA0)
 -------ARCS-------
 1'[(cA)]
 1'[(cB)]

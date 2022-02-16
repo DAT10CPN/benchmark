@@ -9,6 +9,7 @@ Usersort {'id': 'N2', 'name': 'N2'} is a product: ['N', 'N']
 Variable decl attrib: {'id': 'x', 'name': 'x'}, with declaration: {'declaration': 'N'}
 Variable decl attrib: {'id': 'y', 'name': 'y'}, with declaration: {'declaration': 'N'}
 Variable decl attrib: {'id': 'v', 'name': 'v'}, with declaration: {'declaration': 'N'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'select'
@@ -18,7 +19,6 @@ Outgoing arc: <x,v>
 Ingoing arc: <x,y,v>
 Outgoing arc: <x,y>
 Outgoing arc: <y,v>
--------GUARDS-------
 -------ARCS-------
 <x,v>
 <x,y,v>

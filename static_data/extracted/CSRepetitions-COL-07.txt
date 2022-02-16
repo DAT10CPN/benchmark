@@ -9,6 +9,7 @@ Usersort {'id': 'computation', 'name': 'Computation'} is a product: ['clclass', 
 -------VARIABLES-------
 Variable decl attrib: {'id': 'varc', 'name': 'c'}, with declaration: {'declaration': 'clclass'}
 Variable decl attrib: {'id': 'vars', 'name': 's'}, with declaration: {'declaration': 'srclass'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'Send_Request'
@@ -45,7 +46,6 @@ Outgoing arc: 1'(c)
 Ingoing arc: 1'(s)
 Outgoing arc: 1'(c,s)
 Ingoing arc: 1'(c)
--------GUARDS-------
 -------ARCS-------
 1'(dot)
 1'(dot)

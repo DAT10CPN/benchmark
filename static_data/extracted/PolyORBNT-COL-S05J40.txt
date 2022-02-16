@@ -38,6 +38,9 @@ Variable decl attrib: {'id': 'varms1', 'name': 'ms1'}, with declaration: {'decla
 Variable decl attrib: {'id': 'varst', 'name': 'st'}, with declaration: {'declaration': 'states'}
 Variable decl attrib: {'id': 'vart', 'name': 't'}, with declaration: {'declaration': 'Threads'}
 Variable decl attrib: {'id': 'vart2', 'name': 't2'}, with declaration: {'declaration': 'Threads'}
+-------GUARDS-------
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
 -------TRANSITIONS-------
 
 Transition 'fi3'
@@ -331,9 +334,6 @@ Guard: No guard
 Arcs:
 Outgoing arc: 1'[(t)]
 Ingoing arc: 1'[(t)]
--------GUARDS-------
-(st) eq (StatesPerformWork)
-(st) eq (StatesCheckSource)
 -------ARCS-------
 1'(dot)
 1'(dot)

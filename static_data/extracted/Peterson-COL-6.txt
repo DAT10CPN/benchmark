@@ -13,6 +13,11 @@ Usersort {'id': 'procbool', 'name': 'ProcBool'} is a product: ['process', 'bool'
 Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'process'}
 Variable decl attrib: {'id': 'vark', 'name': 'k'}, with declaration: {'declaration': 'process'}
 Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declaration': 'tour'}
+-------GUARDS-------
+[i ineq k]
+[j ineq 5]
+[i ineq k]
+[k ineq 6]
 -------TRANSITIONS-------
 
 Transition 'Ask'
@@ -112,11 +117,6 @@ Guard: No guard
 Arcs:
 Ingoing arc: 1'(i,j)
 Outgoing arc: 1'(i,j,k)
--------GUARDS-------
-[i ineq k]
-[j ineq 5]
-[i ineq k]
-[k ineq 6]
 -------ARCS-------
 1'(i)
 1'(i)

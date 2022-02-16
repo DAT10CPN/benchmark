@@ -11,6 +11,14 @@ Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declaration': 'It'}
 Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declaration': 'It'}
 Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'It'}
+-------GUARDS-------
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
 -------TRANSITIONS-------
 
 Transition 'loss_a'
@@ -136,14 +144,6 @@ Outgoing arc: 1'[(x)]
 Ingoing arc: 1'[(i)]
 Ingoing arc: 1'[(i),(x)]
 Outgoing arc: 1'[(i)]
--------GUARDS-------
-(x) eq (y)
-(i) eq (j)
-(x) eq (y)
-(r) eq (i)
-(i) eq (j) and (r) ineq (i)
-(i) eq (j)
-(r) eq (i)
 -------ARCS-------
 1'[(x++)]
 1'[(x++)]

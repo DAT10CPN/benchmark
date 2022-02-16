@@ -11,6 +11,17 @@ Named sort: {'id': 'dot', 'name': 'Dot'}
 Variable decl attrib: {'id': 'varW', 'name': 'W'}, with declaration: {'declaration': 'weight'}
 Variable decl attrib: {'id': 'varA', 'name': 'A'}, with declaration: {'declaration': 'Altitude'}
 Variable decl attrib: {'id': 'varS', 'name': 'S'}, with declaration: {'declaration': 'Speed'}
+-------GUARDS-------
+(S) lte (Speed2000) or (S) eq (Speed4000)
+(S) gt (Speed2000) and (S) ineq (Speed4000)
+(S) lte (Speed2000) or (S) eq (Speed4000)
+(S) gt (Speed2000) and (S) ineq (Speed4000)
+(A) gte (Altitude4000) or (A) eq (Altitude8000)
+(A) lt (Altitude4000) and (A) ineq (Altitude8000)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
 -------TRANSITIONS-------
 
 Transition 'SpeedLW'
@@ -128,17 +139,6 @@ Ingoing arc: 1'[(SignalT)]
 Ingoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
 Outgoing arc: 1'[(W)]
--------GUARDS-------
-(S) lte (Speed2000) or (S) eq (Speed4000)
-(S) gt (Speed2000) and (S) ineq (Speed4000)
-(S) lte (Speed2000) or (S) eq (Speed4000)
-(S) gt (Speed2000) and (S) ineq (Speed4000)
-(A) gte (Altitude4000) or (A) eq (Altitude8000)
-(A) lt (Altitude4000) and (A) ineq (Altitude8000)
-(W) eq (Weightoff)
-(W) eq (Weighton)
-(W) eq (Weightoff)
-(W) eq (Weighton)
 -------ARCS-------
 1'[(S)]
 1'(dot)

@@ -6,6 +6,7 @@ Named sort: {'id': 'Voters', 'name': 'Voters'} has ranges: [1,500]
 Named sort: {'id': 'dot', 'name': 'Dot'}
 -------VARIABLES-------
 Variable decl attrib: {'id': 'varv', 'name': 'v'}, with declaration: {'declaration': 'Voters'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'start'
@@ -25,7 +26,6 @@ Guard: No guard
 Arcs:
 Ingoing arc: 1'[(v)]
 Outgoing arc: 1'[(v)]
--------GUARDS-------
 -------ARCS-------
 1'[(Voters.all)]
 1'(dot)

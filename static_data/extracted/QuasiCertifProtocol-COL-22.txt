@@ -7,6 +7,7 @@ Usersort {'id': 'tsidxtsid', 'name': 'tsidxtsid'} is a product: ['tsid', 'tsid']
 Named sort: {'id': 'dot', 'name': 'Dot'}
 -------VARIABLES-------
 Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'tsid'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'malC1'
@@ -189,7 +190,6 @@ Arcs:
 Ingoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
 Ingoing arc: 1'[(tsid.all)]
--------GUARDS-------
 -------ARCS-------
 1'[(i)]
 1'[(i)]

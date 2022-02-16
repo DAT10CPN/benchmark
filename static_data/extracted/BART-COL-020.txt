@@ -16,6 +16,12 @@ Variable decl attrib: {'id': 'varda2', 'name': 'da2'}, with declaration: {'decla
 Variable decl attrib: {'id': 'varda', 'name': 'da'}, with declaration: {'declaration': 'distance'}
 Variable decl attrib: {'id': 'vardb', 'name': 'db'}, with declaration: {'declaration': 'distance'}
 Variable decl attrib: {'id': 'vards', 'name': 'ds'}, with declaration: {'declaration': 'distance'}
+-------GUARDS-------
+(tsp) gt (speed0) and (db) eq (distance0)
+(tsp) eq (speed0) and (db) gt (distance0)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
 -------TRANSITIONS-------
 
 Transition 'TrainStop'
@@ -71,12 +77,6 @@ Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
 Outgoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
 Outgoing arc: 1'[(tid),(tsp),(db)]
 Ingoing arc: 1'[(tid),(tsp),(da)]
--------GUARDS-------
-(tsp) gt (speed0) and (db) eq (distance0)
-(tsp) eq (speed0) and (db) gt (distance0)
-(da2) gt (ds2) and (tsp) lt (speed4)
-(da) lte (ds) and (tsp) gt (speed1)
-(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
 -------ARCS-------
 1'[(tid),(speed0),(distance0)]
 1'[(tid),(speed1),(distance1)]

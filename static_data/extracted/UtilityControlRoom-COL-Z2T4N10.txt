@@ -13,6 +13,7 @@ Usersort {'id': 'CxZxZ', 'name': 'CxZxZ'} is a product: ['Cli', 'Z', 'Z']
 Variable decl attrib: {'id': 'a', 'name': 'a'}, with declaration: {'declaration': 'Z'}
 Variable decl attrib: {'id': 'r', 'name': 'r'}, with declaration: {'declaration': 'Z'}
 Variable decl attrib: {'id': 'c', 'name': 'c'}, with declaration: {'declaration': 'Cli'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'calls'
@@ -99,7 +100,6 @@ Arcs:
 Outgoing arc: <c,r>
 Ingoing arc: <c,r>
 Outgoing arc: <c>
--------GUARDS-------
 -------ARCS-------
 <c>
 <c,a>

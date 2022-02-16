@@ -116,6 +116,22 @@ def main():
                     print(variable_declaration)
 
         # ALL conditions on transitions
+        final_to_file = final_to_file + "\n" + "-------GUARDS-------"
+        if LOGGING:
+            print("-------GUARDS-------")
+
+        for transition in transitions:
+            conditions = transition.findall(f'{NAMESPACE}' + 'condition')
+            for condition in conditions:
+                text = condition.find(f'{NAMESPACE}' + 'text').text
+
+                if text == "":
+                    text = "No guard"
+                final_to_file = final_to_file + "\n" + text
+                if LOGGING:
+                    print(text)
+
+        # ALL conditions on transitions
         final_to_file = final_to_file + "\n" + "-------TRANSITIONS-------"
         if LOGGING:
             print("-------TRANSITIONS-------")
@@ -152,22 +168,6 @@ def main():
                 print("Arcs:")
                 for arc in arcs_descriptions:
                     print(arc)
-
-        # ALL conditions on transitions
-        final_to_file = final_to_file + "\n" + "-------GUARDS-------"
-        if LOGGING:
-            print("-------GUARDS-------")
-
-        for transition in transitions:
-            conditions = transition.findall(f'{NAMESPACE}' + 'condition')
-            for condition in conditions:
-                text = condition.find(f'{NAMESPACE}' + 'text').text
-
-                if text == "":
-                    text = "No guard"
-                final_to_file = final_to_file + "\n" + text
-                if LOGGING:
-                    print(text)
 
         final_to_file = final_to_file + "\n" + "-------ARCS-------"
         if LOGGING:

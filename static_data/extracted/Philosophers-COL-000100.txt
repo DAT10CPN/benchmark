@@ -5,6 +5,7 @@ Arcs: 15
 Named sort: {'id': 'philo', 'name': 'Philo'} has ranges: [1,100]
 -------VARIABLES-------
 Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'philo'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'FF1a'
@@ -41,7 +42,6 @@ Arcs:
 Outgoing arc: 1'(x)
 Ingoing arc: 1'(x)
 Ingoing arc: 1'(x) + 1'(x--1)
--------GUARDS-------
 -------ARCS-------
 1'(x)
 1'(x)

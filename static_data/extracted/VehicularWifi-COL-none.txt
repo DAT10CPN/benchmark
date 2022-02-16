@@ -24,6 +24,21 @@ Variable decl attrib: {'id': 'p', 'name': 'p'}, with declaration: {'declaration'
 Variable decl attrib: {'id': 'p2', 'name': 'p2'}, with declaration: {'declaration': 'Pr'}
 Variable decl attrib: {'id': 'sc', 'name': 'sc'}, with declaration: {'declaration': 'St'}
 Variable decl attrib: {'id': 'tx', 'name': 'tx'}, with declaration: {'declaration': 'TxCount'}
+-------GUARDS-------
+sa!=sb
+pt==rts||pt==data
+pt==cts||pt==ack
+pt==cts||pt==ack
+pt==rts||pt==data
+pt==rts||pt==data
+pt==cts||pt==ack
+pt!=ack && pt!=rts && p2==p
+pt==ack && (pt==rts||p2==p)
+pt!=rts
+pt==cts||pt==ack
+b!=b1
+p>p2
+pt==rts
 -------TRANSITIONS-------
 
 Transition 'PacketArrival'
@@ -325,21 +340,6 @@ Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Outgoing arc: <sc,sa,p2,pt>
 Ingoing arc: <sa,sc,p2,pt++>
--------GUARDS-------
-sa!=sb
-pt==rts||pt==data
-pt==cts||pt==ack
-pt==cts||pt==ack
-pt==rts||pt==data
-pt==rts||pt==data
-pt==cts||pt==ack
-pt!=ack && pt!=rts && p2==p
-pt==ack && (pt==rts||p2==p)
-pt!=rts
-pt==cts||pt==ack
-b!=b1
-p>p2
-pt==rts
 -------ARCS-------
 <sa,p>
 <sa,sb,p,rts>

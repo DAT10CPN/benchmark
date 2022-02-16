@@ -12,6 +12,12 @@ Variable decl attrib: {'id': 'V-bi-bool', 'name': 'P-bi'}, with declaration: {'d
 Variable decl attrib: {'id': 'V-x-pid', 'name': 'x'}, with declaration: {'declaration': 'T-pid'}
 Variable decl attrib: {'id': 'V-y-pid', 'name': 'y'}, with declaration: {'declaration': 'T-pid'}
 Variable decl attrib: {'id': 'V-j-pid', 'name': 'j'}, with declaration: {'declaration': 'T-pid'}
+-------GUARDS-------
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
 -------TRANSITIONS-------
 
 Transition 'T-setbi_2'
@@ -149,12 +155,6 @@ Ingoing arc: <( i )>
 Outgoing arc: <( i, bi )>
 Ingoing arc: <( i, false )>
 Outgoing arc: <( i )>
--------GUARDS-------
-(y != 0)
-(x != i)
-(i != y)
-(i = y)
-(i = x)
 -------ARCS-------
 <( i )>
 <( i, bi )>

@@ -13,6 +13,7 @@ Variable decl attrib: {'id': 'varn4', 'name': 'n4'}, with declaration: {'declara
 Variable decl attrib: {'id': 'varn3', 'name': 'n3'}, with declaration: {'declaration': 'input'}
 Variable decl attrib: {'id': 'varn2', 'name': 'n2'}, with declaration: {'declaration': 'input'}
 Variable decl attrib: {'id': 'varn1', 'name': 'n1'}, with declaration: {'declaration': 'input'}
+-------GUARDS-------
 -------TRANSITIONS-------
 
 Transition 'switch12'
@@ -161,7 +162,6 @@ Ingoing arc: 1'[(n4)]
 Ingoing arc: 1'[(n8)]
 Outgoing arc: 1'[(n8)]
 Outgoing arc: 1'[(n4)]
--------GUARDS-------
 -------ARCS-------
 1'[(n1)]
 1'[(n5)]

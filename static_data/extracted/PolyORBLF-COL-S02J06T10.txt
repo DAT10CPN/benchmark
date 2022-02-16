@@ -35,6 +35,9 @@ Variable decl attrib: {'id': 'varms2', 'name': 'ms2'}, with declaration: {'decla
 Variable decl attrib: {'id': 'varms1', 'name': 'ms1'}, with declaration: {'declaration': 'Sources'}
 Variable decl attrib: {'id': 'vart', 'name': 't'}, with declaration: {'declaration': 'Threads'}
 Variable decl attrib: {'id': 'vart2', 'name': 't2'}, with declaration: {'declaration': 'Threads'}
+-------GUARDS-------
+(s) eq (s2)
+(t) eq (t2)
 -------TRANSITIONS-------
 
 Transition 'T_2317'
@@ -550,9 +553,6 @@ Outgoing arc: 1'[(t),(s)]
 Outgoing arc: 1'(dot)
 Outgoing arc: 10'(dot)
 Ingoing arc: 10'(dot)
--------GUARDS-------
-(s) eq (s2)
-(t) eq (t2)
 -------ARCS-------
 1'(dot)
 1'[(j)]
