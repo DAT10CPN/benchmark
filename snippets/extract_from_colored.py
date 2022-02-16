@@ -3,14 +3,18 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 LOGGING = True
-
+#final_to_file = f""
+def write_log(string, final_to_file=''):
+    final_to_file = final_to_file + string
+    if LOGGING:
+        print(string)
 
 def main():
     NAMESPACE = '{http://www.pnml.org/version-2009/grammar/pnml}'
     ET.register_namespace('', 'http://www.pnml.org/version-2009/grammar/pnml')
 
     script_dir = os.path.dirname(__file__)
-    MCC_DIRECTORY = os.path.join(script_dir, '..\\..\\..\\mcc2021-COL\\')
+    MCC_DIRECTORY = os.path.join(script_dir, '..\\..\\mcc2021-COL\\')
 
     graph_dir = os.path.join(script_dir, 'extracted\\')
     if not os.path.isdir(graph_dir):
@@ -19,7 +23,7 @@ def main():
         if test_folder != 'SafeBus-COL-03':
             continue
 
-        final_to_file = f""
+
         final_to_file = final_to_file + (f"Test: {test_folder}")
         if LOGGING:
             print(f"Test: {test_folder}")
@@ -38,22 +42,18 @@ def main():
         final_to_file = final_to_file + "\n" + "-------GUARDS-------"
         if LOGGING:
             print("-------GUARDS-------")
-        all_conditions_text = []
+
         transitions = page.findall(f'{NAMESPACE}' + 'transition')
         for transition in transitions:
             conditions = transition.findall(f'{NAMESPACE}' + 'condition')
             for condition in conditions:
-                text = condition.findall(f'{NAMESPACE}' + 'text')
+                text = condition.find(f'{NAMESPACE}' + 'text').text
 
-                all_conditions_text.append(text[0].text)
-
-        if len(all_conditions_text) == 0:
-            all_conditions_text = "No condition"
-
-        for condition in all_conditions_text:
-            final_to_file = final_to_file + "\n" + condition
-            if LOGGING:
-                print(condition)
+                if text == "":
+                    text = "No guard"
+                final_to_file = final_to_file + "\n" + text
+                if LOGGING:
+                    print(text)
 
         # Find all variables used
         final_to_file = final_to_file + "\n" + "-------VARIABLES-------"
@@ -67,10 +67,15 @@ def main():
                     print(variable_declaration)
 
         # Find ranges of colors
-        final_to_file = final_to_file + "\n" + "-------RANGES-------"
+        final_to_file = final_to_file + "\n" + "-------SORTS-------"
         if LOGGING:
-            print("-------RANGES-------")
+            print("-------SORTS-------")
         for named_sort in declarations[0].findall(f'{NAMESPACE}' + 'namedsort'):
+            if named_sort.attrib['id'] == "dot":
+                final_to_file = final_to_file + "\n" + f"Named sort: {named_sort.attrib}"
+                if LOGGING:
+                    print(f"Named sort: {named_sort.attrib}")
+
             min_range = None
             max_range = None
             for cyclicenumeration in named_sort.findall(f'{NAMESPACE}' + 'cyclicenumeration'):
@@ -79,6 +84,10 @@ def main():
                         min_range = int(feconstant.attrib['name'])
                     if max_range is None or int(feconstant.attrib['name']) > max_range:
                         max_range = int(feconstant.attrib['name'])
+                if not (min_range is None) and not (max_range is None):
+                    final_to_file = final_to_file + "\n" + f"Named sort: {named_sort.attrib} has ranges: [{min_range},{max_range}]"
+                    if LOGGING:
+                        print(f"Named sort: {named_sort.attrib} has ranges: [{min_range},{max_range}]")
             if min_range is None and max_range is None:
                 for finiteintrange in named_sort.findall(f'{NAMESPACE}' + 'finiteintrange'):
                     if len(finiteintrange) > 1:
@@ -98,11 +107,16 @@ def main():
                 final_to_file = final_to_file + "\n" + var_range
                 if LOGGING:
                     print(var_range)
+
         final_to_file = final_to_file + "\n" + "-------ARCS-------"
-        final_to_file = final_to_file + "\n" + "TODO"
         if LOGGING:
             print("-------ARCS-------")
-            print("TODO")
+        for arc in page.findall(f'{NAMESPACE}' + 'arc'):
+            hlinscription = arc.find(f'{NAMESPACE}' + 'hlinscription')
+            text = hlinscription.find(f'{NAMESPACE}' + 'text').text
+            final_to_file = final_to_file + "\n" + text
+            if LOGGING:
+                print(text)
 
         final_to_file = final_to_file + "\n" + "------------------------------------------------------------------"
         if LOGGING:
