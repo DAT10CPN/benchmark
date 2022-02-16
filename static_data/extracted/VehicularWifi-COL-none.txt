@@ -24,70 +24,98 @@ Variable decl attrib: {'id': 'sc', 'name': 'sc'}, with declaration: {'declaratio
 Variable decl attrib: {'id': 'tx', 'name': 'tx'}, with declaration: {'declaration': 'TxCount'}
 -------TRANSITIONS-------
 
-Transition 'PacketArrival' has Guard: 'sa!=sb' and Arcs: 
+Transition 'PacketArrival'
+Guard: sa!=sb
+Arcs:
 Outgoing arc: <sa,p>
 Ingoing arc: <sa,sb,p,rts>
 
-Transition 'SenderSenseCollision' has Guard: 'pt==rts||pt==data' and Arcs: 
+Transition 'SenderSenseCollision'
+Guard: pt==rts||pt==data
+Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p>
 Outgoing arc: 1
 Ingoing arc: 1
 
-Transition 'SenderTimeout' has Guard: 'pt==cts||pt==ack' and Arcs: 
+Transition 'SenderTimeout'
+Guard: pt==cts||pt==ack
+Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p>
 
-Transition 'SenderGarbled' has Guard: 'pt==cts||pt==ack' and Arcs: 
+Transition 'SenderGarbled'
+Guard: pt==cts||pt==ack
+Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p>
 Ingoing arc: 1
 Outgoing arc: 1
 
-Transition 'ReceiverGarbled' has Guard: 'pt==rts||pt==data' and Arcs: 
+Transition 'ReceiverGarbled'
+Guard: pt==rts||pt==data
+Arcs:
 Ingoing arc: 1
 Outgoing arc: 1
 Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p,rts>
 
-Transition 'ReceiverWrongPacket' has Guard: 'pt==rts||pt==data' and Arcs: 
+Transition 'ReceiverWrongPacket'
+Guard: pt==rts||pt==data
+Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p,rts>
 
-Transition 'SenderWrongPacket' has Guard: 'pt==cts||pt==ack' and Arcs: 
+Transition 'SenderWrongPacket'
+Guard: pt==cts||pt==ack
+Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p>
 
-Transition 'CorrectPacketButAck' has Guard: 'pt!=ack && pt!=rts && p2==p' and Arcs: 
+Transition 'CorrectPacketButAck'
+Guard: pt!=ack && pt!=rts && p2==p
+Arcs:
 Outgoing arc: <sa,sb,p2,pt>
 Ingoing arc: <sa,sb,p,pt++>
 Outgoing arc: <sb,sa,p,pt>
 
-Transition 'CorrectPacketAck' has Guard: 'pt==ack && (pt==rts||p2==p)' and Arcs: 
+Transition 'CorrectPacketAck'
+Guard: pt==ack && (pt==rts||p2==p)
+Arcs:
 Outgoing arc: <sa,sb,p2,pt>
 Outgoing arc: <sb,sa,p,pt>
 Ingoing arc: <sa,p>
 
-Transition 'ShortEnterVulnerable' has Guard: 'pt!=rts' and Arcs: 
+Transition 'ShortEnterVulnerable'
+Guard: pt!=rts
+Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p,pt>
 
-Transition 'ReceiverSenseCollision' has Guard: 'pt==cts||pt==ack' and Arcs: 
+Transition 'ReceiverSenseCollision'
+Guard: pt==cts||pt==ack
+Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Ingoing arc: <sa,sb,p,rts>
 Ingoing arc: 1
 Outgoing arc: 1
 
-Transition 'DecrementBackoff' has Guard: 'b!=b1' and Arcs: 
+Transition 'DecrementBackoff'
+Guard: b!=b1
+Arcs:
 Outgoing arc: <sa,sb,p,b>
 Ingoing arc: <sa,sb,p,b-->
 
-Transition 'InternalCollision' has Guard: 'p>p2' and Arcs: 
+Transition 'InternalCollision'
+Guard: p>p2
+Arcs:
 Outgoing arc: <sa,sb,p,pt>+<sa,sc,p2,pt>
 Ingoing arc: <sa,sb,p>
 Ingoing arc: <sa,sc,p2,pt>
 
-Transition 'CorrectPacketRts' has Guard: 'pt==rts' and Arcs: 
+Transition 'CorrectPacketRts'
+Guard: pt==rts
+Arcs:
 Outgoing arc: <sa,sb,p,pt>
 Outgoing arc: <sc,sa,p2,pt>
 Ingoing arc: <sa,sc,p2,pt++>

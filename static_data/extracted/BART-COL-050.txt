@@ -18,13 +18,19 @@ Variable decl attrib: {'id': 'vardb', 'name': 'db'}, with declaration: {'declara
 Variable decl attrib: {'id': 'vards', 'name': 'ds'}, with declaration: {'declaration': 'distance'}
 -------TRANSITIONS-------
 
-Transition 'MissStation' has Guard: '(tsp) gt (speed0) and (db) eq (distance0)' and Arcs: 
+Transition 'MissStation'
+Guard: (tsp) gt (speed0) and (db) eq (distance0)
+Arcs:
 Outgoing arc: 1'[(tid),(tsp),(db)]
 
-Transition 'TooEarly' has Guard: '(tsp) eq (speed0) and (db) gt (distance0)' and Arcs: 
+Transition 'TooEarly'
+Guard: (tsp) eq (speed0) and (db) gt (distance0)
+Arcs:
 Outgoing arc: 1'[(tid),(tsp),(db)]
 
-Transition 'TrainAcc' has Guard: '(da2) gt (ds2) and (tsp) lt (speed4)' and Arcs: 
+Transition 'TrainAcc'
+Guard: (da2) gt (ds2) and (tsp) lt (speed4)
+Arcs:
 Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Ingoing arc: 1'[(tsp++),(ds2)]
@@ -32,7 +38,9 @@ Outgoing arc: 1'[(tsp++),(ds2)]
 Outgoing arc: 1'[(tid),(tsp),(db)]
 Ingoing arc: 1'[(tid),(tsp++),(da)]
 
-Transition 'TrainDecc' has Guard: '(da) lte (ds) and (tsp) gt (speed1)' and Arcs: 
+Transition 'TrainDecc'
+Guard: (da) lte (ds) and (tsp) gt (speed1)
+Arcs:
 Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
@@ -40,7 +48,9 @@ Outgoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
 Outgoing arc: 1'[(tid),(tsp),(db)]
 Ingoing arc: 1'[(tid),(tsp--),(da)]
 
-Transition 'TrainStable' has Guard: '(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)' and Arcs: 
+Transition 'TrainStable'
+Guard: (da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+Arcs:
 Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
 Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]

@@ -10,7 +10,9 @@ Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'vary', 'name': 'y'}, with declaration: {'declaration': 'process'}
 -------TRANSITIONS-------
 
-Transition 'OtherProcess' has Guard: '[i ineq 0 and x ineq y]' and Arcs: 
+Transition 'OtherProcess'
+Guard: [i ineq 0 and x ineq y]
+Arcs:
 Ingoing arc: 1'(i, y) + 1'(i--1, y)
 Outgoing arc: 1'(i, x) + 1'(i--1, y)
 -------GUARDS-------

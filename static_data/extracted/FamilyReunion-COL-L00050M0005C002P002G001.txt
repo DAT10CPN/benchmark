@@ -22,7 +22,9 @@ Variable decl attrib: {'id': 'varg', 'name': 'g'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declaration': 'response'}
 -------TRANSITIONS-------
 
-Transition 'SendClearanceToRel' has Guard: '(r) eq (ResponseY)' and Arcs: 
+Transition 'SendClearanceToRel'
+Guard: (r) eq (ResponseY)
+Arcs:
 Outgoing arc: 1'[(l),(r)]
 Ingoing arc: 1'[(l),(r)]
 -------GUARDS-------

@@ -137,11 +137,16 @@ def main():
                     if transition_id == arc.attrib['target']:
                         arcs_descriptions.append(f"Outgoing arc: {text}")
 
-                final_to_file = final_to_file + "\n\n" + f"Transition '{transition_id}' has Guard: '{guard}' and Arcs: "
+                final_to_file = final_to_file + "\n\n" + f"Transition '{transition_id}'"
+                final_to_file = final_to_file + "\n" + f"Guard: {guard}"
+                final_to_file = final_to_file + "\n" +"Arcs:"
+
                 for arc in arcs_descriptions:
                     final_to_file = final_to_file + "\n" + arc
                 if LOGGING:
-                    print(f"\nTransition: '{transition_id}' has Guard: '{guard}' and Arcs: ")
+                    print(f"\nTransition: '{transition_id}'")
+                    print(f"Guard: {guard}")
+                    print("Arcs:")
                     for arc in arcs_descriptions:
                         print(arc)
 

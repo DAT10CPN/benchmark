@@ -15,21 +15,29 @@ Variable decl attrib: {'id': 'vark', 'name': 'k'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declaration': 'tour'}
 -------TRANSITIONS-------
 
-Transition 'TurnDiff' has Guard: '[i ineq k]' and Arcs: 
+Transition 'TurnDiff'
+Guard: [i ineq k]
+Arcs:
 Outgoing arc: 1'(j,k)
 Ingoing arc: 1'(j,k)
 Outgoing arc: 1'(i,j)
 Ingoing arc: 1'(i,j)
 
-Transition 'ProgressTurn' has Guard: '[j ineq 6]' and Arcs: 
+Transition 'ProgressTurn'
+Guard: [j ineq 6]
+Arcs:
 Ingoing arc: 1'(i,j++1)
 Outgoing arc: 1'(i,j)
 
-Transition 'NoIdentity' has Guard: '[i ineq k]' and Arcs: 
+Transition 'NoIdentity'
+Guard: [i ineq k]
+Arcs:
 Outgoing arc: 1'(i,j,k)
 Ingoing arc: 1'(i,j,k)
 
-Transition 'Loop' has Guard: '[k ineq 7]' and Arcs: 
+Transition 'Loop'
+Guard: [k ineq 7]
+Arcs:
 Ingoing arc: 1'(i,j,k++1)
 Outgoing arc: 1'(i,j,k)
 -------GUARDS-------

@@ -14,31 +14,41 @@ Variable decl attrib: {'id': 'V-y-pid', 'name': 'y'}, with declaration: {'declar
 Variable decl attrib: {'id': 'V-j-pid', 'name': 'j'}, with declaration: {'declaration': 'T-pid'}
 -------TRANSITIONS-------
 
-Transition 'T-yne0_4' has Guard: '(y != 0)' and Arcs: 
+Transition 'T-yne0_4'
+Guard: (y != 0)
+Arcs:
 Outgoing arc: <( y )>
 Ingoing arc: <( y )>
 Ingoing arc: <( i )>
 Outgoing arc: <( i )>
 
-Transition 'T-xnei_10' has Guard: '(x != i)' and Arcs: 
+Transition 'T-xnei_10'
+Guard: (x != i)
+Arcs:
 Outgoing arc: <( x )>
 Ingoing arc: <( x )>
 Outgoing arc: <( i )>
 Ingoing arc: <( i )>
 
-Transition 'T-ynei_15' has Guard: '(i != y)' and Arcs: 
+Transition 'T-ynei_15'
+Guard: (i != y)
+Arcs:
 Outgoing arc: <( y )>
 Ingoing arc: <( y )>
 Outgoing arc: <( i )>
 Ingoing arc: <( i )>
 
-Transition 'T-yeqi_15' has Guard: '(i = y)' and Arcs: 
+Transition 'T-yeqi_15'
+Guard: (i = y)
+Arcs:
 Outgoing arc: <( y )>
 Ingoing arc: <( y )>
 Outgoing arc: <( i )>
 Ingoing arc: <( i )>
 
-Transition 'T-xeqi_10' has Guard: '(i = x)' and Arcs: 
+Transition 'T-xeqi_10'
+Guard: (i = x)
+Arcs:
 Outgoing arc: <( x )>
 Ingoing arc: <( x )>
 Outgoing arc: <( i )>

@@ -13,7 +13,9 @@ Variable decl attrib: {'id': 'varo1', 'name': 'o1'}, with declaration: {'declara
 Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'Quality'}
 -------TRANSITIONS-------
 
-Transition 'elaborate3' has Guard: '(x) gt (Quality48) and (x) lte (Quality64)' and Arcs: 
+Transition 'elaborate3'
+Guard: (x) gt (Quality48) and (x) lte (Quality64)
+Arcs:
 Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(x)]
@@ -21,7 +23,9 @@ Outgoing arc: 1'[(x)]
 Ingoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
 Outgoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
 
-Transition 'elaborate2' has Guard: '(x) gt (Quality32) and (x) lte (Quality48)' and Arcs: 
+Transition 'elaborate2'
+Guard: (x) gt (Quality32) and (x) lte (Quality48)
+Arcs:
 Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(o1)] + 1'[(o2)]
@@ -29,7 +33,9 @@ Ingoing arc: 1'[(o1)] + 1'[(o2)]
 Ingoing arc: 1'[(x)]
 Outgoing arc: 1'[(x)]
 
-Transition 'elaborate1' has Guard: '(x) gt (Quality16) and (x) lte (Quality32)' and Arcs: 
+Transition 'elaborate1'
+Guard: (x) gt (Quality16) and (x) lte (Quality32)
+Arcs:
 Outgoing arc: 1'[(x)]
 Ingoing arc: 1'[(x)]
 Outgoing arc: 1'[(p)]
@@ -37,7 +43,9 @@ Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(o1)]
 Ingoing arc: 1'[(o1)]
 
-Transition 'elaborate0' has Guard: '(x) lte (Quality16)' and Arcs: 
+Transition 'elaborate0'
+Guard: (x) lte (Quality16)
+Arcs:
 Outgoing arc: 1'[(x)]
 Ingoing arc: 1'[(x)]
 Outgoing arc: 1'[(p)]

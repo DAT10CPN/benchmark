@@ -25,14 +25,18 @@ Variable decl attrib: {'id': 'V-p-M', 'name': 'p'}, with declaration: {'declarat
 Variable decl attrib: {'id': 'V-i-POS', 'name': 'i'}, with declaration: {'declaration': 'T-POS'}
 -------TRANSITIONS-------
 
-Transition 'T-poll__handleAI1' has Guard: '(m >= s)' and Arcs: 
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
 Outgoing arc: <( m, r, CO )>
 Ingoing arc: <( m, r, DONE )>
 Outgoing arc: <( m, s, AI, 0 )>
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
 
-Transition 'T-poll__handleAI2' has Guard: '(m < s)' and Arcs: 
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
 Outgoing arc: <( m, iam, pm )>
 Ingoing arc: <( m, F, pm )>
 Outgoing arc: <( m, r, CO )>
@@ -41,14 +45,18 @@ Outgoing arc: <( m, s, AI, 0 )>
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
 
-Transition 'T-poll__handleAnnP1' has Guard: '(pm != m)' and Arcs: 
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
 Outgoing arc: <( m, iam, pm )>
 Ingoing arc: <( m, F, s )>
 Outgoing arc: <( m, s, AnnP, 0 )>
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
 
-Transition 'T-poll__handleAnsP2' has Guard: '(p != 0)' and Arcs: 
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
 Outgoing arc: <( m, iam, p )>
 Ingoing arc: <( m, F, p )>
 Outgoing arc: <( m, s, AnsP, p )>
@@ -56,14 +64,18 @@ Ingoing arc: <( s, m, RI, 0 )>
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
 
-Transition 'T-poll__handleAnsP3' has Guard: '(((p != 0) and (pm != 0)) and (pm != p))' and Arcs: 
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
 Outgoing arc: <( m, iam, pm )>
 Ingoing arc: <( m, T, 0 )>
 Outgoing arc: <( m, s, AnsP, p )>
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
 
-Transition 'T-poll__handleAnsP4' has Guard: '(p != 0)' and Arcs: 
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
 Outgoing arc: <( m, iam, 0 )>
 Ingoing arc: <( m, F, p )>
 Ingoing arc: <( s, m, RI, 0 )>

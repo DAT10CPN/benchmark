@@ -11,13 +11,17 @@ Variable decl attrib: {'id': 'vary', 'name': 'y'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varm', 'name': 'm'}, with declaration: {'declaration': 'pclass'}
 -------TRANSITIONS-------
 
-Transition 'End_Own_Acc' has Guard: '[m eq x]' and Arcs: 
+Transition 'End_Own_Acc'
+Guard: [m eq x]
+Arcs:
 Outgoing arc: 1'(x)
 Outgoing arc: 1'(m)
 Ingoing arc: 1'(m)
 Ingoing arc: 1'(x)
 
-Transition 'Begin_Ext_Acc' has Guard: '[x ineq m]' and Arcs: 
+Transition 'Begin_Ext_Acc'
+Guard: [x ineq m]
+Arcs:
 Outgoing arc: 1'(m)
 Outgoing arc: 1'(x)
 Outgoing arc: 1'(dot)

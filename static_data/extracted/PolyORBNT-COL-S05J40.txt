@@ -40,11 +40,15 @@ Variable decl attrib: {'id': 'vart', 'name': 't'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'vart2', 'name': 't2'}, with declaration: {'declaration': 'Threads'}
 -------TRANSITIONS-------
 
-Transition 'GoPerformWork' has Guard: '(st) eq (StatesPerformWork)' and Arcs: 
+Transition 'GoPerformWork'
+Guard: (st) eq (StatesPerformWork)
+Arcs:
 Ingoing arc: 1'[(t),(j)]
 Outgoing arc: 1'[(t),(st),(j)]
 
-Transition 'GoCheckSource' has Guard: '(st) eq (StatesCheckSource)' and Arcs: 
+Transition 'GoCheckSource'
+Guard: (st) eq (StatesCheckSource)
+Arcs:
 Outgoing arc: 1'[(t),(st),(j)]
 Ingoing arc: 1'[(t)]
 -------GUARDS-------

@@ -13,7 +13,9 @@ Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'It'}
 -------TRANSITIONS-------
 
-Transition 'C_refuse' has Guard: '(x) eq (y)' and Arcs: 
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
 Ingoing arc: 1'[(x++)]
 Outgoing arc: 1'[(y)]
 Outgoing arc: 1'[(i),(x)]
@@ -23,13 +25,17 @@ Ingoing arc: 1'[(i)]
 Outgoing arc: 1'(dot)
 Ingoing arc: 1'(dot)
 
-Transition 'C_free' has Guard: '(i) eq (j)' and Arcs: 
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
 Outgoing arc: 1'[(j)]
 Ingoing arc: 1'(dot)
 Outgoing arc: 1'[(i)]
 Ingoing arc: 1'(dot)
 
-Transition 'C_provide' has Guard: '(x) eq (y)' and Arcs: 
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
 Ingoing arc: 1'[(x++)]
 Outgoing arc: 1'[(y)]
 Outgoing arc: 1'[(i),(x)]
@@ -39,13 +45,17 @@ Ingoing arc: 1'[(i)]
 Outgoing arc: 1'(dot)
 Ingoing arc: 1'(dot)
 
-Transition 'I_rec1' has Guard: '(r) eq (i)' and Arcs: 
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
 Ingoing arc: 1'[(i)]
 Outgoing arc: 1'[(i)]
 Outgoing arc: 1'[(r)]
 Ingoing arc: 1'(dot)
 
-Transition 'I_emit' has Guard: '(i) eq (j) and (r) ineq (i)' and Arcs: 
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
 Ingoing arc: 1'[(r)]
 Outgoing arc: 1'[(r)]
 Outgoing arc: 1'[(i)]
@@ -53,12 +63,16 @@ Ingoing arc: 1'[(i),(r)]
 Ingoing arc: 1'[(r)]
 Outgoing arc: 1'[(j)]
 
-Transition 'I_refused' has Guard: '(i) eq (j)' and Arcs: 
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
 Outgoing arc: 1'[(i)]
 Outgoing arc: 1'[(j)]
 Ingoing arc: 1'[(i)]
 
-Transition 'I_rec2' has Guard: '(r) eq (i)' and Arcs: 
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
 Outgoing arc: 1'[(i)]
 Outgoing arc: 1'[(r)]
 Ingoing arc: 1'(dot)

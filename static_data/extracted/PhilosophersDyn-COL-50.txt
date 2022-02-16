@@ -11,7 +11,9 @@ Variable decl attrib: {'id': 'varq', 'name': 'q'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'Philosopher'}
 -------TRANSITIONS-------
 
-Transition 'Initialize' has Guard: '(p) ineq (q)' and Arcs: 
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
 Ingoing arc: 1'[(p)] + 1'[(q)]
 Ingoing arc: 1'[(p),(q)] + 1'[(q),(p)]
 Ingoing arc: 1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]

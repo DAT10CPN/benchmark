@@ -37,7 +37,9 @@ Variable decl attrib: {'id': 'vart', 'name': 't'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'vart2', 'name': 't2'}, with declaration: {'declaration': 'Threads'}
 -------TRANSITIONS-------
 
-Transition 'T_0376' has Guard: '(s) eq (s2)' and Arcs: 
+Transition 'T_0376'
+Guard: (s) eq (s2)
+Arcs:
 Outgoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
 Ingoing arc: 1'(dot)
@@ -45,7 +47,9 @@ Outgoing arc: 1'[(s2)]
 Outgoing arc: 1'[(s)]
 Ingoing arc: 1'[(s)]
 
-Transition 'LeaveIdle' has Guard: '(t) eq (t2)' and Arcs: 
+Transition 'LeaveIdle'
+Guard: (t) eq (t2)
+Arcs:
 Outgoing arc: 1'[(t2)]
 Ingoing arc: 1'[(t)]
 Outgoing arc: 1'[(t)]
