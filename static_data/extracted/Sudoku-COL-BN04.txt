@@ -14,17 +14,24 @@ Variable decl attrib: {'id': 'd', 'name': 'd'}, with declaration: {'declaration'
 Transition 'select'
 Guard: (x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
 Arcs:
+
+Transition 'select'
+Guard: (x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
+Arcs:
+
+Transition 'select'
+Guard: (x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
+Arcs:
+
+Transition 'select'
+Guard: (x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
+Arcs:
+
+Transition 'select'
+Guard: (x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
+Arcs:
 Outgoing arc: <x,v>
 Ingoing arc: <x,y,v>
 Outgoing arc: <d,v>
 Outgoing arc: <x,y>
 Outgoing arc: <y,v>
--------GUARDS-------
-(x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
--------ARCS-------
-<x,v>
-<x,y,v>
-<d,v>
-<x,y>
-<y,v>
-------------------------------------------------------------------

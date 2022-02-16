@@ -13,6 +13,826 @@ Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'It'}
 -------TRANSITIONS-------
 
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(i),(r)]
+Outgoing arc: 1'[(i),(r)]
+Ingoing arc: 1'[(r)]
+Outgoing arc: 1'(dot)
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+
 Transition 'C_refuse'
 Guard: (x) eq (y)
 Arcs:
@@ -28,10 +848,546 @@ Ingoing arc: 1'(dot)
 Transition 'C_free'
 Guard: (i) eq (j)
 Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
 Outgoing arc: 1'[(j)]
 Ingoing arc: 1'(dot)
 Outgoing arc: 1'[(i)]
 Ingoing arc: 1'(dot)
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
 
 Transition 'C_provide'
 Guard: (x) eq (y)
@@ -48,10 +1404,823 @@ Ingoing arc: 1'(dot)
 Transition 'I_rec1'
 Guard: (r) eq (i)
 Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
 Ingoing arc: 1'[(i)]
 Outgoing arc: 1'[(i)]
 Outgoing arc: 1'[(r)]
 Ingoing arc: 1'(dot)
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(i),(r)]
+Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(i)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
 
 Transition 'I_emit'
 Guard: (i) eq (j) and (r) ineq (i)
@@ -66,9 +2235,1374 @@ Outgoing arc: 1'[(j)]
 Transition 'I_refused'
 Guard: (i) eq (j)
 Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
 Outgoing arc: 1'[(i)]
 Outgoing arc: 1'[(j)]
 Ingoing arc: 1'[(i)]
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(x++)]
+Outgoing arc: 1'[(x)]
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(i),(x)]
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(r)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'[(i)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
 
 Transition 'I_rec2'
 Guard: (r) eq (i)
@@ -77,81 +3611,280 @@ Outgoing arc: 1'[(i)]
 Outgoing arc: 1'[(r)]
 Ingoing arc: 1'(dot)
 Ingoing arc: 1'[(i)]
--------GUARDS-------
-(x) eq (y)
-(i) eq (j)
-(x) eq (y)
-(r) eq (i)
-(i) eq (j) and (r) ineq (i)
-(i) eq (j)
-(r) eq (i)
--------ARCS-------
-1'[(x++)]
-1'[(x++)]
-1'[(x++)]
-1'[(y)]
-1'[(y)]
-1'[(x)]
-1'[(r)]
-1'[(r)]
-1'(dot)
-1'(dot)
-1'[(i),(r)]
-1'[(i),(r)]
-1'[(r)]
-1'[(i),(x)]
-1'[(i),(x)]
-1'[(j)]
-1'(dot)
-1'[(i)]
-1'[(i)]
-1'(dot)
-1'[(j)]
-1'[(j)]
-1'[(i)]
-1'[(i)]
-1'[(i)]
-1'[(i)]
-1'[(i),(r)]
-1'[(i),(r)]
-1'[(i)]
-1'[(i)]
-1'[(i)]
-1'[(r)]
-1'[(r)]
-1'(dot)
-1'[(j)]
-1'[(j)]
-1'[(i)]
-1'[(i)]
-1'[(i)]
-1'[(i),(x)]
-1'(dot)
-1'[(r)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(i)]
-1'[(i)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(i)]
-1'[(i)]
-1'[(r)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(x++)]
-1'[(x)]
-1'[(i)]
-1'[(i),(x)]
-1'[(i)]
-1'[(i)]
-------------------------------------------------------------------
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(x++)]
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(i),(x)]
+Outgoing arc: 1'[(i)]

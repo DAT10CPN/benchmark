@@ -9,10 +9,23 @@ Variable decl attrib: {'id': 'x', 'name': 'x'}, with declaration: {'declaration'
 Variable decl attrib: {'id': 'y', 'name': 'y'}, with declaration: {'declaration': 'N'}
 Variable decl attrib: {'id': 'v', 'name': 'v'}, with declaration: {'declaration': 'N'}
 -------TRANSITIONS-------
--------GUARDS-------
--------ARCS-------
-<x,v>
-<x,y,v>
-<x,y>
-<y,v>
-------------------------------------------------------------------
+
+Transition 'select'
+Guard: No guard
+Arcs:
+
+Transition 'select'
+Guard: No guard
+Arcs:
+
+Transition 'select'
+Guard: No guard
+Arcs:
+
+Transition 'select'
+Guard: No guard
+Arcs:
+Outgoing arc: <x,v>
+Ingoing arc: <x,y,v>
+Outgoing arc: <x,y>
+Outgoing arc: <y,v>

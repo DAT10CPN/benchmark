@@ -25,6 +25,788 @@ Variable decl attrib: {'id': 'V-p-M', 'name': 'p'}, with declaration: {'declarat
 Variable decl attrib: {'id': 'V-i-POS', 'name': 'i'}, with declaration: {'declaration': 'T-POS'}
 -------TRANSITIONS-------
 
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+
 Transition 'T-poll__handleAI1'
 Guard: (m >= s)
 Arcs:
@@ -33,6 +815,394 @@ Ingoing arc: <( m, r, DONE )>
 Outgoing arc: <( m, s, AI, 0 )>
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
 
 Transition 'T-poll__handleAI2'
 Guard: (m < s)
@@ -48,11 +1218,1580 @@ Ingoing arc: <( m )>
 Transition 'T-poll__handleAnnP1'
 Guard: (pm != m)
 Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
 Outgoing arc: <( m, iam, pm )>
 Ingoing arc: <( m, F, s )>
 Outgoing arc: <( m, s, AnnP, 0 )>
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m, T, m )>
+Ingoing arc: <( m, T, 0 )>
+Outgoing arc: <( m, s, AnnP, 0 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m, s, AnsP, 0 )>
+Ingoing arc: <( s, m, RI, 0 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
 
 Transition 'T-poll__handleAnsP2'
 Guard: (p != 0)
@@ -67,11 +2806,787 @@ Ingoing arc: <( m )>
 Transition 'T-poll__handleAnsP3'
 Guard: (((p != 0) and (pm != 0)) and (pm != p))
 Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
 Outgoing arc: <( m, iam, pm )>
 Ingoing arc: <( m, T, 0 )>
 Outgoing arc: <( m, s, AnsP, p )>
 Outgoing arc: <( m )>
 Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
 
 Transition 'T-poll__handleAnsP4'
 Guard: (p != 0)
@@ -82,110 +3597,5152 @@ Ingoing arc: <( s, m, RI, 0 )>
 Outgoing arc: <( m )>
 Outgoing arc: <( m, s, AnsP, p )>
 Ingoing arc: <( m )>
--------GUARDS-------
-(m >= s)
-(m < s)
-(pm != m)
-(p != 0)
-(((p != 0) and (pm != 0)) and (pm != p))
-(p != 0)
--------ARCS-------
-<( m )>
-<( m )>
-<( m, r, CO )>
-<( m, r, DONE )>
-<( m, s, AI, 0 )>
-<( m )>
-<( m )>
-<( m, iam, pm )>
-<( m, F, pm )>
-<( m, r, CO )>
-<( m, r, DONE )>
-<( m, s, AI, 0 )>
-<( m )>
-<( m )>
-<( m, iam, pm )>
-<( m, F, s )>
-<( m, s, AnnP, 0 )>
-<( m )>
-<( m )>
-<( m, T, m )>
-<( m, T, 0 )>
-<( m, s, AnnP, 0 )>
-<( m )>
-<( m )>
-<( m, s, AnsP, 0 )>
-<( s, m, RI, 0 )>
-<( m )>
-<( m )>
-<( m, iam, p )>
-<( m, F, p )>
-<( m, s, AnsP, p )>
-<( s, m, RI, 0 )>
-<( m )>
-<( m )>
-<( m, iam, pm )>
-<( m, T, 0 )>
-<( m, s, AnsP, p )>
-<( m )>
-<( m )>
-<( m, iam, 0 )>
-<( m, F, p )>
-<( s, m, RI, 0 )>
-<( m )>
-<( m, s, AnsP, p )>
-<( m )>
-<( m, iam, pm )>
-<( m, iam, pm )>
-<( m, s, AskP, 0 )>
-<( s, m, AnsP, pm )>
-<( m )>
-<( m )>
-<( m, s, RI, 0 )>
-<( s, m, AI, 0 )>
-<( m )>
-<( m )>
-<( m, s, RP, 0 )>
-<( m )>
-<( m )>
-<( m )>
-<( m, T, 0 )>
-<( m, T, m )>
-<( m, 1, DONE )> + <( m, 2, DONE )>
-<( m, 1, DONE )> + <( m, 2, DONE )>
-<( m )>
-<( m, NEG )>
-<( m, PRIM )>
-<( m )>
-<( m, F, pm )>
-<( m, F, pm )>
-<( m, 1, DONE )> + <( m, 2, DONE )>
-<( m, 1, DONE )> + <( m, 2, DONE )>
-<( m )>
-<( m, NEG )>
-<( m, SEC )>
-<( m )>
-<( m )>
-<( m )>
-<( m, 2 )>
-<( m, i, r )>
-<( m, i, r )>
-<( r, m, AnnP, 0 )>
-<( m, i )>
-<( m, (succ i) )>
-<( m )>
-<( m, 1 )>
-<( m )>
-<( m, 2 )>
-<( m, i, r )>
-<( m, i, r )>
-<( m, r, NONE )>
-<( m, r, CO )>
-<( r, m, AskP, 0 )>
-<( m, i )>
-<( m, (succ i) )>
-<( m )>
-<( m, 1 )>
-<( m )>
-<( m )>
-------------------------------------------------------------------
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m, iam, pm )>
+Ingoing arc: <( m, iam, pm )>
+Outgoing arc: <( m, s, AskP, 0 )>
+Ingoing arc: <( s, m, AnsP, pm )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m, s, RI, 0 )>
+Ingoing arc: <( s, m, AI, 0 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m, s, RP, 0 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m, T, 0 )>
+Ingoing arc: <( m, T, m )>
+Outgoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
+Ingoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
+Outgoing arc: <( m )>
+Outgoing arc: <( m, NEG )>
+Ingoing arc: <( m, PRIM )>
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m, F, pm )>
+Ingoing arc: <( m, F, pm )>
+Outgoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
+Ingoing arc: <( m, 1, DONE )> + <( m, 2, DONE )>
+Outgoing arc: <( m )>
+Outgoing arc: <( m, NEG )>
+Ingoing arc: <( m, SEC )>
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m, 2 )>
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m, i, r )>
+Ingoing arc: <( m, i, r )>
+Ingoing arc: <( r, m, AnnP, 0 )>
+Outgoing arc: <( m, i )>
+Ingoing arc: <( m, (succ i) )>
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m, 1 )>
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m, 2 )>
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m, i, r )>
+Ingoing arc: <( m, i, r )>
+Outgoing arc: <( m, r, NONE )>
+Ingoing arc: <( m, r, CO )>
+Ingoing arc: <( r, m, AskP, 0 )>
+Outgoing arc: <( m, i )>
+Ingoing arc: <( m, (succ i) )>
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m, 1 )>
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>

@@ -13,6 +13,1366 @@ Variable decl attrib: {'id': 'varA', 'name': 'A'}, with declaration: {'declarati
 Variable decl attrib: {'id': 'varS', 'name': 'S'}, with declaration: {'declaration': 'Speed'}
 -------TRANSITIONS-------
 
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedLW'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(S)]
+Outgoing arc: 1'[(S)]
+Ingoing arc: 1'[(S)]
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+
+Transition 'SpeedRW'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(S)]
+Ingoing arc: 1'[(S)]
+Outgoing arc: 1'[(S)]
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+
+Transition 'getAlt'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(A)]
+Ingoing arc: 1'[(A)]
+Outgoing arc: 1'[(A)]
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleRW'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(W)]
+Ingoing arc: 1'[(W)]
+Outgoing arc: 1'[(W)]
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+
+Transition 'SampleLW'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(W)]
+Ingoing arc: 1'[(W)]
+Ingoing arc: 1'[(W)]
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't5_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
 Transition 't5_2'
 Guard: (S) lte (Speed5) or (S) eq (Speed10)
 Arcs:
@@ -20,6 +1380,226 @@ Outgoing arc: 1'[(S)]
 Ingoing arc: 1'(dot)
 Ingoing arc: 1'[(SignalF)]
 Outgoing arc: 1'(dot)
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't5_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
 
 Transition 't5_1'
 Guard: (S) gt (Speed5) and (S) ineq (Speed10)
@@ -32,9 +1612,449 @@ Ingoing arc: 1'[(SignalT)]
 Transition 't4_2'
 Guard: (S) lte (Speed5) or (S) eq (Speed10)
 Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
+
+Transition 't4_2'
+Guard: (S) lte (Speed5) or (S) eq (Speed10)
+Arcs:
 Outgoing arc: 1'[(S)]
 Ingoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
+
+Transition 't4_1'
+Guard: (S) gt (Speed5) and (S) ineq (Speed10)
+Arcs:
 
 Transition 't4_1'
 Guard: (S) gt (Speed5) and (S) ineq (Speed10)
@@ -47,9 +2067,449 @@ Ingoing arc: 1'[(SignalT)]
 Transition 't3_2'
 Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
 Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
+
+Transition 't3_2'
+Guard: (A) gte (Altitude10) or (A) eq (Altitude20)
+Arcs:
 Outgoing arc: 1'(dot)
 Outgoing arc: 1'[(A)]
 Ingoing arc: 1'(dot)
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
+
+Transition 't3_1'
+Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
+Arcs:
 
 Transition 't3_1'
 Guard: (A) lt (Altitude10) and (A) ineq (Altitude20)
@@ -62,9 +2522,449 @@ Ingoing arc: 1'[(SignalT)]
 Transition 't2_2'
 Guard: (W) eq (Weightoff)
 Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't2_2'
+Guard: (W) eq (Weightoff)
+Arcs:
 Outgoing arc: 1'(dot)
 Outgoing arc: 1'[(W)]
 Ingoing arc: 1'(dot)
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't2_1'
+Guard: (W) eq (Weighton)
+Arcs:
 
 Transition 't2_1'
 Guard: (W) eq (Weighton)
@@ -77,9 +2977,449 @@ Outgoing arc: 1'[(W)]
 Transition 't1_2'
 Guard: (W) eq (Weightoff)
 Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
+
+Transition 't1_2'
+Guard: (W) eq (Weightoff)
+Arcs:
 Outgoing arc: 1'(dot)
 Outgoing arc: 1'[(W)]
 Ingoing arc: 1'(dot)
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
+
+Transition 't1_1'
+Guard: (W) eq (Weighton)
+Arcs:
 
 Transition 't1_1'
 Guard: (W) eq (Weighton)
@@ -88,72 +3428,3 @@ Ingoing arc: 1'[(SignalT)]
 Ingoing arc: 1'(dot)
 Outgoing arc: 1'(dot)
 Outgoing arc: 1'[(W)]
--------GUARDS-------
-(S) lte (Speed5) or (S) eq (Speed10)
-(S) gt (Speed5) and (S) ineq (Speed10)
-(S) lte (Speed5) or (S) eq (Speed10)
-(S) gt (Speed5) and (S) ineq (Speed10)
-(A) gte (Altitude10) or (A) eq (Altitude20)
-(A) lt (Altitude10) and (A) ineq (Altitude20)
-(W) eq (Weightoff)
-(W) eq (Weighton)
-(W) eq (Weightoff)
-(W) eq (Weighton)
--------ARCS-------
-1'[(S)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(S)]
-1'[(S)]
-1'[(S)]
-1'[(S)]
-1'[(S)]
-1'[(S)]
-1'[(A)]
-1'[(A)]
-1'[(A)]
-1'[(W)]
-1'[(W)]
-1'[(W)]
-1'[(W)]
-1'[(W)]
-1'[(W)]
-1'[(SignalT)]
-1'[(SignalT)]
-1'(dot)
-1'(dot)
-1'[(W)]
-1'(dot)
-1'[(W)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(W)]
-1'[(W)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(A)]
-1'[(A)]
-1'(dot)
-1'[(SignalT)]
-1'(dot)
-1'[(S)]
-1'[(S)]
-1'(dot)
-1'(dot)
-1'[(SignalT)]
-1'(dot)
-1'(dot)
-1'[(S)]
-1'(dot)
-1'[(SignalT)]
-1'(dot)
-1'[(SignalF)]
-1'(dot)
-1'(dot)
-------------------------------------------------------------------

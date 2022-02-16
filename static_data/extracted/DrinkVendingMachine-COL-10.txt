@@ -13,6 +13,342 @@ Variable decl attrib: {'id': 'varo1', 'name': 'o1'}, with declaration: {'declara
 Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'Quality'}
 -------TRANSITIONS-------
 
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+
+Transition 'addOption'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(o1)]
+Ingoing arc: 1'[(o1)]
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+
+Transition 'addProduct'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
+Transition 'elaborate0'
+Guard: (x) lte (Quality10)
+Arcs:
+
 Transition 'elaborate0'
 Guard: (x) lte (Quality10)
 Arcs:
@@ -20,6 +356,228 @@ Ingoing arc: 1'[(x)]
 Outgoing arc: 1'[(x)]
 Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(p)]
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+
+Transition 'serve'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(x)]
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
+
+Transition 'elaborate1'
+Guard: (x) gt (Quality10) and (x) lte (Quality20)
+Arcs:
 
 Transition 'elaborate1'
 Guard: (x) gt (Quality10) and (x) lte (Quality20)
@@ -34,6 +592,114 @@ Outgoing arc: 1'[(x)]
 Transition 'elaborate2'
 Guard: (x) gt (Quality20) and (x) lte (Quality30)
 Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
+
+Transition 'elaborate2'
+Guard: (x) gt (Quality20) and (x) lte (Quality30)
+Arcs:
 Ingoing arc: 1'[(o1)] + 1'[(o2)]
 Outgoing arc: 1'[(o1)] + 1'[(o2)]
 Ingoing arc: 1'[(p)]
@@ -44,44 +710,117 @@ Outgoing arc: 1'[(x)]
 Transition 'elaborate3'
 Guard: (x) gt (Quality30) and (x) lte (Quality40)
 Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
+
+Transition 'elaborate3'
+Guard: (x) gt (Quality30) and (x) lte (Quality40)
+Arcs:
 Ingoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
 Outgoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
 Ingoing arc: 1'[(p)]
 Outgoing arc: 1'[(p)]
 Ingoing arc: 1'[(x)]
 Outgoing arc: 1'[(x)]
--------GUARDS-------
-(x) lte (Quality10)
-(x) gt (Quality10) and (x) lte (Quality20)
-(x) gt (Quality20) and (x) lte (Quality30)
-(x) gt (Quality30) and (x) lte (Quality40)
--------ARCS-------
-1'[(x)]
-1'[(x)]
-1'[(o1)]
-1'[(o1)]
-1'[(p)]
-1'[(p)]
-1'[(x)]
-1'[(x)]
-1'[(o1)] + 1'[(o2)]
-1'[(o1)] + 1'[(o2)]
-1'[(p)]
-1'[(p)]
-1'[(x)]
-1'[(x)]
-1'[(o1)] + 1'[(o2)] + 1'[(o3)]
-1'[(o1)] + 1'[(o2)] + 1'[(o3)]
-1'[(p)]
-1'[(p)]
-1'[(x)]
-1'[(x)]
-1'[(p)]
-1'[(p)]
-1'[(o1)]
-1'[(o1)]
-1'[(x)]
-1'[(x)]
-1'[(p)]
-1'[(p)]
-------------------------------------------------------------------

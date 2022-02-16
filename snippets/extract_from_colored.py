@@ -4,7 +4,7 @@ from pathlib import Path
 
 LOGGING = False
 TESTING = False
-test_model = 'AirplaneLD-COL-0010'
+test_model = 'CSRepetitions-COL-02'
 
 
 def main():
@@ -120,37 +120,38 @@ def main():
 
         for transition in transitions:
             transition_id = transition.attrib['id']
+            condition = transition.find(f'{NAMESPACE}' + 'condition')
 
-            conditions = transition.findall(f'{NAMESPACE}' + 'condition')
-            for condition in conditions:
+            if condition:
                 guard = condition.find(f'{NAMESPACE}' + 'text').text
-
                 if guard == "":
                     guard = "No guard"
+            else:
+                guard = "No guard"
 
-                arcs_descriptions = []
-                for arc in arcs:
-                    hlinscription = arc.find(f'{NAMESPACE}' + 'hlinscription')
-                    text = hlinscription.find(f'{NAMESPACE}' + 'text').text
-                    if transition_id == arc.attrib['source']:
-                        arcs_descriptions.append(f"Ingoing arc: {text}")
-                    if transition_id == arc.attrib['target']:
-                        arcs_descriptions.append(f"Outgoing arc: {text}")
+            arcs_descriptions = []
+            for arc in arcs:
+                hlinscription = arc.find(f'{NAMESPACE}' + 'hlinscription')
+                text = hlinscription.find(f'{NAMESPACE}' + 'text').text
+                if transition_id == arc.attrib['source']:
+                    arcs_descriptions.append(f"Ingoing arc: {text}")
+                if transition_id == arc.attrib['target']:
+                    arcs_descriptions.append(f"Outgoing arc: {text}")
 
                 final_to_file = final_to_file + "\n\n" + f"Transition '{transition_id}'"
                 final_to_file = final_to_file + "\n" + f"Guard: {guard}"
-                final_to_file = final_to_file + "\n" +"Arcs:"
+                final_to_file = final_to_file + "\n" + "Arcs:"
 
+            for arc in arcs_descriptions:
+                final_to_file = final_to_file + "\n" + arc
+            if LOGGING:
+                print(f"\nTransition: '{transition_id}'")
+                print(f"Guard: {guard}")
+                print("Arcs:")
                 for arc in arcs_descriptions:
-                    final_to_file = final_to_file + "\n" + arc
-                if LOGGING:
-                    print(f"\nTransition: '{transition_id}'")
-                    print(f"Guard: {guard}")
-                    print("Arcs:")
-                    for arc in arcs_descriptions:
-                        print(arc)
+                    print(arc)
 
-        # ALL conditions on transitions
+        """# ALL conditions on transitions
         final_to_file = final_to_file + "\n" + "-------GUARDS-------"
         if LOGGING:
             print("-------GUARDS-------")
@@ -178,7 +179,7 @@ def main():
 
         final_to_file = final_to_file + "\n" + "------------------------------------------------------------------"
         if LOGGING:
-            print("------------------------------------------------------------------")
+            print("------------------------------------------------------------------")"""
 
         with open(f"{extracted_folder}/{test_folder}.txt", "w") as file:
             # Writing data to a file

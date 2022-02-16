@@ -14,89 +14,5398 @@ Variable decl attrib: {'id': 'varn3', 'name': 'n3'}, with declaration: {'declara
 Variable decl attrib: {'id': 'varn2', 'name': 'n2'}, with declaration: {'declaration': 'input'}
 Variable decl attrib: {'id': 'varn1', 'name': 'n1'}, with declaration: {'declaration': 'input'}
 -------TRANSITIONS-------
--------GUARDS-------
--------ARCS-------
-1'[(n8)]
-1'[(n7)]
-1'[(n6)]
-1'[(n5)]
-1'[(n4)]
-1'[(n3)]
-1'[(n1)]
-1'[(n6)]
-1'[(n2)]
-1'[(n4)]
-1'[(n8)]
-1'[(n3)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(n2)] + 1'[(n6)]
-1'[(n1)] + 1'[(n5)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(n1)]
-1'[(n2)] + 1'[(n4)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(n1)] + 1'[(n3)]
-1'[(n5)] + 1'[(n7)]
-1'(dot)
-1'(dot)
-1'[(n6)]
-1'[(n4)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'[(n6)] + 1'[(n8)]
-1'[(n2)]
-1'[(n5)]
-1'[(n3)]
-1'[(n2)]
-1'[(n4)]
-1'[(n1)]
-1'[(n8)]
-1'(dot)
-1'[(n5)] + 1'[(n6)]
-1'[(n7)]
-1'[(n1)]
-1'[(n7)]
-1'[(n6)]
-1'[(n3)]
-1'[(n1)] + 1'[(n2)]
-1'[(n7)] + 1'[(n8)]
-1'(dot)
-1'(dot)
-1'[(n8)]
-1'[(n5)]
-1'(dot)
-1'[(n3)] + 1'[(n4)]
-1'[(n1)]
-1'[(n5)]
-1'[(n4)] + 1'[(n8)]
-1'[(n7)]
-1'[(n2)]
-1'[(n6)]
-1'[(n3)]
-1'[(n7)]
-1'[(n4)]
-1'[(n8)]
-1'[(n2)]
-1'[(n3)] + 1'[(n7)]
-1'(dot)
-1'[(n5)]
-1'(dot)
-1'(dot)
-1'(dot)
-1'(dot)
-------------------------------------------------------------------
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+
+Transition 'display4'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n2)]
+Outgoing arc: 1'[(n6)]
+Ingoing arc: 1'[(n2)]
+Ingoing arc: 1'[(n6)]
+Outgoing arc: 1'(dot)
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+
+Transition 'display3'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n1)]
+Outgoing arc: 1'[(n5)]
+Ingoing arc: 1'[(n1)]
+Ingoing arc: 1'[(n5)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+
+Transition 'display2'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n4)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(n8)]
+Ingoing arc: 1'[(n4)]
+Ingoing arc: 1'[(n8)]
+Ingoing arc: 1'(dot)
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+
+Transition 'display1'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n7)]
+Outgoing arc: 1'[(n3)]
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(n3)]
+Ingoing arc: 1'[(n7)]
+Outgoing arc: 1'(dot)
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+
+Transition 'switch8'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(n5)] + 1'[(n7)]
+Outgoing arc: 1'[(n7)]
+Outgoing arc: 1'[(n5)]
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+
+Transition 'switch6'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n6)]
+Outgoing arc: 1'[(n8)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(n6)] + 1'[(n8)]
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+
+Transition 'switch7'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n1)]
+Outgoing arc: 1'[(n3)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(n1)] + 1'[(n3)]
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+
+Transition 'switch5'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n2)]
+Outgoing arc: 1'[(n4)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(n2)] + 1'[(n4)]
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+
+Transition 'switch4'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n8)]
+Outgoing arc: 1'[(n4)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(n4)] + 1'[(n8)]
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+
+Transition 'switch1'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n5)]
+Ingoing arc: 1'[(n1)] + 1'[(n5)]
+Outgoing arc: 1'[(n1)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+
+Transition 'switch3'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n7)]
+Outgoing arc: 1'[(n3)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(n3)] + 1'[(n7)]
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+
+Transition 'switch2'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(n6)]
+Ingoing arc: 1'[(n2)] + 1'[(n6)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(n2)]
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+
+Transition 'switch9'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(n6)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(n5)]
+Ingoing arc: 1'[(n5)] + 1'[(n6)]
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+
+Transition 'switch12'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(n4)]
+Outgoing arc: 1'[(n3)]
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(n3)] + 1'[(n4)]
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+
+Transition 'switch11'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(n2)]
+Outgoing arc: 1'[(n1)]
+Ingoing arc: 1'[(n1)] + 1'[(n2)]
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+
+Transition 'switch10'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(n8)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(n7)]
+Ingoing arc: 1'[(n7)] + 1'[(n8)]

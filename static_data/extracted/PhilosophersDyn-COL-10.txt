@@ -14,45 +14,956 @@ Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declarati
 Transition 'Initialize'
 Guard: (p) ineq (q)
 Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
+
+Transition 'Initialize'
+Guard: (p) ineq (q)
+Arcs:
 Ingoing arc: 1'[(p)] + 1'[(q)]
 Ingoing arc: 1'[(p),(q)] + 1'[(q),(p)]
 Ingoing arc: 1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
 Ingoing arc: 1'[(p)] + 1'[(q)]
 Outgoing arc: 1'[(Philosopher.all)]
--------GUARDS-------
-(p) ineq (q)
--------ARCS-------
-1'[(p),(q)]
-1'[(p),(q)]
-1'[(p)] + 1'[(q)]
-1'[(p),(q)]
-1'[(p),(q)]
-1'[(p)]
-1'[(p)]
-1'[(p)]
-1'[(q)]
-1'[(p)]
-1'[(p)]
-1'[(p)]
-1'[(p)]
-1'[(p)]
-1'[(p)]
-1'[(p)]
-1'[(p)]
-1'[(l),(r)]
-1'[(l),(p)] + 1'[(p),(r)]
-1'[(p)]
-1'[(p)]
-1'[(p)]
-1'[(p)] + 1'[(q)]
-1'[(l)] + 1'[(r)]
-1'[(l)] + 1'[(r)]
-1'[(p)]
-1'[(l),(p)] + 1'[(p),(r)]
-1'[(l),(r)]
-1'[(p)]
-1'[(p),(q)] + 1'[(q),(p)]
-1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
-1'[(p)] + 1'[(q)]
-1'[(Philosopher.all)]
-------------------------------------------------------------------
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+
+Transition 'Join'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)] + 1'[(r)]
+Outgoing arc: 1'[(l)] + 1'[(r)]
+Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(l),(p)] + 1'[(p),(r)]
+Outgoing arc: 1'[(l),(r)]
+Outgoing arc: 1'[(p)]
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+
+Transition 'Leave'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(r)]
+Outgoing arc: 1'[(l),(p)] + 1'[(p),(r)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+
+Transition 'TakeLeft'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+
+Transition 'TakeRight'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(p),(q)]
+Outgoing arc: 1'[(p),(q)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(q)]
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+
+Transition 'Eat'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(p),(q)]
+Outgoing arc: 1'[(p),(q)]
+Ingoing arc: 1'[(p)] + 1'[(q)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+
+Transition 'SearchForks'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]

@@ -12,43 +12,1816 @@ Variable decl attrib: {'id': 'a', 'name': 'a'}, with declaration: {'declaration'
 Variable decl attrib: {'id': 'r', 'name': 'r'}, with declaration: {'declaration': 'Z'}
 Variable decl attrib: {'id': 'c', 'name': 'c'}, with declaration: {'declaration': 'Cli'}
 -------TRANSITIONS-------
--------GUARDS-------
--------ARCS-------
-<c>
-<c,a>
-<a>
-<c,r>
-<a>
-<c,a>
-<c,a,r>
-<c,a,r>
-<c,r>
-<c,r>
-<c,r>
-<c,r>
-<r>
-<c>
-<c,r>
-1
-1
-1
-<c>
-<c,r>
-<a>
-<c,a,r>
-1
-<c>
-1
-<c>
-<c>
-<c>
-1
-<c>
-<c>
-<c,r>
-<c,r>
-<c,r>
-<c,r>
-<c>
-<c>
-------------------------------------------------------------------
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+
+Transition 'calls'
+Guard: No guard
+Arcs:
+Outgoing arc: <c>
+Ingoing arc: 1
+Ingoing arc: <c>
+Ingoing arc: <c>
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignSameZone'
+Guard: No guard
+Arcs:
+Outgoing arc: <c,a>
+Outgoing arc: <a>
+Ingoing arc: <c,a>
+Outgoing arc: 1
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+
+Transition 'assignNearZone'
+Guard: No guard
+Arcs:
+Outgoing arc: <c,r>
+Outgoing arc: <a>
+Ingoing arc: <c,a,r>
+Outgoing arc: 1
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+
+Transition 'move_between_Municipalities'
+Guard: No guard
+Arcs:
+Outgoing arc: <c,a,r>
+Ingoing arc: <c,r>
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+
+Transition 'reachLocation'
+Guard: No guard
+Arcs:
+Outgoing arc: <c,r>
+Ingoing arc: <c,r>
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+
+Transition 'securing'
+Guard: No guard
+Arcs:
+Outgoing arc: <c,r>
+Ingoing arc: <r>
+Ingoing arc: <c>
+Outgoing arc: 1
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+
+Transition 'assignMunicipality'
+Guard: No guard
+Arcs:
+Outgoing arc: <c>
+Ingoing arc: <c,r>
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+
+Transition 'assignFar'
+Guard: No guard
+Arcs:
+Outgoing arc: <c,r>
+Outgoing arc: <a>
+Ingoing arc: <c,a,r>
+Outgoing arc: 1
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+
+Transition 'end'
+Guard: No guard
+Arcs:
+Ingoing arc: 1
+Ingoing arc: <c>
+Outgoing arc: <c>
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+
+Transition 'Timeout'
+Guard: No guard
+Arcs:
+Outgoing arc: <c>
+Ingoing arc: <c>
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+
+Transition 'timeout'
+Guard: No guard
+Arcs:
+Outgoing arc: <c,r>
+Ingoing arc: <c,r>
+Outgoing arc: <c>
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+
+Transition 'securingInTime'
+Guard: No guard
+Arcs:
+Outgoing arc: <c,r>
+Ingoing arc: <c,r>
+Outgoing arc: <c>
