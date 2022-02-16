@@ -1,0 +1,56 @@
+Test: PhilosophersDyn-COL-10
+Transitions: 7
+Arcs: 33
+-------SORTS-------
+Named sort: {'id': 'Philosopher', 'name': 'Philosopher'} has ranges: [1,10]
+Usersort {'id': 'neighbourhood', 'name': 'Neighbourhood'} is a product: ['Philosopher', 'Philosopher']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declaration': 'Philosopher'}
+Variable decl attrib: {'id': 'varl', 'name': 'l'}, with declaration: {'declaration': 'Philosopher'}
+Variable decl attrib: {'id': 'varq', 'name': 'q'}, with declaration: {'declaration': 'Philosopher'}
+Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'Philosopher'}
+-------TRANSITIONS-------
+
+Transition 'Initialize' has Guard: '(p) ineq (q)' and Arcs: 
+Ingoing arc: 1'[(p)] + 1'[(q)]
+Ingoing arc: 1'[(p),(q)] + 1'[(q),(p)]
+Ingoing arc: 1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
+Ingoing arc: 1'[(p)] + 1'[(q)]
+Outgoing arc: 1'[(Philosopher.all)]
+-------GUARDS-------
+(p) ineq (q)
+-------ARCS-------
+1'[(p),(q)]
+1'[(p),(q)]
+1'[(p)] + 1'[(q)]
+1'[(p),(q)]
+1'[(p),(q)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(q)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(l),(r)]
+1'[(l),(p)] + 1'[(p),(r)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)] + 1'[(q)]
+1'[(l)] + 1'[(r)]
+1'[(l)] + 1'[(r)]
+1'[(p)]
+1'[(l),(p)] + 1'[(p),(r)]
+1'[(l),(r)]
+1'[(p)]
+1'[(p),(q)] + 1'[(q),(p)]
+1'[(Philosopher.all)] - 1'[(p)] - 1'[(q)]
+1'[(p)] + 1'[(q)]
+1'[(Philosopher.all)]
+------------------------------------------------------------------

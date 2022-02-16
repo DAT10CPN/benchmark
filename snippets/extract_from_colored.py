@@ -2,8 +2,8 @@ import os
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-LOGGING = True
-TESTING = True
+LOGGING = False
+TESTING = False
 test_model = 'AirplaneLD-COL-0010'
 
 
@@ -13,8 +13,9 @@ def main():
 
     script_dir = os.path.dirname(__file__)
     MCC_DIRECTORY = os.path.join(script_dir, '..\\..\\mcc2021-COL\\')
+    extracted_folder = '..\\static_data\\extracted\\'
 
-    graph_dir = os.path.join(script_dir, 'extracted\\')
+    graph_dir = os.path.join(script_dir, extracted_folder)
     if not os.path.isdir(graph_dir):
         os.makedirs(graph_dir)
     for test_folder in os.listdir(MCC_DIRECTORY):
@@ -36,6 +37,15 @@ def main():
         declaration = net.findall(f'{NAMESPACE}' + 'declaration')
         structure = declaration[0].findall(f'{NAMESPACE}' + 'structure')
         declarations = structure[0].findall(f'{NAMESPACE}' + 'declarations')
+        transitions = page.findall(f'{NAMESPACE}' + 'transition')
+        arcs = page.findall(f'{NAMESPACE}' + 'arc')
+
+        # Some stats
+        final_to_file = final_to_file + (f"\nTransitions: {len(transitions)}")
+        final_to_file = final_to_file + (f"\nArcs: {len(arcs)}")
+        if LOGGING:
+            print(f"Transitions: {len(transitions)}")
+            print(f"Arcs: {len(arcs)}")
 
         named_sort_ids = []
         # Find ranges of colors
@@ -108,30 +118,31 @@ def main():
         if LOGGING:
             print("-------TRANSITIONS-------")
 
-        transitions = page.findall(f'{NAMESPACE}' + 'transition')
         for transition in transitions:
             transition_id = transition.attrib['id']
 
             conditions = transition.findall(f'{NAMESPACE}' + 'condition')
             for condition in conditions:
-                text = condition.find(f'{NAMESPACE}' + 'text').text
+                guard = condition.find(f'{NAMESPACE}' + 'text').text
 
-                if text == "":
-                    text = "No guard"
+                if guard == "":
+                    guard = "No guard"
 
-                arcs = []
-                for arc in page.findall(f'{NAMESPACE}' + 'arc'):
+                arcs_descriptions = []
+                for arc in arcs:
                     hlinscription = arc.find(f'{NAMESPACE}' + 'hlinscription')
                     text = hlinscription.find(f'{NAMESPACE}' + 'text').text
                     if transition_id == arc.attrib['source']:
-                        arcs.append(f"Ingoing arc: {text}")
+                        arcs_descriptions.append(f"Ingoing arc: {text}")
                     if transition_id == arc.attrib['target']:
-                        arcs.append(f"Outgoing arc: {text}")
+                        arcs_descriptions.append(f"Outgoing arc: {text}")
 
-                final_to_file = final_to_file + "\n" + f"{transition_id} has Guard: {text} and Arcs: {arcs}"
+                final_to_file = final_to_file + "\n\n" + f"Transition '{transition_id}' has Guard: '{guard}' and Arcs: "
+                for arc in arcs_descriptions:
+                    final_to_file = final_to_file + "\n" + arc
                 if LOGGING:
-                    print(f"\nTransition: {transition_id} has Guard: {text} and Arcs: ")
-                    for arc in arcs:
+                    print(f"\nTransition: '{transition_id}' has Guard: '{guard}' and Arcs: ")
+                    for arc in arcs_descriptions:
                         print(arc)
 
         # ALL conditions on transitions
@@ -139,7 +150,6 @@ def main():
         if LOGGING:
             print("-------GUARDS-------")
 
-        transitions = page.findall(f'{NAMESPACE}' + 'transition')
         for transition in transitions:
             conditions = transition.findall(f'{NAMESPACE}' + 'condition')
             for condition in conditions:
@@ -154,7 +164,7 @@ def main():
         final_to_file = final_to_file + "\n" + "-------ARCS-------"
         if LOGGING:
             print("-------ARCS-------")
-        for arc in page.findall(f'{NAMESPACE}' + 'arc'):
+        for arc in arcs:
             hlinscription = arc.find(f'{NAMESPACE}' + 'hlinscription')
             text = hlinscription.find(f'{NAMESPACE}' + 'text').text
             final_to_file = final_to_file + "\n" + text
@@ -165,7 +175,7 @@ def main():
         if LOGGING:
             print("------------------------------------------------------------------")
 
-        with open(f"extracted/{test_folder}.txt", "w") as file:
+        with open(f"{extracted_folder}/{test_folder}.txt", "w") as file:
             # Writing data to a file
             file.write(final_to_file)
 

@@ -1,0 +1,83 @@
+Test: Peterson-COL-4
+Transitions: 14
+Arcs: 42
+-------SORTS-------
+Named sort: {'id': 'process', 'name': 'Process'} has ranges: [0,4]
+Named sort: {'id': 'tour', 'name': 'Tour'} has ranges: [0,3]
+Named sort: {'id': 'bool', 'name': 'Bool'} has values: ['F', 'T']
+Usersort {'id': 'proctour', 'name': 'ProcTour'} is a product: ['process', 'tour']
+Usersort {'id': 'tourproc', 'name': 'TourProc'} is a product: ['tour', 'process']
+Usersort {'id': 'proctourproc', 'name': 'ProcTourProc'} is a product: ['process', 'tour', 'process']
+Usersort {'id': 'procbool', 'name': 'ProcBool'} is a product: ['process', 'bool']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'process'}
+Variable decl attrib: {'id': 'vark', 'name': 'k'}, with declaration: {'declaration': 'process'}
+Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declaration': 'tour'}
+-------TRANSITIONS-------
+
+Transition 'TurnDiff' has Guard: '[i ineq k]' and Arcs: 
+Outgoing arc: 1'(j,k)
+Ingoing arc: 1'(j,k)
+Outgoing arc: 1'(i,j)
+Ingoing arc: 1'(i,j)
+
+Transition 'ProgressTurn' has Guard: '[j ineq 3]' and Arcs: 
+Ingoing arc: 1'(i,j++1)
+Outgoing arc: 1'(i,j)
+
+Transition 'NoIdentity' has Guard: '[i ineq k]' and Arcs: 
+Outgoing arc: 1'(i,j,k)
+Ingoing arc: 1'(i,j,k)
+
+Transition 'Loop' has Guard: '[k ineq 4]' and Arcs: 
+Ingoing arc: 1'(i,j,k++1)
+Outgoing arc: 1'(i,j,k)
+-------GUARDS-------
+[i ineq k]
+[j ineq 3]
+[i ineq k]
+[k ineq 4]
+-------ARCS-------
+1'(i)
+1'(i)
+1'(i,F)
+1'(i,T)
+1'(i,T)
+1'(i,F)
+1'(i,j)
+1'(i,0)
+1'(i,j++1)
+1'(j,k)
+1'(j,i)
+1'(j,k)
+1'(j,k)
+1'(j,i)
+1'(j,i)
+1'(i,j)
+1'(i,j)
+1'(i,j)
+1'(i,j)
+1'(i,j,k)
+1'(i,j,0)
+1'(i,j,k++1)
+1'(i,j)
+1'(i,3)
+1'(i,j)
+1'(i,j)
+1'(i,j,k)
+1'(i,j,i)
+1'(i,j,k)
+1'(i)
+1'(i)
+1'(i,j,k)
+1'(i,j,k)
+1'(i,j,k)
+1'(i,j,k)
+1'(i,j,k)
+1'(i,j,i)
+1'(i,j,k)
+1'(k,F)
+1'(k,F)
+1'(k,T)
+1'(k,T)
+------------------------------------------------------------------

@@ -1,0 +1,179 @@
+Test: NeoElection-COL-7
+Transitions: 22
+Arcs: 98
+-------SORTS-------
+Named sort: {'id': 'T-bool', 'name': 'bool'} has values: ['false', 'true']
+Named sort: {'id': 'T-M', 'name': 'M'} has ranges: [0,7]
+Named sort: {'id': 'T-STAGE', 'name': 'STAGE'} has values: ['NEG', 'PRIM', 'SEC']
+Named sort: {'id': 'T-NEGSTEP', 'name': 'NEGSTEP'} has values: ['NONE', 'CO', 'DONE']
+Named sort: {'id': 'T-POS', 'name': 'POS'} has ranges: [1,7]
+Named sort: {'id': 'T-BOOL', 'name': 'BOOL'} has values: ['F', 'T']
+Named sort: {'id': 'T-MT', 'name': 'MT'} has values: ['AskP', 'AnsP', 'RI', 'AI', 'AnnP', 'RP']
+Usersort {'id': 'T-M-POS-M', 'name': 'M * POS * M'} is a product: ['T-M', 'T-POS', 'T-M']
+Usersort {'id': 'T-M-BOOL-M', 'name': 'M * BOOL * M'} is a product: ['T-M', 'T-BOOL', 'T-M']
+Usersort {'id': 'T-M-M-NEGSTEP', 'name': 'M * M * NEGSTEP'} is a product: ['T-M', 'T-M', 'T-NEGSTEP']
+Usersort {'id': 'T-M-M-MT-M', 'name': 'M * M * MT * M'} is a product: ['T-M', 'T-M', 'T-MT', 'T-M']
+Usersort {'id': 'T-M-POS', 'name': 'M * POS'} is a product: ['T-M', 'T-POS']
+Usersort {'id': 'T-M-STAGE', 'name': 'M * STAGE'} is a product: ['T-M', 'T-STAGE']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'V-m-M', 'name': 'm'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-s-M', 'name': 's'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-r-M', 'name': 'r'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-iam-BOOL', 'name': 'iam'}, with declaration: {'declaration': 'T-BOOL'}
+Variable decl attrib: {'id': 'V-pm-M', 'name': 'pm'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-p-M', 'name': 'p'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-i-POS', 'name': 'i'}, with declaration: {'declaration': 'T-POS'}
+-------TRANSITIONS-------
+
+Transition 'T-poll__handleAI1' has Guard: '(m >= s)' and Arcs: 
+Outgoing arc: <( m, r, CO )>
+Ingoing arc: <( m, r, DONE )>
+Outgoing arc: <( m, s, AI, 0 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAI2' has Guard: '(m < s)' and Arcs: 
+Outgoing arc: <( m, iam, pm )>
+Ingoing arc: <( m, F, pm )>
+Outgoing arc: <( m, r, CO )>
+Ingoing arc: <( m, r, DONE )>
+Outgoing arc: <( m, s, AI, 0 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAnnP1' has Guard: '(pm != m)' and Arcs: 
+Outgoing arc: <( m, iam, pm )>
+Ingoing arc: <( m, F, s )>
+Outgoing arc: <( m, s, AnnP, 0 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP2' has Guard: '(p != 0)' and Arcs: 
+Outgoing arc: <( m, iam, p )>
+Ingoing arc: <( m, F, p )>
+Outgoing arc: <( m, s, AnsP, p )>
+Ingoing arc: <( s, m, RI, 0 )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP3' has Guard: '(((p != 0) and (pm != 0)) and (pm != p))' and Arcs: 
+Outgoing arc: <( m, iam, pm )>
+Ingoing arc: <( m, T, 0 )>
+Outgoing arc: <( m, s, AnsP, p )>
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP4' has Guard: '(p != 0)' and Arcs: 
+Outgoing arc: <( m, iam, 0 )>
+Ingoing arc: <( m, F, p )>
+Ingoing arc: <( s, m, RI, 0 )>
+Outgoing arc: <( m )>
+Outgoing arc: <( m, s, AnsP, p )>
+Ingoing arc: <( m )>
+-------GUARDS-------
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+-------ARCS-------
+<( m )>
+<( m )>
+<( m, r, CO )>
+<( m, r, DONE )>
+<( m, s, AI, 0 )>
+<( m )>
+<( m )>
+<( m, iam, pm )>
+<( m, F, pm )>
+<( m, r, CO )>
+<( m, r, DONE )>
+<( m, s, AI, 0 )>
+<( m )>
+<( m )>
+<( m, iam, pm )>
+<( m, F, s )>
+<( m, s, AnnP, 0 )>
+<( m )>
+<( m )>
+<( m, T, m )>
+<( m, T, 0 )>
+<( m, s, AnnP, 0 )>
+<( m )>
+<( m )>
+<( m, s, AnsP, 0 )>
+<( s, m, RI, 0 )>
+<( m )>
+<( m )>
+<( m, iam, p )>
+<( m, F, p )>
+<( m, s, AnsP, p )>
+<( s, m, RI, 0 )>
+<( m )>
+<( m )>
+<( m, iam, pm )>
+<( m, T, 0 )>
+<( m, s, AnsP, p )>
+<( m )>
+<( m )>
+<( m, iam, 0 )>
+<( m, F, p )>
+<( s, m, RI, 0 )>
+<( m )>
+<( m, s, AnsP, p )>
+<( m )>
+<( m, iam, pm )>
+<( m, iam, pm )>
+<( m, s, AskP, 0 )>
+<( s, m, AnsP, pm )>
+<( m )>
+<( m )>
+<( m, s, RI, 0 )>
+<( s, m, AI, 0 )>
+<( m )>
+<( m )>
+<( m, s, RP, 0 )>
+<( m )>
+<( m )>
+<( m )>
+<( m, T, 0 )>
+<( m, T, m )>
+<( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )> + <( m, 5, DONE )> + <( m, 6, DONE )> + <( m, 7, DONE )>
+<( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )> + <( m, 5, DONE )> + <( m, 6, DONE )> + <( m, 7, DONE )>
+<( m )>
+<( m, NEG )>
+<( m, PRIM )>
+<( m )>
+<( m, F, pm )>
+<( m, F, pm )>
+<( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )> + <( m, 5, DONE )> + <( m, 6, DONE )> + <( m, 7, DONE )>
+<( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )> + <( m, 5, DONE )> + <( m, 6, DONE )> + <( m, 7, DONE )>
+<( m )>
+<( m, NEG )>
+<( m, SEC )>
+<( m )>
+<( m )>
+<( m )>
+<( m, 7 )>
+<( m, i, r )>
+<( m, i, r )>
+<( r, m, AnnP, 0 )>
+<( m, i )>
+<( m, (succ i) )>
+<( m )>
+<( m, 1 )>
+<( m )>
+<( m, 7 )>
+<( m, i, r )>
+<( m, i, r )>
+<( m, r, NONE )>
+<( m, r, CO )>
+<( r, m, AskP, 0 )>
+<( m, i )>
+<( m, (succ i) )>
+<( m )>
+<( m, 1 )>
+<( m )>
+<( m )>
+------------------------------------------------------------------

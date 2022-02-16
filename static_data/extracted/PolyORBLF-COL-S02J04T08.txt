@@ -1,0 +1,311 @@
+Test: PolyORBLF-COL-S02J04T08
+Transitions: 65
+Arcs: 254
+-------SORTS-------
+Named sort: {'id': 'Jobs', 'name': 'Jobs'} has ranges: [0,4]
+Named sort: {'id': 'Sources', 'name': 'Sources'} has ranges: [1,2]
+Named sort: {'id': 'Threads', 'name': 'Threads'} has ranges: [1,8]
+Usersort {'id': 'd1', 'name': 'D1'} is a product: ['Threads', 'Jobs']
+Usersort {'id': 'd4', 'name': 'D4'} is a product: ['Threads', 'Sources']
+Usersort {'id': 'd6', 'name': 'D6'} is a product: ['Jobs', 'Sources']
+Named sort: {'id': 'dot', 'name': 'Dot'}
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj10', 'name': 'j10'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj9', 'name': 'j9'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj8', 'name': 'j8'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj7', 'name': 'j7'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj6', 'name': 'j6'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj5', 'name': 'j5'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj4', 'name': 'j4'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj3', 'name': 'j3'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj2', 'name': 'j2'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj1', 'name': 'j1'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'vars', 'name': 's'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'vars2', 'name': 's2'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms10', 'name': 'ms10'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms9', 'name': 'ms9'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms8', 'name': 'ms8'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms7', 'name': 'ms7'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms6', 'name': 'ms6'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms5', 'name': 'ms5'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms4', 'name': 'ms4'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms3', 'name': 'ms3'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms2', 'name': 'ms2'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms1', 'name': 'ms1'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'vart', 'name': 't'}, with declaration: {'declaration': 'Threads'}
+Variable decl attrib: {'id': 'vart2', 'name': 't2'}, with declaration: {'declaration': 'Threads'}
+-------TRANSITIONS-------
+
+Transition 'T_0376' has Guard: '(s) eq (s2)' and Arcs: 
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(s2)]
+Outgoing arc: 1'[(s)]
+Ingoing arc: 1'[(s)]
+
+Transition 'LeaveIdle' has Guard: '(t) eq (t2)' and Arcs: 
+Outgoing arc: 1'[(t2)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+-------GUARDS-------
+(s) eq (s2)
+(t) eq (t2)
+-------ARCS-------
+1'(dot)
+1'[(j)]
+1'[(j),(s)]
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(t),(s)]
+1'[(t),(s)]
+1'[(t),(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'(dot)
+10'(dot)
+10'(dot)
+1'(dot)
+1'(dot)
+1'[(t2)]
+1'[(t2)]
+1'[(t2)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'[(t),(j)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'(dot)
+10'(dot)
+10'(dot)
+1'[(t),(s)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+10'(dot)
+10'(dot)
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(t),(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'[(j)]
+1'[(j)]
+1'[(t)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(j)]
+1'[(j)]
+1'(dot)
+1'(dot)
+1'[(j)]
+1'[(j)]
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(s2)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(s)]
+1'[(t)]
+1'[(t)]
+1'[(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+10'(dot)
+10'(dot)
+10'(dot)
+10'(dot)
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+3'[(t)]
+4'[(t)]
+1'[(t)]
+2'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+6'(dot)
+1'[(t)]
+8'(dot)
+7'(dot)
+1'[(t),(s)]
+9'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+2'(dot)
+1'(dot)
+4'(dot)
+3'(dot)
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)]
+1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)] + 1'[(t),(ms4)]
+1'[(t),(ms1)]
+1'[(t),(ms1)] + 1'[(t),(ms2)]
+1'[(j),(s)]
+1'[(j)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(s)]
+1'[(t)]
+1'[(s)]
+1'[(s)]
+1'[(ms1)] + 1'[(ms2)]
+1'[(ms1)]
+1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)] + 1'[(ms4)]
+1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+2'(dot)
+1'(dot)
+1'(dot)
+2'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(s)]
+1'[(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(s)]
+1'(dot)
+1'[(t),(s)]
+1'[(t),(s)]
+1'[(t),(s)]
+1'[(t),(s)]
+1'(dot)
+10'(dot)
+10'(dot)
+1'(dot)
+1'(dot)
+1'[(t),(s)]
+1'[(t),(s)]
+1'(dot)
+1'[(t),(j)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+------------------------------------------------------------------

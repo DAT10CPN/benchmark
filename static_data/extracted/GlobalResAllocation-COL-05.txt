@@ -1,0 +1,46 @@
+Test: GlobalResAllocation-COL-05
+Transitions: 7
+Arcs: 29
+-------SORTS-------
+Named sort: {'id': 'prclass', 'name': 'Proc'} has ranges: [1,5]
+Named sort: {'id': 'reclass', 'name': 'Res'} has ranges: [1,10]
+Usersort {'id': 'pr', 'name': 'PR'} is a product: ['prclass', 'reclass']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'prclass'}
+Variable decl attrib: {'id': 'varr1', 'name': 'r1'}, with declaration: {'declaration': 'reclass'}
+Variable decl attrib: {'id': 'varr2', 'name': 'r2'}, with declaration: {'declaration': 'reclass'}
+Variable decl attrib: {'id': 'varr3', 'name': 'r3'}, with declaration: {'declaration': 'reclass'}
+Variable decl attrib: {'id': 'varr4', 'name': 'r4'}, with declaration: {'declaration': 'reclass'}
+-------TRANSITIONS-------
+-------GUARDS-------
+-------ARCS-------
+1'(p)
+1'(p)
+1'(p)
+1'(p)
+1'(p)
+4'(p)
+3'(p)
+2'(p)
+1'(p)
+1'(p)
+2'(p)
+1'(r1)
+1'(r1) + 1'(r2)
+1'(p)
+2'(p)
+1'(p,r1)
+1'(p,r1) + 1'(p,r2)
+1'(p)
+2'(p)
+3'(p)
+4'(p)
+1'(p,r1) + 1'(p,r2) + 1'(p,r3) + 1'(p,r4)
+1'(p,r1) + 1'(p,r2) + 1'(p,r3)
+1'(p,r1) + 1'(p,r2)
+1'(p,r1)
+1'(r1) + 1'(r2) + 1'(r3) + 1'(r4)
+1'(r1) + 1'(r2) + 1'(r3)
+1'(r1) + 1'(r2)
+1'(r1)
+------------------------------------------------------------------

@@ -1,0 +1,36 @@
+Test: DatabaseWithMutex-COL-04
+Transitions: 8
+Arcs: 22
+-------SORTS-------
+Named sort: {'id': 'site', 'name': 'site'} has ranges: [1,4]
+Named sort: {'id': 'file', 'name': 'file'} has ranges: [1,4]
+Usersort {'id': 'sf', 'name': 'SF'} is a product: ['site', 'file']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'vars', 'name': 's'}, with declaration: {'declaration': 'site'}
+Variable decl attrib: {'id': 'varf', 'name': 'f'}, with declaration: {'declaration': 'file'}
+-------TRANSITIONS-------
+-------GUARDS-------
+-------ARCS-------
+1'[(s)]
+1'[(site.all),(f)] - 1'[(s),(f)]
+1'[(s),(f)]
+1'[(f)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(site.all),(f)] - 1'[(s),(f)]
+1'[(s)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(s)]
+1'[(s)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(s),(f)]
+1'[(f)]
+1'[(s),(f)]
+------------------------------------------------------------------

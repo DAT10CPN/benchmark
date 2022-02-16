@@ -1,0 +1,79 @@
+Test: DrinkVendingMachine-COL-76
+Transitions: 7
+Arcs: 28
+-------SORTS-------
+Named sort: {'id': 'Quality', 'name': 'Quality'} has ranges: [1,304]
+Named sort: {'id': 'Products', 'name': 'Products'} has ranges: [1,76]
+Named sort: {'id': 'Options', 'name': 'Options'} has ranges: [1,76]
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'Products'}
+Variable decl attrib: {'id': 'varo3', 'name': 'o3'}, with declaration: {'declaration': 'Options'}
+Variable decl attrib: {'id': 'varo2', 'name': 'o2'}, with declaration: {'declaration': 'Options'}
+Variable decl attrib: {'id': 'varo1', 'name': 'o1'}, with declaration: {'declaration': 'Options'}
+Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'Quality'}
+-------TRANSITIONS-------
+
+Transition 'elaborate3' has Guard: '(x) gt (Quality228) and (x) lte (Quality304)' and Arcs: 
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
+Outgoing arc: 1'[(o1)] + 1'[(o2)] + 1'[(o3)]
+
+Transition 'elaborate2' has Guard: '(x) gt (Quality152) and (x) lte (Quality228)' and Arcs: 
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(o1)] + 1'[(o2)]
+Ingoing arc: 1'[(o1)] + 1'[(o2)]
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(x)]
+
+Transition 'elaborate1' has Guard: '(x) gt (Quality76) and (x) lte (Quality152)' and Arcs: 
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(o1)]
+Ingoing arc: 1'[(o1)]
+
+Transition 'elaborate0' has Guard: '(x) lte (Quality76)' and Arcs: 
+Outgoing arc: 1'[(x)]
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(p)]
+Ingoing arc: 1'[(p)]
+-------GUARDS-------
+(x) gt (Quality228) and (x) lte (Quality304)
+(x) gt (Quality152) and (x) lte (Quality228)
+(x) gt (Quality76) and (x) lte (Quality152)
+(x) lte (Quality76)
+-------ARCS-------
+1'[(p)]
+1'[(p)]
+1'[(o1)] + 1'[(o2)]
+1'[(o1)] + 1'[(o2)]
+1'[(x)]
+1'[(x)]
+1'[(p)]
+1'[(p)]
+1'[(o1)]
+1'[(o1)]
+1'[(x)]
+1'[(x)]
+1'[(x)]
+1'[(x)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(p)]
+1'[(o1)]
+1'[(o1)]
+1'[(p)]
+1'[(p)]
+1'[(x)]
+1'[(x)]
+1'[(x)]
+1'[(x)]
+1'[(o1)] + 1'[(o2)] + 1'[(o3)]
+1'[(o1)] + 1'[(o2)] + 1'[(o3)]
+------------------------------------------------------------------

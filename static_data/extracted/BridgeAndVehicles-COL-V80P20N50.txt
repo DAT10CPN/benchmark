@@ -1,0 +1,130 @@
+Test: BridgeAndVehicles-COL-V80P20N50
+Transitions: 11
+Arcs: 56
+-------SORTS-------
+Named sort: {'id': 'sens', 'name': 'sens'} has ranges: [1,2]
+Named sort: {'id': 'compteur', 'name': 'compteur'} has ranges: [0,50]
+Named sort: {'id': 'voitureA', 'name': 'voitureA'} has ranges: [0,80]
+Named sort: {'id': 'voitureB', 'name': 'voitureB'} has ranges: [0,80]
+Named sort: {'id': 'dot', 'name': 'Dot'}
+-------VARIABLES-------
+Variable decl attrib: {'id': 'vars', 'name': 's'}, with declaration: {'declaration': 'sens'}
+Variable decl attrib: {'id': 'varcpt', 'name': 'cpt'}, with declaration: {'declaration': 'compteur'}
+Variable decl attrib: {'id': 'varcA', 'name': 'cA'}, with declaration: {'declaration': 'voitureA'}
+Variable decl attrib: {'id': 'varcB', 'name': 'cB'}, with declaration: {'declaration': 'voitureB'}
+-------TRANSITIONS-------
+
+Transition 'autorisation_B' has Guard: '(s) eq (sens2) and (cB) gt (voitureB0)' and Arcs: 
+Outgoing arc: 1'[(s)]
+Ingoing arc: 1'[(s)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(cB)]
+Ingoing arc: 1'[(cB--)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'decision' has Guard: '(cpt) lt (compteur50)' and Arcs: 
+Ingoing arc: 1'[(s)]
+Outgoing arc: 1'[(s)]
+Ingoing arc: 1'[(cpt++)]
+Outgoing arc: 1'[(cpt)]
+
+Transition 'altern_cpt' has Guard: '(cpt) eq (compteur50)' and Arcs: 
+Outgoing arc: 1'[(s)]
+Outgoing arc: 1'[(cpt)]
+Ingoing arc: 1'[(compteur0)]
+Ingoing arc: 1'[(s++)]
+
+Transition 'timeout_A' has Guard: '(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)' and Arcs: 
+Ingoing arc: 1'[(cB)]
+Outgoing arc: 1'[(cB)]
+Outgoing arc: 1'[(s)]
+Outgoing arc: 1'[(cpt)]
+Ingoing arc: 1'[(compteur0)]
+Ingoing arc: 1'[(s++)]
+Outgoing arc: 1'[(cA)]
+Ingoing arc: 1'[(cA)]
+
+Transition 'timeout_B' has Guard: '(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)' and Arcs: 
+Ingoing arc: 1'[(cA)]
+Outgoing arc: 1'[(cA)]
+Outgoing arc: 1'[(s)]
+Outgoing arc: 1'[(cpt)]
+Ingoing arc: 1'[(compteur0)]
+Ingoing arc: 1'[(s++)]
+Outgoing arc: 1'[(cB)]
+Ingoing arc: 1'[(cB)]
+
+Transition 'autorisation_A' has Guard: '(s) eq (sens1) and (cA) gt (voitureA0)' and Arcs: 
+Ingoing arc: 1'[(cA--)]
+Outgoing arc: 1'[(cA)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(s)]
+Outgoing arc: 1'[(s)]
+-------GUARDS-------
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur50)
+(cpt) eq (compteur50)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+-------ARCS-------
+1'[(cA)]
+1'[(cB)]
+1'[(cA)]
+1'[(cB)]
+1'[(s)]
+1'[(s)]
+1'[(s)]
+1'[(s)]
+1'[(s)]
+1'[(s)]
+1'[(s)]
+1'[(s)]
+1'[(cpt)]
+1'[(cpt++)]
+1'[(cpt)]
+1'[(cpt)]
+1'[(compteur0)]
+1'[(cpt)]
+1'[(compteur0)]
+1'[(compteur0)]
+1'[(s++)]
+1'[(s)]
+1'[(s++)]
+1'[(s++)]
+1'(dot)
+1'(dot)
+1'[(cB)]
+1'[(cB)]
+1'[(cB++)]
+1'[(cB)]
+1'[(cB)]
+1'[(cB--)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+20'(dot)
+20'(dot)
+1'(dot)
+1'[(cA)]
+1'[(cA++)]
+1'[(cA)]
+1'[(cA)]
+1'[(cA--)]
+1'[(cA)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(s)]
+1'[(s)]
+------------------------------------------------------------------

@@ -1,0 +1,18 @@
+Test: Sudoku-COL-AN16
+Transitions: 1
+Arcs: 4
+-------SORTS-------
+Usersort {'id': 'N3', 'name': 'N3'} is a product: ['N', 'N', 'N']
+Usersort {'id': 'N2', 'name': 'N2'} is a product: ['N', 'N']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'x', 'name': 'x'}, with declaration: {'declaration': 'N'}
+Variable decl attrib: {'id': 'y', 'name': 'y'}, with declaration: {'declaration': 'N'}
+Variable decl attrib: {'id': 'v', 'name': 'v'}, with declaration: {'declaration': 'N'}
+-------TRANSITIONS-------
+-------GUARDS-------
+-------ARCS-------
+<x,v>
+<x,y,v>
+<x,y>
+<y,v>
+------------------------------------------------------------------

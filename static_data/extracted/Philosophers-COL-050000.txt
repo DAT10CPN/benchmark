@@ -1,0 +1,26 @@
+Test: Philosophers-COL-050000
+Transitions: 5
+Arcs: 15
+-------SORTS-------
+Named sort: {'id': 'philo', 'name': 'Philo'} has ranges: [1,50000]
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'philo'}
+-------TRANSITIONS-------
+-------GUARDS-------
+-------ARCS-------
+1'(x)
+1'(x)
+1'(x)
+1'(x--1)
+1'(x--1)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x) + 1'(x--1)
+------------------------------------------------------------------

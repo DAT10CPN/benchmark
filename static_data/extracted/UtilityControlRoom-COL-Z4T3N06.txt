@@ -1,0 +1,54 @@
+Test: UtilityControlRoom-COL-Z4T3N06
+Transitions: 12
+Arcs: 37
+-------SORTS-------
+Named sort: {'id': 'dot', 'name': 'Dot'}
+Usersort {'id': 'ZxZ', 'name': 'ZxZ'} is a product: ['Z', 'Z']
+Usersort {'id': 'AxZ1xZ', 'name': 'AxZ1xZ'} is a product: ['Z', 'Z', 'Z']
+Usersort {'id': 'CxZ', 'name': 'CxZ'} is a product: ['Cli', 'Z']
+Usersort {'id': 'CxZxZ', 'name': 'CxZxZ'} is a product: ['Cli', 'Z', 'Z']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'a', 'name': 'a'}, with declaration: {'declaration': 'Z'}
+Variable decl attrib: {'id': 'r', 'name': 'r'}, with declaration: {'declaration': 'Z'}
+Variable decl attrib: {'id': 'c', 'name': 'c'}, with declaration: {'declaration': 'Cli'}
+-------TRANSITIONS-------
+-------GUARDS-------
+-------ARCS-------
+<c>
+<c,a>
+<a>
+<c,r>
+<a>
+<c,a>
+<c,a,r>
+<c,a,r>
+<c,r>
+<c,r>
+<c,r>
+<c,r>
+<r>
+<c>
+<c,r>
+1
+1
+1
+<c>
+<c,r>
+<a>
+<c,a,r>
+1
+<c>
+1
+<c>
+<c>
+<c>
+1
+<c>
+<c>
+<c,r>
+<c,r>
+<c,r>
+<c,r>
+<c>
+<c>
+------------------------------------------------------------------

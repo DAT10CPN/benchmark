@@ -1,0 +1,30 @@
+Test: CSRepetitions-COL-04
+Transitions: 5
+Arcs: 15
+-------SORTS-------
+Named sort: {'id': 'clclass', 'name': 'Client'} has ranges: [1,16]
+Named sort: {'id': 'srclass', 'name': 'Server'} has ranges: [1,4]
+Named sort: {'id': 'dot', 'name': 'Dot'}
+Usersort {'id': 'computation', 'name': 'Computation'} is a product: ['clclass', 'srclass']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varc', 'name': 'c'}, with declaration: {'declaration': 'clclass'}
+Variable decl attrib: {'id': 'vars', 'name': 's'}, with declaration: {'declaration': 'srclass'}
+-------TRANSITIONS-------
+-------GUARDS-------
+-------ARCS-------
+1'(dot)
+1'(dot)
+1'(c)
+1'(c)
+1'(c)
+1'(c)
+1'(c)
+1'(s)
+1'(c,s)
+1'(c)
+1'(s)
+1'(c)
+1'(c)
+1'(c,s)
+1'(c)
+------------------------------------------------------------------

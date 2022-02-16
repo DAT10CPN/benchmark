@@ -1,0 +1,83 @@
+Test: BART-COL-050
+Transitions: 7
+Arcs: 26
+-------SORTS-------
+Named sort: {'id': 'trainid', 'name': 'trainid'} has ranges: [1,50]
+Named sort: {'id': 'speed', 'name': 'speed'} has ranges: [0,5]
+Named sort: {'id': 'distance', 'name': 'distance'} has ranges: [0,40]
+Usersort {'id': 'traincontext', 'name': 'traincontext'} is a product: ['trainid', 'speed', 'distance']
+Usersort {'id': 'speedxdist', 'name': 'speedXdist'} is a product: ['speed', 'distance']
+Usersort {'id': 'distxspeedxdist', 'name': 'distXspeedXdist'} is a product: ['distance', 'speed', 'distance']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'vartid', 'name': 'tid'}, with declaration: {'declaration': 'trainid'}
+Variable decl attrib: {'id': 'vartsp', 'name': 'tsp'}, with declaration: {'declaration': 'speed'}
+Variable decl attrib: {'id': 'vards2', 'name': 'ds2'}, with declaration: {'declaration': 'distance'}
+Variable decl attrib: {'id': 'varda2', 'name': 'da2'}, with declaration: {'declaration': 'distance'}
+Variable decl attrib: {'id': 'varda', 'name': 'da'}, with declaration: {'declaration': 'distance'}
+Variable decl attrib: {'id': 'vardb', 'name': 'db'}, with declaration: {'declaration': 'distance'}
+Variable decl attrib: {'id': 'vards', 'name': 'ds'}, with declaration: {'declaration': 'distance'}
+-------TRANSITIONS-------
+
+Transition 'MissStation' has Guard: '(tsp) gt (speed0) and (db) eq (distance0)' and Arcs: 
+Outgoing arc: 1'[(tid),(tsp),(db)]
+
+Transition 'TooEarly' has Guard: '(tsp) eq (speed0) and (db) gt (distance0)' and Arcs: 
+Outgoing arc: 1'[(tid),(tsp),(db)]
+
+Transition 'TrainAcc' has Guard: '(da2) gt (ds2) and (tsp) lt (speed4)' and Arcs: 
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Ingoing arc: 1'[(tsp++),(ds2)]
+Outgoing arc: 1'[(tsp++),(ds2)]
+Outgoing arc: 1'[(tid),(tsp),(db)]
+Ingoing arc: 1'[(tid),(tsp++),(da)]
+
+Transition 'TrainDecc' has Guard: '(da) lte (ds) and (tsp) gt (speed1)' and Arcs: 
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Outgoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Outgoing arc: 1'[(tid),(tsp),(db)]
+Ingoing arc: 1'[(tid),(tsp--),(da)]
+
+Transition 'TrainStable' has Guard: '(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)' and Arcs: 
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Outgoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Outgoing arc: 1'[(tid),(tsp),(db)]
+Ingoing arc: 1'[(tid),(tsp),(da)]
+-------GUARDS-------
+(tsp) gt (speed0) and (db) eq (distance0)
+(tsp) eq (speed0) and (db) gt (distance0)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+-------ARCS-------
+1'[(tid),(speed0),(distance0)]
+1'[(tid),(speed1),(distance1)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(tsp++),(ds2)]
+1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+1'[(tsp++),(ds2)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(speed0),(distance0)]
+1'[(tid),(tsp),(da)]
+1'[(tid),(tsp--),(da)]
+1'[(tid),(tsp++),(da)]
+1'[(tid),(speed1),(da)]
+1'[(da)]
+1'[(da)]
+------------------------------------------------------------------

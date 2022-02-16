@@ -1,0 +1,121 @@
+Test: LamportFastMutEx-COL-5
+Transitions: 17
+Arcs: 68
+-------SORTS-------
+Named sort: {'id': 'T-bool', 'name': 'P-bool'} has values: ['false', 'true']
+Named sort: {'id': 'T-pid', 'name': 'pid'} has ranges: [0,5]
+Usersort {'id': 'T-pid-bool', 'name': 'pid * bool'} is a product: ['T-pid', 'T-bool']
+Usersort {'id': 'T-pid-pid', 'name': 'pid * pid'} is a product: ['T-pid', 'T-pid']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'V-i-pid', 'name': 'i'}, with declaration: {'declaration': 'T-pid'}
+Variable decl attrib: {'id': 'V-bi-bool', 'name': 'P-bi'}, with declaration: {'declaration': 'T-bool'}
+Variable decl attrib: {'id': 'V-x-pid', 'name': 'x'}, with declaration: {'declaration': 'T-pid'}
+Variable decl attrib: {'id': 'V-y-pid', 'name': 'y'}, with declaration: {'declaration': 'T-pid'}
+Variable decl attrib: {'id': 'V-j-pid', 'name': 'j'}, with declaration: {'declaration': 'T-pid'}
+-------TRANSITIONS-------
+
+Transition 'T-yne0_4' has Guard: '(y != 0)' and Arcs: 
+Outgoing arc: <( y )>
+Ingoing arc: <( y )>
+Ingoing arc: <( i )>
+Outgoing arc: <( i )>
+
+Transition 'T-xnei_10' has Guard: '(x != i)' and Arcs: 
+Outgoing arc: <( x )>
+Ingoing arc: <( x )>
+Outgoing arc: <( i )>
+Ingoing arc: <( i )>
+
+Transition 'T-ynei_15' has Guard: '(i != y)' and Arcs: 
+Outgoing arc: <( y )>
+Ingoing arc: <( y )>
+Outgoing arc: <( i )>
+Ingoing arc: <( i )>
+
+Transition 'T-yeqi_15' has Guard: '(i = y)' and Arcs: 
+Outgoing arc: <( y )>
+Ingoing arc: <( y )>
+Outgoing arc: <( i )>
+Ingoing arc: <( i )>
+
+Transition 'T-xeqi_10' has Guard: '(i = x)' and Arcs: 
+Outgoing arc: <( x )>
+Ingoing arc: <( x )>
+Outgoing arc: <( i )>
+Ingoing arc: <( i )>
+-------GUARDS-------
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
+-------ARCS-------
+<( i )>
+<( i, bi )>
+<( i, true )>
+<( i )>
+<( x )>
+<( i )>
+<( i )>
+<( i )>
+<( y )>
+<( y )>
+<( i )>
+<( i )>
+<( i, bi )>
+<( i, false )>
+<( i )>
+<( i )>
+<( i )>
+<( no_pid )>
+<( no_pid )>
+<( i )>
+<( no_pid )>
+<( no_pid )>
+<( i )>
+<( i )>
+<( y )>
+<( i )>
+<( i )>
+<( i )>
+<( x )>
+<( x )>
+<( i )>
+<( i )>
+<( i, bi )>
+<( i, false )>
+<( i )>
+<( i )>
+<( i )>
+for (j in pid range 1 .. pid'last) <( i, j )>
+<( i )>
+<( j, false )>
+<( j, false )>
+<( i, j )>
+<( i )>
+<( i )>
+<( i, j )>
+<( i )>
+for (j in pid range 1 .. pid'last) <( i, j )>
+<( i )>
+<( y )>
+<( y )>
+<( i )>
+<( i )>
+<( y )>
+<( y )>
+<( i )>
+<( i )>
+<( x )>
+<( x )>
+<( i )>
+<( i )>
+<( y )>
+<( no_pid )>
+<( i )>
+<( i )>
+<( i )>
+<( i, bi )>
+<( i, false )>
+<( i )>
+------------------------------------------------------------------
