@@ -1,0 +1,1018 @@
+
+
+Test model: AirplaneLD-COL-0010
+(S) lte (Speed5) or (S) eq (Speed10)
+(S) gt (Speed5) and (S) ineq (Speed10)
+(S) lte (Speed5) or (S) eq (Speed10)
+(S) gt (Speed5) and (S) ineq (Speed10)
+(A) gte (Altitude10) or (A) eq (Altitude20)
+(A) lt (Altitude10) and (A) ineq (Altitude20)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: AirplaneLD-COL-0020
+(S) lte (Speed10) or (S) eq (Speed20)
+(S) gt (Speed10) and (S) ineq (Speed20)
+(S) lte (Speed10) or (S) eq (Speed20)
+(S) gt (Speed10) and (S) ineq (Speed20)
+(A) gte (Altitude20) or (A) eq (Altitude40)
+(A) lt (Altitude20) and (A) ineq (Altitude40)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: AirplaneLD-COL-0050
+(S) lte (Speed25) or (S) eq (Speed50)
+(S) gt (Speed25) and (S) ineq (Speed50)
+(S) lte (Speed25) or (S) eq (Speed50)
+(S) gt (Speed25) and (S) ineq (Speed50)
+(A) gte (Altitude50) or (A) eq (Altitude100)
+(A) lt (Altitude50) and (A) ineq (Altitude100)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: AirplaneLD-COL-0100
+(S) lte (Speed50) or (S) eq (Speed100)
+(S) gt (Speed50) and (S) ineq (Speed100)
+(S) lte (Speed50) or (S) eq (Speed100)
+(S) gt (Speed50) and (S) ineq (Speed100)
+(A) gte (Altitude100) or (A) eq (Altitude200)
+(A) lt (Altitude100) and (A) ineq (Altitude200)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: AirplaneLD-COL-0200
+(S) lte (Speed100) or (S) eq (Speed200)
+(S) gt (Speed100) and (S) ineq (Speed200)
+(S) lte (Speed100) or (S) eq (Speed200)
+(S) gt (Speed100) and (S) ineq (Speed200)
+(A) gte (Altitude200) or (A) eq (Altitude400)
+(A) lt (Altitude200) and (A) ineq (Altitude400)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: AirplaneLD-COL-0500
+(S) lte (Speed250) or (S) eq (Speed500)
+(S) gt (Speed250) and (S) ineq (Speed500)
+(S) lte (Speed250) or (S) eq (Speed500)
+(S) gt (Speed250) and (S) ineq (Speed500)
+(A) gte (Altitude500) or (A) eq (Altitude1000)
+(A) lt (Altitude500) and (A) ineq (Altitude1000)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: AirplaneLD-COL-1000
+(S) lte (Speed500) or (S) eq (Speed1000)
+(S) gt (Speed500) and (S) ineq (Speed1000)
+(S) lte (Speed500) or (S) eq (Speed1000)
+(S) gt (Speed500) and (S) ineq (Speed1000)
+(A) gte (Altitude1000) or (A) eq (Altitude2000)
+(A) lt (Altitude1000) and (A) ineq (Altitude2000)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: AirplaneLD-COL-2000
+(S) lte (Speed1000) or (S) eq (Speed2000)
+(S) gt (Speed1000) and (S) ineq (Speed2000)
+(S) lte (Speed1000) or (S) eq (Speed2000)
+(S) gt (Speed1000) and (S) ineq (Speed2000)
+(A) gte (Altitude2000) or (A) eq (Altitude4000)
+(A) lt (Altitude2000) and (A) ineq (Altitude4000)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: AirplaneLD-COL-4000
+(S) lte (Speed2000) or (S) eq (Speed4000)
+(S) gt (Speed2000) and (S) ineq (Speed4000)
+(S) lte (Speed2000) or (S) eq (Speed4000)
+(S) gt (Speed2000) and (S) ineq (Speed4000)
+(A) gte (Altitude4000) or (A) eq (Altitude8000)
+(A) lt (Altitude4000) and (A) ineq (Altitude8000)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+(W) eq (Weightoff)
+(W) eq (Weighton)
+
+Test model: BART-COL-002
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(tsp) eq (speed0) and (db) gt (distance0)
+(tsp) gt (speed0) and (db) eq (distance0)
+
+Test model: BART-COL-005
+(tsp) gt (speed0) and (db) eq (distance0)
+(tsp) eq (speed0) and (db) gt (distance0)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+
+Test model: BART-COL-010
+(tsp) gt (speed0) and (db) eq (distance0)
+(tsp) eq (speed0) and (db) gt (distance0)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+
+Test model: BART-COL-020
+(tsp) gt (speed0) and (db) eq (distance0)
+(tsp) eq (speed0) and (db) gt (distance0)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+
+Test model: BART-COL-030
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(tsp) eq (speed0) and (db) gt (distance0)
+(tsp) gt (speed0) and (db) eq (distance0)
+
+Test model: BART-COL-040
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(tsp) eq (speed0) and (db) gt (distance0)
+(tsp) gt (speed0) and (db) eq (distance0)
+
+Test model: BART-COL-050
+(tsp) gt (speed0) and (db) eq (distance0)
+(tsp) eq (speed0) and (db) gt (distance0)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+
+Test model: BART-COL-060
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(tsp) eq (speed0) and (db) gt (distance0)
+(tsp) gt (speed0) and (db) eq (distance0)
+
+Test model: BridgeAndVehicles-COL-V04P05N02
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur2)
+(cpt) eq (compteur2)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V10P10N10
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur10)
+(cpt) eq (compteur10)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V20P10N10
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur10)
+(cpt) eq (compteur10)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V20P10N20
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur20)
+(cpt) eq (compteur20)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V20P10N50
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur50)
+(cpt) eq (compteur50)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V20P20N10
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur10)
+(cpt) eq (compteur10)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V20P20N20
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur20)
+(cpt) eq (compteur20)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V20P20N50
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur50)
+(cpt) eq (compteur50)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V50P20N10
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur10)
+(cpt) eq (compteur10)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V50P20N20
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur20)
+(cpt) eq (compteur20)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V50P20N50
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur50)
+(cpt) eq (compteur50)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V50P50N10
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur10)
+(cpt) eq (compteur10)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V50P50N20
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur20)
+(cpt) eq (compteur20)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V50P50N50
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur50)
+(cpt) eq (compteur50)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V80P20N10
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur10)
+(cpt) eq (compteur10)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V80P20N20
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur20)
+(cpt) eq (compteur20)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V80P20N50
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur50)
+(cpt) eq (compteur50)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V80P50N10
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur10)
+(cpt) eq (compteur10)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V80P50N20
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur20)
+(cpt) eq (compteur20)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: BridgeAndVehicles-COL-V80P50N50
+(s) eq (sens2) and (cB) gt (voitureB0)
+(cpt) lt (compteur50)
+(cpt) eq (compteur50)
+(s) eq (sens1) and (cA) eq (voitureA0) and (cB) gt (voitureB0)
+(s) eq (sens2) and (cB) eq (voitureB0) and (cA) gt (voitureA0)
+(s) eq (sens1) and (cA) gt (voitureA0)
+
+Test model: CSRepetitions-COL-02
+
+Test model: CSRepetitions-COL-03
+
+Test model: CSRepetitions-COL-04
+
+Test model: CSRepetitions-COL-05
+
+Test model: CSRepetitions-COL-07
+
+Test model: CSRepetitions-COL-10
+
+Test model: DatabaseWithMutex-COL-02
+
+Test model: DatabaseWithMutex-COL-04
+
+Test model: DatabaseWithMutex-COL-10
+
+Test model: DatabaseWithMutex-COL-20
+
+Test model: DatabaseWithMutex-COL-40
+
+Test model: DrinkVendingMachine-COL-02
+(x) gt (Quality6) and (x) lte (Quality8)
+(x) gt (Quality4) and (x) lte (Quality6)
+(x) gt (Quality2) and (x) lte (Quality4)
+(x) lte (Quality2)
+
+Test model: DrinkVendingMachine-COL-10
+(x) lte (Quality10)
+(x) gt (Quality10) and (x) lte (Quality20)
+(x) gt (Quality20) and (x) lte (Quality30)
+(x) gt (Quality30) and (x) lte (Quality40)
+
+Test model: DrinkVendingMachine-COL-16
+(x) gt (Quality48) and (x) lte (Quality64)
+(x) gt (Quality32) and (x) lte (Quality48)
+(x) gt (Quality16) and (x) lte (Quality32)
+(x) lte (Quality16)
+
+Test model: DrinkVendingMachine-COL-24
+(x) lte (Quality24)
+(x) gt (Quality24) and (x) lte (Quality48)
+(x) gt (Quality48) and (x) lte (Quality72)
+(x) gt (Quality72) and (x) lte (Quality96)
+
+Test model: DrinkVendingMachine-COL-48
+(x) gt (Quality144) and (x) lte (Quality192)
+(x) gt (Quality96) and (x) lte (Quality144)
+(x) gt (Quality48) and (x) lte (Quality96)
+(x) lte (Quality48)
+
+Test model: DrinkVendingMachine-COL-76
+(x) gt (Quality228) and (x) lte (Quality304)
+(x) gt (Quality152) and (x) lte (Quality228)
+(x) gt (Quality76) and (x) lte (Quality152)
+(x) lte (Quality76)
+
+Test model: DrinkVendingMachine-COL-98
+(x) lte (Quality98)
+(x) gt (Quality98) and (x) lte (Quality196)
+(x) gt (Quality196) and (x) lte (Quality294)
+(x) gt (Quality294) and (x) lte (Quality392)
+
+Test model: FamilyReunion-COL-L00010M0001C001P001G001
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L00020M0002C001P001G001
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L00050M0005C002P002G001
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L00100M0010C005P005G002
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L00200M0020C010P010G005
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L00400M0040C020P020G001
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L00800M0080C040P040G020
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L01200M0120C060P060G030
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L03000M0300G150P150G075
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L05000M0500C250P250G125
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L08000M0800C400P400G200
+(r) eq (ResponseY)
+
+Test model: FamilyReunion-COL-L12000M1200C600P600G300
+(r) eq (ResponseY)
+
+Test model: GlobalResAllocation-COL-03
+
+Test model: GlobalResAllocation-COL-05
+
+Test model: GlobalResAllocation-COL-06
+
+Test model: GlobalResAllocation-COL-07
+
+Test model: GlobalResAllocation-COL-09
+
+Test model: GlobalResAllocation-COL-10
+
+Test model: GlobalResAllocation-COL-11
+
+Test model: LamportFastMutEx-COL-2
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
+
+Test model: LamportFastMutEx-COL-3
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
+
+Test model: LamportFastMutEx-COL-4
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
+
+Test model: LamportFastMutEx-COL-5
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
+
+Test model: LamportFastMutEx-COL-6
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
+
+Test model: LamportFastMutEx-COL-7
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
+
+Test model: LamportFastMutEx-COL-8
+(y != 0)
+(x != i)
+(i != y)
+(i = y)
+(i = x)
+
+Test model: NeoElection-COL-2
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+
+Test model: NeoElection-COL-3
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+
+Test model: NeoElection-COL-4
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+
+Test model: NeoElection-COL-5
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+
+Test model: NeoElection-COL-6
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+
+Test model: NeoElection-COL-7
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+
+Test model: NeoElection-COL-8
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+
+Test model: PermAdmissibility-COL-01
+
+Test model: PermAdmissibility-COL-02
+
+Test model: PermAdmissibility-COL-05
+
+Test model: PermAdmissibility-COL-10
+
+Test model: PermAdmissibility-COL-20
+
+Test model: PermAdmissibility-COL-50
+
+Test model: Peterson-COL-2
+[i ineq k]
+[j ineq 1]
+[i ineq k]
+[k ineq 2]
+
+Test model: Peterson-COL-3
+[i ineq k]
+[j ineq 2]
+[i ineq k]
+[k ineq 3]
+
+Test model: Peterson-COL-4
+[i ineq k]
+[j ineq 3]
+[i ineq k]
+[k ineq 4]
+
+Test model: Peterson-COL-5
+[i ineq k]
+[j ineq 4]
+[i ineq k]
+[k ineq 5]
+
+Test model: Peterson-COL-6
+[i ineq k]
+[j ineq 5]
+[i ineq k]
+[k ineq 6]
+
+Test model: Peterson-COL-7
+[i ineq k]
+[j ineq 6]
+[i ineq k]
+[k ineq 7]
+
+Test model: Philosophers-COL-000005
+
+Test model: Philosophers-COL-000010
+
+Test model: Philosophers-COL-000020
+
+Test model: Philosophers-COL-000050
+
+Test model: Philosophers-COL-000100
+
+Test model: Philosophers-COL-000200
+
+Test model: Philosophers-COL-000500
+
+Test model: Philosophers-COL-001000
+
+Test model: Philosophers-COL-002000
+
+Test model: Philosophers-COL-005000
+
+Test model: Philosophers-COL-010000
+
+Test model: Philosophers-COL-050000
+
+Test model: Philosophers-COL-100000
+
+Test model: PhilosophersDyn-COL-03
+(p) ineq (q)
+
+Test model: PhilosophersDyn-COL-10
+(p) ineq (q)
+
+Test model: PhilosophersDyn-COL-20
+(p) ineq (q)
+
+Test model: PhilosophersDyn-COL-50
+(p) ineq (q)
+
+Test model: PhilosophersDyn-COL-80
+(p) ineq (q)
+
+Test model: PolyORBLF-COL-S02J04T06
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S02J04T08
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S02J04T10
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S02J06T06
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S02J06T08
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S02J06T10
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S04J04T06
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S04J04T08
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S04J04T10
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S04J06T06
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S04J06T08
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S04J06T10
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S06J04T04
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S06J04T06
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S06J04T08
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S06J06T04
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S06J06T06
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBLF-COL-S06J06T08
+(s) eq (s2)
+(t) eq (t2)
+
+Test model: PolyORBNT-COL-S05J20
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S05J30
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S05J40
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S05J60
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S05J80
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S10J20
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S10J30
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S10J40
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S10J60
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: PolyORBNT-COL-S10J80
+(st) eq (StatesPerformWork)
+(st) eq (StatesCheckSource)
+
+Test model: QuasiCertifProtocol-COL-02
+
+Test model: QuasiCertifProtocol-COL-06
+
+Test model: QuasiCertifProtocol-COL-10
+
+Test model: QuasiCertifProtocol-COL-18
+
+Test model: QuasiCertifProtocol-COL-22
+
+Test model: QuasiCertifProtocol-COL-28
+
+Test model: QuasiCertifProtocol-COL-32
+
+Test model: Referendum-COL-0010
+
+Test model: Referendum-COL-0015
+
+Test model: Referendum-COL-0020
+
+Test model: Referendum-COL-0050
+
+Test model: Referendum-COL-0100
+
+Test model: Referendum-COL-0200
+
+Test model: Referendum-COL-0500
+
+Test model: Referendum-COL-1000
+
+Test model: SafeBus-COL-03
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
+
+Test model: SafeBus-COL-06
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
+
+Test model: SafeBus-COL-10
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
+
+Test model: SafeBus-COL-15
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
+
+Test model: SafeBus-COL-20
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
+
+Test model: SafeBus-COL-50
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
+
+Test model: SafeBus-COL-80
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
+
+Test model: SharedMemory-COL-000005
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-000010
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-000020
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-000050
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-000100
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-000200
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-000500
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-001000
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-002000
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-005000
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-010000
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-020000
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-050000
+[m eq x]
+[x ineq m]
+
+Test model: SharedMemory-COL-100000
+[m eq x]
+[x ineq m]
+
+Test model: Sudoku-COL-AN01
+
+Test model: Sudoku-COL-AN02
+
+Test model: Sudoku-COL-AN03
+
+Test model: Sudoku-COL-AN04
+
+Test model: Sudoku-COL-AN05
+
+Test model: Sudoku-COL-AN06
+
+Test model: Sudoku-COL-AN07
+
+Test model: Sudoku-COL-AN08
+
+Test model: Sudoku-COL-AN09
+
+Test model: Sudoku-COL-AN10
+
+Test model: Sudoku-COL-AN11
+
+Test model: Sudoku-COL-AN12
+
+Test model: Sudoku-COL-AN13
+
+Test model: Sudoku-COL-AN14
+
+Test model: Sudoku-COL-AN15
+
+Test model: Sudoku-COL-AN16
+
+Test model: Sudoku-COL-BN01
+(x==1 and y==1 and d==1)
+
+Test model: Sudoku-COL-BN04
+(x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==2)or(x==1 and y==4 and d==2)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==2)or(x==2 and y==4 and d==2)or(x==3 and y==1 and d==3)or(x==3 and y==2 and d==3)or(x==3 and y==3 and d==4)or(x==3 and y==4 and d==4)or(x==4 and y==1 and d==3)or(x==4 and y==2 and d==3)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==4)
+
+Test model: Sudoku-COL-BN09
+(x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==1)or(x==1 and y==4 and d==2)or(x==1 and y==5 and d==2)or(x==1 and y==6 and d==2)or(x==1 and y==7 and d==3)or(x==1 and y==8 and d==3)or(x==1 and y==9 and d==3)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==1)or(x==2 and y==4 and d==2)or(x==2 and y==5 and d==2)or(x==2 and y==6 and d==2)or(x==2 and y==7 and d==3)or(x==2 and y==8 and d==3)or(x==2 and y==9 and d==3)or(x==3 and y==1 and d==1)or(x==3 and y==2 and d==1)or(x==3 and y==3 and d==1)or(x==3 and y==4 and d==2)or(x==3 and y==5 and d==2)or(x==3 and y==6 and d==2)or(x==3 and y==7 and d==3)or(x==3 and y==8 and d==3)or(x==3 and y==9 and d==3)or(x==4 and y==1 and d==4)or(x==4 and y==2 and d==4)or(x==4 and y==3 and d==4)or(x==4 and y==4 and d==5)or(x==4 and y==5 and d==5)or(x==4 and y==6 and d==5)or(x==4 and y==7 and d==6)or(x==4 and y==8 and d==6)or(x==4 and y==9 and d==6)or(x==5 and y==1 and d==4)or(x==5 and y==2 and d==4)or(x==5 and y==3 and d==4)or(x==5 and y==4 and d==5)or(x==5 and y==5 and d==5)or(x==5 and y==6 and d==5)or(x==5 and y==7 and d==6)or(x==5 and y==8 and d==6)or(x==5 and y==9 and d==6)or(x==6 and y==1 and d==4)or(x==6 and y==2 and d==4)or(x==6 and y==3 and d==4)or(x==6 and y==4 and d==5)or(x==6 and y==5 and d==5)or(x==6 and y==6 and d==5)or(x==6 and y==7 and d==6)or(x==6 and y==8 and d==6)or(x==6 and y==9 and d==6)or(x==7 and y==1 and d==7)or(x==7 and y==2 and d==7)or(x==7 and y==3 and d==7)or(x==7 and y==4 and d==8)or(x==7 and y==5 and d==8)or(x==7 and y==6 and d==8)or(x==7 and y==7 and d==9)or(x==7 and y==8 and d==9)or(x==7 and y==9 and d==9)or(x==8 and y==1 and d==7)or(x==8 and y==2 and d==7)or(x==8 and y==3 and d==7)or(x==8 and y==4 and d==8)or(x==8 and y==5 and d==8)or(x==8 and y==6 and d==8)or(x==8 and y==7 and d==9)or(x==8 and y==8 and d==9)or(x==8 and y==9 and d==9)or(x==9 and y==1 and d==7)or(x==9 and y==2 and d==7)or(x==9 and y==3 and d==7)or(x==9 and y==4 and d==8)or(x==9 and y==5 and d==8)or(x==9 and y==6 and d==8)or(x==9 and y==7 and d==9)or(x==9 and y==8 and d==9)or(x==9 and y==9 and d==9)
+
+Test model: Sudoku-COL-BN16
+(x==1 and y==1 and d==1)or(x==1 and y==2 and d==1)or(x==1 and y==3 and d==1)or(x==1 and y==4 and d==1)or(x==1 and y==5 and d==2)or(x==1 and y==6 and d==2)or(x==1 and y==7 and d==2)or(x==1 and y==8 and d==2)or(x==1 and y==9 and d==3)or(x==1 and y==10 and d==3)or(x==1 and y==11 and d==3)or(x==1 and y==12 and d==3)or(x==1 and y==13 and d==4)or(x==1 and y==14 and d==4)or(x==1 and y==15 and d==4)or(x==1 and y==16 and d==4)or(x==2 and y==1 and d==1)or(x==2 and y==2 and d==1)or(x==2 and y==3 and d==1)or(x==2 and y==4 and d==1)or(x==2 and y==5 and d==2)or(x==2 and y==6 and d==2)or(x==2 and y==7 and d==2)or(x==2 and y==8 and d==2)or(x==2 and y==9 and d==3)or(x==2 and y==10 and d==3)or(x==2 and y==11 and d==3)or(x==2 and y==12 and d==3)or(x==2 and y==13 and d==4)or(x==2 and y==14 and d==4)or(x==2 and y==15 and d==4)or(x==2 and y==16 and d==4)or(x==3 and y==1 and d==1)or(x==3 and y==2 and d==1)or(x==3 and y==3 and d==1)or(x==3 and y==4 and d==1)or(x==3 and y==5 and d==2)or(x==3 and y==6 and d==2)or(x==3 and y==7 and d==2)or(x==3 and y==8 and d==2)or(x==3 and y==9 and d==3)or(x==3 and y==10 and d==3)or(x==3 and y==11 and d==3)or(x==3 and y==12 and d==3)or(x==3 and y==13 and d==4)or(x==3 and y==14 and d==4)or(x==3 and y==15 and d==4)or(x==3 and y==16 and d==4)or(x==4 and y==1 and d==1)or(x==4 and y==2 and d==1)or(x==4 and y==3 and d==1)or(x==4 and y==4 and d==1)or(x==4 and y==5 and d==2)or(x==4 and y==6 and d==2)or(x==4 and y==7 and d==2)or(x==4 and y==8 and d==2)or(x==4 and y==9 and d==3)or(x==4 and y==10 and d==3)or(x==4 and y==11 and d==3)or(x==4 and y==12 and d==3)or(x==4 and y==13 and d==4)or(x==4 and y==14 and d==4)or(x==4 and y==15 and d==4)or(x==4 and y==16 and d==4)or(x==5 and y==1 and d==5)or(x==5 and y==2 and d==5)or(x==5 and y==3 and d==5)or(x==5 and y==4 and d==5)or(x==5 and y==5 and d==6)or(x==5 and y==6 and d==6)or(x==5 and y==7 and d==6)or(x==5 and y==8 and d==6)or(x==5 and y==9 and d==7)or(x==5 and y==10 and d==7)or(x==5 and y==11 and d==7)or(x==5 and y==12 and d==7)or(x==5 and y==13 and d==8)or(x==5 and y==14 and d==8)or(x==5 and y==15 and d==8)or(x==5 and y==16 and d==8)or(x==6 and y==1 and d==5)or(x==6 and y==2 and d==5)or(x==6 and y==3 and d==5)or(x==6 and y==4 and d==5)or(x==6 and y==5 and d==6)or(x==6 and y==6 and d==6)or(x==6 and y==7 and d==6)or(x==6 and y==8 and d==6)or(x==6 and y==9 and d==7)or(x==6 and y==10 and d==7)or(x==6 and y==11 and d==7)or(x==6 and y==12 and d==7)or(x==6 and y==13 and d==8)or(x==6 and y==14 and d==8)or(x==6 and y==15 and d==8)or(x==6 and y==16 and d==8)or(x==7 and y==1 and d==5)or(x==7 and y==2 and d==5)or(x==7 and y==3 and d==5)or(x==7 and y==4 and d==5)or(x==7 and y==5 and d==6)or(x==7 and y==6 and d==6)or(x==7 and y==7 and d==6)or(x==7 and y==8 and d==6)or(x==7 and y==9 and d==7)or(x==7 and y==10 and d==7)or(x==7 and y==11 and d==7)or(x==7 and y==12 and d==7)or(x==7 and y==13 and d==8)or(x==7 and y==14 and d==8)or(x==7 and y==15 and d==8)or(x==7 and y==16 and d==8)or(x==8 and y==1 and d==5)or(x==8 and y==2 and d==5)or(x==8 and y==3 and d==5)or(x==8 and y==4 and d==5)or(x==8 and y==5 and d==6)or(x==8 and y==6 and d==6)or(x==8 and y==7 and d==6)or(x==8 and y==8 and d==6)or(x==8 and y==9 and d==7)or(x==8 and y==10 and d==7)or(x==8 and y==11 and d==7)or(x==8 and y==12 and d==7)or(x==8 and y==13 and d==8)or(x==8 and y==14 and d==8)or(x==8 and y==15 and d==8)or(x==8 and y==16 and d==8)or(x==9 and y==1 and d==9)or(x==9 and y==2 and d==9)or(x==9 and y==3 and d==9)or(x==9 and y==4 and d==9)or(x==9 and y==5 and d==10)or(x==9 and y==6 and d==10)or(x==9 and y==7 and d==10)or(x==9 and y==8 and d==10)or(x==9 and y==9 and d==11)or(x==9 and y==10 and d==11)or(x==9 and y==11 and d==11)or(x==9 and y==12 and d==11)or(x==9 and y==13 and d==12)or(x==9 and y==14 and d==12)or(x==9 and y==15 and d==12)or(x==9 and y==16 and d==12)or(x==10 and y==1 and d==9)or(x==10 and y==2 and d==9)or(x==10 and y==3 and d==9)or(x==10 and y==4 and d==9)or(x==10 and y==5 and d==10)or(x==10 and y==6 and d==10)or(x==10 and y==7 and d==10)or(x==10 and y==8 and d==10)or(x==10 and y==9 and d==11)or(x==10 and y==10 and d==11)or(x==10 and y==11 and d==11)or(x==10 and y==12 and d==11)or(x==10 and y==13 and d==12)or(x==10 and y==14 and d==12)or(x==10 and y==15 and d==12)or(x==10 and y==16 and d==12)or(x==11 and y==1 and d==9)or(x==11 and y==2 and d==9)or(x==11 and y==3 and d==9)or(x==11 and y==4 and d==9)or(x==11 and y==5 and d==10)or(x==11 and y==6 and d==10)or(x==11 and y==7 and d==10)or(x==11 and y==8 and d==10)or(x==11 and y==9 and d==11)or(x==11 and y==10 and d==11)or(x==11 and y==11 and d==11)or(x==11 and y==12 and d==11)or(x==11 and y==13 and d==12)or(x==11 and y==14 and d==12)or(x==11 and y==15 and d==12)or(x==11 and y==16 and d==12)or(x==12 and y==1 and d==9)or(x==12 and y==2 and d==9)or(x==12 and y==3 and d==9)or(x==12 and y==4 and d==9)or(x==12 and y==5 and d==10)or(x==12 and y==6 and d==10)or(x==12 and y==7 and d==10)or(x==12 and y==8 and d==10)or(x==12 and y==9 and d==11)or(x==12 and y==10 and d==11)or(x==12 and y==11 and d==11)or(x==12 and y==12 and d==11)or(x==12 and y==13 and d==12)or(x==12 and y==14 and d==12)or(x==12 and y==15 and d==12)or(x==12 and y==16 and d==12)or(x==13 and y==1 and d==13)or(x==13 and y==2 and d==13)or(x==13 and y==3 and d==13)or(x==13 and y==4 and d==13)or(x==13 and y==5 and d==14)or(x==13 and y==6 and d==14)or(x==13 and y==7 and d==14)or(x==13 and y==8 and d==14)or(x==13 and y==9 and d==15)or(x==13 and y==10 and d==15)or(x==13 and y==11 and d==15)or(x==13 and y==12 and d==15)or(x==13 and y==13 and d==16)or(x==13 and y==14 and d==16)or(x==13 and y==15 and d==16)or(x==13 and y==16 and d==16)or(x==14 and y==1 and d==13)or(x==14 and y==2 and d==13)or(x==14 and y==3 and d==13)or(x==14 and y==4 and d==13)or(x==14 and y==5 and d==14)or(x==14 and y==6 and d==14)or(x==14 and y==7 and d==14)or(x==14 and y==8 and d==14)or(x==14 and y==9 and d==15)or(x==14 and y==10 and d==15)or(x==14 and y==11 and d==15)or(x==14 and y==12 and d==15)or(x==14 and y==13 and d==16)or(x==14 and y==14 and d==16)or(x==14 and y==15 and d==16)or(x==14 and y==16 and d==16)or(x==15 and y==1 and d==13)or(x==15 and y==2 and d==13)or(x==15 and y==3 and d==13)or(x==15 and y==4 and d==13)or(x==15 and y==5 and d==14)or(x==15 and y==6 and d==14)or(x==15 and y==7 and d==14)or(x==15 and y==8 and d==14)or(x==15 and y==9 and d==15)or(x==15 and y==10 and d==15)or(x==15 and y==11 and d==15)or(x==15 and y==12 and d==15)or(x==15 and y==13 and d==16)or(x==15 and y==14 and d==16)or(x==15 and y==15 and d==16)or(x==15 and y==16 and d==16)or(x==16 and y==1 and d==13)or(x==16 and y==2 and d==13)or(x==16 and y==3 and d==13)or(x==16 and y==4 and d==13)or(x==16 and y==5 and d==14)or(x==16 and y==6 and d==14)or(x==16 and y==7 and d==14)or(x==16 and y==8 and d==14)or(x==16 and y==9 and d==15)or(x==16 and y==10 and d==15)or(x==16 and y==11 and d==15)or(x==16 and y==12 and d==15)or(x==16 and y==13 and d==16)or(x==16 and y==14 and d==16)or(x==16 and y==15 and d==16)or(x==16 and y==16 and d==16)
+
+Test model: TokenRing-COL-005
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-010
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-015
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-020
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-030
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-040
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-050
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-100
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-200
+[i ineq 0 and x ineq y]
+
+Test model: TokenRing-COL-500
+[i ineq 0 and x ineq y]
+
+Test model: UtilityControlRoom-COL-Z2T3N04
+
+Test model: UtilityControlRoom-COL-Z2T3N06
+
+Test model: UtilityControlRoom-COL-Z2T3N08
+
+Test model: UtilityControlRoom-COL-Z2T3N10
+
+Test model: UtilityControlRoom-COL-Z2T4N02
+
+Test model: UtilityControlRoom-COL-Z2T4N04
+
+Test model: UtilityControlRoom-COL-Z2T4N06
+
+Test model: UtilityControlRoom-COL-Z2T4N08
+
+Test model: UtilityControlRoom-COL-Z2T4N10
+
+Test model: UtilityControlRoom-COL-Z4T3N06
+
+Test model: UtilityControlRoom-COL-Z4T3N08
+
+Test model: UtilityControlRoom-COL-Z4T3N10
+
+Test model: UtilityControlRoom-COL-Z4T4N02
+
+Test model: UtilityControlRoom-COL-Z4T4N04
+
+Test model: UtilityControlRoom-COL-Z4T4N06
+
+Test model: UtilityControlRoom-COL-Z4T4N08
+
+Test model: UtilityControlRoom-COL-Z4T4N10
+
+Test model: VehicularWifi-COL-none
+sa!=sb
+pt==rts||pt==data
+pt==cts||pt==ack
+pt==cts||pt==ack
+pt==rts||pt==data
+pt==rts||pt==data
+pt==cts||pt==ack
+pt!=ack && pt!=rts && p2==p
+pt==ack && (pt==rts||p2==p)
+pt!=rts
+pt==cts||pt==ack
+b!=b1
+p>p2
+pt==rts

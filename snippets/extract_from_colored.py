@@ -18,6 +18,8 @@ def main():
     graph_dir = os.path.join(script_dir, extracted_folder)
     if not os.path.isdir(graph_dir):
         os.makedirs(graph_dir)
+
+    all_guards = ""
     for test_folder in os.listdir(MCC_DIRECTORY):
         if TESTING:
             if test_folder != test_model:
@@ -120,6 +122,7 @@ def main():
         if LOGGING:
             print("-------GUARDS-------")
 
+        all_guards = all_guards + "\n\n" + f"Test model: {test_folder}"
         for transition in transitions:
             conditions = transition.findall(f'{NAMESPACE}' + 'condition')
             for condition in conditions:
@@ -128,6 +131,7 @@ def main():
                 if text == "":
                     text = "No guard"
                 final_to_file = final_to_file + "\n" + text
+                all_guards = all_guards + "\n" + text
                 if LOGGING:
                     print(text)
 
@@ -186,6 +190,10 @@ def main():
         with open(f"{extracted_folder}/{test_folder}.txt", "w") as file:
             # Writing data to a file
             file.write(final_to_file)
+
+        with open(f"{extracted_folder}/_all_guards.txt", "w") as file:
+            # Writing data to a file
+            file.write(all_guards)
 
 
 if __name__ == "__main__":
