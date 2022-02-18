@@ -122,6 +122,7 @@ def main():
         if LOGGING:
             print("-------GUARDS-------")
 
+        all_guards = all_guards + "\n\n" + f"Test model: {test_folder}"
         for transition in transitions:
             conditions = transition.findall(f'{NAMESPACE}' + 'condition')
             for condition in conditions:
