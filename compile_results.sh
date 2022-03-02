@@ -28,14 +28,14 @@ OUT="output/$BIN/$NAME.csv"
 
 # ***** Setup CSV *****
 
-NEW_RULES=("L" "M" "N" "P" "Q" "R")
+RULE_NAMES=()
 
 rm -f $OUT
 
 # Write header
-echo -n "model name,query index,verification time,verification memory,answer,solved by query simplification,prev place count,prev transition count,post place count,post transition count,reduce time,state space size,rule A,rule B,rule C,rule D,rule E,rule F,rule G,rule H,rule I,rule J,rule K" >> $OUT
-for i in ${!NEW_RULES[@]} ; do
-	echo -n ",rule ${NEW_RULES[$i]}" >> $OUT
+echo -n "model name,query index,verification time,verification memory,answer,solved by query simplification,prev place count,prev transition count,post place count,post transition count,reduce time,state space size" >> $OUT
+for i in ${!RULE_NAMES[@]} ; do
+	echo -n ",rule ${RULE_NAMES[$i]}" >> $OUT
 done
 echo "" >> $OUT
 
@@ -90,43 +90,14 @@ for RED_RES_FILE in $(ls $DIR | grep "\.rout$") ; do
 
 	ENTRY+="$MODEL,$Q,$VERI_TIME,$VERI_MEM,$ANSWER,$QUERY_SIMPLIFICATION,$PREV_PLACE_COUNT,$PREV_TRANS_COUNT,$POST_RED_PLACE_COUNT,$POST_RED_TRANS_COUNT,$RED_TIME,$SIZE"
 
-	ANY_RULE=$([[ -n "$(echo $ROUT | awk '/Applications of rule/')" ]] && echo "TRUE" || echo "FALSE")
+	# Extract applications of rules
+	ROUT_APPLICATIONS=$(echo $ROUT | grep 'Applications of rule')
+	for i in ${!RULE_NAMES[@]} ; do
 
-	if [[ $ANY_RULE = "FALSE" ]]; then
+		APPLICATIONS=$([[ -n "$(echo $ROUT_APPLICATIONS | awk "/Applications of rule ${RULE_NAMES[$i]}/")" ]] && echo $ROUT_APPLICATIONS | sed -E "s/.*Applications of rule ${RULE_NAMES[$i]}: ([0-9]+).*/\1/" || echo 0)
+		ENTRY+=",$APPLICATIONS"
 
-		# No rules where applied??
-
-		ENTRY+=",0,0,0,0,0,0,0,0,0,0,0"
-		for i in ${!NEW_RULES[@]} ; do
-			ENTRY+=",0"
-		done
-
-	else
-
-		# Extract applications of rules that are always there
-		RULE_A=$(echo $ROUT | sed -E "s/.*Applications of rule A: ([0-9]+).*/\1/")
-		RULE_B=$(echo $ROUT | sed -E "s/.*Applications of rule B: ([0-9]+).*/\1/")
-		RULE_C=$(echo $ROUT | sed -E "s/.*Applications of rule C: ([0-9]+).*/\1/")
-		RULE_D=$(echo $ROUT | sed -E "s/.*Applications of rule D: ([0-9]+).*/\1/")
-		RULE_E=$(echo $ROUT | sed -E "s/.*Applications of rule E: ([0-9]+).*/\1/")
-		RULE_F=$(echo $ROUT | sed -E "s/.*Applications of rule F: ([0-9]+).*/\1/")
-		RULE_G=$(echo $ROUT | sed -E "s/.*Applications of rule G: ([0-9]+).*/\1/")
-		RULE_H=$(echo $ROUT | sed -E "s/.*Applications of rule H: ([0-9]+).*/\1/")
-		RULE_I=$(echo $ROUT | sed -E "s/.*Applications of rule I: ([0-9]+).*/\1/")
-		RULE_J=$(echo $ROUT | sed -E "s/.*Applications of rule J: ([0-9]+).*/\1/")
-		RULE_K=$(echo $ROUT | sed -E "s/.*Applications of rule K: ([0-9]+).*/\1/")
-
-		ENTRY+=",$RULE_A,$RULE_B,$RULE_C,$RULE_D,$RULE_E,$RULE_F,$RULE_G,$RULE_H,$RULE_I,$RULE_J,$RULE_K"
-
-		# Extract applications of new rules
-		for i in ${!NEW_RULES[@]} ; do
-
-			APPLICATIONS=$([[ -n "$(echo $ROUT | awk "/Applications of rule ${NEW_RULES[$i]}/")" ]] && echo $ROUT | sed -E "s/.*Applications of rule ${NEW_RULES[$i]}: ([0-9]+).*/\1/" || echo 0)
-			ENTRY+=",$APPLICATIONS"
-
-		done
-
-	fi
+	done
 
 	# Add entry to CSV
 	echo $ENTRY >> $OUT
