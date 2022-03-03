@@ -1,0 +1,36 @@
+Test: Referendum-COL-0100
+Transitions: 3
+Arcs: 6
+-------SORTS-------
+Named sort: {'id': 'Voters', 'name': 'Voters'} has ranges: [1,100]
+Named sort: {'id': 'dot', 'name': 'Dot'}
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varv', 'name': 'v'}, with declaration: {'declaration': 'Voters'}
+-------GUARDS-------
+-------TRANSITIONS-------
+
+Transition 'yes'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(v)]
+Outgoing arc: 1'[(v)]
+
+Transition 'no'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(v)]
+Outgoing arc: 1'[(v)]
+
+Transition 'start'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(Voters.all)]
+-------ARCS-------
+1'[(v)]
+1'[(v)]
+1'[(v)]
+1'[(v)]
+1'(dot)
+1'[(Voters.all)]
+------------------------------------------------------------------

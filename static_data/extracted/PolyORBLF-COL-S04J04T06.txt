@@ -1,0 +1,811 @@
+Test: PolyORBLF-COL-S04J04T06
+Transitions: 65
+Arcs: 254
+-------SORTS-------
+Named sort: {'id': 'Jobs', 'name': 'Jobs'} has ranges: [0,4]
+Named sort: {'id': 'Sources', 'name': 'Sources'} has ranges: [1,4]
+Named sort: {'id': 'Threads', 'name': 'Threads'} has ranges: [1,6]
+Usersort {'id': 'd1', 'name': 'D1'} is a product: ['Threads', 'Jobs']
+Usersort {'id': 'd4', 'name': 'D4'} is a product: ['Threads', 'Sources']
+Usersort {'id': 'd6', 'name': 'D6'} is a product: ['Jobs', 'Sources']
+Named sort: {'id': 'dot', 'name': 'Dot'}
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj10', 'name': 'j10'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj9', 'name': 'j9'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj8', 'name': 'j8'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj7', 'name': 'j7'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj6', 'name': 'j6'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj5', 'name': 'j5'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj4', 'name': 'j4'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj3', 'name': 'j3'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj2', 'name': 'j2'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'varj1', 'name': 'j1'}, with declaration: {'declaration': 'Jobs'}
+Variable decl attrib: {'id': 'vars', 'name': 's'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'vars2', 'name': 's2'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms10', 'name': 'ms10'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms9', 'name': 'ms9'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms8', 'name': 'ms8'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms7', 'name': 'ms7'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms6', 'name': 'ms6'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms5', 'name': 'ms5'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms4', 'name': 'ms4'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms3', 'name': 'ms3'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms2', 'name': 'ms2'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'varms1', 'name': 'ms1'}, with declaration: {'declaration': 'Sources'}
+Variable decl attrib: {'id': 'vart', 'name': 't'}, with declaration: {'declaration': 'Threads'}
+Variable decl attrib: {'id': 'vart2', 'name': 't2'}, with declaration: {'declaration': 'Threads'}
+-------GUARDS-------
+(s) eq (s2)
+(t) eq (t2)
+-------TRANSITIONS-------
+
+Transition 'T_2317'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+
+Transition 'T_2315'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+
+Transition 'T_2311'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'NOPDP'
+Guard: No guard
+Arcs:
+Outgoing arc: 10'(dot)
+Ingoing arc: 10'(dot)
+Ingoing arc: 1'[(t),(s)]
+Outgoing arc: 1'[(t),(s)]
+
+Transition 'WaitCompleted'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t),(s)]
+Ingoing arc: 1'(dot)
+Ingoing arc: 10'(dot)
+Outgoing arc: 10'(dot)
+Ingoing arc: 1'[(s)]
+Ingoing arc: 1'(dot)
+
+Transition 'WaitforBlockedTasks'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t),(s)]
+Outgoing arc: 1'[(s)]
+
+Transition 'T_2296'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+
+Transition 'T_2294'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_2285'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t2)]
+Ingoing arc: 1'[(t2)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+
+Transition 'T_2283'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 2'(dot)
+Ingoing arc: 2'(dot)
+
+Transition 'T_2280'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(t),(j)]
+Outgoing arc: 1'[(t),(j)]
+
+Transition 'T_1730'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t),(j)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(j)]
+Ingoing arc: 1'(dot)
+
+Transition 'T_1729'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t),(j)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(j)]
+Ingoing arc: 1'(dot)
+
+Transition 'T_1722'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t),(j)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(j)]
+
+Transition 'T_1721'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t),(j)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(j)]
+
+Transition 'T_1713'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t),(j)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(j)]
+Outgoing arc: 1'(dot)
+
+Transition 'T_1711'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t),(j)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(j)]
+Outgoing arc: 1'(dot)
+
+Transition 'SetSigAbort'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+
+Transition 'NopAbort'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+
+Transition 'IsAbort'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+
+Transition 'T_0383'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t),(s)]
+Outgoing arc: 1'[(s)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(s)]
+
+Transition 'T_0376'
+Guard: (s) eq (s2)
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(s2)]
+Ingoing arc: 1'[(s)]
+Outgoing arc: 1'[(s)]
+
+Transition 'IsEvt'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(s)]
+Ingoing arc: 1'[(s)]
+
+Transition 'NotifyEventSourceAdded'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'EnterCSIS'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t),(s)]
+Ingoing arc: 1'[(t),(s)]
+
+Transition 'LeaveCSIS'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'DummyIS'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+
+Transition 'T_1094'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1096'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1098'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1100'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1114'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1115'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t),(j)]
+Ingoing arc: 1'[(t),(s)]
+Outgoing arc: 1'[(j),(s)]
+Ingoing arc: 1'[(j)]
+
+Transition 'T_1123'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Ingoing arc: 9'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(t),(ms1)]
+Ingoing arc: 1'[(ms1)]
+
+Transition 'T_1124'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Ingoing arc: 8'(dot)
+Outgoing arc: 2'(dot)
+Outgoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)]
+Ingoing arc: 1'[(ms1)] + 1'[(ms2)]
+
+Transition 'T_1125'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Ingoing arc: 7'(dot)
+Outgoing arc: 3'(dot)
+Outgoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)]
+Ingoing arc: 1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)]
+
+Transition 'T_1126'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Ingoing arc: 6'(dot)
+Outgoing arc: 4'(dot)
+Outgoing arc: 1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)] + 1'[(t),(ms4)]
+Ingoing arc: 1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)] + 1'[(ms4)]
+
+Transition 'LeaveCSTCS'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+
+Transition 'EnterCSTCS'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+
+Transition 'T_1145'
+Guard: No guard
+Arcs:
+Outgoing arc: 10'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1146'
+Guard: No guard
+Arcs:
+Outgoing arc: 10'(dot)
+Ingoing arc: 2'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1147'
+Guard: No guard
+Arcs:
+Outgoing arc: 10'(dot)
+Ingoing arc: 3'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1148'
+Guard: No guard
+Arcs:
+Outgoing arc: 10'(dot)
+Ingoing arc: 4'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1170'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+
+Transition 'T_1171'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'DummyOR2'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+
+Transition 'DummyOR1'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+
+Transition 'GoIdle'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+
+Transition 'GoCheckSource'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'GoPerformWork'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(j)]
+Ingoing arc: 1'[(j),(s)]
+Outgoing arc: 1'[(t),(s)]
+Ingoing arc: 1'[(t),(j)]
+
+Transition 'LeaveIdle'
+Guard: (t) eq (t2)
+Arcs:
+Ingoing arc: 1'[(t2)]
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+
+Transition 'EnterCSPW'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+
+Transition 'NotifyEventJobCompleted'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+
+Transition 'Run'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'T_1444'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+
+Transition 'LeaveCSPW'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+
+Transition 'NeedMonitoring'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'NoMonitoring'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'T_1618'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+
+Transition 'NoCheck'
+Guard: No guard
+Arcs:
+Ingoing arc: 10'(dot)
+Outgoing arc: 10'(dot)
+Ingoing arc: 1'[(t)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(t)]
+
+Transition 'WillPerformWork'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(t),(j)]
+Outgoing arc: 1'[(t),(j)]
+
+Transition 'NOPEP'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'T_2541'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t)]
+Ingoing arc: 1'[(t)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'T_2577'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t),(s)]
+Ingoing arc: 1'[(t),(s)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'T_2578'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(t),(s)]
+Ingoing arc: 1'[(t),(s)]
+Ingoing arc: 1'(dot)
+Ingoing arc: 10'(dot)
+Outgoing arc: 10'(dot)
+-------ARCS-------
+1'(dot)
+1'[(j)]
+1'[(j),(s)]
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(t),(s)]
+1'[(t),(s)]
+1'[(t),(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'(dot)
+10'(dot)
+10'(dot)
+1'(dot)
+1'(dot)
+1'[(t2)]
+1'[(t2)]
+1'[(t2)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'[(t),(j)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'(dot)
+10'(dot)
+10'(dot)
+1'[(t),(s)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+10'(dot)
+10'(dot)
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(t),(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'[(j)]
+1'[(j)]
+1'[(t)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t),(j)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(j)]
+1'[(j)]
+1'(dot)
+1'(dot)
+1'[(j)]
+1'[(j)]
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(s2)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(s)]
+1'[(t)]
+1'[(t)]
+1'[(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+10'(dot)
+10'(dot)
+10'(dot)
+10'(dot)
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+3'[(t)]
+4'[(t)]
+1'[(t)]
+2'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+6'(dot)
+1'[(t)]
+8'(dot)
+7'(dot)
+1'[(t),(s)]
+9'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+2'(dot)
+1'(dot)
+4'(dot)
+3'(dot)
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)]
+1'[(t),(ms1)] + 1'[(t),(ms2)] + 1'[(t),(ms3)] + 1'[(t),(ms4)]
+1'[(t),(ms1)]
+1'[(t),(ms1)] + 1'[(t),(ms2)]
+1'[(j),(s)]
+1'[(j)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(s)]
+1'[(t)]
+1'[(s)]
+1'[(s)]
+1'[(ms1)] + 1'[(ms2)]
+1'[(ms1)]
+1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)] + 1'[(ms4)]
+1'[(ms1)] + 1'[(ms2)] + 1'[(ms3)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+2'(dot)
+1'(dot)
+1'(dot)
+2'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(s)]
+1'[(s)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(t)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(s)]
+1'(dot)
+1'[(t),(s)]
+1'[(t),(s)]
+1'[(t),(s)]
+1'[(t),(s)]
+1'(dot)
+10'(dot)
+10'(dot)
+1'(dot)
+1'(dot)
+1'[(t),(s)]
+1'[(t),(s)]
+1'(dot)
+1'[(t),(j)]
+1'[(t)]
+1'[(t),(j)]
+1'[(t)]
+1'(dot)
+1'(dot)
+1'(dot)
+------------------------------------------------------------------

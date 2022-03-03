@@ -1,0 +1,61 @@
+Test: Philosophers-COL-100000
+Transitions: 5
+Arcs: 15
+-------SORTS-------
+Named sort: {'id': 'philo', 'name': 'Philo'} has ranges: [1,100000]
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'philo'}
+-------GUARDS-------
+-------TRANSITIONS-------
+
+Transition 'FF1a'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(x)
+Ingoing arc: 1'(x--1)
+Outgoing arc: 1'(x)
+
+Transition 'FF1b'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(x)
+Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
+
+Transition 'FF2a'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(x)
+Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
+
+Transition 'FF2b'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(x--1)
+Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
+
+Transition 'End'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(x)
+Outgoing arc: 1'(x)
+Outgoing arc: 1'(x) + 1'(x--1)
+-------ARCS-------
+1'(x)
+1'(x)
+1'(x)
+1'(x--1)
+1'(x--1)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x)
+1'(x) + 1'(x--1)
+------------------------------------------------------------------

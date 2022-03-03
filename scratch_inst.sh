@@ -45,35 +45,45 @@ for Q in $(seq 1 $NQ) ; do
 	
 	# Reduce model+query and store stdout
 
-	O=$(eval "$RCMD")
+	O=$(eval "$RCMD" 2>&1)
 	echo "$O" > "$ROUT"
 
 	# ===================== VERIFICATION =====================
 
 	echo "  Verification ..."
 
-	VCMD="./$BIN -r 0 -x $Q $LTLFLAG $PNML $TEST_FOLDER/$MODEL/$CATEGORY.xml"
-	VOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.vout"
-	
-	# Verify query and store stdout along with time and memory spent between @@@s
-	O=$(eval "/usr/bin/time -f '@@@%e,%M@@@' timeout ${VERI_TIME_OUT}m $VCMD" 2>&1)
-	echo "$O" > "$VOUT"
+	if [ "$VERI_TIME_OUT" -eq "0" ] ; then
+		echo "  Verification skipped"
+	else
+		echo "  Verification ..."
+
+		VCMD="./$BIN -r 0 -x $Q $LTLFLAG $PNML $TEST_FOLDER/$MODEL/$CATEGORY.xml"
+		VOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.vout"
+		
+		# Verify query and store stdout along with time and memory spent between @@@s
+		O=$(eval "/usr/bin/time -f '@@@%e,%M@@@' timeout ${VERI_TIME_OUT}m $VCMD" 2>&1)
+		echo "$O" > "$VOUT"
+	fi
 
 	# ===================== EXPLORATION ======================
 
-	echo "  Exploration ..."
+	if [ "$EXPL_TIME_OUT" -eq "0" ] ; then
+		echo "  Exploration skipped"
+	else
+		echo "  Exploration ..."
 
-	ECMD="./$BIN -q 0 -r 0 $PNML -e"
-	SOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.sout"
-	ZOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.size"
+		ECMD="./$BIN -q 0 -r 0 $PNML -e"
+		SOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.sout"
+		ZOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.size"
 
-	RES=$(eval "timeout ${EXPL_TIME_OUT}m $ECMD")
-	RES=$(echo $RES | grep -v "^<" | tr '\n' '\r')
-	echo $RES > $SOUT
+		RES=$(eval "timeout ${EXPL_TIME_OUT}m $ECMD" 2>&1)
+		RES=$(echo $RES | grep -v "^<" | tr '\n' '\r')
+		echo $RES > $SOUT
 
-	SIZE=$([[ -n "$(echo $RES | awk "/explored states/")" ]] && echo $RES | sed -E "s/.*explored states: *([0-9]+).*/\1/" || echo 0)
-	
-	echo $SIZE > $ZOUT
+		SIZE=$([[ -n "$(echo $RES | awk "/explored states/")" ]] && echo $RES | sed -E "s/.*explored states: *([0-9]+).*/\1/" || echo 0)
+		
+		echo $SIZE > $ZOUT
+	fi
 	
 done
 

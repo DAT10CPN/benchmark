@@ -1,0 +1,163 @@
+Test: Peterson-COL-7
+Transitions: 14
+Arcs: 42
+-------SORTS-------
+Named sort: {'id': 'process', 'name': 'Process'} has ranges: [0,7]
+Named sort: {'id': 'tour', 'name': 'Tour'} has ranges: [0,6]
+Named sort: {'id': 'bool', 'name': 'Bool'} has values: ['F', 'T']
+Usersort {'id': 'proctour', 'name': 'ProcTour'} is a product: ['process', 'tour']
+Usersort {'id': 'tourproc', 'name': 'TourProc'} is a product: ['tour', 'process']
+Usersort {'id': 'proctourproc', 'name': 'ProcTourProc'} is a product: ['process', 'tour', 'process']
+Usersort {'id': 'procbool', 'name': 'ProcBool'} is a product: ['process', 'bool']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'process'}
+Variable decl attrib: {'id': 'vark', 'name': 'k'}, with declaration: {'declaration': 'process'}
+Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declaration': 'tour'}
+-------GUARDS-------
+[i ineq k]
+[j ineq 6]
+[i ineq k]
+[k ineq 7]
+-------TRANSITIONS-------
+
+Transition 'Ask'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(i)
+Ingoing arc: 1'(i,F)
+Outgoing arc: 1'(i,T)
+Outgoing arc: 1'(i,0)
+
+Transition 'UpdateTurn'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(i,j)
+Ingoing arc: 1'(j,k)
+Outgoing arc: 1'(j,i)
+Outgoing arc: 1'(i,j)
+
+Transition 'TurnEqual'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(j,i)
+Outgoing arc: 1'(j,i)
+Ingoing arc: 1'(i,j)
+Outgoing arc: 1'(i,j,0)
+
+Transition 'TurnDiff'
+Guard: [i ineq k]
+Arcs:
+Ingoing arc: 1'(j,k)
+Outgoing arc: 1'(j,k)
+Ingoing arc: 1'(i,j)
+Outgoing arc: 1'(i,j)
+
+Transition 'AccessCS'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(i,6)
+Outgoing arc: 1'(i)
+
+Transition 'ProgressTurn'
+Guard: [j ineq 6]
+Arcs:
+Outgoing arc: 1'(i,j++1)
+Ingoing arc: 1'(i,j)
+
+Transition 'BecomeIdle'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(i)
+Ingoing arc: 1'(i,T)
+Outgoing arc: 1'(i,F)
+Ingoing arc: 1'(i)
+
+Transition 'ContinueLoop'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(i,j,k)
+Outgoing arc: 1'(i,j,k)
+
+Transition 'Identity'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(i,j,i)
+Outgoing arc: 1'(i,j,i)
+
+Transition 'NoIdentity'
+Guard: [i ineq k]
+Arcs:
+Ingoing arc: 1'(i,j,k)
+Outgoing arc: 1'(i,j,k)
+
+Transition 'Loop'
+Guard: [k ineq 7]
+Arcs:
+Outgoing arc: 1'(i,j,k++1)
+Ingoing arc: 1'(i,j,k)
+
+Transition 'NotAlone'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(i,j)
+Ingoing arc: 1'(i,j,k)
+Ingoing arc: 1'(k,T)
+Outgoing arc: 1'(k,T)
+
+Transition 'Alone1'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'(i,j,k)
+Outgoing arc: 1'(i,j,k)
+Ingoing arc: 1'(k,F)
+Outgoing arc: 1'(k,F)
+
+Transition 'EndLoop'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(i,j)
+Ingoing arc: 1'(i,j,k)
+-------ARCS-------
+1'(i)
+1'(i)
+1'(i,F)
+1'(i,T)
+1'(i,T)
+1'(i,F)
+1'(i,j)
+1'(i,0)
+1'(i,j++1)
+1'(j,k)
+1'(j,i)
+1'(j,k)
+1'(j,k)
+1'(j,i)
+1'(j,i)
+1'(i,j)
+1'(i,j)
+1'(i,j)
+1'(i,j)
+1'(i,j,k)
+1'(i,j,0)
+1'(i,j,k++1)
+1'(i,j)
+1'(i,6)
+1'(i,j)
+1'(i,j)
+1'(i,j,k)
+1'(i,j,i)
+1'(i,j,k)
+1'(i)
+1'(i)
+1'(i,j,k)
+1'(i,j,k)
+1'(i,j,k)
+1'(i,j,k)
+1'(i,j,k)
+1'(i,j,i)
+1'(i,j,k)
+1'(k,F)
+1'(k,F)
+1'(k,T)
+1'(k,T)
+------------------------------------------------------------------

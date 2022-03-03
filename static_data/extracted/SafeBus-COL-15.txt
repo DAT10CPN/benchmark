@@ -1,0 +1,216 @@
+Test: SafeBus-COL-15
+Transitions: 14
+Arcs: 68
+-------SORTS-------
+Named sort: {'id': 'It', 'name': 'It'} has ranges: [1,15]
+Usersort {'id': 'dom', 'name': 'Dom'} is a product: ['It', 'It']
+Named sort: {'id': 'dot', 'name': 'Dot'}
+-------VARIABLES-------
+Variable decl attrib: {'id': 'vary', 'name': 'y'}, with declaration: {'declaration': 'It'}
+Variable decl attrib: {'id': 'varx', 'name': 'x'}, with declaration: {'declaration': 'It'}
+Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declaration': 'It'}
+Variable decl attrib: {'id': 'varj', 'name': 'j'}, with declaration: {'declaration': 'It'}
+Variable decl attrib: {'id': 'vari', 'name': 'i'}, with declaration: {'declaration': 'It'}
+-------GUARDS-------
+(x) eq (y)
+(i) eq (j)
+(x) eq (y)
+(r) eq (i)
+(i) eq (j) and (r) ineq (i)
+(i) eq (j)
+(r) eq (i)
+-------TRANSITIONS-------
+
+Transition 'loss_a'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'I_reemit'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(i),(r)]
+Ingoing arc: 1'[(i),(r)]
+Outgoing arc: 1'[(r)]
+Ingoing arc: 1'(dot)
+
+Transition 'C_refuse'
+Guard: (x) eq (y)
+Arcs:
+Outgoing arc: 1'[(x++)]
+Ingoing arc: 1'[(y)]
+Ingoing arc: 1'[(i),(x)]
+Outgoing arc: 1'[(j)]
+Ingoing arc: 1'[(j)]
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'C_free'
+Guard: (i) eq (j)
+Arcs:
+Ingoing arc: 1'[(j)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'[(i)]
+Outgoing arc: 1'(dot)
+
+Transition 'C_provide'
+Guard: (x) eq (y)
+Arcs:
+Outgoing arc: 1'[(x++)]
+Ingoing arc: 1'[(y)]
+Ingoing arc: 1'[(i),(x)]
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'I_rec1'
+Guard: (r) eq (i)
+Arcs:
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(r)]
+Outgoing arc: 1'(dot)
+
+Transition 'I_free'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(i),(r)]
+Outgoing arc: 1'[(i)]
+Outgoing arc: 1'[(i)]
+Ingoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'I_emit'
+Guard: (i) eq (j) and (r) ineq (i)
+Arcs:
+Outgoing arc: 1'[(r)]
+Ingoing arc: 1'[(r)]
+Ingoing arc: 1'[(i)]
+Outgoing arc: 1'[(i),(r)]
+Outgoing arc: 1'[(r)]
+Ingoing arc: 1'[(j)]
+
+Transition 'I_refused'
+Guard: (i) eq (j)
+Arcs:
+Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(j)]
+Outgoing arc: 1'[(i)]
+
+Transition 'I_ask1'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(x++)]
+Ingoing arc: 1'[(x)]
+Ingoing arc: 1'[(i)]
+Outgoing arc: 1'[(i)]
+Outgoing arc: 1'[(i),(x)]
+
+Transition 'loss_m'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(r)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+Outgoing arc: 1'(dot)
+
+Transition 'Gto'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(i)]
+Outgoing arc: 1'[(i)]
+Outgoing arc: 1'(dot)
+Ingoing arc: 1'(dot)
+
+Transition 'I_rec2'
+Guard: (r) eq (i)
+Arcs:
+Ingoing arc: 1'[(i)]
+Ingoing arc: 1'[(r)]
+Outgoing arc: 1'(dot)
+Outgoing arc: 1'[(i)]
+
+Transition 'I_ask2'
+Guard: No guard
+Arcs:
+Outgoing arc: 1'[(x++)]
+Ingoing arc: 1'[(x)]
+Outgoing arc: 1'[(i)]
+Outgoing arc: 1'[(i),(x)]
+Ingoing arc: 1'[(i)]
+-------ARCS-------
+1'[(x++)]
+1'[(x++)]
+1'[(x++)]
+1'[(y)]
+1'[(y)]
+1'[(x)]
+1'[(r)]
+1'[(r)]
+1'(dot)
+1'(dot)
+1'[(i),(r)]
+1'[(i),(r)]
+1'[(r)]
+1'[(i),(x)]
+1'[(i),(x)]
+1'[(j)]
+1'(dot)
+1'[(i)]
+1'[(i)]
+1'(dot)
+1'[(j)]
+1'[(j)]
+1'[(i)]
+1'[(i)]
+1'[(i)]
+1'[(i)]
+1'[(i),(r)]
+1'[(i),(r)]
+1'[(i)]
+1'[(i)]
+1'[(i)]
+1'[(r)]
+1'[(r)]
+1'(dot)
+1'[(j)]
+1'[(j)]
+1'[(i)]
+1'[(i)]
+1'[(i)]
+1'[(i),(x)]
+1'(dot)
+1'[(r)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(i)]
+1'[(i)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(i)]
+1'[(i)]
+1'[(r)]
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'(dot)
+1'[(x++)]
+1'[(x)]
+1'[(i)]
+1'[(i),(x)]
+1'[(i)]
+1'[(i)]
+------------------------------------------------------------------

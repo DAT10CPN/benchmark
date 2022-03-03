@@ -1,0 +1,107 @@
+Test: BART-COL-060
+Transitions: 7
+Arcs: 26
+-------SORTS-------
+Named sort: {'id': 'trainid', 'name': 'trainid'} has ranges: [1,60]
+Named sort: {'id': 'speed', 'name': 'speed'} has ranges: [0,5]
+Named sort: {'id': 'distance', 'name': 'distance'} has ranges: [0,40]
+Usersort {'id': 'traincontext', 'name': 'traincontext'} is a product: ['trainid', 'speed', 'distance']
+Usersort {'id': 'speedxdist', 'name': 'speedXdist'} is a product: ['speed', 'distance']
+Usersort {'id': 'distxspeedxdist', 'name': 'distXspeedXdist'} is a product: ['distance', 'speed', 'distance']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'vartid', 'name': 'tid'}, with declaration: {'declaration': 'trainid'}
+Variable decl attrib: {'id': 'vartsp', 'name': 'tsp'}, with declaration: {'declaration': 'speed'}
+Variable decl attrib: {'id': 'vards2', 'name': 'ds2'}, with declaration: {'declaration': 'distance'}
+Variable decl attrib: {'id': 'varda2', 'name': 'da2'}, with declaration: {'declaration': 'distance'}
+Variable decl attrib: {'id': 'varda', 'name': 'da'}, with declaration: {'declaration': 'distance'}
+Variable decl attrib: {'id': 'vardb', 'name': 'db'}, with declaration: {'declaration': 'distance'}
+Variable decl attrib: {'id': 'vards', 'name': 'ds'}, with declaration: {'declaration': 'distance'}
+-------GUARDS-------
+(da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+(da) lte (ds) and (tsp) gt (speed1)
+(da2) gt (ds2) and (tsp) lt (speed4)
+(tsp) eq (speed0) and (db) gt (distance0)
+(tsp) gt (speed0) and (db) eq (distance0)
+-------TRANSITIONS-------
+
+Transition 'TrainStable'
+Guard: (da2) lte (ds2) and (da) gt (ds) or (da2) gt (ds2) and (tsp) eq (speed4) or (tsp) eq (speed1) and (db) gt (distance1)
+Arcs:
+Outgoing arc: 1'[(tid),(tsp),(da)]
+Ingoing arc: 1'[(tid),(tsp),(db)]
+Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Outgoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+
+Transition 'TrainDecc'
+Guard: (da) lte (ds) and (tsp) gt (speed1)
+Arcs:
+Outgoing arc: 1'[(tid),(tsp--),(da)]
+Ingoing arc: 1'[(tid),(tsp),(db)]
+Ingoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Outgoing arc: 1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+
+Transition 'TrainAcc'
+Guard: (da2) gt (ds2) and (tsp) lt (speed4)
+Arcs:
+Outgoing arc: 1'[(tid),(tsp++),(da)]
+Ingoing arc: 1'[(tid),(tsp),(db)]
+Ingoing arc: 1'[(tsp++),(ds2)]
+Outgoing arc: 1'[(tsp++),(ds2)]
+Ingoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+Outgoing arc: 1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+
+Transition 'TooEarly'
+Guard: (tsp) eq (speed0) and (db) gt (distance0)
+Arcs:
+Ingoing arc: 1'[(tid),(tsp),(db)]
+
+Transition 'MissStation'
+Guard: (tsp) gt (speed0) and (db) eq (distance0)
+Arcs:
+Ingoing arc: 1'[(tid),(tsp),(db)]
+
+Transition 'AtStation'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(da)]
+Outgoing arc: 1'[(da)]
+Outgoing arc: 1'[(tid),(speed1),(da)]
+Ingoing arc: 1'[(tid),(speed0),(distance0)]
+
+Transition 'TrainStop'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(tid),(speed1),(distance1)]
+Outgoing arc: 1'[(tid),(speed0),(distance0)]
+-------ARCS-------
+1'[(da)]
+1'[(da)]
+1'[(tid),(speed1),(da)]
+1'[(tid),(tsp++),(da)]
+1'[(tid),(tsp--),(da)]
+1'[(tid),(tsp),(da)]
+1'[(tid),(speed0),(distance0)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(tsp),(db)]
+1'[(tid),(tsp),(db)]
+1'[(tsp++),(ds2)]
+1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+1'[(tsp++),(ds2)] + 1'[(tsp),(ds)]
+1'[(tsp++),(ds2)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(db),(tsp++),(da2)] + 1'[(db),(tsp),(da)]
+1'[(tid),(speed1),(distance1)]
+1'[(tid),(speed0),(distance0)]
+------------------------------------------------------------------

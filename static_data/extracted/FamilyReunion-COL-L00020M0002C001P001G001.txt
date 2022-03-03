@@ -1,0 +1,687 @@
+Test: FamilyReunion-COL-L00020M0002C001P001G001
+Transitions: 66
+Arcs: 198
+-------SORTS-------
+Named sort: {'id': 'LegalResident', 'name': 'LegalResident'} has ranges: [0,20]
+Named sort: {'id': 'MICSystem', 'name': 'MICSystem'} has ranges: [0,2]
+Named sort: {'id': 'CINFORMI', 'name': 'CINFORMI'} has ranges: [0,1]
+Named sort: {'id': 'PublicAdminOffice', 'name': 'PublicAdminOffice'} has ranges: [0,1]
+Named sort: {'id': 'GovernmentCommission', 'name': 'GovernmentCommission'} has ranges: [0,1]
+Named sort: {'id': 'response', 'name': 'Response'} has values: ['Y', 'N']
+Usersort {'id': 'lxm', 'name': 'LxM'} is a product: ['LegalResident', 'MICSystem']
+Usersort {'id': 'lxc', 'name': 'LxC'} is a product: ['LegalResident', 'CINFORMI']
+Usersort {'id': 'lxp', 'name': 'LxP'} is a product: ['LegalResident', 'PublicAdminOffice']
+Usersort {'id': 'lxg', 'name': 'LxG'} is a product: ['LegalResident', 'GovernmentCommission']
+Usersort {'id': 'lxr', 'name': 'LxR'} is a product: ['LegalResident', 'response']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'varl', 'name': 'l'}, with declaration: {'declaration': 'LegalResident'}
+Variable decl attrib: {'id': 'varm', 'name': 'm'}, with declaration: {'declaration': 'MICSystem'}
+Variable decl attrib: {'id': 'varc', 'name': 'c'}, with declaration: {'declaration': 'CINFORMI'}
+Variable decl attrib: {'id': 'varp', 'name': 'p'}, with declaration: {'declaration': 'PublicAdminOffice'}
+Variable decl attrib: {'id': 'varg', 'name': 'g'}, with declaration: {'declaration': 'GovernmentCommission'}
+Variable decl attrib: {'id': 'varr', 'name': 'r'}, with declaration: {'declaration': 'response'}
+-------GUARDS-------
+(r) eq (ResponseY)
+-------TRANSITIONS-------
+
+Transition 'Gate2ANDJoin'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'AccessMicTerminal'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ReceiveAccessReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(m)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(m)]
+
+Transition 'ReserveAppCINFORMI'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'DisplayLangChoice'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'AppReqReceived'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(c)]
+Outgoing arc: 1'[(l),(c)]
+Outgoing arc: 1'[(c)]
+
+Transition 'ReceiveLangReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'SetUpAppoint'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(c)]
+Outgoing arc: 1'[(l),(c)]
+Outgoing arc: 1'[(c)]
+
+Transition 'AppointReceived'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(c)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'SendLangChoice'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'ReceiveLangChoice'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'BringReqtoCINFORMI'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'CheckRequiredDoc'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(c)]
+Outgoing arc: 1'[(l),(c)]
+
+Transition 'DisplayNeedChoice'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'ReceiveNeedReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'Summoned'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(l),(g)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ProvidePersonalnfo'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ChoseFamilyReunion'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'PrepFamReuClearReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(c)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l),(c)]
+
+Transition 'ReceiveNeedChoice'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'TransmitReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(c)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(c)]
+
+Transition 'DisplayReqDocs'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'ReceiveReqDocsReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'ClearanceReqReceived'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(g)]
+Outgoing arc: 1'[(l),(g)]
+
+Transition 'SummonApplicant'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(g)]
+Outgoing arc: 1'[(l),(g)]
+Outgoing arc: 1'[(g)]
+
+Transition 'TickDocsObtained'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'GotoOSSAndProdDoc'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ReceiveDocsObtained'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'ExplainHowToObtainMissingDocs'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(m)]
+
+Transition 'EvaluateReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(g)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l),(g)]
+
+Transition 'ReceiveInstructions'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l)]
+
+Transition 'CommunicateResp'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(g)]
+Outgoing arc: 1'[(g)]
+Outgoing arc: 1'[(l),(r)]
+Ingoing arc: 1'[(r)]
+Outgoing arc: 1'[(r)]
+
+Transition 'ObtainMissingDocs'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ReqAppointCINFORMI'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'Gate1XORSplit'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'RespReceived'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(l),(r)]
+Outgoing arc: 1'[(l),(r)]
+
+Transition 'ReceiveAppointReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'Gate3XORSplit'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(r)]
+Outgoing arc: 1'[(l),(r)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ReserveAppoint'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+
+Transition 'SendClearanceToRel'
+Guard: (r) eq (ResponseY)
+Arcs:
+Ingoing arc: 1'[(l),(r)]
+Outgoing arc: 1'[(l),(r)]
+
+Transition 'GiveAppoint'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(l),(m)]
+Outgoing arc: 1'[(m)]
+
+Transition 'GoToAppoint'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ReceiveAppoint'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(m)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'AskCINFORMI'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ReceiveQuestion'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(c)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l),(c)]
+Outgoing arc: 1'[(c)]
+
+Transition 'ExplainProcedure'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(c)]
+Outgoing arc: 1'[(c)]
+Outgoing arc: 1'[(l),(c)]
+
+Transition 'GotIt'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(c)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'Gate1XORJoin'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ReqHousingSuitCertif'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ReceiveHousingSuitCertifReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(p)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(p)]
+
+Transition 'Gate1ANDSplit'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(l),(p)]
+
+Transition 'CheckHousingSuitReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(l),(p)]
+
+Transition 'CheckSanityReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(l),(p)]
+
+Transition 'Gate1ANDJoin'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(p)]
+Ingoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(l),(p)]
+
+Transition 'Gate2XORSplit'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(l),(p)]
+
+Transition 'ArchiveReq'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+
+Transition 'SendSuitabilityCertif'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(l),(p)]
+
+Transition 'HousingSuitCertifObtained'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(l),(p)]
+Outgoing arc: 1'[(l)]
+
+Transition 'RegisterRelativePubHealth'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'RegisterRelative'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Ingoing arc: 1'[(p)]
+Outgoing arc: 1'[(p)]
+Outgoing arc: 1'[(l),(p)]
+
+Transition 'ReceiveRegsitration'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l),(p)]
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'Gate2ANDSplit'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'PrepIncomeCertif'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ObtainRelativeFinStatement'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ObtainFamRelCertif'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+
+Transition 'ObtainRelHealtCondStatement'
+Guard: No guard
+Arcs:
+Ingoing arc: 1'[(l)]
+Outgoing arc: 1'[(l)]
+-------ARCS-------
+1'[(l)]
+1'[(l)]
+1'[(m)]
+1'[(l)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l)]
+1'[(l)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(m)]
+1'[(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l),(m)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(m)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(c)]
+1'[(l)]
+1'[(l),(c)]
+1'[(l),(c)]
+1'[(l)]
+1'[(c)]
+1'[(l),(c)]
+1'[(l),(c)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(p)]
+1'[(l)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(p)]
+1'[(l),(p)]
+1'[(p)]
+1'[(p)]
+1'[(l),(p)]
+1'[(p)]
+1'[(l),(p)]
+1'[(l)]
+1'[(l),(p)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(p)]
+1'[(p)]
+1'[(l),(p)]
+1'[(l),(p)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(c)]
+1'[(l),(c)]
+1'[(l),(c)]
+1'[(l),(c)]
+1'[(l),(c)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(c)]
+1'[(l)]
+1'[(c)]
+1'[(l),(c)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(l),(c)]
+1'[(l)]
+1'[(l)]
+1'[(l),(c)]
+1'[(l),(c)]
+1'[(l)]
+1'[(l)]
+1'[(g)]
+1'[(c)]
+1'[(l),(g)]
+1'[(l),(g)]
+1'[(l),(g)]
+1'[(l)]
+1'[(l),(g)]
+1'[(l)]
+1'[(l)]
+1'[(l)]
+1'[(g)]
+1'[(g)]
+1'[(l)]
+1'[(l)]
+1'[(l),(g)]
+1'[(l),(g)]
+1'[(g)]
+1'[(l),(r)]
+1'[(l)]
+1'[(l),(r)]
+1'[(l),(r)]
+1'[(l),(r)]
+1'[(l),(r)]
+1'[(l)]
+1'[(l),(r)]
+1'[(l),(r)]
+1'[(r)]
+1'[(r)]
+1'[(m)]
+1'[(c)]
+1'[(c)]
+1'[(p)]
+------------------------------------------------------------------

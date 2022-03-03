@@ -1,0 +1,319 @@
+Test: NeoElection-COL-4
+Transitions: 22
+Arcs: 98
+-------SORTS-------
+Named sort: {'id': 'T-bool', 'name': 'bool'} has values: ['false', 'true']
+Named sort: {'id': 'T-M', 'name': 'M'} has ranges: [0,4]
+Named sort: {'id': 'T-STAGE', 'name': 'STAGE'} has values: ['NEG', 'PRIM', 'SEC']
+Named sort: {'id': 'T-NEGSTEP', 'name': 'NEGSTEP'} has values: ['NONE', 'CO', 'DONE']
+Named sort: {'id': 'T-POS', 'name': 'POS'} has ranges: [1,4]
+Named sort: {'id': 'T-BOOL', 'name': 'BOOL'} has values: ['F', 'T']
+Named sort: {'id': 'T-MT', 'name': 'MT'} has values: ['AskP', 'AnsP', 'RI', 'AI', 'AnnP', 'RP']
+Usersort {'id': 'T-M-POS-M', 'name': 'M * POS * M'} is a product: ['T-M', 'T-POS', 'T-M']
+Usersort {'id': 'T-M-BOOL-M', 'name': 'M * BOOL * M'} is a product: ['T-M', 'T-BOOL', 'T-M']
+Usersort {'id': 'T-M-M-NEGSTEP', 'name': 'M * M * NEGSTEP'} is a product: ['T-M', 'T-M', 'T-NEGSTEP']
+Usersort {'id': 'T-M-M-MT-M', 'name': 'M * M * MT * M'} is a product: ['T-M', 'T-M', 'T-MT', 'T-M']
+Usersort {'id': 'T-M-POS', 'name': 'M * POS'} is a product: ['T-M', 'T-POS']
+Usersort {'id': 'T-M-STAGE', 'name': 'M * STAGE'} is a product: ['T-M', 'T-STAGE']
+-------VARIABLES-------
+Variable decl attrib: {'id': 'V-m-M', 'name': 'm'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-s-M', 'name': 's'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-r-M', 'name': 'r'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-iam-BOOL', 'name': 'iam'}, with declaration: {'declaration': 'T-BOOL'}
+Variable decl attrib: {'id': 'V-pm-M', 'name': 'pm'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-p-M', 'name': 'p'}, with declaration: {'declaration': 'T-M'}
+Variable decl attrib: {'id': 'V-i-POS', 'name': 'i'}, with declaration: {'declaration': 'T-POS'}
+-------GUARDS-------
+(m >= s)
+(m < s)
+(pm != m)
+(p != 0)
+(((p != 0) and (pm != 0)) and (pm != p))
+(p != 0)
+-------TRANSITIONS-------
+
+Transition 'T-poll__end'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAI1'
+Guard: (m >= s)
+Arcs:
+Ingoing arc: <( m, r, CO )>
+Outgoing arc: <( m, r, DONE )>
+Ingoing arc: <( m, s, AI, 0 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAI2'
+Guard: (m < s)
+Arcs:
+Ingoing arc: <( m, iam, pm )>
+Outgoing arc: <( m, F, pm )>
+Ingoing arc: <( m, r, CO )>
+Outgoing arc: <( m, r, DONE )>
+Ingoing arc: <( m, s, AI, 0 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAnnP1'
+Guard: (pm != m)
+Arcs:
+Ingoing arc: <( m, iam, pm )>
+Outgoing arc: <( m, F, s )>
+Ingoing arc: <( m, s, AnnP, 0 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAnnP2'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m, T, m )>
+Outgoing arc: <( m, T, 0 )>
+Ingoing arc: <( m, s, AnnP, 0 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP1'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m, s, AnsP, 0 )>
+Outgoing arc: <( s, m, RI, 0 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP2'
+Guard: (p != 0)
+Arcs:
+Ingoing arc: <( m, iam, p )>
+Outgoing arc: <( m, F, p )>
+Ingoing arc: <( m, s, AnsP, p )>
+Outgoing arc: <( s, m, RI, 0 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP3'
+Guard: (((p != 0) and (pm != 0)) and (pm != p))
+Arcs:
+Ingoing arc: <( m, iam, pm )>
+Outgoing arc: <( m, T, 0 )>
+Ingoing arc: <( m, s, AnsP, p )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAnsP4'
+Guard: (p != 0)
+Arcs:
+Ingoing arc: <( m, iam, 0 )>
+Outgoing arc: <( m, F, p )>
+Outgoing arc: <( s, m, RI, 0 )>
+Ingoing arc: <( m )>
+Ingoing arc: <( m, s, AnsP, p )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleAskP'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m, iam, pm )>
+Outgoing arc: <( m, iam, pm )>
+Ingoing arc: <( m, s, AskP, 0 )>
+Outgoing arc: <( s, m, AnsP, pm )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleRI'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m, s, RI, 0 )>
+Outgoing arc: <( s, m, AI, 0 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__handleRP'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m, s, RP, 0 )>
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+
+Transition 'T-poll__iAmPrimary'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m, T, 0 )>
+Outgoing arc: <( m, T, m )>
+Ingoing arc: <( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )>
+Outgoing arc: <( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )>
+Ingoing arc: <( m )>
+Ingoing arc: <( m, NEG )>
+Outgoing arc: <( m, PRIM )>
+
+Transition 'T-poll__iAmSecondary'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m, F, pm )>
+Outgoing arc: <( m, F, pm )>
+Ingoing arc: <( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )>
+Outgoing arc: <( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )>
+Ingoing arc: <( m )>
+Ingoing arc: <( m, NEG )>
+Outgoing arc: <( m, SEC )>
+
+Transition 'T-poll__start'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m )>
+
+Transition 'T-sendAnnPs__end'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m, 4 )>
+
+Transition 'T-sendAnnPs__send'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m, i, r )>
+Outgoing arc: <( m, i, r )>
+Outgoing arc: <( r, m, AnnP, 0 )>
+Ingoing arc: <( m, i )>
+Outgoing arc: <( m, (succ i) )>
+
+Transition 'T-sendAnnPs__start'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m, 1 )>
+
+Transition 'T-startNeg__end'
+Guard: No guard
+Arcs:
+Outgoing arc: <( m )>
+Ingoing arc: <( m, 4 )>
+
+Transition 'T-startNeg__send'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m, i, r )>
+Outgoing arc: <( m, i, r )>
+Ingoing arc: <( m, r, NONE )>
+Outgoing arc: <( m, r, CO )>
+Outgoing arc: <( r, m, AskP, 0 )>
+Ingoing arc: <( m, i )>
+Outgoing arc: <( m, (succ i) )>
+
+Transition 'T-startNeg__start'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m, 1 )>
+
+Transition 'T-startSec'
+Guard: No guard
+Arcs:
+Ingoing arc: <( m )>
+Outgoing arc: <( m )>
+-------ARCS-------
+<( m )>
+<( m )>
+<( m, r, CO )>
+<( m, r, DONE )>
+<( m, s, AI, 0 )>
+<( m )>
+<( m )>
+<( m, iam, pm )>
+<( m, F, pm )>
+<( m, r, CO )>
+<( m, r, DONE )>
+<( m, s, AI, 0 )>
+<( m )>
+<( m )>
+<( m, iam, pm )>
+<( m, F, s )>
+<( m, s, AnnP, 0 )>
+<( m )>
+<( m )>
+<( m, T, m )>
+<( m, T, 0 )>
+<( m, s, AnnP, 0 )>
+<( m )>
+<( m )>
+<( m, s, AnsP, 0 )>
+<( s, m, RI, 0 )>
+<( m )>
+<( m )>
+<( m, iam, p )>
+<( m, F, p )>
+<( m, s, AnsP, p )>
+<( s, m, RI, 0 )>
+<( m )>
+<( m )>
+<( m, iam, pm )>
+<( m, T, 0 )>
+<( m, s, AnsP, p )>
+<( m )>
+<( m )>
+<( m, iam, 0 )>
+<( m, F, p )>
+<( s, m, RI, 0 )>
+<( m )>
+<( m, s, AnsP, p )>
+<( m )>
+<( m, iam, pm )>
+<( m, iam, pm )>
+<( m, s, AskP, 0 )>
+<( s, m, AnsP, pm )>
+<( m )>
+<( m )>
+<( m, s, RI, 0 )>
+<( s, m, AI, 0 )>
+<( m )>
+<( m )>
+<( m, s, RP, 0 )>
+<( m )>
+<( m )>
+<( m )>
+<( m, T, 0 )>
+<( m, T, m )>
+<( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )>
+<( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )>
+<( m )>
+<( m, NEG )>
+<( m, PRIM )>
+<( m )>
+<( m, F, pm )>
+<( m, F, pm )>
+<( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )>
+<( m, 1, DONE )> + <( m, 2, DONE )> + <( m, 3, DONE )> + <( m, 4, DONE )>
+<( m )>
+<( m, NEG )>
+<( m, SEC )>
+<( m )>
+<( m )>
+<( m )>
+<( m, 4 )>
+<( m, i, r )>
+<( m, i, r )>
+<( r, m, AnnP, 0 )>
+<( m, i )>
+<( m, (succ i) )>
+<( m )>
+<( m, 1 )>
+<( m )>
+<( m, 4 )>
+<( m, i, r )>
+<( m, i, r )>
+<( m, r, NONE )>
+<( m, r, CO )>
+<( r, m, AskP, 0 )>
+<( m, i )>
+<( m, (succ i) )>
+<( m )>
+<( m, 1 )>
+<( m )>
+<( m )>
+------------------------------------------------------------------
