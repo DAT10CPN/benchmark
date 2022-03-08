@@ -1,6 +1,7 @@
 #!/bin/bash
+#SBATCH --partition=cpu
 
-# Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [red-time-out] [veri-time-out] [expl-time-out]
+# Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [col-red-time-out] [red-time-out] [veri-time-out] [expl-time-out]
 # Starts a number of slurm jobs each solving the queries of one model in the test folder.
 # Each of those jobs are then followed by another job running the reduced net too in order to determine the size of the state space.
 # When all jobs are done, the results are compiled into a single csv.
@@ -11,9 +12,10 @@ OPTIONS=$3
 TEST_FOLDER=$4
 CATEGORY=$5
 PARTITION=$6
-RED_TIME_OUT=$7
-VERI_TIME_OUT=$8
-EXPL_TIME_OUT=$9
+COL_RED_TIME_OUT=$7
+RED_TIME_OUT=$8
+VERI_TIME_OUT=$9
+EXPL_TIME_OUT=$10
 
 if [ -z "$NAME" ] ; then
 	echo "Missing benchmark name"
@@ -30,13 +32,13 @@ if [ ! -f "$BIN" ] ; then
 	exit
 fi
 
-pat1="^-r [0-2]"
-pat2="^-r [3-4] [0-9]"
+pat1="^-R [0-1]"
+pat2="^-R 2 [0-9]"
 if [ -z "$OPTIONS" ] ; then
 	echo "Missing binary options"
 	exit
 elif ! [[ "$OPTIONS" =~ $pat1 ]] && ! [[ "$OPTIONS" =~ $pat2 ]] ; then
-	echo "Err: OPTIONS must start with '-r [0-2]' or '-r [3-4] [0-9]'. It is '$OPTIONS'"
+	echo "Err: OPTIONS must start with '-R [0-1]' or '-R 2 [0-9]'. It is '$OPTIONS'"
 	exit 0
 fi
 
@@ -65,6 +67,14 @@ elif [ "$PARTITION" != "naples" ] && [ "$PARTITION" != "rome" ] && [ "$PARTITION
 fi
 
 pat="^[0-9]+$"
+
+if [ -z "$COL_RED_TIME_OUT" ] ; then
+	echo "No COL_RED_TIME_OUT given, using 30 seconds per query"
+	COL_RED_TIME_OUT=30
+elif ! [[ "$COL_RED_TIME_OUT" =~ $pat ]] ; then
+	echo "Err: COL_RED_TIME_OUT must be a non-negative integer (seconds). It is '$COL_RED_TIME_OUT'"
+	exit 0
+fi
 
 if [ -z "$RED_TIME_OUT" ] ; then
 	echo "No RED_TIME_OUT given, using 60 seconds per query"
@@ -97,9 +107,9 @@ mkdir -p $DIR
 for MODEL in $(ls $TEST_FOLDER) ; do
 	# Process model
 
-	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION ./scratch_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $RED_TIME_OUT $VERI_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
+	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./scratch_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $RED_TIME_OUT $VERI_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
 	echo "Submitted batch job $JOB_ID for $MODEL"
 
 done
 
-sbatch --partition=rome -c 1 --mail-type=FAIL --mail-user=$(whoami) --job-name=$NAME --dependency=singleton ./compile_results.sh $NAME $BIN
+sbatch --partition=cpu --mail-type=FAIL --mail-user=$(whoami) --job-name=$NAME --dependency=singleton ./compile_results.sh $NAME $BIN

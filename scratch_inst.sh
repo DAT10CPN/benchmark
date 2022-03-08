@@ -2,11 +2,10 @@
 
 #SBATCH --time=12:00:00
 #SBATCH --mail-type=FAIL
-#SBATCH --exclude=naples0[1-2]
 #SBATCH --mem=15G
-#SBATCH -c 2
+#SBATCH -c 1
 
-# Args: <test-name> <binary> <test-folder> <model> <category> <red-time-out> <veri-time-out> <expl-time-out> <bin-options>
+# Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <red-time-out> <veri-time-out> <expl-time-out> <bin-options>
 
 echo "Arguments: $@"
 
@@ -15,10 +14,11 @@ BIN=$2
 TEST_FOLDER=$3
 MODEL=$4
 CATEGORY=$5
-RED_TIME_OUT=$6
-VERI_TIME_OUT=$7
-EXPL_TIME_OUT=$8
-OPTIONS="$9"
+COL_RED_TIME_OUT=$6
+RED_TIME_OUT=$7
+VERI_TIME_OUT=$8
+EXPL_TIME_OUT=$9
+OPTIONS="${10}"
 
 SCRATCH="/scratch/$(whoami)/$NAME/$MODEL/$CATEGORY"
 
@@ -34,25 +34,41 @@ for Q in $(seq 1 $NQ) ; do
 	echo "Q$Q"
 
 	mkdir -p $SCRATCH
-	PNML="$SCRATCH/$MODEL.$Q.pnml"
+	UQUERIES="$SCRATCH/$MODEL.$Q.u.xml"
+	UPNML="$SCRATCH/$MODEL.$Q.u.pnml"
+	PNML="$SCRATCH/$MODEL.$Q.r.pnml"
 
-	# ===================== REDUCTION ========================
+	# ===================== COLORED REDUCTION AND UNFOLD ========================
 
-	echo "  Reduction ..."
+	echo "  Colored reduction ..."
 
-	RCMD="./$BIN $OPTIONS -d $RED_TIME_OUT -q 0 -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --write-reduced $PNML --noverify"
-	ROUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.rout"
-	
-	# Reduce model+query and store stdout
+	UCMD="./$BIN $OPTIONS -D $COL_RED_TIME_OUT -r 0 -q 0 -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --noverify --write-unfolded-net $UPNML --write-unfolded-queries $UQUERIES"
+	UOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.uout"
 
-	O=$(eval "$RCMD" 2>&1)
-	echo "$O" > "$ROUT"
+	# Reduce model+unfold and store stdout
+
+	O=$(eval "$UCMD" 2>&1)
+	echo "$O" > "$UOUT"
+
+	# ===================== NORMAL REDUCTION ========================
+
+	if [ "$RED_TIME_OUT" -eq "0" ] ; then
+		echo "  Reduction skipped"
+	else
+		echo "  Reduction ..."
+
+		RCMD="./$BIN $OPTIONS -d $RED_TIME_OUT -q 0 -x $Q $LTLFLAG $UPNML $UQUERIES --write-reduced $PNML --noverify"
+		ROUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.rout"
+		
+		# Reduce model+query and store stdout
+
+		O=$(eval "$RCMD" 2>&1)
+		echo "$O" > "$ROUT"
+	fi
 
 	# ===================== VERIFICATION =====================
 
-	echo "  Verification ..."
-
-	if [ "$VERI_TIME_OUT" -eq "0" ] ; then
+	if [ "$RED_TIME_OUT" -eq "0" ] || [ "$VERI_TIME_OUT" -eq "0" ] ; then
 		echo "  Verification skipped"
 	else
 		echo "  Verification ..."
@@ -67,7 +83,7 @@ for Q in $(seq 1 $NQ) ; do
 
 	# ===================== EXPLORATION ======================
 
-	if [ "$EXPL_TIME_OUT" -eq "0" ] ; then
+	if [ "$RED_TIME_OUT" -eq "0" ] || [ "$EXPL_TIME_OUT" -eq "0" ] ; then
 		echo "  Exploration skipped"
 	else
 		echo "  Exploration ..."
