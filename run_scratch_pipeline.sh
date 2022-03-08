@@ -30,13 +30,13 @@ if [ ! -f "$BIN" ] ; then
 	exit
 fi
 
-pat1="^-r [0-2]"
-pat2="^-r [3-4] [0-9]"
+pat1="^-R [0-1]"
+pat2="^-R 2 [0-9]"
 if [ -z "$OPTIONS" ] ; then
 	echo "Missing binary options"
 	exit
 elif ! [[ "$OPTIONS" =~ $pat1 ]] && ! [[ "$OPTIONS" =~ $pat2 ]] ; then
-	echo "Err: OPTIONS must start with '-r [0-2]' or '-r [3-4] [0-9]'. It is '$OPTIONS'"
+	echo "Err: OPTIONS must start with '-R [0-1]' or '-R 2 [0-9]'. It is '$OPTIONS'"
 	exit 0
 fi
 
