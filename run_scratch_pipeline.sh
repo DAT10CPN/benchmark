@@ -15,7 +15,7 @@ PARTITION=$6
 COL_RED_TIME_OUT=$7
 RED_TIME_OUT=$8
 VERI_TIME_OUT=$9
-EXPL_TIME_OUT=$10
+EXPL_TIME_OUT=${10}
 
 if [ -z "$NAME" ] ; then
 	echo "Missing benchmark name"
