@@ -62,7 +62,7 @@ for COL_RED_RES_FILE in $(ls $DIR | grep "\.uout$") ; do
 
 	# Get stdout of model, filter out transition and place-bound statistics, and replace new lines such that regex will work
 	UOUT=$(cat "$DIR/$COL_RED_RES_FILE" | grep -v "^<" | tr '\n' '\r')
-	ROUT=$([[ -f $COL_RED_RES_FILE ]] && cat "$DIR/$RED_RES_FILE" | grep -v "^<" | tr '\n' '\r' || ehco "")
+	ROUT=$([[ -f $RED_RES_FILE ]] && cat "$RED_RES_FILE" | grep -v "^<" | tr '\n' '\r' || echo "")
 	VOUT=$([[ -f $VERI_RES_FILE ]] && cat $VERI_RES_FILE | grep -v "^<" | tr '\n' '\r' || echo "@@@0,0@@@")
 
 	# ----- Exploration -----
