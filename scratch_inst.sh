@@ -20,7 +20,7 @@ VERI_TIME_OUT=$8
 EXPL_TIME_OUT=$9
 OPTIONS="${10}"
 
-SCRATCH="/scratch/$(whoami)/$NAME/$MODEL/$CATEGORY"
+SCRATCH="/scratch/jesmatnic/$NAME/$MODEL/$CATEGORY"
 
 LTLFLAG=$([[ "$CATEGORY" == "LTLCardinality" ]] && echo " -ltl" || echo "")
 
