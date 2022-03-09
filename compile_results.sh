@@ -34,7 +34,7 @@ NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I")
 rm -f $OUT
 
 # Write header
-echo -n "model name,query index,answer,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,unfolded place count, unfolded transition count,reduced place count,reduced transition count" >> $OUT
+echo -n "model name,query index,answer,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,colored reduce place count,colored reduce transition count,unfolded place count, unfolded transition count,reduced place count,reduced transition count" >> $OUT
 for i in ${!NORMAL_RULE_NAMES[@]} ; do
 	echo -n ",rule ${NORMAL_RULE_NAMES[$i]}" >> $OUT
 done

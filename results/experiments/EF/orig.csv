@@ -1,4 +1,4 @@
-model name,query index,answer,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,unfolded place count, unfolded transition count,reduced place count,reduced transition count,rule A,rule B,rule C,rule D,rule E,rule F,rule G,rule H,rule I
+model name,query index,answer,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,colored reduce place count,colored reduce transition count,unfolded place count, unfolded transition count,reduced place count,reduced transition count,rule A,rule B,rule C,rule D,rule E,rule F,rule G,rule H,rule I
 AirplaneLD-COL-0010,1,NONE,0,0.001468,0.000819,0.0,6556,FALSE,1129,20,15,20,15,28,27,24,26,0,0,0,1,0,0,0,0,1
 AirplaneLD-COL-0010,10,NONE,0,0.001304,0.0,0.0,5716,FALSE,0,20,15,20,15,28,27,0,0,0,0,0,0,0,0,0,0,0
 AirplaneLD-COL-0010,11,NONE,0,0.001303,0.0,0.0,5720,FALSE,0,20,15,20,15,28,27,0,0,0,0,0,0,0,0,0,0,0
