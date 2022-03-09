@@ -28,9 +28,6 @@ def plot(data_list, test_names, graph_dir, metric, keep_largest_percent, cutoff_
 
     time_metrics = ['total time', 'verification time', 'reduce time']
 
-    if metric == "verification memory":
-        return
-
     if metric in time_metrics and os.path.isfile(
             graph_dir + f'{category}_{metric.replace(" ", "_")}_above_{cutoff_times[metric]}_seconds.svg'):
         return

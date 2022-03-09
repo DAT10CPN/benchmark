@@ -161,8 +161,7 @@ def plot_all(data_list, test_names, graph_dir, experiment_to_compare_against_nam
         print(f"{graphs_made}/{num_graphs} graphs made")
 
     if 'lines' in graphs:
-        # metrics = ['verification time', 'verification memory', 'state space size', 'reduce time', 'reduced size', 'total time']
-        metrics = ['verification time', 'state space size', 'reduce time', 'reduced size', 'total time']
+        metrics = ['verification time', 'verification memory', 'state space size', 'reduce time', 'reduced size', 'total time']
         for metric in metrics:
             for percentage in [0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1]:
                 for cutoff_time in [0, 0.5, 1, 5, 10, 30]:
