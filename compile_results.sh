@@ -108,7 +108,7 @@ for COL_RED_RES_FILE in $(ls $DIR | grep "\.uout$") ; do
 
 	else
 
-		COL_RED_TIME="0"
+		COL_RED_TIME="0.0"
 		
 		# Colored reduction is not performed, so we get the sizes from the unfolding instead
 		ORIG_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of colored net:/')" ]] && echo $UOUT | sed -E "s/.*Size of colored net: ([0-9]+) places.*/\1/" || echo 0)
