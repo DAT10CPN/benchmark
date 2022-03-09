@@ -96,20 +96,34 @@ for COL_RED_RES_FILE in $(ls $DIR | grep "\.uout$") ; do
 
 	# ----- Colored reduction and unfolding extraction -----
 
-	ORIG_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Reduced from /')" ]] && echo $ROUT | sed -E "s/.*Reduced from ([0-9]+) to [0-9]+ places.*/\1/" || echo 0)
-	ORIG_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Reduced from /')" ]] && echo $ROUT | sed -E "s/.*Reduced from ([0-9]+) to [0-9]+ transitions.*/\1/" || echo 0)
-	COL_RED_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Reduced from /')" ]] && echo $ROUT | sed -E "s/.*Reduced from [0-9]+ to ([0-9]+) places.*/\1/" || echo 0)
-	COL_RED_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Reduced from /')" ]] && echo $ROUT | sed -E "s/.*Reduced from [0-9]+ to ([0-9]+) transitions.*/\1/" || echo 0)
+	COL_RED_ACTIVE=$([[ -n "$(echo $UOUT | awk 'Colored structural reductions computed')" ]] && echo "TRUE" || echo "FALSE")
 
-	UNF_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of unfolded net:/')" ]] && echo $ROUT | sed -E "s/.*Size of unfolded net: ([0-9]+) places.*/\1/" || echo 0)
-	UNF_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of unfolded net:/')" ]] && echo $ROUT | sed -E "s/.*Size of unfolded net: [0-9]+ places, ([0-9]+) transitions.*/\1/" || echo 0)
+	if [[ $COL_RED_ACTIVE = "TRUE" ]]; then
 
-	COL_RED_TIME=$([[ -n "$(echo $UOUT | awk '/Colored structural reductions computed/')" ]] && echo $UOUT | sed -E "s/.*Colored structural reductions computed in (([0-9](\.[0-9])?e-0[2-9])|([0-9]+(\.[0-9]+)?)) s.*/\1/" || echo 0.0)
+		COL_RED_TIME=$([[ -n "$(echo $UOUT | awk '/Colored structural reductions computed/')" ]] && echo $UOUT | sed -E "s/.*Colored structural reductions computed in (([0-9](\.[0-9])?e-0[2-9])|([0-9]+(\.[0-9]+)?)) s.*/\1/" || echo 0.0)
+		ORIG_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Reduced from /')" ]] && echo $UOUT | sed -E "s/.*Reduced from ([0-9]+) to [0-9]+ places.*/\1/" || echo 0)
+		ORIG_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Reduced from /')" ]] && echo $UOUT | sed -E "s/.*Reduced from ([0-9]+) to [0-9]+ transitions.*/\1/" || echo 0)
+		COL_RED_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Reduced from /')" ]] && echo $UOUT | sed -E "s/.*Reduced from [0-9]+ to ([0-9]+) places.*/\1/" || echo 0)
+		COL_RED_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Reduced from /')" ]] && echo $UOUT | sed -E "s/.*Reduced from [0-9]+ to ([0-9]+) transitions.*/\1/" || echo 0)
+
+	else
+
+		COL_RED_TIME="0"
+		
+		# Colored reduction is not performed, so we get the sizes from the unfolding instead
+		ORIG_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of colored net:/')" ]] && echo $UOUT | sed -E "s/.*Size of colored net: ([0-9]+) places.*/\1/" || echo 0)
+		ORIG_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of colored net:/')" ]] && echo $UOUT | sed -E "s/.*Size of colored net: [0-9]+ places, ([0-9]+) transitions.*/\1/" || echo 0)
+		COL_RED_PLACE_COUNT=$ORIG_PLACE_COUNT
+		COL_RED_TRANSITION_COUNT=$ORIG_TRANSITION_COUNT
+	fi
+
 	UNFOLD_TIME=$([[ -n "$(echo $UOUT | awk '/Unfolded in/')" ]] && echo $UOUT | sed -E "s/.*Unfolded in (([0-9](\.[0-9])?e-0[2-9])|([0-9]+(\.[0-9]+)?)) s.*/\1/" || echo 0.0)
+	UNF_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of unfolded net:/')" ]] && echo $UOUT | sed -E "s/.*Size of unfolded net: ([0-9]+) places.*/\1/" || echo 0)
+	UNF_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of unfolded net:/')" ]] && echo $UOUT | sed -E "s/.*Size of unfolded net: [0-9]+ places, ([0-9]+) transitions.*/\1/" || echo 0)
 
 	# ----- Entry so far -----
 
-	ENTRY+="$MODEL,$Q,$ANSWER,$COL_RED_TIME,$UNFOLD_TIME,$RED_TIME,$VERI_TIME,$VERI_MEM,$QUERY_SIMPLIFICATION,$SIZE,$ORIG_PLACE_COUNT,$ORIG_TRANS_COUNT,$COL_RED_PLACE_COUNT,$COL_RED_TRANSITION_COUNT,$UNF_PLACE_COUNT,$UNF_TRANSITION_COUNT,$RED_PLACE_COUNT,$RED_TRANS_COUNT"
+	ENTRY+="$MODEL,$Q,$ANSWER,$COL_RED_TIME,$UNFOLD_TIME,$RED_TIME,$VERI_TIME,$VERI_MEM,$QUERY_SIMPLIFICATION,$SIZE,$ORIG_PLACE_COUNT,$ORIG_TRANSITION_COUNT,$COL_RED_PLACE_COUNT,$COL_RED_TRANSITION_COUNT,$UNF_PLACE_COUNT,$UNF_TRANSITION_COUNT,$RED_PLACE_COUNT,$RED_TRANS_COUNT"
 
 	# ----- Rule applications -----
 
