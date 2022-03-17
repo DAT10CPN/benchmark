@@ -28,7 +28,7 @@ OUT="output/$BIN/$NAME.csv"
 
 # ***** Setup CSV *****
 
-COL_RULE_NAMES=()
+COL_RULE_NAMES=("ParallelPlaces" "ParallelTransitions")
 NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I")
 
 rm -f $OUT
