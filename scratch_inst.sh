@@ -52,23 +52,19 @@ for Q in $(seq 1 $NQ) ; do
 
 	# ===================== NORMAL REDUCTION ========================
 
-	if [ "$RED_TIME_OUT" -eq "0" ] ; then
-		echo "  Reduction skipped"
-	else
-		echo "  Reduction ..."
+	echo "  Reduction ..."
 
-		RCMD="./$BIN $OPTIONS -d $RED_TIME_OUT -q 0 -x $Q $LTLFLAG $UPNML $UQUERIES --write-reduced $PNML --noverify"
-		ROUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.rout"
-		
-		# Reduce model+query and store stdout
+	RCMD="./$BIN $OPTIONS -d $RED_TIME_OUT -q 0 -x $Q $LTLFLAG $UPNML $UQUERIES --write-reduced $PNML --noverify"
+	ROUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.rout"
+	
+	# Reduce model+query and store stdout
 
-		O=$(eval "$RCMD" 2>&1)
-		echo "$O" > "$ROUT"
-	fi
+	O=$(eval "$RCMD" 2>&1)
+	echo "$O" > "$ROUT"
 
 	# ===================== VERIFICATION =====================
 
-	if [ "$RED_TIME_OUT" -eq "0" ] || [ "$VERI_TIME_OUT" -eq "0" ] ; then
+	if [ "$VERI_TIME_OUT" -eq "0" ] ; then
 		echo "  Verification skipped"
 	else
 		echo "  Verification ..."
@@ -83,7 +79,7 @@ for Q in $(seq 1 $NQ) ; do
 
 	# ===================== EXPLORATION ======================
 
-	if [ "$RED_TIME_OUT" -eq "0" ] || [ "$EXPL_TIME_OUT" -eq "0" ] ; then
+	if [ "$EXPL_TIME_OUT" -eq "0" ] ; then
 		echo "  Exploration skipped"
 	else
 		echo "  Exploration ..."
