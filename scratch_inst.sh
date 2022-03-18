@@ -73,7 +73,7 @@ for Q in $(seq 1 $NQ) ; do
 	else
 		echo "  Verification ..."
 
-		VCMD="./$BIN -r 0 -x $Q $LTLFLAG $PNML $TEST_FOLDER/$MODEL/$CATEGORY.xml"
+		VCMD="./$BIN -r 0 -x $Q $LTLFLAG $PNML $UQUERIES"
 		VOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.vout"
 		
 		# Verify query and store stdout along with time and memory spent between @@@s
