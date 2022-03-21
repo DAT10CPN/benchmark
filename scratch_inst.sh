@@ -54,7 +54,7 @@ for Q in $(seq 1 $NQ) ; do
 
 	echo "  Reduction ..."
 
-	RCMD="./$BIN $OPTIONS -d $RED_TIME_OUT -q 0 -x $Q $LTLFLAG $UPNML $UQUERIES --write-reduced $PNML --noverify"
+	RCMD="./$BIN $OPTIONS -d $RED_TIME_OUT -q 0 -x 1 $LTLFLAG $UPNML $UQUERIES --write-reduced $PNML --noverify"
 	ROUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.rout"
 	
 	# Reduce model+query and store stdout
@@ -69,7 +69,7 @@ for Q in $(seq 1 $NQ) ; do
 	else
 		echo "  Verification ..."
 
-		VCMD="./$BIN -r 0 -x $Q $LTLFLAG $PNML $UQUERIES"
+		VCMD="./$BIN -r 0 -x 1 $LTLFLAG $PNML $UQUERIES"
 		VOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.vout"
 		
 		# Verify query and store stdout along with time and memory spent between @@@s
