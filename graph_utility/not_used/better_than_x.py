@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-import utility
+import graph_utility.utility as utility
 
 REDUCE_TIMEOUT = 300
 

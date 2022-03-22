@@ -89,7 +89,6 @@ def rename_index_to_test_name(df, test_names):
     for index, name in enumerate(test_names):
         new_indices[index] = name
     df = df.rename(index=new_indices)
-
     return df
 
 
@@ -306,19 +305,3 @@ def rename_test_name_for_paper_presentation(test_names):
 
         new_test_names[test_name] = new_test_name
     return new_test_names
-
-
-'''
-def split_into_all_with_without(df):
-    columns_with = [test_name for test_name in df.T.columns if
-                    ("with" in test_name) or ("base-rules" in test_name)]
-    columns_not_with = [test_name for test_name in df.T.columns if
-                        "with" not in test_name or ("base-rules" in test_name)]
-
-    columns_to_be_removed_by_with = [column for column in df.T.columns if column not in columns_with]
-    columns_to_be_removed_by_without = [column for column in df.T.columns if column not in columns_not_with]
-
-    df_without = df.drop(columns_to_be_removed_by_without)
-    df_with = df.drop(columns_to_be_removed_by_with)
-
-    return [df, df_with, df_without]'''

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-import utility
+import graph_utility.utility as utility
 
 
 def plot(data_list, test_names, graph_dir, category):
