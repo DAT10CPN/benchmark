@@ -96,7 +96,7 @@ for COL_RED_RES_FILE in $(ls $DIR | grep "\.uout$") ; do
 
 	# ----- Colored reduction and unfolding extraction -----
 
-	COL_RED_ACTIVE=$([[ -n "$(echo $UOUT | awk 'Colored structural reductions computed')" ]] && echo "TRUE" || echo "FALSE")
+	COL_RED_ACTIVE=$([[ -n "$(echo $UOUT | awk '/Colored structural reductions computed/')" ]] && echo "TRUE" || echo "FALSE")
 
 	if [[ $COL_RED_ACTIVE = "TRUE" ]]; then
 
