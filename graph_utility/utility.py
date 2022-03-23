@@ -1,6 +1,21 @@
 import numpy as np
 import pandas as pd
+from dataclasses import dataclass
 
+@dataclass()
+class Options:
+    '''Class for keeping track of options chosen from the gui'''
+    result_dir: str
+    graph_dir: str
+    results_to_plot: list
+    category: str
+    folder: str
+    test_names: [str]
+    chosen_graphs: [str]
+    chosen_lines: [str]
+    do_fast_graphs: bool
+    do_consistency_check: bool
+    enable_graphs: bool
 
 def remove_rows_with_no_answers_or_query_simplification(data_list):
     for data in data_list:

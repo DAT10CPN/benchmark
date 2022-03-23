@@ -22,9 +22,9 @@ def plot_all(options):
 
     print("Creating graph objects")
     graph_objects = [
-        answer_simplification_bars.__init__(options),
-        RuleUsage.__init__(options),
-        lines.__init__(options)
+        answer_simplification_bars(options),
+        RuleUsage(options),
+        lines(options)
     ]
 
     print(f"Making graphs: {num_graphs}")
@@ -43,19 +43,19 @@ if __name__ == "__main__":
     options = Gui().get_options()
 
     # Remove all graphs
-    if os.path.isdir(options['graph dir']):
-        shutil.rmtree(options['graph dir'])
-    os.makedirs(options['graph dir'])
+    if os.path.isdir(options.graph_dir):
+        shutil.rmtree(options.graph_dir)
+    os.makedirs(options.graph_dir)
 
-    if options['enable graphs']:
+    if options.enable_graphs:
         print("---------Creating graphs---------")
         plot_all(options)
-        with open(options['graph dir'] + "/graphs-meta.txt", mode='a') as file:
+        with open(options.graph_dir + "/graphs-meta.txt", mode='a') as file:
             file.write('Made graphs at at %s.\n' %
                        (datetime.datetime.now()))
-    if options['do consistency check']:
+    if options.do_consistency_check:
         print("---------Doing consistency check---------")
         check_consistency(options)
-        with open(options['graph dir'] + "/consistency-meta.txt", mode='a') as file:
+        with open(options.graph_dir + "/consistency-meta.txt", mode='a') as file:
             file.write('Did consistency check at %s.\n' %
                        (datetime.datetime.now()))

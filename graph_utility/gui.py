@@ -2,6 +2,8 @@ import glob
 import os
 from tkinter import *
 
+from graph_utility.utility import Options
+
 
 class Gui:
     def __init__(self):
@@ -121,35 +123,44 @@ class Gui:
         self.choose_directory_category()
         self.choose_tests_and_graph_type()
 
-        options = {
-            'chosen dir': self.results_dir + "/" + self.folder + "/" + self.category,
-            'graph dir': os.path.join(os.path.dirname(__file__), f"..\\graphs\\{self.folder}\\{self.category}\\"),
-            'chosen results': self.results,
-            'do fast graphs': self.do_fast_graphs,
-            'do consistency check': self.do_consistency_check,
-            'category': self.category,
-            'folder': self.folder,
-            'test names': [os.path.split(os.path.splitext(csv)[0])[1] for csv in self.results],
-            'enable graphs': self.enable_graphs
-        }
+        options = Options(
+            result_dir=self.results_dir +  self.folder + "\\" + self.category,
+            graph_dir=os.path.join(os.path.dirname(__file__), f"..\\graphs\\{self.folder}\\{self.category}\\"),
+            results_to_plot=self.results,
+            category=self.category,
+            folder=self.folder,
+            test_names=[os.path.split(os.path.splitext(csv)[0])[1] for csv in self.results],
+            chosen_graphs=[],
+            chosen_lines=[],
+            do_fast_graphs=bool(self.do_fast_graphs),
+            do_consistency_check=bool(self.do_consistency_check),
+            enable_graphs=bool(self.enable_graphs)
+        )
 
-        if (not self.enable_graphs and not self.do_consistency_check):
+        if not options.enable_graphs and not options.do_consistency_check:
             raise Exception('You chose to not do graphs or consistency, you probably clicked something wrong')
 
+        if len(options.results_to_plot) == 0:
+            raise Exception('You must choose some results')
+
+        if len(options.results_to_plot) == 1 and options.do_consistency_check:
+            raise Exception('You must choose at least two results to do consistency checks')
+
         print("----------Options----------")
-        print(f"Selected folder: {options['folder']}")
-        print(f"Selected category: {options['category']}")
-        print(f"Selected tests: {options['test names']}")
-        print(f"Doing consistency check: {options['do consistency check']}")
-        print(f"Creating graphs: {options['enable graphs']}")
+        print(f"Selected folder: {options.folder}")
+        print(f"Selected category: {options.category}")
+        print(f"Selected tests: {options.test_names}")
+        print(f"Doing consistency check: {options.do_consistency_check}")
+        print(f"Creating graphs: {options.enable_graphs}")
         if self.enable_graphs:
             if self.do_fast_graphs:
                 print(f"\tDoing quick graphs")
-                options['chosen graphs'] = ['answer simplification', 'rule usage', 'lines']
-                options['chosen lines'] = ['verification memory', 'state space size', 'total time', 'verification_time','colored reduce time', 'unfold time', 'reduce_time']
+                options.chosen_graphs = ['answer simplification', 'rule usage', 'lines']
+                options.chosen_lines = ['verification memory', 'state space size', 'total time', 'verification_time',
+                                        'colored reduce time', 'unfold time', 'reduce_time']
             else:
-                options['chosen graphs'] = ['answer simplification', 'rule usage']
-                options['chosen lines'] = 'all'
+                options.chosen_graphs = ['answer simplification', 'rule usage']
+                options.chosen_lines = 'all'
                 print(f"\tDoing all graphs")
 
         return options
