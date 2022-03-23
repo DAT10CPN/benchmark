@@ -1,3 +1,5 @@
+import os
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -8,25 +10,26 @@ from graph import Graph
 pd.options.mode.chained_assignment = None
 
 
-class answer_simplification_bars(Graph):
+class AnswerSimplificationBars(Graph):
 
     def __init__(self, options):
-        Graph.__init__(self, options)
+        super().__init__(options)
         self.transformed_data = pd.DataFrame()
-        self.graph_dir = super().graph_dir + '\\answer_bars\\'
-        self.name = 'answer simplification'
+        self.graph_dir = options.graph_dir + '\\answers\\'
+        self.name = 'answers'
+        os.makedirs(self.graph_dir)
 
     def prepare_data(self):
         # data from each csv will become a row in the combined dataframe, such that row index is the test name,
         # and columns are 'not answered', 'simplified', and 'reduced'.
         combined = pd.DataFrame()
-
         for index, data in enumerate(self.data_list):
             try:
                 num_errors = data['answer'].value_counts()['ERR']
             except KeyError:
                 num_errors = 0
 
+            # todo
             data = utility.remove_errors_df(data)
 
             # Change 'NONE' value to 'not answered', and 'TRUE' and 'FALSE' to 'answered'
@@ -45,8 +48,9 @@ class answer_simplification_bars(Graph):
             simplifications = (data['solved by query simplification'].value_counts()).to_frame()
 
             # Combine into same dataframe, with column being the test name, and row indices being above metrics
-            answers.rename(columns={'answer': self.test_names[index]}, inplace=True)
-            simplifications.rename(columns={'solved by query simplification': self.test_names[index]}, inplace=True)
+            answers.rename(columns={'answer': self.options.test_names[index]}, inplace=True)
+            simplifications.rename(columns={'solved by query simplification': self.options.test_names[index]},
+                                   inplace=True)
 
             temp = answers.append(simplifications)
 
@@ -92,8 +96,7 @@ class answer_simplification_bars(Graph):
 
     def plot(self):
         # Plot the plot
-        self.transformed_data.rename(utility.rename_test_name_for_paper_presentation(self.test_names), axis='rows',
-                                     inplace=True)
+        # self.transformed_data.rename(utility.rename_test_name_for_paper_presentation(self.options.test_names), axis='rows',inplace=True)
         sns.set_theme(style="darkgrid", palette="pastel")
         plot = self.transformed_data.plot(kind='barh', width=0.75, linewidth=2, figsize=(10, 10), stacked=True)
 
@@ -111,5 +114,5 @@ class answer_simplification_bars(Graph):
             left, bottom, width, height = p.get_bbox().bounds
             plot.annotate(int(width), xy=(left + width / 2, bottom + height / 2),
                           ha='center', va='center', rotation=45)
-        plt.savefig(self.graph_dir + f'{self.category}_answer_simplification_bars.svg', dpi=600, format="svg")
+        plt.savefig(self.graph_dir + 'answers.svg', dpi=600, format="svg")
         plt.close()

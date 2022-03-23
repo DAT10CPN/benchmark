@@ -1,10 +1,9 @@
-import numpy as np
-import pandas as pd
 from dataclasses import dataclass
+
 
 @dataclass()
 class Options:
-    '''Class for keeping track of options chosen from the gui'''
+    """Class for keeping track of options chosen from the gui"""
     result_dir: str
     graph_dir: str
     results_to_plot: list
@@ -13,10 +12,65 @@ class Options:
     test_names: [str]
     chosen_graphs: [str]
     chosen_lines: [str]
+    read_results: []
     do_fast_graphs: bool
     do_consistency_check: bool
     enable_graphs: bool
 
+
+# todo
+def sanitise_df_list(result_list):
+    return result_list
+    return [sanitise_df(df) for df in result_list]
+
+
+def sanitise_df(df):
+    df = infer_errors(df)
+    # df = infer_simplification_from_prev_size_0_rows(df)
+    return df
+
+
+def infer_errors(df):
+    def row_with_err(row):
+        row['answer'] = 'ERR'
+        row['solved by query simplification'] = 'ERR'
+        return row
+
+    df = df.apply(lambda row: row_with_err(row) if all_columns_indicate_error(row) else row, axis=1)
+    return df
+
+
+def all_columns_indicate_error(row):
+    columns_with_0_indicating_error = ['verification time', 'verification memory', 'reduce time',
+                                       'state space size']
+    error = False
+    if get_pre_size(row) == 0.0 and get_post_size(row) == 0.0:
+        for column in columns_with_0_indicating_error:
+            if row[column] != 0.0:
+                break
+            error = True
+
+    return error
+
+
+def infer_simplification_from_prev_size_0_rows(df):
+    df['answer'] = df.apply(
+        lambda row: 'TRUE' if (get_post_size(row) == 0.0 and get_pre_size(row) > 0) else row['answer'], axis=1)
+    df['solved by query simplification'] = df.apply(
+        lambda row: True if (get_post_size(row) == 0.0 and get_pre_size(row) > 0) else row[
+            'solved by query simplification'], axis=1)
+    return df
+
+
+def get_pre_size(row):
+    return row['original place count'] + row['original transition count']
+
+
+def get_post_size(row):
+    return row['post place count'] + row['post transition count']
+
+
+"""
 def remove_rows_with_no_answers_or_query_simplification(data_list):
     for data in data_list:
         # Remove rows where query simplification has been used, or where there isn't an answer
@@ -88,15 +142,7 @@ def color(t):
     return a + (b * np.cos(2 * np.pi * (c * t + d)))
 
 
-def sanitise_df(df):
-    df = remove_permission_denied_model(df)
-    df = infer_errors(df)
-    df = infer_simplification_from_prev_size_0_rows(df)
-    return df
 
-
-def sanitise_df_list(datalist):
-    return [sanitise_df(df) for df in datalist]
 
 
 def rename_index_to_test_name(df, test_names):
@@ -107,42 +153,7 @@ def rename_index_to_test_name(df, test_names):
     return df
 
 
-def make_derived_jable(csvs, exp_names):
-    needed_columns = ['model name', 'query index', 'answer', 'verification time', 'verification memory',
-                      'prev place count', 'post place count',
-                      'prev transition count', 'post transition count', 'reduce time', 'state space size',
-                      'solved by query simplification']
 
-    for data in csvs:
-        data.set_index(["model name", "query index"], inplace=True)
-        columns_to_drop = [column for column in data.columns if column not in needed_columns]
-        data.drop(columns_to_drop, axis=1, inplace=True)
-
-    for i, csv in enumerate(csvs):
-        csv.rename(columns={col: f"{exp_names[i]}@{col}" for col in csv.columns}, inplace=True)
-    jable = pd.concat(csvs, axis=1)
-    jable.sort_index(level=0, inplace=True)
-
-    for exp_name in exp_names:
-        jable[f'{exp_name}@total time'] = jable.apply(
-            lambda row: row[f'{exp_name}@reduce time'] + row[f'{exp_name}@verification time'], axis=1)
-
-    # Create reduced sizes and prev/post sizes
-    for exp_name in exp_names:
-        for time in ['prev', 'post']:
-            jable[f'{exp_name}@{time} size'] = jable[f'{exp_name}@{time} place count'] + jable[
-                f'{exp_name}@{time} transition count']
-        jable[f'{exp_name}@reduced size'] = (jable[f'{exp_name}@post size'] - jable[
-            f'{exp_name}@prev size'])
-    return jable
-
-
-def get_pre_size(row):
-    return row['prev place count'] + row['prev transition count']
-
-
-def get_post_size(row):
-    return row['post place count'] + row['post transition count']
 
 
 def get_reduced_size(row):
@@ -164,27 +175,10 @@ def remove_prev_size_0_rows(df):
     return df
 
 
-def all_columns_indicate_error(row):
-    columns_with_0_indicating_error = ['verification time', 'verification memory', 'reduce time',
-                                       'state space size']
-    error = False
-    if get_pre_size(row) == 0.0 and get_post_size(row) == 0.0:
-        for column in columns_with_0_indicating_error:
-            if row[column] != 0.0:
-                break
-            error = True
-
-    return error
 
 
-def infer_errors(df):
-    def row_with_err(row):
-        row['answer'] = 'ERR'
-        row['solved by query simplification'] = 'ERR'
-        return row
 
-    df = df.apply(lambda row: row_with_err(row) if all_columns_indicate_error(row) else row, axis=1)
-    return df
+
 
 
 def number_of_errors(df):
@@ -195,27 +189,8 @@ def row_indicate_simplification_jable(row, test_name):
     return (row[f'{test_name}@post size'] == 0.0 and row[f'{test_name}@prev size'] > 0) or row[
         f'{test_name}@solved by query simplification']
 
-
 def row_indicate_simplification(row):
     return (get_post_size(row) == 0.0 and get_pre_size(row) > 0) or row['solved by query simplification']
-
-
-def infer_simplification_from_prev_size_0_rows(df):
-    df['answer'] = df.apply(
-        lambda row: 'TRUE' if (get_post_size(row) == 0.0 and get_pre_size(row) > 0) else row['answer'], axis=1)
-    df['solved by query simplification'] = df.apply(
-        lambda row: True if (get_post_size(row) == 0.0 and get_pre_size(row) > 0) else row[
-            'solved by query simplification'], axis=1)
-    return df
-
-
-def second_smallest_in_list(list):
-    return sorted(list)[1]
-
-
-def second_largest_in_list(list):
-    return sorted(list)[-2]
-
 
 def unique_answers_comparison(df, experiment_to_compare_against, test_names):
     res = pd.DataFrame()
@@ -225,36 +200,14 @@ def unique_answers_comparison(df, experiment_to_compare_against, test_names):
         res[test] = [temp.sum()]
     return res.T[0]
 
-
-def zero_padding(series, metric, test_names):
-    if metric != 'unique answers':
-        metric_columns = [experiment_column + '@' + metric for experiment_column in test_names]
-    else:
-        metric_columns = test_names
-
-    for test_name in metric_columns:
-        if test_name not in series or (test_name == 'no-red' and metric in ['reduce time', 'reduced size']):
-            series[test_name] = 0
-    return series
-
-
-def largest_x_by_prev_size_jable(jable, x, test_name):
-    n = int(jable.shape[0] * x)
-
-    res_df = jable.sort_values(by=[f'{test_name}@prev size'])
-
-    return res_df.tail(n)
-
-
-def remove_permission_denied_model(df):
-    return df[df['model name'] != 'EGFr-PT-10421']
+"""
 
 
 def remove_errors_df(df):
     return df[df['answer'] != 'ERR']
 
 
-def remove_errors_datalist(data_list):
+"""def remove_errors_datalist(data_list):
     for data in data_list:
         data.drop(data[data['answer'] == 'ERR'].index, inplace=True)
     return data_list
@@ -320,3 +273,57 @@ def rename_test_name_for_paper_presentation(test_names):
 
         new_test_names[test_name] = new_test_name
     return new_test_names
+def zero_padding(series, metric, test_names):
+    if metric != 'unique answers':
+        metric_columns = [experiment_column + '@' + metric for experiment_column in test_names]
+    else:
+        metric_columns = test_names
+
+    for test_name in metric_columns:
+        if test_name not in series or (test_name == 'no-red' and metric in ['reduce time', 'reduced size']):
+            series[test_name] = 0
+    return series
+
+def second_smallest_in_list(list):
+    return sorted(list)[1]
+
+
+def second_largest_in_list(list):
+    return sorted(list)[-2]
+
+
+def largest_x_by_prev_size_jable(jable, x, test_name):
+    n = int(jable.shape[0] * x)
+
+    res_df = jable.sort_values(by=[f'{test_name}@prev size'])
+
+    return res_df.tail(n)
+
+def make_derived_jable(csvs, exp_names):
+    needed_columns = ['model name', 'query index', 'answer', 'verification time', 'verification memory',
+                      'prev place count', 'post place count',
+                      'prev transition count', 'post transition count', 'reduce time', 'state space size',
+                      'solved by query simplification']
+
+    for data in csvs:
+        data.set_index(["model name", "query index"], inplace=True)
+        columns_to_drop = [column for column in data.columns if column not in needed_columns]
+        data.drop(columns_to_drop, axis=1, inplace=True)
+
+    for i, csv in enumerate(csvs):
+        csv.rename(columns={col: f"{exp_names[i]}@{col}" for col in csv.columns}, inplace=True)
+    jable = pd.concat(csvs, axis=1)
+    jable.sort_index(level=0, inplace=True)
+
+    for exp_name in exp_names:
+        jable[f'{exp_name}@total time'] = jable.apply(
+            lambda row: row[f'{exp_name}@reduce time'] + row[f'{exp_name}@verification time'], axis=1)
+
+    # Create reduced sizes and prev/post sizes
+    for exp_name in exp_names:
+        for time in ['prev', 'post']:
+            jable[f'{exp_name}@{time} size'] = jable[f'{exp_name}@{time} place count'] + jable[
+                f'{exp_name}@{time} transition count']
+        jable[f'{exp_name}@reduced size'] = (jable[f'{exp_name}@post size'] - jable[
+            f'{exp_name}@prev size'])
+    return jable"""

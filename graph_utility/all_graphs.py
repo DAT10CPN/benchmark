@@ -2,41 +2,35 @@ import datetime
 import os
 import shutil
 
+import pandas as pd
+
 import utility
-from answer_simplification_bars import answer_simplification_bars
+from answers import AnswerSimplificationBars
+from consistency import check_consistency
+from graph_utility.rules import RuleUsage
 from gui import Gui
-from lines import lines
-from ruleusage import RuleUsage
-from check_consistency import check_consistency
 
 
 def plot_all(options):
     # Get number of files in this directory, remove the ones we do not use
     # Can use this for the prints
-    num_graphs = len(options['test names'])
+    num_graphs = len(options.chosen_graphs)
     graphs_made = 0
-
-    # Sanitise the data
-    print("Sanitising the data")
-    options['chosen results'] = utility.sanitise_df_list(options['chosen results'])
-
     print("Creating graph objects")
     graph_objects = [
-        answer_simplification_bars(options),
+        AnswerSimplificationBars(options),
         RuleUsage(options),
-        lines(options)
+        # lines(options)
     ]
 
     print(f"Making graphs: {num_graphs}")
-    print(f"{graphs_made}/{num_graphs} graphs made")
     for graph in graph_objects:
-        if graph.name in options['chosen graphs']:
+        if graph.name in options.chosen_graphs:
             print(f"Making graph: {graph.name}")
-            graph.read_results()
             graph.prepare_data()
             graph.plot()
-            print(f"graphs made: {graphs_made}/{num_graphs}")
             graphs_made += 1
+            print(f"graphs made: {graphs_made}/{num_graphs}")
 
 
 if __name__ == "__main__":
@@ -47,12 +41,18 @@ if __name__ == "__main__":
         shutil.rmtree(options.graph_dir)
     os.makedirs(options.graph_dir)
 
+    print("Sanitising the data")
+    # todo
+    options.read_results = utility.sanitise_df_list(
+        [pd.read_csv(options.result_dir + "\\" + csv) for csv in options.results_to_plot])
+
     if options.enable_graphs:
         print("---------Creating graphs---------")
         plot_all(options)
         with open(options.graph_dir + "/graphs-meta.txt", mode='a') as file:
             file.write('Made graphs at at %s.\n' %
                        (datetime.datetime.now()))
+
     if options.do_consistency_check:
         print("---------Doing consistency check---------")
         check_consistency(options)

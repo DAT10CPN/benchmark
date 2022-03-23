@@ -31,16 +31,15 @@ def compare_two_results(exp_1, exp_1_index, data_list, options):
 
 
 def check_consistency(options):
-    data_list = [pd.read_csv(options.result_dir + "\\" + csv) for csv in options.results_to_plot]
-    print(options.graph_dir)
-    for i, data in enumerate(data_list):
+    # We are now mutating the data in options, so check consistency should always be last
+    for i, data in enumerate(options.read_results):
         data.drop(data.index[data['answer'] == 'NONE'], inplace=True)
         data.set_index(["model name", "query index"], inplace=True)
         data.rename(columns={col: f"{options.test_names[i]}@{col}" for col in data.columns}, inplace=True)
 
     consistency_matrix = pd.DataFrame()
-    for index, exp_1 in enumerate(data_list):
-        row = compare_two_results(exp_1, index, data_list, options)
+    for index, exp_1 in enumerate(options.read_results):
+        row = compare_two_results(exp_1, index, options.read_results, options)
         consistency_matrix = consistency_matrix.append(row, ignore_index=True)
 
     new_rows_indices = dict()
