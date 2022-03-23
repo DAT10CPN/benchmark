@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+import numpy as np
+
 
 @dataclass()
 class Options:
@@ -18,10 +20,23 @@ class Options:
     enable_graphs: bool
 
 
+def color(t):
+    a = np.array([0.5, 0.5, 0.5])
+    b = np.array([0.5, 0.5, 0.5])
+    c = np.array([1.0, 1.0, 1.0])
+    d = np.array([0.0, 0.33, 0.67])
+
+    return a + (b * np.cos(2 * np.pi * (c * t + d)))
+
+
+def get_total_time(row):
+    return row['colored reduce time'] + row['unfold time'] + row['reduce time'] + row['verification time']
+
+
 # todo
 def sanitise_df_list(result_list):
     return result_list
-    return [sanitise_df(df) for df in result_list]
+    """return [sanitise_df(df) for df in result_list]
 
 
 def sanitise_df(df):
@@ -70,7 +85,7 @@ def get_post_size(row):
     return row['post place count'] + row['post transition count']
 
 
-"""
+
 def remove_rows_with_no_answers_or_query_simplification(data_list):
     for data in data_list:
         # Remove rows where query simplification has been used, or where there isn't an answer
@@ -133,13 +148,7 @@ def remove_no_red(data_list, test_names):
     return data_list, test_names
 
 
-def color(t):
-    a = np.array([0.5, 0.5, 0.5])
-    b = np.array([0.5, 0.5, 0.5])
-    c = np.array([1.0, 1.0, 1.0])
-    d = np.array([0.0, 0.33, 0.67])
 
-    return a + (b * np.cos(2 * np.pi * (c * t + d)))
 
 
 
@@ -166,8 +175,7 @@ def get_reduced_size(row):
         return np.nan
 
 
-def get_total_time(row):
-    return row['reduce time'] + row['verification time']
+
 
 
 def remove_prev_size_0_rows(df):

@@ -156,11 +156,11 @@ class Gui:
         if self.enable_graphs:
             if self.do_fast_graphs:
                 print(f"\tDoing quick graphs")
-                options.chosen_graphs = ['answers', 'rules', 'lines']
+                options.chosen_graphs = ['answers', 'rules', 'memory-state lines', 'time lines']
                 options.chosen_lines = ['verification memory', 'state space size', 'total time', 'verification_time',
                                         'colored reduce time', 'unfold time', 'reduce_time']
             else:
-                options.chosen_graphs = ['answers', 'rules']
+                options.chosen_graphs = ['answers', 'rules', 'memory-state lines', 'time lines']
                 options.chosen_lines = 'all'
                 print(f"\tDoing all graphs")
 

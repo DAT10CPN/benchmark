@@ -7,6 +7,8 @@ import pandas as pd
 import utility
 from answers import AnswerSimplificationBars
 from consistency import check_consistency
+from graph_utility.lines_memory_state import MemoryStateLines
+from graph_utility.lines_time import TimeLines
 from graph_utility.rules import RuleUsage
 from gui import Gui
 
@@ -20,7 +22,8 @@ def plot_all(options):
     graph_objects = [
         AnswerSimplificationBars(options),
         RuleUsage(options),
-        # lines(options)
+        MemoryStateLines(options),
+        TimeLines(options)
     ]
 
     print(f"Making graphs: {num_graphs}")
@@ -50,7 +53,7 @@ if __name__ == "__main__":
         print("---------Creating graphs---------")
         plot_all(options)
         with open(options.graph_dir + "/graphs-meta.txt", mode='a') as file:
-            file.write('Made graphs at at %s.\n' %
+            file.write('Made graphs at %s.\n' %
                        (datetime.datetime.now()))
 
     if options.do_consistency_check:

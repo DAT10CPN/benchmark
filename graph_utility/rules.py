@@ -23,6 +23,10 @@ class RuleUsage(Graph):
         self.graph_dir = options.graph_dir + '\\rules\\'
         self.name = 'rules'
         os.makedirs(self.graph_dir)
+        for test_name in self.options.test_names:
+            os.makedirs(self.graph_dir + f'\\{test_name}\\')
+        for graph_type in ['absolute applications', 'absolute models', 'percentage models']:
+            os.makedirs(self.graph_dir + f'\\{graph_type}\\')
 
     def prepare_data(self):
         # todo
@@ -43,22 +47,18 @@ class RuleUsage(Graph):
 
             models_using_rule = ((data_grouped_by_model > 0) * 1).agg('sum').to_frame().T
 
-            # todo
             # new_test_name = utility.rename_test_name_for_paper_presentation(self.test_names)[
-            #    self.test_names[test_index]]
+            #   self.test_names[test_index]]
 
             # Remove the 'Rule' part of e.g 'Rule A'
-            all_lists = self.rules_summed + self.percentages + self.models_using_rule
-            for df in all_lists:
+            for df in [rules_summed, percentages, models_using_rule]:
                 df.rename(columns=lambda x: re.sub('rule', '', x), inplace=True)
 
             self.models_using_rule.append(models_using_rule)
             self.percentages.append(percentages)
             self.rules_summed.append(rules_summed)
-            # todo
             # self.new_test_names.append(new_test_name)
-        #todo
-        self.new_test_names=self.options.test_names
+            self.new_test_names.append(self.options.test_names[test_index])
 
     def plot(self):
         sns.set_theme(style="darkgrid", palette="pastel")
@@ -84,10 +84,8 @@ class RuleUsage(Graph):
                               size=12,
                               xytext=(0, 8),
                               textcoords='offset points')
-            plt.savefig(
-                self.graph_dir + f'{self.options.test_names[i]}_rule_usage_absolute.svg',
-                dpi=600,
-                format="svg")
+
+            self.save_fig(self.options.test_names[i], 'absolute applications')
             plt.clf()
 
     def plot_percentages(self):
@@ -106,20 +104,18 @@ class RuleUsage(Graph):
                                   size=12,
                                   xytext=(0, 8),
                                   textcoords='offset points')
-            plt.savefig(
-                self.graph_dir + f'{self.options.test_names[i]}_rule_usage_percentage.svg',
-                dpi=600,
-                format="svg")
+
+            self.save_fig(self.options.test_names[i], 'percentage models')
             plt.clf()
 
-            # todo
+            # todo, might not needed, was for big table in last paper of rule applications
             # self.percentages[i].rename(index={
             #    0: utility.rename_test_name_for_paper_presentation(self.test_names)[self.test_names[i]].replace("⃰",
             #                                                                                                    "*")},
             #   inplace=True)
-            #self.percentages[i].drop([' J', ' K'], axis=1, inplace=True)
-            #self.percentages[i] = self.percentages[i].round(1)
-            #self.all_percentages = self.all_percentages.append(self.percentages[i])
+            # self.percentages[i].drop([' J', ' K'], axis=1, inplace=True)
+            # self.percentages[i] = self.percentages[i].round(1)
+            # self.all_percentages = self.all_percentages.append(self.percentages[i])
 
     def plot_models_using_rule(self):
         for i in range(len(self.options.test_names)):
@@ -134,8 +130,15 @@ class RuleUsage(Graph):
                                   size=12,
                                   xytext=(0, 8),
                                   textcoords='offset points')
-            plt.savefig(
-                self.graph_dir + f'{self.options.test_names[i]}_rule_usage_absolute_models.svg',
-                dpi=600,
-                format="svg")
+            self.save_fig(self.options.test_names[i], 'absolute models')
             plt.close()
+
+    def save_fig(self, result_name, graph_type):
+        plt.savefig(
+            self.graph_dir + f'\\{result_name}\\' + f'{graph_type}.svg',
+            dpi=600,
+            format="svg")
+        plt.savefig(
+            self.graph_dir + f'\\{graph_type}\\' + f'{result_name}.svg',
+            dpi=600,
+            format="svg")
