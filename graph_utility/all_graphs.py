@@ -49,16 +49,14 @@ if __name__ == "__main__":
     options.read_results = utility.sanitise_df_list(
         [pd.read_csv(options.result_dir + "\\" + csv) for csv in options.results_to_plot])
 
+    with open(options.graph_dir + "/meta.txt", mode='a') as file:
+        file.write('Ran at %s.\n' %
+                   (datetime.datetime.now()))
     if options.enable_graphs:
         print("---------Creating graphs---------")
         plot_all(options)
-        with open(options.graph_dir + "/graphs-meta.txt", mode='a') as file:
-            file.write('Made graphs at %s.\n' %
-                       (datetime.datetime.now()))
 
     if options.do_consistency_check:
         print("---------Doing consistency check---------")
         check_consistency(options)
-        with open(options.graph_dir + "/consistency-meta.txt", mode='a') as file:
-            file.write('Did consistency check at %s.\n' %
-                       (datetime.datetime.now()))
+

@@ -15,9 +15,8 @@ class AnswerSimplificationBars(Graph):
     def __init__(self, options):
         super().__init__(options)
         self.transformed_data = pd.DataFrame()
-        self.graph_dir = options.graph_dir + '\\answers\\'
+        self.graph_dir = options.graph_dir
         self.name = 'answers'
-        os.makedirs(self.graph_dir)
 
     def prepare_data(self):
         # data from each csv will become a row in the combined dataframe, such that row index is the test name,
@@ -114,5 +113,5 @@ class AnswerSimplificationBars(Graph):
             left, bottom, width, height = p.get_bbox().bounds
             plot.annotate(int(width), xy=(left + width / 2, bottom + height / 2),
                           ha='center', va='center', rotation=45)
-        plt.savefig(self.graph_dir + 'answers.svg', dpi=600, format="svg")
+        plt.savefig(self.graph_dir + '\\answers.svg', dpi=600, format="svg")
         plt.close()

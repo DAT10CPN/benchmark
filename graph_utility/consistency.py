@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 import pandas as pd
 
@@ -27,10 +29,13 @@ def compare_two_results(exp_1, exp_1_index, data_list, options):
             combined.to_csv(
                 f'{options.graph_dir}/inconsistent_rows_({exp_1_name})_({exp_2_result_name})_{options.category}.csv')
 
+            f"{options.graph_dir}/consistency_matrix.csv"
     return consistency_row
 
 
 def check_consistency(options):
+    os.makedirs(options.graph_dir + f'\\consistency\\')
+    options.graph_dir = options.graph_dir + f'\\consistency\\'
     # We are now mutating the data in options, so check consistency should always be last
     for i, data in enumerate(options.read_results):
         data.drop(data.index[data['answer'] == 'NONE'], inplace=True)
