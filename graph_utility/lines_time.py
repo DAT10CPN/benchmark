@@ -31,6 +31,7 @@ class TimeLines(Lines):
                             axis=1)
                     else:
                         res_df[metric] = data[metric]
+
                     res_df.dropna(subset=[metric], inplace=True)
                     metric_data = ((res_df[metric].sort_values()).reset_index()).drop(columns='index')
                     metric_data = metric_data[metric_data[metric] >= cutoff_time]

@@ -8,6 +8,7 @@ import utility
 from answers import AnswerSimplificationBars
 from consistency import check_consistency
 from graph_utility.lines_memory_state import MemoryStateLines
+from graph_utility.lines_size import SizeLines
 from graph_utility.lines_time import TimeLines
 from graph_utility.rules import RuleUsage
 from gui import Gui
@@ -24,7 +25,8 @@ def plot_all(options):
         AnswerSimplificationBars(options),
         RuleUsage(options),
         MemoryStateLines(options),
-        TimeLines(options)
+        TimeLines(options),
+        SizeLines(options)
     ]
 
     print(f"Making graphs: {num_graphs}")

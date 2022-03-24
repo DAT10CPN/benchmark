@@ -21,7 +21,7 @@ class Lines(Graph):
         self.base_name = 'base'
         self.chosen_metrics = ['verification memory']
         if self.options.do_fast_graphs:
-            self.cutoff_times = [2.5, 10]
+            self.cutoff_times = [0, 2.5, 10]
             self.keep_percentages = [0.1, 0.5]
         else:
             self.cutoff_times = [0, 0.5, 1, 2.5, 5, 10, 20, 30, 60]
