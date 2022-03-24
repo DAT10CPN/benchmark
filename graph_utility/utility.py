@@ -1,3 +1,4 @@
+import os
 from dataclasses import dataclass
 
 import numpy as np
@@ -33,18 +34,98 @@ def get_total_time(row):
     return row['colored reduce time'] + row['unfold time'] + row['reduce time'] + row['verification time']
 
 
+def get_unfolded_size(row):
+    return row['unfolded place count'] + row['unfolded transition count']
+
+
+def get_colored_reduced_size(row):
+    return row['colored reduce place count'] + row['colored reduce transition count']
+
+
+def get_reduced_size(row):
+    return row['reduced place count'] + row['reduced transition count']
+
+
 # todo
 def sanitise_df_list(result_list):
+    result_list = [sanitise_df(df) for df in result_list]
     return result_list
-    """return [sanitise_df(df) for df in result_list]
 
 
 def sanitise_df(df):
     df = infer_errors(df)
-    # df = infer_simplification_from_prev_size_0_rows(df)
+    df.to_csv(os.path.dirname(__file__) + "\\error-test.csv")
+    df = infer_simplification_from_prev_size_0_rows(df)
+
     return df
 
 
+def is_previous_error(row):
+    return True if row['error'] > 0 else False
+
+
+def phase_1_errors(df):
+    df['error'] = df.apply(
+        lambda row: 1 if row['colored reduce time'] == 0.0 else 0, axis=1)
+    return df
+
+
+def phase_2_errors(df):
+    def infer_phase_2_errors(row):
+        return 2 if row['unfold time'] == 0.0 else row['error']
+
+    df['error'] = df.apply(
+        lambda row: row['error'] if is_previous_error(row) else infer_phase_2_errors(row),
+        axis=1)
+    return df
+
+
+def phase_3_errors(df):
+    def infer_phase_3_errors(row):
+        return 3 if row['reduce time'] == 0.0 else row['error']
+
+    df['error'] = df.apply(
+        lambda row: row['error'] if is_previous_error(row) else infer_phase_3_errors(row),
+        axis=1)
+    return df
+
+
+def phase_4_errors(df):
+    def infer_phase_4_errors(row):
+        return 4 if row['verification time'] == 0.0 and row['answer'] == 'NONE' and row[
+            'solved by query simplification'] == 'NONE' else row['error']
+
+    df['error'] = df.apply(
+        lambda row: row['error'] if is_previous_error(row) else infer_phase_4_errors(row),
+        axis=1)
+    return df
+
+
+def infer_errors(df):
+    df = phase_1_errors(df)
+    df = phase_2_errors(df)
+    df = phase_3_errors(df)
+    df = phase_4_errors(df)
+    return df
+
+
+# This can happen if query simplification is used
+def infer_simplification_from_prev_size_0_rows(df):
+    df['answer'] = df.apply(
+        lambda row: 'TRUE' if (get_reduced_size(row) == 0.0 and get_unfolded_size(row) > 0 and row['error'] == 0) else
+        row['answer'], axis=1)
+    df['solved by query simplification'] = df.apply(
+        lambda row: True if (get_reduced_size(row) == 0.0 and get_unfolded_size(row) > 0 and row['error'] == 0) else
+        row[
+            'solved by query simplification'], axis=1)
+    return df
+
+
+def remove_errors_df(df):
+    return df[df['error'] == 0]
+
+
+"""
 def infer_errors(df):
     def row_with_err(row):
         row['answer'] = 'ERR'
@@ -68,13 +149,7 @@ def all_columns_indicate_error(row):
     return error
 
 
-def infer_simplification_from_prev_size_0_rows(df):
-    df['answer'] = df.apply(
-        lambda row: 'TRUE' if (get_post_size(row) == 0.0 and get_pre_size(row) > 0) else row['answer'], axis=1)
-    df['solved by query simplification'] = df.apply(
-        lambda row: True if (get_post_size(row) == 0.0 and get_pre_size(row) > 0) else row[
-            'solved by query simplification'], axis=1)
-    return df
+
 
 
 def get_pre_size(row):
@@ -209,11 +284,6 @@ def unique_answers_comparison(df, experiment_to_compare_against, test_names):
     return res.T[0]
 
 """
-
-
-def remove_errors_df(df):
-    return df[df['answer'] != 'ERR']
-
 
 """def remove_errors_datalist(data_list):
     for data in data_list:

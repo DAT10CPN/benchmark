@@ -21,11 +21,7 @@ class AnswerSimplificationBars(Graph):
         # and columns are 'not answered', 'simplified', and 'reduced'.
         combined = pd.DataFrame()
         for index, data in enumerate(self.data_list):
-            try:
-                num_errors = data['answer'].value_counts()['ERR']
-            except KeyError:
-                num_errors = 0
-
+            errors = data['error'].value_counts()
             # todo
             data = utility.remove_errors_df(data)
 
@@ -66,11 +62,15 @@ class AnswerSimplificationBars(Graph):
             reduced = int(num_answered - num_simplified)
             if reduced > 0:
                 temp.loc['reduced'] = reduced
+            for error_code in range(1, 5):
+                try:
+                    if errors[error_code] > 0:
+                        temp.loc[error_code] = errors[error_code]
 
-            if num_errors > 0:
-                temp.loc['ERR'] = num_errors
+                except KeyError:
+                    temp.loc[error_code] = 0
+                    continue
             temp = temp.T
-
             # As per default we want to remove these two columns that Nicolaj does not like
             # But as we saw, we can have faulty experiments-30-60-1-1 where some of these wont exist
             # And if we try to remove something that does not exist, everything stops working
@@ -82,10 +82,7 @@ class AnswerSimplificationBars(Graph):
                     continue
 
             # Reorder the columns so that bars are stacked nicely
-            try:
-                temp = temp[["reduced", "simplified", "not answered", "ERR"]]
-            except KeyError:
-                temp = temp[["reduced", "simplified", "not answered"]]
+            temp = temp[["reduced", "simplified", "not answered", 1, 2, 3, 4]]
 
             # Add data from this experiment, to results from other experiments-30-60-1-1
             combined = combined.append(temp)
