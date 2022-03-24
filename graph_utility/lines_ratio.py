@@ -1,13 +1,14 @@
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
+
 import utility
 from lines import Lines
-import seaborn as sns
-import matplotlib.pyplot as plt
+
 
 class RatioLines(Lines):
     def __init__(self, options):
         super().__init__(options)
-
 
     def prepare_unfold_size(self):
         combined_df = pd.DataFrame()
@@ -32,6 +33,7 @@ class RatioLines(Lines):
             combined_df = pd.concat([combined_df, metric_data], axis=1)
         combined_df.rename(utility.rename_test_name_for_paper_presentation(self.test_names), axis='columns',
                            inplace=True)
+
     def prepare_col_reduced_size(self):
         combined_df = pd.DataFrame()
         for index, data in enumerate(self.data_list):
@@ -55,6 +57,7 @@ class RatioLines(Lines):
             combined_df = pd.concat([combined_df, metric_data], axis=1)
         combined_df.rename(utility.rename_test_name_for_paper_presentation(self.test_names), axis='columns',
                            inplace=True)
+
     def prepare_normal_reduced_size(self):
         combined_df = pd.DataFrame()
         for index, data in enumerate(self.data_list):
@@ -133,4 +136,3 @@ class RatioLines(Lines):
         sns.set_theme(style="darkgrid")
 
         self.plot_ratios()
-

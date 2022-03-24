@@ -18,6 +18,7 @@ def plot_all(options):
     # Can use this for the prints
     num_graphs = len(options.chosen_graphs)
     graphs_made = 0
+
     print("Creating graph objects")
     graph_objects = [
         AnswerSimplificationBars(options),
@@ -60,4 +61,3 @@ if __name__ == "__main__":
     if options.do_consistency_check:
         print("---------Doing consistency check---------")
         check_consistency(options)
-

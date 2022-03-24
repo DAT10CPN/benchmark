@@ -1,9 +1,10 @@
 import os
+from collections import defaultdict
 
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-from collections import defaultdict
+
 import utility
 from lines import Lines
 

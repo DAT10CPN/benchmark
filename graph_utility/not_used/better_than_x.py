@@ -128,7 +128,7 @@ def plot(data_list, test_names, graph_dir, experiment_to_compare_against, keep_l
 
     if len(test_names) == 2 and 'no-red' in test_names:
         print(
-            '(best_overall) beware, probably weird results (in reduction points) in this graph due to comparing only 2 experiments, and one which is no-red')
+            '(best_overall) beware, probably weird results (in reduction points) in this graph due to comparing only 2 experiments-30-60-1-1, and one which is no-red')
 
     derived_jable = utility.make_derived_jable(data_list, test_names)
     derived_jable_sized = utility.largest_x_by_prev_size_jable(derived_jable, keep_largest_percent, test_names[0])
@@ -164,7 +164,7 @@ def plot(data_list, test_names, graph_dir, experiment_to_compare_against, keep_l
             f'Point given if {how_much_better * 100}% better than {experiment_to_compare_against}, using {keep_largest_percent * 100}% largest tests ({int(derived_jable.shape[0] * keep_largest_percent)} tests) by prev_size')
         plt.xscale('symlog')
         plt.xlabel("points")
-        plt.ylabel('experiments')
+        plt.ylabel('experiments-30-60-1-1')
 
         # Plot the numbers in the bars
         for p in plot.patches:
@@ -204,7 +204,7 @@ def plot(data_list, test_names, graph_dir, experiment_to_compare_against, keep_l
                 f'Point given if at least as good as {experiment_to_compare_against}, using {keep_largest_percent * 100}% largest tests ({int(derived_jable.shape[0] * keep_largest_percent)} tests) by prev_size')
             plt.xscale('symlog')
             plt.xlabel("points")
-            plt.ylabel('experiments')
+            plt.ylabel('experiments-30-60-1-1')
 
             # Plot the numbers in the bars
             for p in plot.patches:

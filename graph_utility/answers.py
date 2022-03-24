@@ -1,5 +1,3 @@
-import os
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -74,7 +72,7 @@ class AnswerSimplificationBars(Graph):
             temp = temp.T
 
             # As per default we want to remove these two columns that Nicolaj does not like
-            # But as we saw, we can have faulty experiments where some of these wont exist
+            # But as we saw, we can have faulty experiments-30-60-1-1 where some of these wont exist
             # And if we try to remove something that does not exist, everything stops working
             columns_to_remove = ['answered', 'not simplified']
             for col in columns_to_remove:
@@ -89,7 +87,7 @@ class AnswerSimplificationBars(Graph):
             except KeyError:
                 temp = temp[["reduced", "simplified", "not answered"]]
 
-            # Add data from this experiment, to results from other experiments
+            # Add data from this experiment, to results from other experiments-30-60-1-1
             combined = combined.append(temp)
         self.transformed_data = combined
 
@@ -101,7 +99,7 @@ class AnswerSimplificationBars(Graph):
 
         plt.legend(bbox_to_anchor=(0.35, 1.12), loc='upper left', borderaxespad=0)
         plt.xlabel("test instances")
-        plt.ylabel('experiments')
+        plt.ylabel('experiments-30-60-1-1')
 
         # Find max width, in order to move the very small numbers away from the bars
         max_width = 0

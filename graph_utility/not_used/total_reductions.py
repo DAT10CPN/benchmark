@@ -50,7 +50,7 @@ def plot(data_list, test_names, graph_dir, category):
         plt.legend(bbox_to_anchor=(1.02, 1), loc='best', borderaxespad=0)
         plt.xscale('log')
         plt.xlabel("reductions")
-        plt.ylabel('experiments')
+        plt.ylabel('experiments-30-60-1-1')
 
         # Plot the numbers in the bars
         for p in plot.patches:
