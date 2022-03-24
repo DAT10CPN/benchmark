@@ -29,6 +29,7 @@ def plot_all(options):
     print(f"Making graphs: {num_graphs}")
     for graph in graph_objects:
         if graph.name in options.chosen_graphs:
+            print("-----------")
             print(f"Making graph: {graph.name}")
             graph.prepare_data()
             graph.plot()
