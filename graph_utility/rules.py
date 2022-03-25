@@ -35,6 +35,7 @@ class RuleUsage(Graph):
         # Make one plot (png) for each csv
         for test_index, data in enumerate(self.data_list):
 
+            data.drop(data[data['error'] <= 3].index, inplace=True)
             # Find rule names
             rules = [column for column in data.columns.tolist() if
                      "rule" in column]
@@ -73,7 +74,8 @@ class RuleUsage(Graph):
             try:
                 plot.set_yscale("log")
             except:
-                print(f"Test has probably gone wrong, had no application of any rules: {self.options.test_names[i]}")
+                print(
+                    f"Test has probably gone wrong, had no application of any rules: {self.options.test_names[i]}.csv")
                 plot.set_yscale("linear")
             plot.set(title=f'{self.new_test_names[i]} number of times rules are used', ylabel='uses', xlabel='rules')
             # This for-loop puts the number of times each rule has been used, on top of the bar

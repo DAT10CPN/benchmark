@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-import utility
 from graph import Graph
 
 pd.options.mode.chained_assignment = None
@@ -23,7 +22,7 @@ class AnswerSimplificationBars(Graph):
         for index, data in enumerate(self.data_list):
             errors = data['error'].value_counts()
             # todo
-            data = utility.remove_errors_df(data)
+            data.drop(data[data['error'] <= 3].index, inplace=True)
 
             # Change 'NONE' value to 'not answered', and 'TRUE' and 'FALSE' to 'answered'
             data['answer'] = data['answer'].replace(['TRUE', 'FALSE'], 'answered')
@@ -60,9 +59,8 @@ class AnswerSimplificationBars(Graph):
 
             # Create new column 'reduced'
             reduced = int(num_answered - num_simplified)
-            if reduced > 0:
-                temp.loc['reduced'] = reduced
-            for error_code in range(1, 5):
+            temp.loc['reduced'] = reduced
+            for error_code in range(1, 4):
                 try:
                     if errors[error_code] > 0:
                         temp.loc[error_code] = errors[error_code]
@@ -81,10 +79,16 @@ class AnswerSimplificationBars(Graph):
                 except KeyError:
                     continue
 
+            if 'reduced' not in temp.columns:
+                temp['reduced'] = 0
+            if 'simplified' not in temp.columns:
+                temp['simplified'] = 0
+            if 'not answered' not in temp.columns:
+                temp['not answered'] = 0
             # Reorder the columns so that bars are stacked nicely
-            temp = temp[["reduced", "simplified", "not answered", 1, 2, 3, 4]]
+            temp = temp[["reduced", "simplified", "not answered", 1, 2, 3]]
 
-            # Add data from this experiment, to results from other experiments-30-60-1-1
+            # Add data from this experiment, to results from other results
             combined = combined.append(temp)
         self.transformed_data = combined
 

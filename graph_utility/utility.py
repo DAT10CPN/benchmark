@@ -47,7 +47,9 @@ def get_reduced_size(row):
 
 
 # todo
-def sanitise_df_list(result_list):
+def sanitise_df_list(result_list, test_names):
+    for index, df in enumerate(result_list):
+        df['test name'] = test_names[index]
     result_list = [sanitise_df(df) for df in result_list]
     return result_list
 
@@ -61,12 +63,12 @@ def sanitise_df(df):
 
 
 def is_previous_error(row):
-    return True if row['error'] > 0 else False
+    return True if row['error'] < 10 else False
 
 
 def phase_1_errors(df):
     df['error'] = df.apply(
-        lambda row: 1 if row['colored reduce time'] == 0.0 else 0, axis=1)
+        lambda row: 1 if row['colored reduce time'] == 0.0 and not ('orig' in row['test name']) else 42069, axis=1)
     return df
 
 
@@ -93,7 +95,7 @@ def phase_3_errors(df):
 def phase_4_errors(df):
     def infer_phase_4_errors(row):
         return 4 if row['verification time'] == 0.0 and row['answer'] == 'NONE' and row[
-            'solved by query simplification'] == 'NONE' else row['error']
+            'solved by query simplification'] is False else row['error']
 
     df['error'] = df.apply(
         lambda row: row['error'] if is_previous_error(row) else infer_phase_4_errors(row),
@@ -119,10 +121,6 @@ def infer_simplification_from_prev_size_0_rows(df):
         row[
             'solved by query simplification'], axis=1)
     return df
-
-
-def remove_errors_df(df):
-    return df[df['error'] == 0]
 
 
 """

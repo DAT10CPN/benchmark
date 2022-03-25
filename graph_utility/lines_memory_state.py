@@ -23,7 +23,7 @@ class MemoryStateLines(Lines):
                 combined_df = pd.DataFrame()
                 for index, data in enumerate(self.data_list):
                     # todo probably move elsewhere
-                    data = utility.remove_errors_df(data)
+                    data.drop(data[data['error'] <= 4].index, inplace=True)
 
                     res_df = pd.DataFrame()
                     if metric == 'state space size':
