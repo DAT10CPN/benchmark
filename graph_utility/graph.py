@@ -1,7 +1,10 @@
+import copy
+
+
 class Graph:
     def __init__(self, options):
-        self.options = options
-        self.data_list = options.read_results
+        self.options = copy.deepcopy(options)
+        self.data_list = copy.deepcopy(options.read_results)
         self.name = ""
 
     def plot(self):

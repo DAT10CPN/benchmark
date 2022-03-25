@@ -1,4 +1,3 @@
-import os
 from dataclasses import dataclass
 
 import numpy as np
@@ -56,7 +55,7 @@ def sanitise_df_list(result_list, test_names):
 
 def sanitise_df(df):
     df = infer_errors(df)
-    #df.to_csv(os.path.dirname(__file__) + "\\error-test.csv")
+    # df.to_csv(os.path.dirname(__file__) + "\\error-test.csv")
     df = infer_simplification_from_prev_size_0_rows(df)
 
     return df
@@ -68,7 +67,8 @@ def is_previous_error(row):
 
 def phase_1_errors(df):
     df['error'] = df.apply(
-        lambda row: 1 if row['colored reduce time'] == 0.0 and not ('orig' in row['test name']) else 42069, axis=1)
+        lambda row: 1 if row['original place count'] == 0 or (
+                    row['colored reduce time'] == 0.0 and not ('orig' in row['test name'])) else 42069, axis=1)
     return df
 
 

@@ -22,6 +22,7 @@ class RuleUsage(Graph):
         self.new_test_names = []
         self.graph_dir = options.graph_dir + '\\rules\\'
         self.name = 'rules'
+
         os.makedirs(self.graph_dir)
         for test_name in self.options.test_names:
             os.makedirs(self.graph_dir + f'\\{test_name}\\')
@@ -29,8 +30,6 @@ class RuleUsage(Graph):
             os.makedirs(self.graph_dir + f'\\{graph_type}\\')
 
     def prepare_data(self):
-        # todo
-        # data_list = utility.remove_rows_with_no_answers_or_query_simplification(self.data_list)
 
         # Make one plot (png) for each csv
         for test_index, data in enumerate(self.data_list):

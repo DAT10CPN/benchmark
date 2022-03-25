@@ -11,6 +11,7 @@ from graph_utility.lines_memory_state import MemoryStateLines
 from graph_utility.lines_size import SizeLines
 from graph_utility.lines_time import TimeLines
 from graph_utility.rules import RuleUsage
+from graph_utility.test import TestGraph
 from gui import Gui
 
 
@@ -26,7 +27,8 @@ def plot_all(options):
         RuleUsage(options),
         MemoryStateLines(options),
         TimeLines(options),
-        SizeLines(options)
+        SizeLines(options),
+        TestGraph(options)
     ]
 
     print(f"Making graphs: {num_graphs}")
