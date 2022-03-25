@@ -117,8 +117,8 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 			COL_RED_TIME="0.0"
 			
 			# Colored reduction is not performed, so we get the sizes from the unfolding instead
-			ORIG_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of colored net:/')" ]] && echo $UOUT | sed -E "s/.*Size of colored net: ([0-9]+) places.*/\1/" || echo 0)
-			ORIG_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Size of colored net:/')" ]] && echo $UOUT | sed -E "s/.*Size of colored net: [0-9]+ places, ([0-9]+) transitions.*/\1/" || echo 0)
+			ORIG_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Skipping colored structural reductions (-R 0)/')" ]] && echo $UOUT | sed -E "s/.*Net consists of ([0-9]+) places.*/\1/" || echo 0)
+			ORIG_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Skipping colored structural reductions (-R 0)/')" ]] && echo $UOUT | sed -E "s/.*Net consists of [0-9]+ places and ([0-9]+) transitions.*/\1/" || echo 0)
 			COL_RED_PLACE_COUNT=$ORIG_PLACE_COUNT
 			COL_RED_TRANSITION_COUNT=$ORIG_TRANSITION_COUNT
 		fi
