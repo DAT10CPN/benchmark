@@ -56,7 +56,7 @@ def sanitise_df_list(result_list, test_names):
 
 def sanitise_df(df):
     df = infer_errors(df)
-    df.to_csv(os.path.dirname(__file__) + "\\error-test.csv")
+    #df.to_csv(os.path.dirname(__file__) + "\\error-test.csv")
     df = infer_simplification_from_prev_size_0_rows(df)
 
     return df
