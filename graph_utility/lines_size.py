@@ -71,8 +71,7 @@ class SizeLines(Lines):
                         combined_df = metric_data
                         continue
                     combined_df = pd.concat([combined_df, metric_data], axis=1)
-                # combined_df.rename(utility.rename_test_name_for_paper_presentation(self.test_names), axis='columns',
-                # inplace=True)
+
                 self.computed_sizes[metric_name][keep_percentage] = combined_df
 
     def plot(self):

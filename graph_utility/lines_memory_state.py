@@ -38,10 +38,6 @@ class MemoryStateLines(Lines):
                         combined_df = metric_data
                         continue
                     combined_df = pd.concat([combined_df, metric_data], axis=1)
-
-                # todo
-                # combined_df.rename(utility.rename_test_name_for_paper_presentation(self.test_names), axis='columns',
-                #                  inplace=True)
                 if metric == 'verification memory':
                     self.verification_memories.append(combined_df)
                 elif metric == 'state space size':

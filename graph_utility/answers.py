@@ -94,7 +94,6 @@ class AnswerSimplificationBars(Graph):
 
     def plot(self):
         # Plot the plot
-        # self.transformed_data.rename(utility.rename_test_name_for_paper_presentation(self.options.test_names), axis='rows',inplace=True)
         sns.set_theme(style="darkgrid", palette="pastel")
         plot = self.transformed_data.plot(kind='barh', width=0.75, linewidth=2, figsize=(10, 10), stacked=True)
 
