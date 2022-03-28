@@ -86,7 +86,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		# If "Query is satisfied" is also a substring, then the answer is TRUE.
 		ANSWER=$([[ -n "$(echo $VOUT | awk '/satisfied/')" ]] && ([[ -n "$(echo $VOUT | awk '/Query is satisfied/')" ]] && echo "TRUE" || echo "FALSE") || echo "NONE")
 		# Was it solved by simplification in reduction?
-		ANSWER=$([[ $ANSWER = "NONE" ]] && [[ -n "$(echo $ROUT | awk '/satisfied/')" ]] && ([[ -n "$(echo $ROUT | awk '/Query is satisfied/')" ]] && echo "TRUE" || echo "FALSE") || echo "NONE")
+		ANSWER=$([[ $ANSWER = "NONE" ]] && [[ -n "$(echo $ROUT | awk '/satisfied/')" ]] && ([[ -n "$(echo $ROUT | awk '/Query is satisfied/')" ]] && echo "TRUE" || echo "FALSE") || echo $ANSWER)
 
 		# Was query solved using query reduction?
 		QUERY_SIMPLIFICATION=$(([[ -n "$(echo $VOUT | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || ([[ -n "$(echo $ROUT | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || echo "FALSE")
@@ -116,9 +116,8 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 
 			COL_RED_TIME="0.0"
 			
-			# Colored reduction is not performed, so we get the sizes from the unfolding instead
-			ORIG_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Skipping colored structural reductions (-R 0)/')" ]] && echo $UOUT | sed -E "s/.*Net consists of ([0-9]+) places.*/\1/" || echo 0)
-			ORIG_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Skipping colored structural reductions (-R 0)/')" ]] && echo $UOUT | sed -E "s/.*Net consists of [0-9]+ places and ([0-9]+) transitions.*/\1/" || echo 0)
+			ORIG_PLACE_COUNT=$([[ -n "$(echo $UOUT | awk '/Skipping colored structural reductions/')" ]] && echo $UOUT | sed -E "s/.*Net consists of ([0-9]+) places.*/\1/" || echo 0)
+			ORIG_TRANSITION_COUNT=$([[ -n "$(echo $UOUT | awk '/Skipping colored structural reductions/')" ]] && echo $UOUT | sed -E "s/.*Net consists of [0-9]+ places and ([0-9]+) transitions.*/\1/" || echo 0)
 			COL_RED_PLACE_COUNT=$ORIG_PLACE_COUNT
 			COL_RED_TRANSITION_COUNT=$ORIG_TRANSITION_COUNT
 		fi
