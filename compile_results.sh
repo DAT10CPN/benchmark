@@ -34,7 +34,7 @@ OUT="output/$BIN/$NAME.csv"
 
 # ***** Setup CSV *****
 
-COL_RULE_NAMES=("ParallelPlaces" "ParallelTransitions")
+COL_RULE_NAMES=("AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces") # MUST MATCH NAMES AND ORDER IN VERIFYPN
 NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I")
 
 rm -f $OUT
@@ -45,7 +45,7 @@ for i in ${!NORMAL_RULE_NAMES[@]} ; do
 	echo -n ",rule ${NORMAL_RULE_NAMES[$i]}" >> $OUT
 done
 for i in ${!COL_RULE_NAMES[@]} ; do
-	echo -n ",rule ${COL_RULE_NAMES[$i]}" >> $OUT
+	echo -n ",rule $i" >> $OUT
 done
 echo "" >> $OUT
 
