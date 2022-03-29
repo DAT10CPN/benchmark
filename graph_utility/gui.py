@@ -16,6 +16,7 @@ class Gui:
         self.enable_graphs = 0
         self.do_fast_graphs = 0
         self.do_consistency_check = 0
+        self.print_errors = 0
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -26,7 +27,7 @@ class Gui:
 
     def choose_directory_category(self):
         root = Tk()
-        root.title('Select directory and category')
+        root.title('Experiments')
         root.configure(bg=self.BACKGROUND)
 
         # self.set_geometry(root, 250, 250)
@@ -68,8 +69,8 @@ class Gui:
         directory = self.folder + "/" + self.category
         root = Tk()
         root.configure(bg=self.BACKGROUND)
-        root.title(f'Select files in /{directory} to use for graphs')
-        # self.set_geometry(root, 200, 400)
+        root.title(f'{directory}')
+        #self.set_geometry(root, 300, 400)
 
         all_csv_files_in_category_in_directory = [(filename.split(self.category)[1]).replace('\\', '') for filename in
                                                   [filename for filename in
@@ -91,23 +92,28 @@ class Gui:
         fast_graphs.set(1)
         check_consistency = IntVar()
         check_consistency.set(0)
+        print_errors = IntVar()
+        print_errors.set(0)
         enable_graphs = IntVar()
         enable_graphs.set(1)
         Label(root, text="Settings:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=0)
-        Checkbutton(root, text='Check consistency', variable=check_consistency,
-                    bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=1, column=0)
         Checkbutton(root, text='Enable graphs', variable=enable_graphs,
                     bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=2, column=0)
+                    fg=self.FOREGROUND).grid(row=1, column=0)
         Radiobutton(root, text='Fast graphs', value=1, variable=fast_graphs,
                     bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=3, column=0)
+                    fg=self.FOREGROUND).grid(row=2, column=0)
         Radiobutton(root, text='All graphs', value=0, variable=fast_graphs,
                     bg=self.BACKGROUND,
+                    fg=self.FOREGROUND).grid(row=3, column=0)
+        Checkbutton(root, text='Check consistency', variable=check_consistency,
+                    bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=4, column=0)
-        Button(root, text="Select", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=5,
+        Checkbutton(root, text='Print errors', variable=print_errors,
+                    bg=self.BACKGROUND,
+                    fg=self.FOREGROUND).grid(row=5, column=0)
+        Button(root, text="Select", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=6,
                                                                                                        column=0)
         root.eval('tk::PlaceWindow . center')
         root.mainloop()
@@ -116,6 +122,7 @@ class Gui:
         self.enable_graphs = enable_graphs.get()
         self.do_fast_graphs = fast_graphs.get()
         self.do_consistency_check = check_consistency.get()
+        self.print_errors = print_errors.get()
         if (enable_graphs.get() == 1) and (len(self.results) == 0):
             raise Exception('You did not choose any tests')
 
@@ -135,7 +142,8 @@ class Gui:
             read_results=[],
             do_fast_graphs=bool(self.do_fast_graphs),
             do_consistency_check=bool(self.do_consistency_check),
-            enable_graphs=bool(self.enable_graphs)
+            enable_graphs=bool(self.enable_graphs),
+            print_errors=bool(self.print_errors)
         )
 
         if not options.enable_graphs and not options.do_consistency_check:

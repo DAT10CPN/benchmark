@@ -18,6 +18,7 @@ class Options:
     do_fast_graphs: bool
     do_consistency_check: bool
     enable_graphs: bool
+    print_errors: bool
 
 
 def color(t):
