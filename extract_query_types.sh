@@ -5,7 +5,7 @@
 #SBATCH --mem=15G
 
 # Args: [test-folder]
-# Finds type (EF or AG) of reachability cardinality formulas in the given test folder and stores it as `RCtypes.csv`
+# Finds type (Reachability or AG) of reachability cardinality formulas in the given test folder and stores it as `RCtypes.csv`
 
 TEST_FOLDER=$1
 

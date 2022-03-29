@@ -6,7 +6,7 @@
 #SBATCH -c 2
 
 # Args: <binary> <test-folder> <model> <time-out>
-# Do not run this. It is supposed to be run by `measure_base_size.sh`. This script will run the binary on all the models using the query "EF false",
+# Do not run this. It is supposed to be run by `measure_base_size.sh`. This script will run the binary on all the models using the query "Reachability false",
 # forcing it to explore the whole state space. The size is then stored in `sizes/<model>.size`
 
 BIN=$1
