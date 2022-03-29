@@ -47,7 +47,6 @@ def get_reduced_size(row):
     return row['reduced place count'] + row['reduced transition count']
 
 
-# todo
 def sanitise_df_list(result_list, test_names):
     for index, df in enumerate(result_list):
         df['test name'] = test_names[index]
