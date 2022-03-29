@@ -57,6 +57,12 @@ if __name__ == "__main__":
     with open(options.graph_dir + "/meta.txt", mode='a') as file:
         file.write('Ran at %s.\n' %
                    (datetime.datetime.now()))
+
+    if options.write_errors:
+        print("---------Printing errors graphs---------")
+        os.makedirs(options.graph_dir + "\\errors")
+        utility.write_results_with_errors(options)
+
     if options.enable_graphs:
         print("---------Creating graphs---------")
         plot_all(options)

@@ -22,9 +22,11 @@ class MemoryStateLines(Lines):
             for metric in ['state space size', 'verification memory']:
                 combined_df = pd.DataFrame()
                 for index, data in enumerate(self.data_list):
-                    # todo probably move elsewhere
-                    data.drop(data[data['error'] <= 4].index, inplace=True)
+                    data = data.drop(data[data['error'] <= 4].index)
 
+                    if len(data) == 0:
+                        print(f"Test full of error, so graphs cannot be made ({self.name}). Check the errors in: {self.options.test_names[index]}")
+                        continue
                     res_df = pd.DataFrame()
                     if metric == 'state space size':
                         res_df = data.drop(data.index[data['state space size'] == 0])

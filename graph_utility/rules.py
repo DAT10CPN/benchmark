@@ -47,6 +47,7 @@ class RuleUsage(Graph):
 
             models_using_rule = ((data_grouped_by_model > 0) * 1).agg('sum').to_frame().T
 
+
             # Remove the 'Rule' part of e.g 'Rule A'
             for df in [rules_summed, percentages, models_using_rule]:
                 df.rename(columns=lambda x: re.sub('rule', '', x), inplace=True)
@@ -71,7 +72,7 @@ class RuleUsage(Graph):
                 plot.set_yscale("log")
             except:
                 print(
-                    f"Test has probably gone wrong, had no application of any rules: {self.options.test_names[i]}.csv")
+                    f"Test/compile results has probably gone wrong. Check errors in: {self.options.test_names[i]}.csv")
                 plot.set_yscale("linear")
             plot.set(title=f'{self.new_test_names[i]} number of times rules are used', ylabel='uses', xlabel='rules')
             # This for-loop puts the number of times each rule has been used, on top of the bar

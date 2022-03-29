@@ -16,7 +16,8 @@ class Gui:
         self.enable_graphs = 0
         self.do_fast_graphs = 0
         self.do_consistency_check = 0
-        self.print_errors = 0
+        self.write_errors = 0
+        self.max_test_in_column = 5
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -70,7 +71,7 @@ class Gui:
         root = Tk()
         root.configure(bg=self.BACKGROUND)
         root.title(f'{directory}')
-        #self.set_geometry(root, 300, 400)
+        # self.set_geometry(root, 300, 400)
 
         all_csv_files_in_category_in_directory = [(filename.split(self.category)[1]).replace('\\', '') for filename in
                                                   [filename for filename in
@@ -78,13 +79,18 @@ class Gui:
         if len(all_csv_files_in_category_in_directory) == 0:
             raise Exception(f"There are no results in selected directory: {directory}")
         results = {}
-        Label(root, text="Available results:", bg=self.BACKGROUND,
+        Label(root, text=f"{directory}:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=1)
+
         for index, test_name in enumerate(all_csv_files_in_category_in_directory):
+            column = 1
+            if index > self.max_test_in_column:
+                index -= self.max_test_in_column
+                column = 2
             var = IntVar()
             Checkbutton(root, text=test_name.replace('.csv', ''), variable=var, bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1,
-                                                 column=1,
+                                                 column=column,
                                                  padx=20)
             results[test_name] = var
 
@@ -92,8 +98,8 @@ class Gui:
         fast_graphs.set(1)
         check_consistency = IntVar()
         check_consistency.set(0)
-        print_errors = IntVar()
-        print_errors.set(0)
+        write_errors = IntVar()
+        write_errors.set(0)
         enable_graphs = IntVar()
         enable_graphs.set(1)
         Label(root, text="Settings:", bg=self.BACKGROUND,
@@ -110,7 +116,7 @@ class Gui:
         Checkbutton(root, text='Check consistency', variable=check_consistency,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=4, column=0)
-        Checkbutton(root, text='Print errors', variable=print_errors,
+        Checkbutton(root, text='Write errors', variable=write_errors,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=5, column=0)
         Button(root, text="Select", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=6,
@@ -122,7 +128,7 @@ class Gui:
         self.enable_graphs = enable_graphs.get()
         self.do_fast_graphs = fast_graphs.get()
         self.do_consistency_check = check_consistency.get()
-        self.print_errors = print_errors.get()
+        self.write_errors = write_errors.get()
         if (enable_graphs.get() == 1) and (len(self.results) == 0):
             raise Exception('You did not choose any tests')
 
@@ -143,7 +149,7 @@ class Gui:
             do_fast_graphs=bool(self.do_fast_graphs),
             do_consistency_check=bool(self.do_consistency_check),
             enable_graphs=bool(self.enable_graphs),
-            print_errors=bool(self.print_errors)
+            write_errors=bool(self.write_errors)
         )
 
         if not options.enable_graphs and not options.do_consistency_check:

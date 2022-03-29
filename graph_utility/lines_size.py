@@ -50,8 +50,11 @@ class SizeLines(Lines):
                 combined_df = pd.DataFrame()
                 for index, data in enumerate(self.data_list):
                     # Drop rows with errors
-                    data.drop(data[data['error'] <= metric.is_in_phase].index, inplace=True)
+                    data = data.drop(data[data['error'] <= metric.is_in_phase].index)
 
+                    if len(data) == 0:
+                        print(f"Test full of error, so graphs cannot be made ({self.name}). Check the errors in: {self.options.test_names[index]}")
+                        continue
                     res_df = pd.DataFrame()
 
                     columns_list = metric.relevant_size_columns

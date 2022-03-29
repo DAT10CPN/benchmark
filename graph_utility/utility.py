@@ -1,3 +1,4 @@
+import copy
 from dataclasses import dataclass
 
 import numpy as np
@@ -18,7 +19,7 @@ class Options:
     do_fast_graphs: bool
     do_consistency_check: bool
     enable_graphs: bool
-    print_errors: bool
+    write_errors: bool
 
 
 def color(t):
@@ -56,20 +57,25 @@ def sanitise_df_list(result_list, test_names):
 
 def sanitise_df(df):
     df = infer_errors(df)
-    # df.to_csv(os.path.dirname(__file__) + "\\error-test.csv")
     df = infer_simplification_from_prev_size_0_rows(df)
 
     return df
 
 
+def write_results_with_errors(options):
+    results_to_write = copy.deepcopy(options.read_results)
+    for index, result in enumerate(results_to_write):
+        result.to_csv(f"{options.graph_dir}\\errors\\{options.test_names[index]}.csv")
+
+
 def is_previous_error(row):
-    return True if row['error'] < 10 else False
+    return False if row['error'] is None else True
 
 
 def phase_1_errors(df):
     df['error'] = df.apply(
         lambda row: 1 if row['original place count'] == 0 or (
-                row['colored reduce time'] == 0.0 and not ('orig' in row['test name'])) else 42069, axis=1)
+                row['colored reduce time'] == 0.0 and not ('orig' in row['test name'])) else None, axis=1)
     return df
 
 
