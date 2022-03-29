@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --time=12:00:00
+#SBATCH --time=4:30:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mem=15G
 #SBATCH -c 1
