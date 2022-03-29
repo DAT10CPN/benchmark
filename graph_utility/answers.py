@@ -21,7 +21,7 @@ class AnswerSimplificationBars(Graph):
         combined = pd.DataFrame()
         for index, data in enumerate(self.data_list):
             errors = data['error'].value_counts()
-            # todo
+
             data.drop(data[data['error'] <= 3].index, inplace=True)
 
             # Change 'NONE' value to 'not answered', and 'TRUE' and 'FALSE' to 'answered'
@@ -87,6 +87,10 @@ class AnswerSimplificationBars(Graph):
                 temp['not answered'] = 0
             # Reorder the columns so that bars are stacked nicely
             temp = temp[["reduced", "simplified", "not answered", 1, 2, 3]]
+            temp.rename(columns={1: '1 error in color reducer'}, inplace=True)
+            temp.rename(columns={2: '2 error in unfolding'}, inplace=True)
+            temp.rename(columns={3: '3 error in reducer'}, inplace=True)
+            temp.rename(columns={4: '4 error in verification'}, inplace=True)
 
             # Add data from this experiment, to results from other results
             combined = combined.append(temp)
