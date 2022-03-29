@@ -47,7 +47,6 @@ class RuleUsage(Graph):
 
             models_using_rule = ((data_grouped_by_model > 0) * 1).agg('sum').to_frame().T
 
-
             # Remove the 'Rule' part of e.g 'Rule A'
             for df in [rules_summed, percentages, models_using_rule]:
                 df.rename(columns=lambda x: re.sub('rule', '', x), inplace=True)

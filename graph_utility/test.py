@@ -14,7 +14,7 @@ class TestGraph(Graph):
     def prepare_data(self):
         def orig_is_smaller(row):
             return (row['orig@colored reduce place count'] + row['orig@colored reduce transition count']) < (
-                        row['parT@colored reduce place count'] + row['parT@colored reduce transition count'])
+                    row['parT@colored reduce place count'] + row['parT@colored reduce transition count'])
 
         csvs = self.options.read_results
         for i, csv in enumerate(csvs):

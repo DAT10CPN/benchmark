@@ -54,7 +54,8 @@ class TimeLines(Lines):
 
                     data = data.drop(data[data['error'] <= metric.is_in_phase].index)
                     if len(data) == 0:
-                        print(f"Test full of error, so graphs cannot be made ({self.name}). Check the errors in: {self.options.test_names[index]}")
+                        print(
+                            f"Test full of error {metric.is_in_phase} or lower, so graphs cannot be made for metric ({metric.line_metric_name}) in class ({self.name}). Check the errors in: {self.options.test_names[index]}")
                         continue
                     res_df = pd.DataFrame()
                     if metric.line_metric_name == 'total time':

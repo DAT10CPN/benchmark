@@ -25,7 +25,8 @@ class MemoryStateLines(Lines):
                     data = data.drop(data[data['error'] <= 4].index)
 
                     if len(data) == 0:
-                        print(f"Test full of error, so graphs cannot be made ({self.name}). Check the errors in: {self.options.test_names[index]}")
+                        print(
+                            f"Test full of error 4 or lower, so graphs cannot be made for metric ({metric}) in class ({self.name}). Check the errors in: {self.options.test_names[index]}")
                         continue
                     res_df = pd.DataFrame()
                     if metric == 'state space size':
