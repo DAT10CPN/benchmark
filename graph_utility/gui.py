@@ -1,6 +1,8 @@
 import glob
 import os
+import sys
 from tkinter import *
+from tkinter import messagebox
 
 from graph_utility.utility import Options
 
@@ -64,6 +66,7 @@ class Gui:
         Button(root, text="Choose and continue", command=set_and_continue, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
             row=4, column=0)
         root.eval('tk::PlaceWindow . center')
+        root.protocol("WM_DELETE_WINDOW", sys.exit)
         root.mainloop()
 
     def choose_tests_and_graph_type(self):
@@ -122,6 +125,8 @@ class Gui:
         Button(root, text="Select", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=6,
                                                                                                        column=0)
         root.eval('tk::PlaceWindow . center')
+
+        root.protocol("WM_DELETE_WINDOW", sys.exit)
         root.mainloop()
 
         self.results = [csv_name for csv_name in results.keys() if results[csv_name].get() == 1]
