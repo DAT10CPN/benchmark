@@ -90,7 +90,6 @@ class AnswerSimplificationBars(Graph):
             temp.rename(columns={1: '1 error in color reducer'}, inplace=True)
             temp.rename(columns={2: '2 error in unfolding'}, inplace=True)
             temp.rename(columns={3: '3 error in reducer'}, inplace=True)
-            temp.rename(columns={4: '4 error in verification'}, inplace=True)
 
             # Add data from this experiment, to results from other results
             combined = combined.append(temp)
