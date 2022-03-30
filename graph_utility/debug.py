@@ -4,12 +4,12 @@ from graph_utility.graph import Graph
 
 
 # Class for testing
-class TestGraph(Graph):
+class DebugGraph(Graph):
 
     def __init__(self, options):
         super().__init__(options)
         self.everything = pd.DataFrame()
-        self.name = 'test'
+        self.name = 'debug'
 
     def prepare_data(self):
         def orig_is_smaller(row):

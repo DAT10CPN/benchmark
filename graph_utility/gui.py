@@ -18,7 +18,7 @@ class Gui:
         self.enable_graphs = 0
         self.do_fast_graphs = 0
         self.do_consistency_check = 0
-        self.write_errors = 0
+        self.debug = 0
         self.max_test_in_column = 5
 
     def set_geometry(self, root, w, h):
@@ -101,8 +101,8 @@ class Gui:
         fast_graphs.set(1)
         check_consistency = IntVar()
         check_consistency.set(0)
-        write_errors = IntVar()
-        write_errors.set(0)
+        debug = IntVar()
+        debug.set(0)
         enable_graphs = IntVar()
         enable_graphs.set(1)
         Label(root, text="Settings:", bg=self.BACKGROUND,
@@ -119,7 +119,7 @@ class Gui:
         Checkbutton(root, text='Check consistency', variable=check_consistency,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=4, column=0)
-        Checkbutton(root, text='Write errors', variable=write_errors,
+        Checkbutton(root, text='Debug', variable=debug,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=5, column=0)
         Button(root, text="Select", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=6,
@@ -133,7 +133,7 @@ class Gui:
         self.enable_graphs = enable_graphs.get()
         self.do_fast_graphs = fast_graphs.get()
         self.do_consistency_check = check_consistency.get()
-        self.write_errors = write_errors.get()
+        self.debug = debug.get()
         if (enable_graphs.get() == 1) and (len(self.results) == 0):
             raise Exception('You did not choose any tests')
 
@@ -154,7 +154,7 @@ class Gui:
             do_fast_graphs=bool(self.do_fast_graphs),
             do_consistency_check=bool(self.do_consistency_check),
             enable_graphs=bool(self.enable_graphs),
-            write_errors=bool(self.write_errors)
+            debug=bool(self.debug)
         )
 
         if not options.enable_graphs and not options.do_consistency_check:
@@ -179,5 +179,8 @@ class Gui:
             else:
                 options.chosen_graphs = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines']
                 print(f"\tDoing all graphs")
+
+        if self.debug:
+            options.chosen_graphs.append('debug')
 
         return options

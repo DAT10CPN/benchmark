@@ -19,7 +19,7 @@ class Options:
     do_fast_graphs: bool
     do_consistency_check: bool
     enable_graphs: bool
-    write_errors: bool
+    debug: bool
 
 
 def color(t):
