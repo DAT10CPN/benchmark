@@ -11,7 +11,7 @@ from graph_utility.lines_memory_state import MemoryStateLines
 from graph_utility.lines_size import SizeLines
 from graph_utility.lines_time import TimeLines
 from graph_utility.rules import RuleUsage
-from graph_utility.test import TestGraph
+from graph_utility.debug import DebugGraph
 from gui import Gui
 
 
@@ -28,7 +28,7 @@ def plot_all(options):
         MemoryStateLines(options),
         TimeLines(options),
         SizeLines(options),
-        TestGraph(options)
+        DebugGraph(options)
     ]
 
     print(f"Making graphs: {num_graphs}")
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         file.write('Ran at %s.\n' %
                    (datetime.datetime.now()))
 
-    if options.write_errors:
+    if options.debug:
         print("---------Printing errors graphs---------")
         os.makedirs(options.graph_dir + "\\errors")
         utility.write_results_with_errors(options)
