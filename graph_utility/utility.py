@@ -68,43 +68,55 @@ def write_results_with_errors(options):
 
 
 def is_previous_error(row):
-    return False if row['error'] is None else True
+    return row['error'] < 69420
 
 
 def phase_1_errors(df):
     df['error'] = df.apply(
         lambda row: 1 if row['original place count'] == 0 or (
-                row['colored reduce time'] == 0.0 and not ('orig' in row['test name'])) else None, axis=1)
+                row['colored reduce time'] == 0.0 and not ('orig' in row['test name'])) else 69420, axis=1)
     return df
 
 
 def phase_2_errors(df):
     def infer_phase_2_errors(row):
-        return 2 if row['unfold time'] == 0.0 else row['error']
+        if row['error'] < 69420:
+            return row['error']
+        elif row['unfold time'] == 0.0:
+            return 2
+        return row['error']
 
     df['error'] = df.apply(
-        lambda row: row['error'] if is_previous_error(row) else infer_phase_2_errors(row),
+        lambda row: min(row['error'], infer_phase_2_errors(row)),
         axis=1)
     return df
 
 
 def phase_3_errors(df):
     def infer_phase_3_errors(row):
-        return 3 if row['reduce time'] == 0.0 else row['error']
+        if row['error'] < 69420:
+            return row['error']
+        elif row['reduce time'] == 0.0:
+            return 3
+        return row['error']
 
     df['error'] = df.apply(
-        lambda row: row['error'] if is_previous_error(row) else infer_phase_3_errors(row),
+        lambda row: min(row['error'], infer_phase_3_errors(row)),
         axis=1)
     return df
 
 
 def phase_4_errors(df):
     def infer_phase_4_errors(row):
-        return 4 if row['verification time'] == 0.0 and row['answer'] == 'NONE' and row[
-            'solved by query simplification'] is False else row['error']
+        if row['error'] < 69420:
+            return row['error']
+        elif row['verification time'] == 0.0 and row['answer'] == 'NONE' and row[
+            'solved by query simplification'] is False:
+            return 4
+        return row['error']
 
     df['error'] = df.apply(
-        lambda row: row['error'] if is_previous_error(row) else infer_phase_4_errors(row),
+        lambda row: min(row['error'], infer_phase_4_errors(row)),
         axis=1)
     return df
 
