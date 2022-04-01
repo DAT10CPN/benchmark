@@ -3,7 +3,7 @@
 #SBATCH --time=4:30:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mem=15G
-#SBATCH -c 1
+#SBATCH -c 2
 
 # Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <red-time-out> <veri-time-out> <expl-time-out> <bin-options>
 
@@ -99,6 +99,8 @@ for Q in $(seq 1 $NQ) ; do
 		echo $SIZE > $ZOUT
 	fi
 	
+	rm -r $SCRATCH
+
 done
 
 echo "Cleaning /scratch"
