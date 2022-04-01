@@ -85,12 +85,23 @@ class AnswerSimplificationBars(Graph):
                 temp['simplified'] = 0
             if 'not answered' not in temp.columns:
                 temp['not answered'] = 0
+
+            temp.rename(columns={'reduced': 'Answered'}, inplace=True)
+            temp.rename(columns={'simplified': 'Answered (simplification)'}, inplace=True)
+            temp.rename(columns={'not answered': 'Timeout in verification (4)'}, inplace=True)
+            temp.rename(columns={3: 'Error in reduction (3)'}, inplace=True)
+            temp.rename(columns={2: 'Timeout in unfolding (2)'}, inplace=True)
+            temp.rename(columns={1: 'Error in col reduction (1)'}, inplace=True)
+
             # Reorder the columns so that bars are stacked nicely
-            temp = temp[["reduced", "simplified", "not answered", 1, 2, 3]]
-            temp.rename(columns={1: 'error in color reducer/unable to load (1)'}, inplace=True)
-            temp.rename(columns={2: 'timeout in unfolding (2)'}, inplace=True)
-            temp.rename(columns={3: 'timeout in reducer (3)'}, inplace=True)
-            temp.rename(columns={'not answered': 'timeout in verification (not answered)'}, inplace=True)
+            temp = temp[[
+                'Answered',
+                'Answered (simplification)',
+                'Timeout in verification (4)',
+                'Error in reduction (3)',
+                'Timeout in unfolding (2)',
+                'Error in col reduction (1)'
+            ]]
 
             # Add data from this experiment, to results from other results
             combined = combined.append(temp)
