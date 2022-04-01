@@ -127,7 +127,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		# ----- Rule applications -----
 
 		# Extract applications of rules
-		ALL_APPS=$(echo $IN | grep 'Applications of rule')
+		ALL_APPS=$([[ -n "$(echo $IN | awk '/Applications of rule/')" ]] && echo $IN | grep 'Applications of rule' || echo "")
 		
 		for i in ${!NORMAL_RULE_NAMES[@]} ; do
 			APPLICATIONS=$([[ -n "$(echo $ALL_APPS | awk "/Applications of rule ${NORMAL_RULE_NAMES[$i]}/")" ]] && echo $ALL_APPS | sed -E "s/.*Applications of rule ${NORMAL_RULE_NAMES[$i]}: ([0-9]+).*/\1/" || echo 0)
