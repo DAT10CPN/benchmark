@@ -63,7 +63,7 @@ if __name__ == "__main__":
         os.makedirs(options.graph_dir + "\\errors")
         utility.write_results_with_errors(options)
 
-    if options.enable_graphs:
+    if options.enable_graphs or options.debug:
         print("---------Creating graphs---------")
         plot_all(options)
 
