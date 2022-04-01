@@ -2,7 +2,6 @@ import glob
 import os
 import sys
 from tkinter import *
-from tkinter import messagebox
 
 from graph_utility.utility import Options
 
@@ -19,7 +18,7 @@ class Gui:
         self.do_fast_graphs = 0
         self.do_consistency_check = 0
         self.debug = 0
-        self.max_test_in_column = 5
+        self.max_test_in_column = 4
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -88,8 +87,9 @@ class Gui:
         for index, test_name in enumerate(all_csv_files_in_category_in_directory):
             column = 1
             if index > self.max_test_in_column:
-                index -= self.max_test_in_column
-                column = 2
+                index -= (self.max_test_in_column + 1)
+                column += 1
+
             var = IntVar()
             Checkbutton(root, text=test_name.replace('.csv', ''), variable=var, bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1,
