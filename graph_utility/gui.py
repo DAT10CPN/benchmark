@@ -18,7 +18,7 @@ class Gui:
         self.do_fast_graphs = 0
         self.do_consistency_check = 0
         self.debug = 0
-        self.max_test_in_column = 4
+        self.max_test_in_column = 6
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -122,8 +122,22 @@ class Gui:
         Checkbutton(root, text='Debug', variable=debug,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=5, column=0)
-        Button(root, text="Select", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=6,
-                                                                                                       column=0)
+        Button(root, text="Make graphs", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=6,
+                                                                                                            column=0)
+
+        def select_all():
+            for results_var in results.values():
+                results_var.set(1)
+
+        def deselect_all():
+            for results_var in results.values():
+                results_var.set(0)
+
+        Button(root, text="Select all tests", command=select_all, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=7,
+                                                                                                               column=0)
+        Button(root, text="Deselect all tests", command=deselect_all, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+            row=8,
+            column=0)
         root.eval('tk::PlaceWindow . center')
 
         root.protocol("WM_DELETE_WINDOW", sys.exit)
@@ -158,7 +172,8 @@ class Gui:
         )
 
         if not options.enable_graphs and not options.do_consistency_check and not options.debug:
-            raise Exception('You chose to not do graphs, consistency or debug mode, you probably clicked something wrong')
+            raise Exception(
+                'You chose to not do graphs, consistency or debug mode, you probably clicked something wrong')
 
         if len(options.results_to_plot) == 0:
             raise Exception('You must choose some results')
