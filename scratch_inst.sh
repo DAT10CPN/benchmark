@@ -20,7 +20,9 @@ VERI_TIME_OUT=$8
 EXPL_TIME_OUT=$9
 OPTIONS="${10}"
 
-SCRATCH="/scratch/jesmatnic/$NAME/$MODEL/$CATEGORY"
+SCRATCH="/scratch/$$/$NAME/$MODEL/$CATEGORY"
+mkdir -p $SCRATCH
+trap "rm -r $SCRATCH ; echo terminated ; exit" 0  # We trap the to make sure we cleanup
 
 LTLFLAG=$([[ "$CATEGORY" == "LTLCardinality" ]] && echo " -ltl" || echo "")
 
