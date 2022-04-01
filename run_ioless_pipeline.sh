@@ -112,4 +112,4 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 
 done
 
-sbatch --partition=cpu --mail-type=FAIL --mail-user=$(whoami) --job-name=$NAME --dependency=singleton ./compile_results.sh $NAME $BIN $TEST_FOLDER
+sbatch --partition=cpu --mail-type=FAIL --mail-user=$(whoami) --job-name=$NAME --dependency=singleton ./compile_results_ioless.sh $NAME $BIN $TEST_FOLDER
