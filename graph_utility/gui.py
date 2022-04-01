@@ -157,8 +157,8 @@ class Gui:
             debug=bool(self.debug)
         )
 
-        if not options.enable_graphs and not options.do_consistency_check:
-            raise Exception('You chose to not do graphs or consistency, you probably clicked something wrong')
+        if not options.enable_graphs and not options.do_consistency_check and not options.debug:
+            raise Exception('You chose to not do graphs, consistency or debug mode, you probably clicked something wrong')
 
         if len(options.results_to_plot) == 0:
             raise Exception('You must choose some results')
