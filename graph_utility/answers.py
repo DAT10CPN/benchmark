@@ -1,3 +1,6 @@
+import os
+from dataclasses import dataclass
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -7,19 +10,27 @@ from graph import Graph
 pd.options.mode.chained_assignment = None
 
 
+@dataclass()
+class Answers():
+    graph_name: str
+    transformed_data: pd.DataFrame()
+
+
 class AnswerSimplificationBars(Graph):
 
     def __init__(self, options):
         super().__init__(options)
-        self.transformed_data = pd.DataFrame()
-        self.graph_dir = options.graph_dir
+        self.graph_dir = options.graph_dir + '\\answers'
         self.name = 'answers'
+        self.answers = []
 
     def prepare_data(self):
         # data from each csv will become a row in the combined dataframe, such that row index is the test name,
         # and columns are 'not answered', 'simplified', and 'reduced'.
         combined = pd.DataFrame()
+        simple_combined = pd.DataFrame()
         for index, data in enumerate(self.data_list):
+            num_test_cases = len(data)
             errors = data['error'].value_counts()
 
             data.drop(data[data['error'] <= 3].index, inplace=True)
@@ -105,26 +116,42 @@ class AnswerSimplificationBars(Graph):
 
             # Add data from this experiment, to results from other results
             combined = combined.append(temp)
-        self.transformed_data = combined
+
+            simple_graph_data = {'answers': num_answered, 'not answered': num_test_cases - num_answered}
+            simple_temp = pd.DataFrame(data=simple_graph_data, index=[self.options.test_names[index]])
+            simple_combined = simple_combined.append(simple_temp)
+        self.transformed_data = [
+            Answers(
+                graph_name='answers_splits',
+                transformed_data=combined
+            ),
+            Answers(
+                graph_name='answers_simple',
+                transformed_data=simple_combined
+            )
+        ]
 
     def plot(self):
+        os.makedirs(self.graph_dir)
         # Plot the plot
         sns.set_theme(style="darkgrid", palette="pastel")
-        plot = self.transformed_data.plot(kind='barh', width=0.75, linewidth=2, figsize=(10, 10), stacked=True)
+        for answers in self.transformed_data:
+            plot = answers.transformed_data.plot(kind='barh', width=0.75, linewidth=2, figsize=(10, 10), stacked=True)
 
-        plt.legend(bbox_to_anchor=(0.35, 1.12), loc='upper left', borderaxespad=0)
-        plt.xlabel("test instances")
-        plt.ylabel('experiments-30-60-1-1')
+            plt.legend(bbox_to_anchor=(0.35, 1.12), loc='upper left', borderaxespad=0)
+            plt.xlabel("test instances")
+            plt.ylabel('experiments-30-60-1-1')
 
-        # Find max width, in order to move the very small numbers away from the bars
-        max_width = 0
-        for p in plot.patches:
-            left, bottom, width, height = p.get_bbox().bounds
-            max_width = max(width, max_width)
-        # Plot the numbers in the bars
-        for p in plot.patches:
-            left, bottom, width, height = p.get_bbox().bounds
-            plot.annotate(int(width), xy=(left + width / 2, bottom + height / 2),
-                          ha='center', va='center', rotation=45)
-        plt.savefig(self.graph_dir + '\\answers.svg', dpi=600, format="svg")
-        plt.close()
+            # Find max width, in order to move the very small numbers away from the bars
+            max_width = 0
+            for p in plot.patches:
+                left, bottom, width, height = p.get_bbox().bounds
+                max_width = max(width, max_width)
+            # Plot the numbers in the bars
+            for p in plot.patches:
+                left, bottom, width, height = p.get_bbox().bounds
+                plot.annotate(int(width), xy=(left + width / 2, bottom + height / 2),
+                              ha='center', va='center', rotation=45)
+
+            plt.savefig(self.graph_dir + f'\\{answers.graph_name}.svg', dpi=600, format="svg")
+            plt.close()
