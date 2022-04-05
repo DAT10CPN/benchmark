@@ -40,7 +40,7 @@ NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I")
 rm -f $OUT
 
 # Write header
-echo -n "model name,query index,answer,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,colored reduce place count,colored reduce transition count,unfolded place count,unfolded transition count,reduced place count,reduced transition count" >> $OUT
+echo -n "model name,query index,answer,crash,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,colored reduce place count,colored reduce transition count,unfolded place count,unfolded transition count,reduced place count,reduced transition count" >> $OUT
 for i in ${!NORMAL_RULE_NAMES[@]} ; do
 	echo -n ",rule ${NORMAL_RULE_NAMES[$i]}" >> $OUT
 done
@@ -70,6 +70,11 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		ROUT=$([[ -f $RED_RES_FILE ]] && cat "$RED_RES_FILE" | grep -v "^<" | tr '\n' '\r' || echo "")
 		VOUT=$([[ -f $VERI_RES_FILE ]] && cat $VERI_RES_FILE | grep -v "^<" | tr '\n' '\r' || echo "@@@0,0@@@")
 
+		CRASH="none"
+		CRASH=$([[ $CRASH = "none" ]] && ([[ -n "$(echo $UOUT | awk "/Error/")" ]] || [[ -n "$(echo $UOUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "uout" || echo $CRASH)
+		CRASH=$([[ $CRASH = "none" ]] && ([[ -n "$(echo $ROUT | awk "/Error/")" ]] || [[ -n "$(echo $ROUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "rout" || echo $CRASH)
+		CRASH=$([[ $CRASH = "none" ]] && ([[ -n "$(echo $VOUT | awk "/Error/")" ]] || [[ -n "$(echo $VOUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "vout" || echo $CRASH)
+
 		# ----- Exploration -----
 
 		# Final state space size
@@ -92,6 +97,8 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		QUERY_SIMPLIFICATION=$(([[ -n "$(echo $VOUT | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || ([[ -n "$(echo $ROUT | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || echo "FALSE")
 
 		# ----- Reduction extraction -------
+
+		CRASH=$([[ $CRASH = "none" ]] && ([[ -n "$(echo $ROUT | awk "/Error/")" ]] || [[ -n "$(echo $ROUT | awk "/signal/")" ]]) && echo "red" || echo $CRASH)
 
 	    # Reduced size
 		RED_PLACE_COUNT=$([[ -n "$(echo $ROUT | awk '/Size of net after/')" ]] && echo $ROUT | sed -E "s/.*Size of net after[^:]*: ([0-9]+).*/\1/" || echo 0)
@@ -128,7 +135,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 
 		# ----- Entry so far -----
 
-		ENTRY+="$MODEL,$Q,$ANSWER,$COL_RED_TIME,$UNFOLD_TIME,$RED_TIME,$VERI_TIME,$VERI_MEM,$QUERY_SIMPLIFICATION,$SIZE,$ORIG_PLACE_COUNT,$ORIG_TRANSITION_COUNT,$COL_RED_PLACE_COUNT,$COL_RED_TRANSITION_COUNT,$UNF_PLACE_COUNT,$UNF_TRANSITION_COUNT,$RED_PLACE_COUNT,$RED_TRANS_COUNT"
+		ENTRY+="$MODEL,$Q,$ANSWER,$CRASH,$COL_RED_TIME,$UNFOLD_TIME,$RED_TIME,$VERI_TIME,$VERI_MEM,$QUERY_SIMPLIFICATION,$SIZE,$ORIG_PLACE_COUNT,$ORIG_TRANSITION_COUNT,$COL_RED_PLACE_COUNT,$COL_RED_TRANSITION_COUNT,$UNF_PLACE_COUNT,$UNF_TRANSITION_COUNT,$RED_PLACE_COUNT,$RED_TRANS_COUNT"
 
 		# ----- Rule applications -----
 
