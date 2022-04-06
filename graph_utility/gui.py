@@ -18,7 +18,8 @@ class Gui:
         self.do_fast_graphs = 0
         self.do_consistency_check = 0
         self.debug = 0
-        self.max_test_in_column = 6
+        self.max_test_in_column = 8
+        self.remove_outliers = False
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -105,6 +106,7 @@ class Gui:
         debug.set(0)
         enable_graphs = IntVar()
         enable_graphs.set(1)
+        remove_outliers = IntVar()
         Label(root, text="Settings:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=0)
         Checkbutton(root, text='Enable graphs', variable=enable_graphs,
@@ -122,7 +124,10 @@ class Gui:
         Checkbutton(root, text='Debug', variable=debug,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=5, column=0)
-        Button(root, text="Make graphs", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=6,
+        Checkbutton(root, text='Remove outliers', variable=remove_outliers,
+                    bg=self.BACKGROUND,
+                    fg=self.FOREGROUND).grid(row=6, column=0)
+        Button(root, text="Make graphs", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=7,
                                                                                                             column=0)
 
         def select_all():
@@ -133,10 +138,10 @@ class Gui:
             for results_var in results.values():
                 results_var.set(0)
 
-        Button(root, text="Select all tests", command=select_all, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=7,
+        Button(root, text="Select all tests", command=select_all, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=8,
                                                                                                                column=0)
         Button(root, text="Deselect all tests", command=deselect_all, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
-            row=8,
+            row=9,
             column=0)
         root.eval('tk::PlaceWindow . center')
 
@@ -148,6 +153,7 @@ class Gui:
         self.do_fast_graphs = fast_graphs.get()
         self.do_consistency_check = check_consistency.get()
         self.debug = debug.get()
+        self.remove_outliers = remove_outliers.get()
         if (enable_graphs.get() == 1) and (len(self.results) == 0):
             raise Exception('You did not choose any tests')
 
@@ -168,7 +174,10 @@ class Gui:
             do_fast_graphs=bool(self.do_fast_graphs),
             do_consistency_check=bool(self.do_consistency_check),
             enable_graphs=bool(self.enable_graphs),
-            debug=bool(self.debug)
+            debug=bool(self.debug),
+            remove_outliers=bool(self.remove_outliers),
+            columns_to_remove_outliers=['unfold time', 'reduce time', 'verification time'],
+            deviation_remove_outliers=5
         )
 
         if not options.enable_graphs and not options.do_consistency_check and not options.debug:

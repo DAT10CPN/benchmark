@@ -20,6 +20,9 @@ class Options:
     do_consistency_check: bool
     enable_graphs: bool
     debug: bool
+    remove_outliers: bool
+    columns_to_remove_outliers: []
+    deviation_remove_outliers: int
 
 
 def color(t):
@@ -29,6 +32,23 @@ def color(t):
     d = np.array([0.0, 0.33, 0.67])
 
     return a + (b * np.cos(2 * np.pi * (c * t + d)))
+
+
+def remove_outliers_df_list(options):
+    deviations_across_all = {}
+    means_across_all = {}
+
+    for df in options.read_results:
+        for column in options.columns_to_remove_outliers:
+            before_len = len(df)
+            deviation = df[column].std()
+            mean = df[column].mean()
+            df = df.drop(df[df[column] < (mean - (options.deviation_remove_outliers * deviation))].index)
+            df = df.drop(df[df[column] > (mean + (options.deviation_remove_outliers * deviation))].index)
+            after_len = len(df)
+            num_removed = before_len - after_len
+            if num_removed > 0:
+                print(f"Removed outliers from '{df['test name'][0]}' column '{column}': {num_removed}")
 
 
 def get_total_time(row):
