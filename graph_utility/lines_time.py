@@ -104,7 +104,7 @@ class TimeLines(Lines):
                 plot.set(
                     ylabel='seconds',
                     xlabel='queries')
-                plot.set(yscale="linear")
+                plot.set(yscale="log")
                 plt.title(f'{metric.line_metric_name} over {cutoff_time} seconds')
                 plt.legend(loc='upper left', borderaxespad=0)
 
