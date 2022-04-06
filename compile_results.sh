@@ -70,10 +70,10 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		ROUT=$([[ -f $RED_RES_FILE ]] && cat "$RED_RES_FILE" | grep -v "^<" | tr '\n' '\r' || echo "")
 		VOUT=$([[ -f $VERI_RES_FILE ]] && cat $VERI_RES_FILE | grep -v "^<" | tr '\n' '\r' || echo "@@@0,0@@@")
 
-		CRASH="none"
-		CRASH=$([[ $CRASH = "none" ]] && ([[ -n "$(echo $UOUT | awk "/Error/")" ]] || [[ -n "$(echo $UOUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "uout" || echo $CRASH)
-		CRASH=$([[ $CRASH = "none" ]] && ([[ -n "$(echo $ROUT | awk "/Error/")" ]] || [[ -n "$(echo $ROUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "rout" || echo $CRASH)
-		CRASH=$([[ $CRASH = "none" ]] && ([[ -n "$(echo $VOUT | awk "/Error/")" ]] || [[ -n "$(echo $VOUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "vout" || echo $CRASH)
+		CRASH="NONE"
+		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $UOUT | grep -v "^Query" | awk "/Error/")" ]] || [[ -n "$(echo $UOUT | grep -v "^Query" | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | grep -v "^Query" | awk "/signal/")" ]]) && echo "U" || echo $CRASH)
+		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $ROUT | grep -v "^Query" | awk "/Error/")" ]] || [[ -n "$(echo $ROUT | grep -v "^Query" | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | grep -v "^Query" | awk "/signal/")" ]]) && echo "R" || echo $CRASH)
+		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $VOUT | grep -v "^Query" | awk "/Error/")" ]] || [[ -n "$(echo $VOUT | grep -v "^Query" | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | grep -v "^Query" | awk "/signal/")" ]]) && echo "V" || echo $CRASH)
 
 		# ----- Exploration -----
 
