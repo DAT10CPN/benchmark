@@ -11,7 +11,7 @@ from lines import Lines
 
 
 @dataclass()
-class TimeMetric():
+class TimeMetric:
     line_metric_name: str
     is_in_phase: int
 
@@ -104,7 +104,10 @@ class TimeLines(Lines):
                 plot.set(
                     ylabel='seconds',
                     xlabel='queries')
-                plot.set(yscale="log")
+                try:
+                    plot.set(yscale="log")
+                except:
+                    plot.set(yscale="linear")
                 plt.title(f'{metric.line_metric_name} over {cutoff_time} seconds')
                 plt.legend(loc='upper left', borderaxespad=0)
 

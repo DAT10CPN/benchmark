@@ -105,7 +105,10 @@ class SizeLines(Lines):
                     plot.set(
                         ylabel=f'Combined number of transition and places',
                         xlabel='queries')
-                    plot.set(yscale="log")
+                    try:
+                        plot.set(yscale="log")
+                    except:
+                        plot.set(yscale="linear")
                     plt.legend(loc='upper left', borderaxespad=0)
 
                     plt.savefig(
