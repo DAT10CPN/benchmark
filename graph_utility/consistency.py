@@ -1,3 +1,4 @@
+import copy
 import os
 
 import numpy as np
@@ -9,42 +10,45 @@ def compare_two_results(exp_1, exp_1_index, data_list, options):
     exp_1_name = options.test_names[exp_1_index]
 
     for exp_2_index, exp_2 in enumerate(data_list):
-        exp_2_result_name = options.test_names[exp_2_index]
+        exp_2_name = options.test_names[exp_2_index]
 
         # Dont compare to itself
-        if exp_2_result_name == exp_1_name:
-            consistency_row[exp_2_result_name] = np.nan
+        if exp_2_name == exp_1_name:
+            consistency_row[exp_2_name] = np.nan
             continue
         # Make sure that we do not compare x and y, and later y and x
         elif exp_2_index < exp_1_index:
-            consistency_row[exp_2_result_name] = np.nan
+            consistency_row[exp_2_name] = np.nan
             continue
 
         combined = exp_1.merge(exp_2, left_index=True, right_index=True)
-        combined = combined.loc[~(combined[f"{exp_2_result_name}@answer"] == combined[f"{exp_1_name}@answer"])]
-        num_consistent_rows = int(len(combined))
-        consistency_row[exp_2_result_name] = num_consistent_rows
+        inconsistencies = combined.loc[~(combined[f"{exp_2_name}@answer"] == combined[f"{exp_1_name}@answer"])]
+        num_consistent_rows = int(len(inconsistencies))
+        consistency_row[exp_2_name] = num_consistent_rows
         # If any inconsistencies, write the inconsistent rows between two single results to file
         if num_consistent_rows > 0:
-            combined.to_csv(
-                f'{options.graph_dir}/inconsistent_rows_({exp_1_name})_({exp_2_result_name})_{options.category}.csv')
+            inconsistencies.to_csv(
+                f'{options.graph_dir}/inconsistent_rows_({exp_1_name})_({exp_2_name})_{options.category}.csv')
 
             f"{options.graph_dir}/consistency_matrix.csv"
+        in_common = combined.loc[(combined[f"{exp_2_name}@answer"] == combined[f"{exp_1_name}@answer"])]
+        print(f"'{exp_1_name}' and '{exp_2_name}' has answers in common: {len(in_common)}")
     return consistency_row
 
 
 def check_consistency(options):
     os.makedirs(options.graph_dir + f'\\consistency\\')
     options.graph_dir = options.graph_dir + f'\\consistency\\'
+    results = copy.deepcopy(options.read_results)
     # We are now mutating the data in options, so check consistency should always be last
-    for i, data in enumerate(options.read_results):
+    for i, data in enumerate(results):
         data.drop(data.index[data['answer'] == 'NONE'], inplace=True)
         data.set_index(["model name", "query index"], inplace=True)
         data.rename(columns={col: f"{options.test_names[i]}@{col}" for col in data.columns}, inplace=True)
 
     consistency_matrix = pd.DataFrame()
-    for index, exp_1 in enumerate(options.read_results):
-        row = compare_two_results(exp_1, index, options.read_results, options)
+    for index, exp_1 in enumerate(results):
+        row = compare_two_results(exp_1, index, results, options)
         consistency_matrix = consistency_matrix.append(row, ignore_index=True)
 
     new_rows_indices = dict()
