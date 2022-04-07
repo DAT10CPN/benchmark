@@ -36,8 +36,11 @@ def plot_all(options):
         if graph.name in options.chosen_graphs:
             print("-----------")
             print(f"Making graph: {graph.name}")
-            graph.prepare_data()
-            graph.plot()
+            try:
+                graph.prepare_data()
+                graph.plot()
+            except Exception as e:
+                print(f"Graph failed with exception: {e}")
             graphs_made += 1
             print(f"graphs made: {graphs_made}/{num_graphs}")
 

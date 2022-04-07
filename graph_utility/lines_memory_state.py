@@ -75,7 +75,10 @@ class MemoryStateLines(Lines):
                     plot.set(
                         ylabel=f'{unit}',
                         xlabel='queries')
-                    plot.set(yscale="log")
+                    try:
+                        plot.set(yscale="log")
+                    except:
+                        plot.set(yscale="linear")
                     plt.legend(loc='upper left', borderaxespad=0)
                 plt.title(f"top {percentage * 100}% largest {metric}")
                 plt.savefig(
