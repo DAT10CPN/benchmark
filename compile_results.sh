@@ -34,7 +34,7 @@ OUT="output/$BIN/$NAME.csv"
 
 # ***** Setup CSV *****
 
-COL_RULE_NAMES=("Relevance" "AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces" "DeadTransition") # MUST MATCH NAMES AND ORDER IN VERIFYPN
+COL_RULE_NAMES=("Relevance" "AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces" "DeadTransitions") # MUST MATCH NAMES AND ORDER IN VERIFYPN
 NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I")
 
 rm -f $OUT

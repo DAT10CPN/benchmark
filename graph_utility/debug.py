@@ -12,10 +12,6 @@ class DebugGraph(Graph):
         self.name = 'debug'
 
     def prepare_data(self):
-        def orig_is_smaller(row):
-            return (row['orig@colored reduce place count'] + row['orig@colored reduce transition count']) < (
-                    row['parT@colored reduce place count'] + row['parT@colored reduce transition count'])
-
         csvs = self.options.read_results
         for i, csv in enumerate(csvs):
             csv.set_index(["model name", "query index"], inplace=True)
@@ -23,15 +19,11 @@ class DebugGraph(Graph):
         everything = pd.concat(csvs, axis=1)
         everything.sort_index(level=0, inplace=True)
 
-        relevant_rows = []
-        for test_name in self.options.test_names:
-            relevant_rows.append(f"{test_name}@colored reduce place count")
-            relevant_rows.append(f"{test_name}@colored reduce transition count")
-        everything = everything[relevant_rows]
-        everything['inequal'] = everything.apply(
-            lambda row: 1 if orig_is_smaller(row) else 0,
-            axis=1)
-        self.everything = everything
+        everything = everything.drop(everything[everything['orig@answer'] != 'NONE'].index)
+        everything = everything.drop(everything[everything['relv-pagg-parT-parP@answer'] == 'NONE'].index)
+
+        self.everything = everything[['orig@verification time', 'relv-pagg-parT-parP@verification time']]
+
 
     def plot(self):
-        self.everything.to_csv(self.options.graph_dir + f"{self.name}.csv")
+        self.everything.to_csv(self.options.graph_dir + f"\\{self.name}.csv")
