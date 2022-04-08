@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#SBATCH --time=4:30:00
+#SBATCH --time=4:00:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mem=15G
 #SBATCH -c 2
 
-# Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <red-time-out> <veri-time-out> <expl-time-out> <bin-options>
+# Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <unf-time-out> <red-time-out> <veri-time-out> <expl-time-out> <bin-options>
 
 echo "Arguments: $@"
 
@@ -15,10 +15,11 @@ TEST_FOLDER=$3
 MODEL=$4
 CATEGORY=$5
 COL_RED_TIME_OUT=$6
-RED_TIME_OUT=$7
-VERI_TIME_OUT=$8
-EXPL_TIME_OUT=$9
-OPTIONS="${10}"
+UNF_TIME_OUT=$7
+RED_TIME_OUT=$8
+VERI_TIME_OUT=$9
+EXPL_TIME_OUT=${10}
+OPTIONS="${11}"
 
 SCRATCH="/scratch/$$/$NAME/$MODEL/$CATEGORY"
 mkdir -p $SCRATCH
@@ -44,7 +45,9 @@ for Q in $(seq 1 $NQ) ; do
 
 	echo "  Colored reduction ..."
 
-	UCMD="./$BIN $OPTIONS -D $COL_RED_TIME_OUT -r 0 -q 0 -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --noverify --write-unfolded-net $UPNML --write-unfolded-queries $UQUERIES"
+	RU_TIME_OUT=$(($COL_RED_TIME_OUT + 60 * $UNF_TIME_OUT))
+
+	UCMD="timeout ${RU_TIME_OUT}s ./$BIN $OPTIONS -D $COL_RED_TIME_OUT -r 0 -q 0 -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --noverify --write-unfolded-net $UPNML --write-unfolded-queries $UQUERIES"
 	UOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.uout"
 
 	# Reduce model+unfold and store stdout
