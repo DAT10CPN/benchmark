@@ -78,7 +78,7 @@ elif ! [[ "$COL_RED_TIME_OUT" =~ $pat ]] ; then
 fi
 
 if [ -z "$UNF_TIME_OUT" ] ; then
-	echo "No UNF_TIME_OUT given, using 2 minute per query"
+	echo "No UNF_TIME_OUT given, using 2 minutes per query"
 	UNF_TIME_OUT=2
 elif ! [[ "$UNF_TIME_OUT" =~ $pat ]] ; then
 	echo "Err: UNF_TIME_OUT must be a non-negative integer (minutes). It is '$UNF_TIME_OUT'"
