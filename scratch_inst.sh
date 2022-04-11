@@ -71,7 +71,7 @@ for Q in $(seq 1 $NQ) ; do
 
 	if [ "$VERI_TIME_OUT" -eq "0" ] ; then
 		echo "  Verification skipped"
-	elif [[ -n "$(echo $VOUT | awk '/Query solved by Query Simplification/')" ]] ; then
+	elif [[ -n "$(echo $O | awk '/Query solved by Query Simplification/')" ]] ; then
 		echo "  Verification skipped due to query simplification"
 	else
 		echo "  Verification ..."
