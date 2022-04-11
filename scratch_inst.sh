@@ -59,8 +59,10 @@ for Q in $(seq 1 $NQ) ; do
 
 	echo "  Reduction ..."
 
-	RCMD="./$BIN $OPTIONS -d $RED_TIME_OUT -q 0 -x 1 $LTLFLAG $UPNML $UQUERIES --write-reduced $PNML --noverify"
 	ROUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.rout"
+	rm -f "$ROUT"
+
+	RCMD="./$BIN $OPTIONS -d $RED_TIME_OUT -q 0 -x 1 $LTLFLAG $UPNML $UQUERIES --write-reduced $PNML --noverify"
 	
 	# Reduce model+query and store stdout
 
@@ -68,6 +70,9 @@ for Q in $(seq 1 $NQ) ; do
 	echo "$O" > "$ROUT"
 
 	# ===================== VERIFICATION =====================
+
+	VOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.vout"
+	rm -f "$VOUT"
 
 	if [ "$VERI_TIME_OUT" -eq "0" ] ; then
 		echo "  Verification skipped"
@@ -77,7 +82,6 @@ for Q in $(seq 1 $NQ) ; do
 		echo "  Verification ..."
 
 		VCMD="./$BIN -r 0 -x 1 $LTLFLAG $PNML $UQUERIES"
-		VOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.vout"
 		
 		# Verify query and store stdout along with time and memory spent between @@@s
 		O=$(eval "/usr/bin/time -f '@@@%e,%M@@@' timeout ${VERI_TIME_OUT}m $VCMD" 2>&1)
@@ -86,14 +90,17 @@ for Q in $(seq 1 $NQ) ; do
 
 	# ===================== EXPLORATION ======================
 
+	SOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.sout"
+	ZOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.size"
+	rm -f "$SOUT"
+	rm -f "$ZOUT"
+
 	if [ "$EXPL_TIME_OUT" -eq "0" ] ; then
 		echo "  Exploration skipped"
 	else
 		echo "  Exploration ..."
 
 		ECMD="./$BIN -q 0 -r 0 $PNML -e"
-		SOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.sout"
-		ZOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.size"
 
 		RES=$(eval "timeout ${EXPL_TIME_OUT}m $ECMD" 2>&1)
 		RES=$(echo $RES | grep -v "^<" | tr '\n' '\r')
