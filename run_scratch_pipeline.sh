@@ -116,7 +116,7 @@ mkdir -p $DIR
 for MODEL in $(ls $TEST_FOLDER) ; do
 	# Process model
 
-	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./scratch_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $RED_TIME_OUT $VERI_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
+	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./scratch_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $UNF_TIME_OUT $RED_TIME_OUT $VERI_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
 	echo "Submitted batch job $JOB_ID for $MODEL"
 
 done
