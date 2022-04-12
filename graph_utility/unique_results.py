@@ -10,6 +10,7 @@ def find_unique_results(options):
     for i, csv in enumerate(csvs):
         csv.set_index(["model name", "query index"], inplace=True)
 
+    print("Starting to compare individual results")
     # Individual comparisons
     for index1, experiment1 in enumerate(csvs):
         for index2, experiment2 in enumerate(csvs):
@@ -19,9 +20,7 @@ def find_unique_results(options):
             experiment1_answers = compare_two_experiments(experiment1, experiment2)
             experiment1_answers.to_csv(
                 f"{options.graph_dir}/({experiment1.iloc[0]['test name']})_answers_that_({experiment2.iloc[0]['test name']})_did_not_find.csv")
-
-    # Compare across all
-    unique_answers_across_all(options)
+        print(f"{(index1+1) / len(csvs) * 100:.2f}%")
 
 
 # Find the results that experiment1 got, that experiment2 did not
@@ -39,7 +38,3 @@ def compare_two_experiments(experiment1, experiment2):
                                                                                  left_index=True, right_index=True)
 
     return experiment1_answers_that_experiment2_did_not_get
-
-
-def unique_answers_across_all(options):
-    print("todo")
