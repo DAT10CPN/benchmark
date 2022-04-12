@@ -14,11 +14,9 @@ class Options:
     folder: str
     test_names: [str]
     chosen_graphs: [str]
-    chosen_lines: [str]
     read_results: []
-    do_fast_graphs: bool
     do_consistency_check: bool
-    enable_graphs: bool
+    enable_graphs: int
     debug: bool
     unique_results: bool
 

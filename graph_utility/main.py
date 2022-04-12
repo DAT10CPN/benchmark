@@ -16,7 +16,7 @@ from graph_utility.debug import DebugGraph
 from gui import Gui
 
 
-def plot_all(options):
+def plot_graphs(options):
     # Get number of files in this directory, remove the ones we do not use
     # Can use this for the prints
     num_graphs = len(options.chosen_graphs)
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         shutil.rmtree(options.graph_dir)
     os.makedirs(options.graph_dir)
 
-    print("Sanitising the data")
+    print("---------Sanitising the data---------")
     options.read_results = utility.sanitise_df_list(
         [pd.read_csv(options.result_dir + "\\" + csv) for csv in options.results_to_plot], options.test_names)
 
@@ -67,9 +67,9 @@ if __name__ == "__main__":
         os.makedirs(options.graph_dir + "\\errors")
         utility.write_results_with_errors(options)
 
-    if options.enable_graphs or options.debug:
+    if (options.enable_graphs > 0) or options.debug:
         print("---------Creating graphs---------")
-        plot_all(options)
+        plot_graphs(options)
 
     if options.unique_results:
         print("---------Finding unique results---------")
