@@ -20,6 +20,7 @@ class Options:
     do_consistency_check: bool
     enable_graphs: bool
     debug: bool
+    unique_results: bool
 
 
 def color(t):
