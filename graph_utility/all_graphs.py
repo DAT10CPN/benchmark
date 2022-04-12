@@ -7,6 +7,7 @@ import pandas as pd
 import utility
 from answers import AnswerSimplificationBars
 from consistency import check_consistency
+from unique_results import find_unique_results
 from graph_utility.lines_memory_state import MemoryStateLines
 from graph_utility.lines_size import SizeLines
 from graph_utility.lines_time import TimeLines
@@ -69,6 +70,10 @@ if __name__ == "__main__":
     if options.enable_graphs or options.debug:
         print("---------Creating graphs---------")
         plot_all(options)
+
+    if options.unique_results:
+        print("---------Finding unique results---------")
+        find_unique_results(options)
 
     if options.do_consistency_check:
         print("---------Doing consistency check---------")
