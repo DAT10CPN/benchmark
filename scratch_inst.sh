@@ -3,7 +3,7 @@
 #SBATCH --time=5:00:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mem=15G
-#SBATCH -c 1
+#SBATCH -c 2
 
 # Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <unf-time-out> <red-time-out> <veri-time-out> <expl-time-out> <bin-options>
 
