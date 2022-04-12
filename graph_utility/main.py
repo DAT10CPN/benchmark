@@ -78,3 +78,5 @@ if __name__ == "__main__":
     if options.do_consistency_check:
         print("---------Doing consistency check---------")
         check_consistency(options)
+
+    print("---------Finished---------")
