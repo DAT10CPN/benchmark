@@ -41,7 +41,7 @@ def plot_graphs(options):
                 graph.prepare_data()
                 graph.plot()
             except Exception as e:
-                print(f"Graph failed with exception: {e}")
+                print(f"\033[93mGraph failed with exception: {e}\033[0m")
             graphs_made += 1
             print(f"graphs made: {graphs_made}/{num_graphs}")
 

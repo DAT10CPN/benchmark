@@ -14,10 +14,12 @@ class MemoryStateLines(Lines):
         self.name = 'memory-state lines'
         self.verification_memories = []
         self.state_space_sizes = []
+
+
+    def prepare_data(self):
         for metric in ['state space size', 'verification memory']:
             os.makedirs(self.graph_dir + f'\\{metric}\\')
 
-    def prepare_data(self):
         for keep_percentage in self.keep_percentages:
             for metric in ['state space size', 'verification memory']:
                 combined_df = pd.DataFrame()

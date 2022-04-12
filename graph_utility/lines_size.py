@@ -40,10 +40,12 @@ class SizeLines(Lines):
 
         self.computed_sizes = defaultdict(dict)
         self.name = 'size lines'
+
+
+    def prepare_data(self):
         for metric in self.size_metrics:
             os.makedirs(self.graph_dir + f'\\{metric.size_metric_name}\\')
 
-    def prepare_data(self):
         for metric in self.size_metrics:
             metric_name = metric.size_metric_name
             for keep_percentage in self.keep_percentages:

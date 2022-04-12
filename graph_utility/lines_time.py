@@ -43,10 +43,12 @@ class TimeLines(Lines):
                 is_in_phase=4
             )
         ]
+
+
+    def prepare_data(self):
         for metric in self.time_metrics:
             os.makedirs(self.graph_dir + f'\\{metric.line_metric_name}\\')
 
-    def prepare_data(self):
         for metric in self.time_metrics:
             for cutoff_time in self.cutoff_times:
                 combined_df = pd.DataFrame()

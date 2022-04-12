@@ -23,13 +23,12 @@ class RuleUsage(Graph):
         self.graph_dir = options.graph_dir + '\\rules\\'
         self.name = 'rules'
 
+    def prepare_data(self):
         os.makedirs(self.graph_dir)
         for test_name in self.options.test_names:
             os.makedirs(self.graph_dir + f'\\{test_name}\\')
         for graph_type in ['absolute applications', 'absolute models', 'percentage models']:
             os.makedirs(self.graph_dir + f'\\{graph_type}\\')
-
-    def prepare_data(self):
 
         # Make one plot (png) for each csv
         for test_index, data in enumerate(self.data_list):
