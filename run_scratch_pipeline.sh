@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=cpu
 
-# Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [col-red-time-out] [red-time-out] [veri-time-out] [expl-time-out]
+# Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [col-red-time-out] [unf-time-out] [red-time-out] [veri-time-out] [expl-time-out]
 # Starts a number of slurm jobs each solving the queries of one model in the test folder.
 # Each of those jobs are then followed by another job running the reduced net too in order to determine the size of the state space.
 # When all jobs are done, the results are compiled into a single csv.
@@ -13,9 +13,10 @@ TEST_FOLDER=$4
 CATEGORY=$5
 PARTITION=$6
 COL_RED_TIME_OUT=$7
-RED_TIME_OUT=$8
-VERI_TIME_OUT=$9
-EXPL_TIME_OUT=${10}
+UNF_TIME_OUT=$8
+RED_TIME_OUT=$9
+VERI_TIME_OUT=${10}
+EXPL_TIME_OUT=${11}
 
 if [ -z "$NAME" ] ; then
 	echo "Missing benchmark name"
@@ -76,6 +77,14 @@ elif ! [[ "$COL_RED_TIME_OUT" =~ $pat ]] ; then
 	exit 0
 fi
 
+if [ -z "$UNF_TIME_OUT" ] ; then
+	echo "No UNF_TIME_OUT given, using 2 minutes per query"
+	UNF_TIME_OUT=2
+elif ! [[ "$UNF_TIME_OUT" =~ $pat ]] ; then
+	echo "Err: UNF_TIME_OUT must be a non-negative integer (minutes). It is '$UNF_TIME_OUT'"
+	exit 0
+fi
+
 if [ -z "$RED_TIME_OUT" ] ; then
 	echo "No RED_TIME_OUT given, using 60 seconds per query"
 	RED_TIME_OUT=60
@@ -107,7 +116,7 @@ mkdir -p $DIR
 for MODEL in $(ls $TEST_FOLDER) ; do
 	# Process model
 
-	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./scratch_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $RED_TIME_OUT $VERI_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
+	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./scratch_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $UNF_TIME_OUT $RED_TIME_OUT $VERI_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
 	echo "Submitted batch job $JOB_ID for $MODEL"
 
 done
