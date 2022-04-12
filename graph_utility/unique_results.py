@@ -4,7 +4,7 @@ import os
 
 def find_unique_results(options):
     os.makedirs(options.graph_dir + f'\\unique-results\\')
-    options.graph_dir = options.graph_dir + f'\\unique-results\\'
+    graph_dir = options.graph_dir + f'\\unique-results\\'
 
     csvs = copy.deepcopy(options.read_results)
     for i, csv in enumerate(csvs):
@@ -19,7 +19,7 @@ def find_unique_results(options):
 
             experiment1_answers = compare_two_experiments(experiment1, experiment2)
             experiment1_answers.to_csv(
-                f"{options.graph_dir}/({experiment1.iloc[0]['test name']})_answers_that_({experiment2.iloc[0]['test name']})_did_not_find.csv")
+                f"{graph_dir}/({experiment1.iloc[0]['test name']})_answers_that_({experiment2.iloc[0]['test name']})_did_not_find.csv")
         print(f"{(index1+1) / len(csvs) * 100:.2f}%")
 
 

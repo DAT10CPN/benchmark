@@ -19,9 +19,9 @@ class Lines(Graph):
         self.base_width = 3
         self.other_width = 1.5
         self.base_name = 'base'
-        if self.options.do_fast_graphs:
+        if self.options.enable_graphs == 1:
             self.cutoff_times = [0, 2.5]
             self.keep_percentages = [0.05, 0.25]
-        else:
+        elif self.options.enable_graphs == 2:
             self.cutoff_times = [0, 0.5, 1, 2.5, 5, 10, 20, 30, 60]
             self.keep_percentages = [0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1]

@@ -15,7 +15,6 @@ class Gui:
         self.results = []
         self.results_dir = os.path.join(os.path.dirname(__file__), '..\\results\\')
         self.enable_graphs = 0
-        self.do_fast_graphs = 0
         self.do_consistency_check = 0
         self.debug = 0
         self.max_test_in_column = 8
@@ -98,8 +97,6 @@ class Gui:
                                                  padx=20)
             results[test_name] = var
 
-        fast_graphs = IntVar()
-        fast_graphs.set(1)
         check_consistency = IntVar()
         check_consistency.set(0)
         debug = IntVar()
@@ -109,13 +106,13 @@ class Gui:
         unique_results = IntVar()
         Label(root, text="Settings:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=0)
-        Checkbutton(root, text='Enable graphs', variable=enable_graphs,
+        Radiobutton(root, text='No graphs', value=0, variable=enable_graphs,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=1, column=0)
-        Radiobutton(root, text='Fast graphs', value=1, variable=fast_graphs,
+        Radiobutton(root, text='Fast graphs', value=1, variable=enable_graphs,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=2, column=0)
-        Radiobutton(root, text='All graphs', value=0, variable=fast_graphs,
+        Radiobutton(root, text='All graphs', value=2, variable=enable_graphs,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=3, column=0)
         Checkbutton(root, text='Check consistency', variable=check_consistency,
@@ -150,11 +147,10 @@ class Gui:
 
         self.results = [csv_name for csv_name in results.keys() if results[csv_name].get() == 1]
         self.enable_graphs = enable_graphs.get()
-        self.do_fast_graphs = fast_graphs.get()
         self.do_consistency_check = check_consistency.get()
         self.debug = debug.get()
         self.unique_results = unique_results.get()
-        if (enable_graphs.get() == 1) and (len(self.results) == 0):
+        if (enable_graphs.get() > 0) and (len(self.results) == 0):
             raise Exception('You did not choose any tests')
 
     def get_options(self):
@@ -169,19 +165,20 @@ class Gui:
             folder=self.folder,
             test_names=[os.path.split(os.path.splitext(csv)[0])[1] for csv in self.results],
             chosen_graphs=['answers', 'rules', 'memory-state lines', 'time lines', 'size lines'],
-            chosen_lines=[],
             read_results=[],
-            do_fast_graphs=bool(self.do_fast_graphs),
             do_consistency_check=bool(self.do_consistency_check),
-            enable_graphs=bool(self.enable_graphs),
+            enable_graphs=self.enable_graphs,
             debug=bool(self.debug),
             unique_results=bool(self.unique_results)
         )
 
+        if self.enable_graphs == 0:
+            options.chosen_graphs = []
+
         if self.debug:
             options.chosen_graphs.append('debug')
 
-        if not (options.enable_graphs or options.do_consistency_check or options.debug or options.unique_results):
+        if not ((options.enable_graphs > 0) or options.do_consistency_check or options.debug or options.unique_results):
             raise Exception(
                 'You chose to not do graphs, consistency or debug mode, you probably clicked something wrong')
 
@@ -198,11 +195,10 @@ class Gui:
         print(f"Doing consistency check: {options.do_consistency_check}")
         print(f"Comparing experiments to find unique results: {options.unique_results}")
         print(f"Doing debug graph and errors: {options.debug}")
-        print(f"Creating graphs: {options.enable_graphs}")
-        if self.enable_graphs:
-            if self.do_fast_graphs:
-                print(f"\tDoing quick graphs")
-            else:
-                print(f"\tDoing all graphs")
+        print(f"Creating graphs: {options.enable_graphs > 0}")
+        if self.enable_graphs == 1:
+            print(f"\tDoing quick graphs")
+        elif self.enable_graphs == 2:
+            print(f"\tDoing all graphs")
 
         return options
