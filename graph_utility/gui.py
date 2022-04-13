@@ -1,6 +1,5 @@
 import glob
 import os
-import sys
 from tkinter import *
 
 from graph_utility.utility import Options
@@ -142,10 +141,11 @@ class Gui:
             enable_graphs.set(2)
             unique_results.set(1)
 
-
-        Button(root, text="Select all tests", command=select_all_tests, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=8,
-                                                                                                               column=0)
-        Button(root, text="Deselect all tests", command=deselect_all_tests, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+        Button(root, text="Select all tests", command=select_all_tests, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+            row=8,
+            column=0)
+        Button(root, text="Deselect all tests", command=deselect_all_tests, bg=self.BACKGROUND,
+               fg=self.FOREGROUND).grid(
             row=9,
             column=0)
         Button(root, text="EVERYTHING", command=EVERYTHING, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
