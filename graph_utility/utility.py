@@ -49,8 +49,11 @@ def get_reduced_size(row):
 def sanitise_df_list(result_list, test_names):
     for index, df in enumerate(result_list):
         df['test name'] = test_names[index]
-    result_list = [sanitise_df(df) for df in result_list]
-    return result_list
+    sanitised_list = []
+    for index, df in enumerate(result_list):
+        print(f"{(index + 1) / len(result_list) * 100:.2f}%")
+        sanitised_list.append(sanitise_df(df))
+    return sanitised_list
 
 
 def sanitise_df(df):
