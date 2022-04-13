@@ -140,6 +140,7 @@ class Gui:
             debug.set(1)
             enable_graphs.set(2)
             unique_results.set(1)
+            root.destroy()
 
         Button(root, text="Select all tests", command=select_all_tests, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
             row=8,
