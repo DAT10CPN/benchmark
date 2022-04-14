@@ -4,7 +4,7 @@
 #SBATCH --mail-type=FAIL
 #SBATCH --partition=rome
 #SBATCH --mem=15G
-#SBATCH -c 4
+#SBATCH -c 1
 
 # Args: <test-name> <binary> <test-folder>
 # This is the last step of `run_pipeline.sh`, but can also be run manually.
@@ -34,7 +34,7 @@ OUT="output/$BIN/$NAME.csv"
 
 # ***** Setup CSV *****
 
-COL_RULE_NAMES=("Relevance" "AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces" "DeadTransitions" "RedundantPlaces") # MUST MATCH NAMES AND ORDER IN VERIFYPN
+COL_RULE_NAMES=("Relevance" "AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces" "DeadTransitions" "DeadPlacesAndTransitions" "RedundantPlaces") # MUST MATCH NAMES AND ORDER IN VERIFYPN
 NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I")
 
 rm -f $OUT
