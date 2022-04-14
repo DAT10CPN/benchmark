@@ -17,7 +17,7 @@ class Gui:
         self.enable_graphs = 0
         self.do_consistency_check = 0
         self.debug = 0
-        self.max_test_in_column = 8
+        self.max_test_in_column = 9
         self.unique_results = 0
 
     def set_geometry(self, root, w, h):
@@ -127,18 +127,31 @@ class Gui:
         Button(root, text="Make graphs", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=7,
                                                                                                             column=0)
 
-        def select_all():
+        def select_all_tests():
             for results_var in results.values():
                 results_var.set(1)
 
-        def deselect_all():
+        def deselect_all_tests():
             for results_var in results.values():
                 results_var.set(0)
 
-        Button(root, text="Select all tests", command=select_all, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=8,
-                                                                                                               column=0)
-        Button(root, text="Deselect all tests", command=deselect_all, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+        def EVERYTHING():
+            select_all_tests()
+            check_consistency.set(1)
+            debug.set(1)
+            enable_graphs.set(2)
+            unique_results.set(1)
+            root.destroy()
+
+        Button(root, text="Select all tests", command=select_all_tests, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+            row=8,
+            column=0)
+        Button(root, text="Deselect all tests", command=deselect_all_tests, bg=self.BACKGROUND,
+               fg=self.FOREGROUND).grid(
             row=9,
+            column=0)
+        Button(root, text="EVERYTHING", command=EVERYTHING, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+            row=10,
             column=0)
         root.eval('tk::PlaceWindow . center')
 
