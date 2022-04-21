@@ -175,6 +175,7 @@ class Gui:
         self.unique_results = unique_results.get()
         if (enable_graphs.get() > 0) and (len(self.results) == 0):
             raise Exception('You did not choose any tests')
+        self.petri_net_type = petri_net_type.get()
 
     def get_options(self):
         self.choose_directory_category()

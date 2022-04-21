@@ -20,23 +20,32 @@ class SizeMetric():
 class SizeLines(Lines):
     def __init__(self, options):
         super().__init__(options)
-        self.size_metrics = [
-            SizeMetric(
-                size_metric_name='color reduced size',
-                relevant_size_columns=['colored reduce place count', 'colored reduce transition count'],
-                is_in_phase=1
-            ),
-            SizeMetric(
-                size_metric_name='unfolded size',
-                relevant_size_columns=['unfolded place count', 'unfolded transition count'],
-                is_in_phase=2
-            ),
-            SizeMetric(
-                size_metric_name='reduced size',
-                relevant_size_columns=['reduced place count', 'reduced transition count'],
-                is_in_phase=3
-            ),
-        ]
+        if options.petri_net_type == 'CPN':
+            self.size_metrics = [
+                SizeMetric(
+                    size_metric_name='color reduced size',
+                    relevant_size_columns=['colored reduce place count', 'colored reduce transition count'],
+                    is_in_phase=1
+                ),
+                SizeMetric(
+                    size_metric_name='unfolded size',
+                    relevant_size_columns=['unfolded place count', 'unfolded transition count'],
+                    is_in_phase=2
+                ),
+                SizeMetric(
+                    size_metric_name='reduced size',
+                    relevant_size_columns=['reduced place count', 'reduced transition count'],
+                    is_in_phase=3
+                ),
+            ]
+        elif options.petri_net_type == 'PT':
+            self.size_metrics = [
+                SizeMetric(
+                    size_metric_name='reduced size',
+                    relevant_size_columns=['post place count','post transition count'],
+                    is_in_phase=3
+                ),
+            ]
 
         self.computed_sizes = defaultdict(dict)
         self.name = 'size lines'
