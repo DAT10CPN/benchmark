@@ -2,6 +2,7 @@ import copy
 from dataclasses import dataclass
 
 import numpy as np
+import pandas as pd
 
 
 @dataclass()
@@ -19,6 +20,7 @@ class Options:
     enable_graphs: int
     debug: bool
     unique_results: bool
+    petri_net_type: str
 
 
 def color(t):
@@ -30,9 +32,11 @@ def color(t):
     return a + (b * np.cos(2 * np.pi * (c * t + d)))
 
 
-def get_total_time(row):
+def cpn_get_total_time(row):
     return row['colored reduce time'] + row['unfold time'] + row['reduce time'] + row['verification time']
 
+def pt_get_total_time(row):
+    return row['reduce time'] + row['verification time']
 
 def get_unfolded_size(row):
     return row['unfolded place count'] + row['unfolded transition count']
@@ -46,21 +50,21 @@ def get_reduced_size(row):
     return row['reduced place count'] + row['reduced transition count']
 
 
-def sanitise_df_list(result_list, test_names):
+def sanitise_df_list(options):
+    result_list = [pd.read_csv(options.result_dir + "\\" + csv) for csv in
+                   options.results_to_plot]
+
     for index, df in enumerate(result_list):
-        df['test name'] = test_names[index]
+        df['test name'] = options.test_names[index]
     sanitised_list = []
     for index, df in enumerate(result_list):
         print(f"{(index + 1) / len(result_list) * 100:.2f}%")
-        sanitised_list.append(sanitise_df(df))
+        if options.petri_net_type == 'CPN':
+            sanitised_list.append(cpn_infer_errors(df))
+        elif options.petri_net_type == 'PT':
+            sanitised_list.append(pt_infer_errors(df))
+
     return sanitised_list
-
-
-def sanitise_df(df):
-    df = infer_errors(df)
-    df = infer_simplification_from_prev_size_0_rows(df)
-
-    return df
 
 
 def write_results_with_errors(options):
@@ -70,19 +74,23 @@ def write_results_with_errors(options):
 
 
 def is_previous_error(row):
-    return row['error'] < 69420
+    return row['error'] < 500
 
 
-def phase_1_errors(df):
-    df['error'] = df.apply(
-        lambda row: 1 if row['original place count'] == 0 or (
-                row['colored reduce time'] == 0.0 and not ('orig' in row['test name'])) else 69420, axis=1)
+def phase_1_errors(df, petri_net_type):
+    if petri_net_type == 'CPN':
+        df['error'] = df.apply(
+            lambda row: 1 if row['original place count'] == 0 or (
+                    row['colored reduce time'] == 0.0 and not ('orig' in row['test name'])) else 500, axis=1)
+    elif petri_net_type == 'PT':
+        df['error'] = df.apply(
+            lambda row: 1 if row['prev place count'] == 0 else 500, axis=1)
     return df
 
 
 def phase_2_errors(df):
     def infer_phase_2_errors(row):
-        if row['error'] < 69420:
+        if row['error'] < 500:
             return row['error']
         elif row['unfold time'] == 0.0:
             return 2
@@ -96,7 +104,7 @@ def phase_2_errors(df):
 
 def phase_3_errors(df):
     def infer_phase_3_errors(row):
-        if row['error'] < 69420:
+        if row['error'] < 500:
             return row['error']
         elif row['reduce time'] == 0.0:
             return 3
@@ -110,7 +118,7 @@ def phase_3_errors(df):
 
 def phase_4_errors(df):
     def infer_phase_4_errors(row):
-        if row['error'] < 69420:
+        if row['error'] < 500:
             return row['error']
         elif row['verification time'] == 0.0 and row['answer'] == 'NONE' and row[
             'solved by query simplification'] is False:
@@ -123,21 +131,16 @@ def phase_4_errors(df):
     return df
 
 
-def infer_errors(df):
-    df = phase_1_errors(df)
+def cpn_infer_errors(df):
+    df = phase_1_errors(df, petri_net_type='CPN')
     df = phase_2_errors(df)
     df = phase_3_errors(df)
     df = phase_4_errors(df)
     return df
 
 
-# This can happen if query simplification is used
-def infer_simplification_from_prev_size_0_rows(df):
-    df['answer'] = df.apply(
-        lambda row: 'TRUE' if (get_reduced_size(row) == 0.0 and get_unfolded_size(row) > 0 and row['error'] == 0) else
-        row['answer'], axis=1)
-    df['solved by query simplification'] = df.apply(
-        lambda row: True if (get_reduced_size(row) == 0.0 and get_unfolded_size(row) > 0 and row['error'] == 0) else
-        row[
-            'solved by query simplification'], axis=1)
+def pt_infer_errors(df):
+    phase_1_errors(df, petri_net_type='PT')
+    df = phase_3_errors(df)
+    df = phase_4_errors(df)
     return df
