@@ -17,8 +17,9 @@ class Gui:
         self.enable_graphs = 0
         self.do_consistency_check = 0
         self.debug = 0
-        self.max_test_in_column = 9
+        self.max_test_in_column = 11
         self.unique_results = 0
+        self.petri_net_type = ""
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -104,6 +105,8 @@ class Gui:
         enable_graphs = IntVar()
         enable_graphs.set(1)
         unique_results = IntVar()
+        petri_net_type = StringVar()
+        petri_net_type.set('CPN')
         Label(root, text="Settings:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=0)
         Radiobutton(root, text='No graphs', value=0, variable=enable_graphs,
@@ -115,16 +118,23 @@ class Gui:
         Radiobutton(root, text='All graphs', value=2, variable=enable_graphs,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=3, column=0)
-        Checkbutton(root, text='Check consistency', variable=check_consistency,
+        Radiobutton(root, text='PT', value='PT', variable=petri_net_type,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=4, column=0)
-        Checkbutton(root, text='Debug', variable=debug,
+        Radiobutton(root, text='CPN', value='CPN', variable=petri_net_type,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=5, column=0)
-        Checkbutton(root, text='Unique results', variable=unique_results,
+        Checkbutton(root, text='Check consistency', variable=check_consistency,
                     bg=self.BACKGROUND,
                     fg=self.FOREGROUND).grid(row=6, column=0)
-        Button(root, text="Make graphs", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=7,
+        Checkbutton(root, text='Debug', variable=debug,
+                    bg=self.BACKGROUND,
+                    fg=self.FOREGROUND).grid(row=7, column=0)
+        Checkbutton(root, text='Unique results', variable=unique_results,
+                    bg=self.BACKGROUND,
+                    fg=self.FOREGROUND).grid(row=8, column=0)
+
+        Button(root, text="Make graphs", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=9,
                                                                                                             column=0)
 
         def select_all_tests():
@@ -144,14 +154,14 @@ class Gui:
             root.destroy()
 
         Button(root, text="Select all tests", command=select_all_tests, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
-            row=8,
+            row=10,
             column=0)
         Button(root, text="Deselect all tests", command=deselect_all_tests, bg=self.BACKGROUND,
                fg=self.FOREGROUND).grid(
-            row=9,
+            row=11,
             column=0)
         Button(root, text="EVERYTHING", command=EVERYTHING, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
-            row=10,
+            row=12,
             column=0)
         root.eval('tk::PlaceWindow . center')
 
@@ -182,7 +192,8 @@ class Gui:
             do_consistency_check=bool(self.do_consistency_check),
             enable_graphs=self.enable_graphs,
             debug=bool(self.debug),
-            unique_results=bool(self.unique_results)
+            unique_results=bool(self.unique_results),
+            petri_net_type=self.petri_net_type
         )
 
         if self.enable_graphs == 0:

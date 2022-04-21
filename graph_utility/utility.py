@@ -19,6 +19,7 @@ class Options:
     enable_graphs: int
     debug: bool
     unique_results: bool
+    petri_net_type: str
 
 
 def color(t):
