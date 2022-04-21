@@ -23,14 +23,6 @@ class TimeLines(Lines):
         self.times = defaultdict(dict)
         self.time_metrics = [
             TimeMetric(
-                line_metric_name='colored reduce time',
-                is_in_phase=1
-            ),
-            TimeMetric(
-                line_metric_name='unfold time',
-                is_in_phase=2
-            ),
-            TimeMetric(
                 line_metric_name='reduce time',
                 is_in_phase=3
             ),
@@ -43,7 +35,16 @@ class TimeLines(Lines):
                 is_in_phase=4
             )
         ]
-
+        if options.petri_net_type == 'cpn':
+            self.time_metrics.append([
+                TimeMetric(
+                    line_metric_name='colored reduce time',
+                    is_in_phase=1
+                ),
+                TimeMetric(
+                    line_metric_name='unfold time',
+                    is_in_phase=2
+                )])
 
     def prepare_data(self):
         for metric in self.time_metrics:
@@ -61,9 +62,14 @@ class TimeLines(Lines):
                         continue
                     res_df = pd.DataFrame()
                     if metric.line_metric_name == 'total time':
-                        res_df['total time'] = data[data['answer'] != 'NONE'].apply(
-                            utility.get_total_time,
-                            axis=1)
+                        if self.options.petri_net_type == 'CPN':
+                            res_df['total time'] = data[data['answer'] != 'NONE'].apply(
+                                utility.cpn_get_total_time,
+                                axis=1)
+                        elif self.options.petri_net_type == 'PT':
+                            res_df['total time'] = data[data['answer'] != 'NONE'].apply(
+                                utility.pt_get_total_time,
+                                axis=1)
                     else:
                         res_df[metric.line_metric_name] = data[metric.line_metric_name]
 

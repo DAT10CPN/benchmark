@@ -55,8 +55,8 @@ if __name__ == "__main__":
     os.makedirs(options.graph_dir)
 
     print("---------Sanitising the data---------")
-    options.read_results = utility.sanitise_df_list(
-        [pd.read_csv(options.result_dir + "\\" + csv) for csv in options.results_to_plot], options.test_names)
+    options.read_results = utility.sanitise_df_list(options)
+
 
     with open(options.graph_dir + "/meta.txt", mode='a') as file:
         file.write('Ran at %s.\n' %
