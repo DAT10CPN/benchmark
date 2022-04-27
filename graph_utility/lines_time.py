@@ -35,7 +35,7 @@ class TimeLines(Lines):
                 is_in_phase=4
             )
         ]
-        if options.petri_net_type == 'cpn':
+        if options.petri_net_type == 'CPN':
             self.time_metrics.append([
                 TimeMetric(
                     line_metric_name='colored reduce time',
