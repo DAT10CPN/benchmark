@@ -36,15 +36,16 @@ class TimeLines(Lines):
             )
         ]
         if options.petri_net_type == 'CPN':
-            self.time_metrics.append([
+            self.time_metrics.append(
                 TimeMetric(
                     line_metric_name='colored reduce time',
                     is_in_phase=1
-                ),
+                ))
+            self.time_metrics.append(
                 TimeMetric(
                     line_metric_name='unfold time',
                     is_in_phase=2
-                )])
+                ))
 
     def prepare_data(self):
         for metric in self.time_metrics:
