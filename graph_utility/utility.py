@@ -80,8 +80,7 @@ def is_previous_error(row):
 def phase_1_errors(df, petri_net_type):
     if petri_net_type == 'CPN':
         df['error'] = df.apply(
-            lambda row: 1 if row['original place count'] == 0 or (
-                    row['colored reduce time'] == 0.0 and not ('orig' in row['test name'])) else 500, axis=1)
+            lambda row: 1 if row['original place count'] == 0 else 500, axis=1)
     elif petri_net_type == 'PT':
         df['error'] = df.apply(
             lambda row: 1 if row['prev place count'] == 0 else 500, axis=1)
