@@ -69,24 +69,24 @@ fi
 pat="^[0-9]+$"
 
 if [ -z "$COL_RED_TIME_OUT" ] ; then
-	echo "No COL_RED_TIME_OUT given, using 30 seconds per query"
-	COL_RED_TIME_OUT=30
+	echo "No COL_RED_TIME_OUT given, using 4 seconds per query"
+	COL_RED_TIME_OUT=4
 elif ! [[ "$COL_RED_TIME_OUT" =~ $pat ]] ; then
 	echo "Err: COL_RED_TIME_OUT must be a non-negative integer (seconds). It is '$COL_RED_TIME_OUT'"
 	exit 0
 fi
 
 if [ -z "$RED_TIME_OUT" ] ; then
-	echo "No RED_TIME_OUT given, using 60 seconds per query"
-	RED_TIME_OUT=60
+	echo "No RED_TIME_OUT given, using 20 seconds per query"
+	RED_TIME_OUT=20
 elif ! [[ "$RED_TIME_OUT" =~ $pat ]] ; then
 	echo "Err: RED_TIME_OUT must be a non-negative integer (seconds). It is '$RED_TIME_OUT'"
 	exit 0
 fi
 
 if [ -z "$COMB_TIME_OUT" ] ; then
-	echo "No COMB_TIME_OUT given, using 1 minute per query"
-	COMB_TIME_OUT=1
+	echo "No COMB_TIME_OUT given, using 2 minute per query"
+	COMB_TIME_OUT=2
 elif ! [[ "$COMB_TIME_OUT" =~ $pat ]] ; then
 	echo "Err: COMB_TIME_OUT must be a non-negative integer (minutes). It is '$COMB_TIME_OUT'"
 	exit 0
