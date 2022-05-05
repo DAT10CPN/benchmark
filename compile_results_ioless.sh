@@ -35,7 +35,7 @@ OUT="output/$BIN/$NAME.csv"
 # ***** Setup CSV *****
 
 COL_RULE_NAMES=("Relevance" "AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces" "DeadTransitions" "RedundantPlaces") # MUST MATCH NAMES AND ORDER IN VERIFYPN
-NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I")
+NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S")
 
 rm -f $OUT
 
@@ -134,12 +134,12 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		ALL_APPS=$([[ -n "$(echo $IN | awk '/Applications of rule/')" ]] && echo $IN | grep 'Applications of rule' || echo "")
 		
 		for i in ${!NORMAL_RULE_NAMES[@]} ; do
-			APPLICATIONS=$([[ -n "$(echo $ALL_APPS | awk "/Applications of rule ${NORMAL_RULE_NAMES[$i]}/")" ]] && echo $ALL_APPS | sed -E "s/.*Applications of rule ${NORMAL_RULE_NAMES[$i]}: ([0-9]+).*/\1/" || echo 0)
+			APPLICATIONS=$([[ -n "$(echo $ALL_APPS | awk "/Applications of rule ${NORMAL_RULE_NAMES[$i]}:/")" ]] && echo $ALL_APPS | sed -E "s/.*Applications of rule ${NORMAL_RULE_NAMES[$i]}: ([0-9]+).*/\1/" || echo 0)
 			ENTRY+=",$APPLICATIONS"
 		done
 
 		for i in ${!COL_RULE_NAMES[@]} ; do
-			APPLICATIONS=$([[ -n "$(echo $ALL_APPS | awk "/Applications of rule ${COL_RULE_NAMES[$i]}/")" ]] && echo $ALL_APPS | sed -E "s/.*Applications of rule ${COL_RULE_NAMES[$i]}: ([0-9]+).*/\1/" || echo 0)
+			APPLICATIONS=$([[ -n "$(echo $ALL_APPS | awk "/Applications of rule ${COL_RULE_NAMES[$i]}:/")" ]] && echo $ALL_APPS | sed -E "s/.*Applications of rule ${COL_RULE_NAMES[$i]}: ([0-9]+).*/\1/" || echo 0)
 			ENTRY+=",$APPLICATIONS"
 		done
 
