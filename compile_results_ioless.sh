@@ -34,13 +34,13 @@ OUT="output/$BIN/$NAME.csv"
 
 # ***** Setup CSV *****
 
-COL_RULE_NAMES=("AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces") # MUST MATCH NAMES AND ORDER IN VERIFYPN
+COL_RULE_NAMES=("Relevance" "AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces" "DeadTransitions" "RedundantPlaces") # MUST MATCH NAMES AND ORDER IN VERIFYPN
 NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I")
 
 rm -f $OUT
 
 # Write header
-echo -n "model name,query index,answer,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,colored reduce place count,colored reduce transition count,unfolded place count,unfolded transition count,reduced place count,reduced transition count" >> $OUT
+echo -n "model name,query index,answer,crash,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,colored reduce place count,colored reduce transition count,unfolded place count,unfolded transition count,reduced place count,reduced transition count" >> $OUT
 for i in ${!NORMAL_RULE_NAMES[@]} ; do
 	echo -n ",rule ${NORMAL_RULE_NAMES[$i]}" >> $OUT
 done
@@ -66,6 +66,10 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		# Get stdout of model, filter out transition and place-bound statistics, and replace new lines such that regex will work
 		IN=$([[ -f $RES_FILE ]] && cat "$RES_FILE" | grep -v "^<" | tr '\n' '\r' || echo "")
 
+    CRASH="NONE"
+		CRASH=$([[ -n "$(echo IN | grep -v "^Query" | awk "/signal/")" ]] && echo "SIGNAL" || echo $CRASH)
+		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $ROUT | grep -v "^Query" | awk "/Error/")" ]] || [[ -n "$(echo $ROUT | grep -v "^Query" | awk "/ERROR/")" ]]) && echo "ERROR" || echo $CRASH)
+
 		# ----- Exploration -----
 
 		# Final state space size
@@ -75,7 +79,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 
 		# Time and memory is appended to the file
 		VERI_TIME=$([[ -n "$(echo $IN | awk "/on verification/")" ]] && echo $IN | sed -E "s/.*Spent (([0-9](\.[0-9])?e-0[2-9])|([0-9]+(\.[0-9]+)?)) on verification.*/\1/" || echo 0.0)
-		VERI_MEM="0"
+		VERI_MEM=$([[ -n "$(echo $IN | awk "/@@@/")" ]] && echo $IN | sed -E "s/.*@@@.*,(.*)@@@.*/\1/" || echo 0)
 
 		# Did we get an answer or did the query time out?
 		# We can check this by checking if "satisfied" is a substring of the output.
@@ -83,7 +87,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		ANSWER=$([[ -n "$(echo $IN | awk '/satisfied/')" ]] && ([[ -n "$(echo $IN | awk '/Query is satisfied/')" ]] && echo "TRUE" || echo "FALSE") || echo "NONE")
 
 		# Was query solved using query reduction?
-		QUERY_SIMPLIFICATION=$(([[ -n "$(echo $IN | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || ([[ -n "$(echo $IN | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || echo "FALSE")
+		QUERY_SIMPLIFICATION=$( ([[ -n "$(echo $IN | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || echo "FALSE")
 
 		# ----- Reduction extraction -------
 
@@ -122,7 +126,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 
 		# ----- Entry so far -----
 
-		ENTRY+="$MODEL,$Q,$ANSWER,$COL_RED_TIME,$UNFOLD_TIME,$RED_TIME,$VERI_TIME,$VERI_MEM,$QUERY_SIMPLIFICATION,$SIZE,$ORIG_PLACE_COUNT,$ORIG_TRANSITION_COUNT,$COL_RED_PLACE_COUNT,$COL_RED_TRANSITION_COUNT,$UNF_PLACE_COUNT,$UNF_TRANSITION_COUNT,$RED_PLACE_COUNT,$RED_TRANS_COUNT"
+		ENTRY+="$MODEL,$Q,$ANSWER,$CRASH,$COL_RED_TIME,$UNFOLD_TIME,$RED_TIME,$VERI_TIME,$VERI_MEM,$QUERY_SIMPLIFICATION,$SIZE,$ORIG_PLACE_COUNT,$ORIG_TRANSITION_COUNT,$COL_RED_PLACE_COUNT,$COL_RED_TRANSITION_COUNT,$UNF_PLACE_COUNT,$UNF_TRANSITION_COUNT,$RED_PLACE_COUNT,$RED_TRANS_COUNT"
 
 		# ----- Rule applications -----
 

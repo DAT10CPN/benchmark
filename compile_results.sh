@@ -94,7 +94,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		ANSWER=$([[ $ANSWER = "NONE" ]] && [[ -n "$(echo $ROUT | awk '/satisfied/')" ]] && ([[ -n "$(echo $ROUT | awk '/Query is satisfied/')" ]] && echo "TRUE" || echo "FALSE") || echo $ANSWER)
 
 		# Was query solved using query reduction?
-		QUERY_SIMPLIFICATION=$(([[ -n "$(echo $VOUT | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || ([[ -n "$(echo $ROUT | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || echo "FALSE")
+		QUERY_SIMPLIFICATION=$( ([[ -n "$(echo $VOUT | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || ([[ -n "$(echo $ROUT | awk '/Query solved by Query Simplification/')" ]] && echo "TRUE") || echo "FALSE")
 
 		# ----- Reduction extraction -------
 

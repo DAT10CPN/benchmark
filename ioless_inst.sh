@@ -5,7 +5,7 @@
 #SBATCH --mem=15G
 #SBATCH -c 1
 
-# Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <red-time-out> <veri-time-out> <expl-time-out> <bin-options>
+# Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <red-time-out> <comb-time-out> <expl-time-out> <bin-options>
 
 echo "Arguments: $@"
 
@@ -16,11 +16,13 @@ MODEL=$4
 CATEGORY=$5
 COL_RED_TIME_OUT=$6
 RED_TIME_OUT=$7
-VERI_TIME_OUT=$8
+COMB_TIME_OUT=$8
 EXPL_TIME_OUT=$9
 OPTIONS="${10}"
 
-SCRATCH="/scratch/jesmatnic/$NAME/$MODEL/$CATEGORY"
+SCRATCH="/scratch/$$/$NAME/$MODEL/$CATEGORY"
+mkdir -p $SCRATCH
+trap "rm -r $SCRATCH ; echo terminated ; exit" 0  # We trap the to make sure we cleanup
 
 LTLFLAG=$([[ "$CATEGORY" == "LTLCardinality" ]] && echo " -ltl" || echo "")
 
@@ -43,7 +45,7 @@ for Q in $(seq 1 $NQ) ; do
 	OUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.out"
 	CMD="./$BIN $OPTIONS -D $COL_RED_TIME_OUT -d $RED_TIME_OUT -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --write-reduced $RED_PNML"
 
-	O=$(eval "$CMD" 2>&1)
+	O=$(eval "/usr/bin/time -f '@@@%e,%M@@@' timeout ${COMB_TIME_OUT}m $CMD" 2>&1)
 	echo "$O" > $OUT
 
 	# ===================== EXPLORATION ======================

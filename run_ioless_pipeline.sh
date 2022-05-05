@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=cpu
 
-# Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [col-red-time-out] [red-time-out] [veri-time-out] [expl-time-out]
+# Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [col-red-time-out] [red-time-out] [combined-time-out] [expl-time-out]
 # Starts a number of slurm jobs each solving the queries of one model in the test folder.
 # Each of those jobs are then followed by another job running the reduced net too in order to determine the size of the state space.
 # When all jobs are done, the results are compiled into a single csv.
@@ -14,7 +14,7 @@ CATEGORY=$5
 PARTITION=$6
 COL_RED_TIME_OUT=$7
 RED_TIME_OUT=$8
-VERI_TIME_OUT=$9
+COMB_TIME_OUT=$9
 EXPL_TIME_OUT=${10}
 
 if [ -z "$NAME" ] ; then
@@ -84,11 +84,11 @@ elif ! [[ "$RED_TIME_OUT" =~ $pat ]] ; then
 	exit 0
 fi
 
-if [ -z "$VERI_TIME_OUT" ] ; then
-	echo "No VERI_TIME_OUT given, using 1 minute per query"
-	VERI_TIME_OUT=1
-elif ! [[ "$VERI_TIME_OUT" =~ $pat ]] ; then
-	echo "Err: VERI_TIME_OUT must be a non-negative integer (minutes). It is '$VERI_TIME_OUT'"
+if [ -z "$COMB_TIME_OUT" ] ; then
+	echo "No COMB_TIME_OUT given, using 1 minute per query"
+	COMB_TIME_OUT=1
+elif ! [[ "$COMB_TIME_OUT" =~ $pat ]] ; then
+	echo "Err: COMB_TIME_OUT must be a non-negative integer (minutes). It is '$COMB_TIME_OUT'"
 	exit 0
 fi
 
@@ -107,7 +107,7 @@ mkdir -p $DIR
 for MODEL in $(ls $TEST_FOLDER) ; do
 	# Process model
 
-	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./ioless_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $RED_TIME_OUT $VERI_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
+	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./ioless_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $RED_TIME_OUT $COMB_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
 	echo "Submitted batch job $JOB_ID for $MODEL"
 
 done
