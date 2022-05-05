@@ -140,7 +140,8 @@ class AnswerSimplificationBars(Graph):
 
             plt.legend(bbox_to_anchor=(0.35, 1.12), loc='upper left', borderaxespad=0)
             plt.xlabel("test instances")
-            plt.ylabel('experiments-30-60-1-1')
+            plot.set_ylabel(self.options.folder)
+            plt.tight_layout()
 
             # Find max width, in order to move the very small numbers away from the bars
             max_width = 0
