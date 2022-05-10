@@ -64,7 +64,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		SIZE_FILE="$DIR/$MODEL.$Q.size"
 
 		# Get stdout of model, filter out transition and place-bound statistics, and replace new lines such that regex will work
-		IN=$([[ -f $RES_FILE ]] && cat "$RES_FILE" | grep -v "^<" | tr '\n' '\r' || echo "")
+		IN=$([[ -f $RES_FILE ]] && cat "$RES_FILE" | grep -v "^<|(Query before reduction:)" | tr '\n' '\r' || echo "")
 
     CRASH="NONE"
 		CRASH=$([[ -n "$(echo IN | grep -v "^Query" | awk "/signal/")" ]] && echo "SIGNAL" || echo $CRASH)
