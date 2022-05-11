@@ -24,7 +24,7 @@ SCRATCH="/scratch/$$/$NAME/$MODEL/$CATEGORY"
 mkdir -p $SCRATCH
 trap "rm -r $SCRATCH ; echo terminated ; exit" 0  # We trap the to make sure we cleanup
 
-LTLFLAG=$([[ "$CATEGORY" == "LTLCardinality" ]] && echo " -ltl" || echo "")
+LTLFLAG=$( ([[ "$CATEGORY" == "LTLCardinality" ]] || [[ "$CATEGORY" == "LTLFireability" ]]) && echo " -ltl" || echo "")
 
 # Find the number of queries for this model by counting how many times "<property>" appears
 NQ=$(grep "<property>" "$TEST_FOLDER/$MODEL/$CATEGORY.xml" | wc -l)
