@@ -66,14 +66,14 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		SIZE_FILE="$DIR/$MODEL.$Q.size"
 
 		# Get stdout of model, filter out transition and place-bound statistics, and replace new lines such that regex will work
-		UOUT=$([[ -f $RED_RES_FILE ]] && cat "$COL_RED_RES_FILE" | grep -v "^<|(Query before reduction:)" | tr '\n' '\r' || echo "")
-		ROUT=$([[ -f $RED_RES_FILE ]] && cat "$RED_RES_FILE" | grep -v "^<|(Query before reduction:)" | tr '\n' '\r' || echo "")
-		VOUT=$([[ -f $VERI_RES_FILE ]] && cat $VERI_RES_FILE | grep -v "^<|(Query before reduction:)" | tr '\n' '\r' || echo "@@@0,0@@@")
+		UOUT=$([[ -f $RED_RES_FILE ]] && cat "$COL_RED_RES_FILE" | grep -v "^<|^(Query)" | tr '\n' '\r' || echo "")
+		ROUT=$([[ -f $RED_RES_FILE ]] && cat "$RED_RES_FILE" | grep -v "^<|^(Query)" | tr '\n' '\r' || echo "")
+		VOUT=$([[ -f $VERI_RES_FILE ]] && cat $VERI_RES_FILE | grep -v "^<|^(Query)" | tr '\n' '\r' || echo "@@@0,0@@@")
 
 		CRASH="NONE"
-		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $UOUT | grep -v "^Query" | awk "/Error/")" ]] || [[ -n "$(echo $UOUT | grep -v "^Query" | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | grep -v "^Query" | awk "/signal/")" ]]) && echo "U" || echo $CRASH)
-		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $ROUT | grep -v "^Query" | awk "/Error/")" ]] || [[ -n "$(echo $ROUT | grep -v "^Query" | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | grep -v "^Query" | awk "/signal/")" ]]) && echo "R" || echo $CRASH)
-		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $VOUT | grep -v "^Query" | awk "/Error/")" ]] || [[ -n "$(echo $VOUT | grep -v "^Query" | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | grep -v "^Query" | awk "/signal/")" ]]) && echo "V" || echo $CRASH)
+		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $UOUT | awk "/Error/")" ]] || [[ -n "$(echo $UOUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "U" || echo $CRASH)
+		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $ROUT | awk "/Error/")" ]] || [[ -n "$(echo $ROUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "R" || echo $CRASH)
+		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $VOUT | awk "/Error/")" ]] || [[ -n "$(echo $VOUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "V" || echo $CRASH)
 
 		# ----- Exploration -----
 
