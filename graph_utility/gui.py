@@ -45,7 +45,7 @@ class Gui:
         category_var.set("Reachability")
         Label(root, text="Categories:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=0)
-        for index, category_name in enumerate(["Reachability", "CTL", "LTL"]):
+        for index, category_name in enumerate(["Reachability", "CTL", "LTL", "ReachFire", "LTLFire", "CTLFire"]):
             Radiobutton(root, text=category_name, value=category_name, variable=category_var, bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1, column=0)
 
@@ -64,7 +64,7 @@ class Gui:
                         fg=self.FOREGROUND).grid(row=index + 1, column=1)
 
         Button(root, text="Choose and continue", command=set_and_continue, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
-            row=4, column=0)
+            row=7, column=0)
         root.eval('tk::PlaceWindow . center')
         root.protocol("WM_DELETE_WINDOW", sys.exit)
         root.mainloop()
