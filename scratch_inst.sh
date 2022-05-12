@@ -53,7 +53,7 @@ for Q in $(seq 1 $NQ) ; do
 	# Reduce model+unfold and store stdout
 
 	O=$(eval "$UCMD" 2>&1)
-	echo "$O" > "$UOUT"
+	echo "$O" | grep -v "^<" > "$UOUT"
 
 	# ===================== NORMAL REDUCTION ========================
 
@@ -67,7 +67,7 @@ for Q in $(seq 1 $NQ) ; do
 	# Reduce model+query and store stdout
 
 	O=$(eval "$RCMD" 2>&1)
-	echo "$O" > "$ROUT"
+	echo "$O" | grep -v "^<" > "$ROUT"
 
 	# ===================== VERIFICATION =====================
 
@@ -85,7 +85,7 @@ for Q in $(seq 1 $NQ) ; do
 		
 		# Verify query and store stdout along with time and memory spent between @@@s
 		O=$(eval "/usr/bin/time -f '@@@%e,%M@@@' timeout ${VERI_TIME_OUT}m $VCMD" 2>&1)
-		echo "$O" > "$VOUT"
+		echo "$O" | grep -v "^<" > "$VOUT"
 	fi
 
 	# ===================== EXPLORATION ======================

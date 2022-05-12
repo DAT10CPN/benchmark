@@ -46,7 +46,7 @@ for Q in $(seq 1 $NQ) ; do
 	CMD="./$BIN $OPTIONS -D $COL_RED_TIME_OUT -d $RED_TIME_OUT -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --write-reduced $RED_PNML"
 
 	O=$(eval "/usr/bin/time -f '@@@%e,%M@@@' timeout ${COMB_TIME_OUT}m $CMD" 2>&1)
-	echo "$O" > $OUT
+	echo "$O" | grep -v "^<" > $OUT
 
 	# ===================== EXPLORATION ======================
 
@@ -61,7 +61,7 @@ for Q in $(seq 1 $NQ) ; do
 
 		RES=$(eval "timeout ${EXPL_TIME_OUT}m $ECMD" 2>&1)
 		RES=$(echo $RES | grep -v "^<" | tr '\n' '\r')
-		echo $RES > $SOUT
+		echo $RES | grep -v "^<" > $SOUT
 
 		SIZE=$([[ -n "$(echo $RES | awk "/explored states/")" ]] && echo $RES | sed -E "s/.*explored states: *([0-9]+).*/\1/" || echo 0)
 		

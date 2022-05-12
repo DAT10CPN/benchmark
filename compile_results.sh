@@ -66,9 +66,9 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		SIZE_FILE="$DIR/$MODEL.$Q.size"
 
 		# Get stdout of model, filter out transition and place-bound statistics, and replace new lines such that regex will work
-		UOUT=$([[ -f $RED_RES_FILE ]] && cat "$COL_RED_RES_FILE" | grep -v "^<|^(Query)" | tr '\n' '\r' || echo "")
-		ROUT=$([[ -f $RED_RES_FILE ]] && cat "$RED_RES_FILE" | grep -v "^<|^(Query)" | tr '\n' '\r' || echo "")
-		VOUT=$([[ -f $VERI_RES_FILE ]] && cat $VERI_RES_FILE | grep -v "^<|^(Query)" | tr '\n' '\r' || echo "@@@0,0@@@")
+		UOUT=$([[ -f $RED_RES_FILE ]] && cat "$COL_RED_RES_FILE" | grep -v "^<"  | grep -v "^Query before|after" | grep -v "^Query before|after" | tr '\n' '\r' || echo "")
+		ROUT=$([[ -f $RED_RES_FILE ]] && cat "$RED_RES_FILE" | grep -v "^<"  | grep -v "^Query before|after" | grep -v "^Query before|after" | tr '\n' '\r' || echo "")
+		VOUT=$([[ -f $VERI_RES_FILE ]] && cat $VERI_RES_FILE | grep -v "^<"  | grep -v "^Query before|after" | grep -v "^Query before|after" | tr '\n' '\r' || echo "@@@0,0@@@")
 
 		CRASH="NONE"
 		CRASH=$([[ $CRASH = "NONE" ]] && ([[ -n "$(echo $UOUT | awk "/Error/")" ]] || [[ -n "$(echo $UOUT | awk "/ERROR/")" ]] || [[ -n "$(echo $UOUT | awk "/signal/")" ]]) && echo "U" || echo $CRASH)
