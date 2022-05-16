@@ -1,35 +1,52 @@
-Parameters: -x 1 AirplaneLD-COL-0010/model.pnml AirplaneLD-COL-0010/ReachabilityCardinality.xml -q 0
 
-Search=OverApprox,Trace=DISABLED,State_Space_Exploration=DISABLED,Colored_Structural_Reduction=ALL,Colored_Struct_Red_Timout=30,Structural_Reduction=AGGRESSIVE,Struct_Red_Timout=60,Stubborn_Reduction=ENABLED,Query_Simplication=DISABLED,Siphon_Trap=DISABLED,LPSolve_Timeout=10
+Parameters: -R 2 0 -D 4 -d 20 -x 16 -ltl MCC2021-COL/AirplaneLD-COL-0200/model.pnml MCC2021-COL/AirplaneLD-COL-0200/LTLFireability.xml --write-reduced /scratch/4154088/ltlf-I/AirplaneLD-COL-0200/LTLFireability/AirplaneLD-COL-0200.16.r.pnml
+
+Search=OverApprox,Trace=DISABLED,State_Space_Exploration=DISABLED,Colored_Structural_Reduction=CUSTOM SEQUENCE,Colored_Struct_Red_Timout=4,Structural_Reduction=AGGRESSIVE,Struct_Red_Timout=20,Stubborn_Reduction=ENABLED,Query_Simplication=ENABLED,QSTimeout=30,Siphon_Trap=DISABLED,LPSolve_Timeout=10
 Finished parsing model
+RWSTATS LEGEND:EG p-> !EF !p,AG p-> !AF !p,!EX p -> AX p,EX false -> false,EX true -> !deadlock,!AX p -> EX p,AX false -> deadlock,AX true -> true,EF !deadlock -> !deadlock,EF EF p -> EF p,EF AF p -> AF p,EF E p U q -> EF q,EF A p U q -> EF q,EF .. or .. -> EF .. or EF ..,AF !deadlock -> !deadlock,AF AF p -> AF p,AF EF p -> EF p,AF .. or EF p -> EF p or AF ..,AF A p U q -> AF q,A p U !deadlock -> !deadlock,A deadlock U q -> q,A !deadlock U q -> AF q,A p U AF q -> AF q,A p U EF q -> EF q,A p U .. or EF q -> EF q or A p U ..,E p U !deadlock -> !deadlock,E deadlock U q -> q,E !deadlock U q -> EF q,E p U EF q -> EF q,E p U .. or EF q -> EF q or E p U ..,!! p -> p,F F p -> F p,F p U q -> F q,F p or q -> F p or F q,p U F q -> F q,
 
-Query before expansion and reduction: (not EF ((TheAltitude < TheAltitude) and (((P3 < 2) and (stp4 < 3)) or (Weight_Left_Wheel < Plane_On_Ground_Signal_no))))
-RWSTATS COLORED PRE:0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+Query before expansion and reduction: A ((is-fireable(t5_2) or (not F is-fireable(t5_2))) U (is-fireable(t5_2) or ((not is-fireable(t1_2)) and F (not is-fireable(t1_2)))))
+RWSTATS COLORED PRE:0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,
 
-Colored structural reductions computed in 2e-06 seconds
+Colored structural reductions computed in 0 seconds
 Reduced from 20 to 20 places (0, 0%)
 Reduced from 15 to 15 transitions (0, 0%)
-Applications of rule Identity: 1
+Applications of rule AtomicPreAgglomeration: 0
+Applications of rule DeadTransitions: 0
+Applications of rule ParallelPlaces: 0
+Applications of rule ParallelTransitions: 0
+Applications of rule RedundantPlaces: 0
+Applications of rule Relevance: 0
 
-Color fixpoint computed in 0.001147 seconds
+Color fixpoint computed in 0.000243 seconds
 Max intervals used: 3
 Size of colored net: 20 places, 15 transitions, and 56 arcs
 Size of unfolded net: 28 places, 27 transitions, and 75 arcs
-Unfolded in 0.022449 seconds
-Partitioned in 0.006708 seconds
-Skipping linear-programming (-q 0)
-Query size reduced from 25 to 25 nodes ( 0 percent reduction).
+Partitioned in 0.00042 seconds
+Unfolded in 0.000285 seconds
+
+Query before reduction: A (((((1 <= Speed_Right_Wheel_0) and (1 <= P5_0)) or ((1 <= Speed_Right_Wheel_199) and (1 <= P5_0))) or (not F (((1 <= Speed_Right_Wheel_0) and (1 <= P5_0)) or ((1 <= Speed_Right_Wheel_199) and (1 <= P5_0))))) U ((((1 <= Speed_Right_Wheel_0) and (1 <= P5_0)) or ((1 <= Speed_Right_Wheel_199) and (1 <= P5_0))) or ((not ((1 <= Weight_Left_Wheel_1) and (1 <= P1_0))) and F (not ((1 <= Weight_Left_Wheel_1) and (1 <= P1_0))))))
+RWSTATS PRE:0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+RWSTATS POST:0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+Query after reduction: true
+FORMULA AirplaneLD-COL-0200-15 TRUE TECHNIQUES COLLATERAL_PROCESSING STRUCTURAL_REDUCTION QUERY_REDUCTION SAT_SMT LP_APPROX UNFOLDING_TO_PT
+Query index 0 was solved
+
+Query is satisfied.
+
+Query solved by Query Simplification.
+
 Size of net before structural reductions: 28 places, 27 transitions
-Size of net after structural reductions: 24 places, 26 transitions
-Structural reduction finished after 0.006775 seconds
+Size of net after structural reductions: 0 places, 0 transitions
+Structural reduction finished after 3.1e-05 seconds
 
 Net reduction is enabled.
-Removed transitions: 1
-Removed places: 4
+Removed transitions: 27
+Removed places: 28
 Applications of rule A: 0
 Applications of rule B: 0
 Applications of rule C: 0
-Applications of rule D: 1
+Applications of rule D: 0
 Applications of rule E: 0
 Applications of rule F: 0
 Applications of rule G: 0
@@ -37,22 +54,12 @@ Applications of rule H: 0
 Applications of rule I: 1
 Applications of rule J: 0
 Applications of rule K: 0
-FORMULA AirplaneLD-COL-0010-ReachabilityCardinality-00 TRUE TECHNIQUES COLLATERAL_PROCESSING STRUCTURAL_REDUCTION QUERY_REDUCTION SAT_SMT UNFOLDING_TO_PT EXPLICIT STATE_COMPRESSION STUBBORN_SETS
-Query index 0 was solved
-
-Query is satisfied.
-
-STATS:
-        discovered states: 49
-        explored states:   30
-        expanded states:   30
-        max tokens:        6
-
-TRANSITION STATISTICS
-<SpeedLW_0:0><SpeedLW_1:0><SpeedLW_2:0><t4_2_0:0><t4_1_0:0><t4_2_1:0><SpeedRW_0:0><SpeedRW_1:0><SpeedRW_2:0><t5_2_0:0><t5_1_0:0><t5_2_1:0><getAlt_0:7><getAlt_1:7><getAlt_2:7><t3_1_0:1><t3_2_0:1><t3_2_1:1><SampleRW_0:4><SampleRW_1:4><t2_1_0:0><t2_2_0:4><SampleLW_0:4><SampleLW_1:4><t1_1_0:0><t1_2_0:4><t3_2_2:?>
-
-PLACE-BOUND STATISTICS
-<stp4_0;1><Speed_Left_Wheel_0;0><Speed_Left_Wheel_5;0><Speed_Left_Wheel_9;0><stp5_0;1><Speed_Right_Wheel_0;0><Speed_Right_Wheel_5;0><Speed_Right_Wheel_9;0><stp3_0;1><TheAltitude_0;1><TheAltitude_9;1><TheAltitude_19;1><stp2_0;1><Weight_Right_Wheel_0;1><Weight_Right_Wheel_1;1><stp1_0;1><Weight_Left_Wheel_0;1><Weight_Left_Wheel_1;1><P5_0;0><Plane_On_Ground_Signal_no_0;1><P4_0;1><P3_0;1><P2_0;1><P1_0;1><P6_0;?><AltitudePossibleVal_orphan;?><SpeedPossibleVal_orphan;?><WeightPossibleVal_orphan;?>
-
-
-Process finished with exit code 0
+Applications of rule L: 0
+Applications of rule M: 0
+Applications of rule N: 0
+Applications of rule O: 0
+Applications of rule P: 0
+Applications of rule Q: 0
+Applications of rule R: 0
+Applications of rule S: 0
+@@@0.01,14504@@@

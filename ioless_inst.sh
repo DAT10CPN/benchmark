@@ -46,7 +46,7 @@ for Q in $(seq 1 $NQ) ; do
 	CMD="./$BIN $OPTIONS -D $COL_RED_TIME_OUT -d $RED_TIME_OUT -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --write-reduced $RED_PNML"
 
 	O=$(eval "/usr/bin/time -f '@@@%e,%M@@@' timeout ${COMB_TIME_OUT}m $CMD" 2>&1)
-	echo "$O" | grep -v "^<" > $OUT
+	echo "$O" | grep -v "^<" | grep -v "^Query before" | grep -v "^Query after" > $OUT
 
 	# ===================== EXPLORATION ======================
 
