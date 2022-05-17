@@ -100,6 +100,8 @@ elif ! [[ "$EXPL_TIME_OUT" =~ $pat ]] ; then
 	exit 0
 fi
 
+chmod u+x "$BIN"
+
 DIR="output/$(basename $BIN)/$NAME"
 rm -rf $DIR
 mkdir -p $DIR
