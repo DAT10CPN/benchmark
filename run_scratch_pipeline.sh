@@ -59,9 +59,19 @@ elif [ "$CATEGORY" != "ReachabilityCardinality" ] && [ "$CATEGORY" != "LTLCardin
 	exit 0
 fi
 
+patReach="^Reachability"
+patLTL="^LTL"
+patCTL="^CTL"
 if [ -z "$PARTITION" ] ; then
-	echo "No PARTITION given, using naples"
 	PARTITION="naples"
+	if [[ "$CATEGORY" =~ $patReach ]] ; then
+    PARTITION="dhabi"
+  elif [[ "$CATEGORY" =~ $patLTL ]] ; then
+    PARTITION="rome"
+  elif [[ "$CATEGORY" =~ $patCTL ]] ; then
+    PARTITION="rome"
+  fi
+	echo "No PARTITION given, using $PARTITION based on the selected category '$CATEGORY'"
 elif [ "$PARTITION" != "naples" ] && [ "$PARTITION" != "rome" ] && [ "$PARTITION" != "dhabi" ] && [ "$PARTITION" != "cpu" ] ; then
 	echo "Err: PARTITION must be naples, rome, dhabi, or cpu. It is '$PARTITION'"
 	exit 0
