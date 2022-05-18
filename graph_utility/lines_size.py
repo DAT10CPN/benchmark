@@ -4,7 +4,6 @@ from dataclasses import dataclass
 
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 
 import utility
 from lines import Lines
@@ -42,14 +41,13 @@ class SizeLines(Lines):
             self.size_metrics = [
                 SizeMetric(
                     size_metric_name='reduced size',
-                    relevant_size_columns=['post place count','post transition count'],
+                    relevant_size_columns=['post place count', 'post transition count'],
                     is_in_phase=3
                 ),
             ]
 
         self.computed_sizes = defaultdict(dict)
         self.name = 'size lines'
-
 
     def prepare_data(self):
         for metric in self.size_metrics:
@@ -90,38 +88,23 @@ class SizeLines(Lines):
                 self.computed_sizes[metric_name][keep_percentage] = combined_df
 
     def plot(self):
-        sns.set_theme(style="darkgrid")
         for metric in self.size_metrics:
             metric_name = metric.size_metric_name
             for keep_percentage in self.keep_percentages:
 
                 data_to_plot = self.computed_sizes[metric_name][keep_percentage]
 
-                custom_palette = {}
-                for column_index, column in enumerate(data_to_plot.columns):
-                    custom_palette[column] = utility.color((column_index + 1) / len(data_to_plot.columns))
+                plot = self.create_lineplot(data_to_plot)
+                plot.set(
+                    ylabel=f'Combined number of transition and places',
+                    xlabel='queries')
+                try:
+                    plot.set(yscale="log")
+                except:
+                    plot.set(yscale="linear")
+                #plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
 
-                my_dashes = self.linestyles[0:len(data_to_plot.columns) - 1]
-
-                columns_without_base = [column for column in data_to_plot.columns if column != self.base_name]
-                if not (len(data_to_plot) == 0 or len(data_to_plot.columns) == 0):
-                    if self.base_name in self.options.test_names:
-                        sns.lineplot(data=data_to_plot[self.base_name], palette=self.base_color, linewidth=self.base_width)
-                        plot = sns.lineplot(data=data_to_plot[columns_without_base], palette=custom_palette,
-                                            linewidth=self.other_width,
-                                            dashes=my_dashes)
-                    else:
-                        plot = sns.lineplot(data=data_to_plot, palette=custom_palette)
-                    plot.set(
-                        ylabel=f'Combined number of transition and places',
-                        xlabel='queries')
-                    try:
-                        plot.set(yscale="log")
-                    except:
-                        plot.set(yscale="linear")
-                    plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
-
-                    plt.savefig(
-                        self.graph_dir + f'{metric_name}\\largest_{keep_percentage * 100}%.svg',
-                        bbox_inches='tight', dpi=600, format="svg")
-                    plt.close()
+                plt.savefig(
+                    self.graph_dir + f'{metric_name}\\largest_{keep_percentage * 100}%.svg',
+                    bbox_inches='tight', dpi=600, format="svg")
+                plt.close()

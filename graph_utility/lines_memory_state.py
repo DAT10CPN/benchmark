@@ -2,7 +2,6 @@ import os
 
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 
 import utility
 from lines import Lines
@@ -14,7 +13,6 @@ class MemoryStateLines(Lines):
         self.name = 'memory-state lines'
         self.verification_memories = []
         self.state_space_sizes = []
-
 
     def prepare_data(self):
         for metric in ['state space size', 'verification memory']:
@@ -60,28 +58,16 @@ class MemoryStateLines(Lines):
                 else:
                     raise Exception("Something went wrong in lines memory state")
 
-                custom_palette = {}
-                for column_index, column in enumerate(data_to_plot.columns):
-                    custom_palette[column] = utility.color((column_index + 1) / len(data_to_plot.columns))
+                plot = self.create_lineplot(data_to_plot)
 
-                my_dashes = self.linestyles[0:len(data_to_plot.columns) - 1]
-                columns_without_base = [column for column in data_to_plot.columns if column != self.base_name]
-                if self.base_name in self.options.test_names:
-                    sns.lineplot(data=data_to_plot[self.base_name], palette=self.base_color, linewidth=self.base_width)
-                    sns.lineplot(data=data_to_plot[columns_without_base], palette=custom_palette,
-                                 linewidth=self.other_width,
-                                 dashes=my_dashes)
-
-                else:
-                    plot = sns.lineplot(data=data_to_plot, palette=custom_palette)
-                    plot.set(
-                        ylabel=f'{unit}',
-                        xlabel='queries')
-                    try:
-                        plot.set(yscale="log")
-                    except:
-                        plot.set(yscale="linear")
-                plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
+                plot.set(
+                    ylabel=f'{unit}',
+                    xlabel='queries')
+                try:
+                    plot.set(yscale="log")
+                except:
+                    plot.set(yscale="linear")
+                #plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
                 plt.title(f"top {percentage * 100}% largest {metric}")
                 plt.savefig(
                     self.graph_dir + f'{metric}\\top_{percentage * 100}%.svg',
