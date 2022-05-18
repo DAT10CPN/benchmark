@@ -67,7 +67,7 @@ class MemoryStateLines(Lines):
                 my_dashes = self.linestyles[0:len(data_to_plot.columns) - 1]
                 columns_without_base = [column for column in data_to_plot.columns if column != self.base_name]
                 if self.base_name in self.options.test_names:
-                    sns.lineplot(data=data_to_plot[self.base_name], palette=custom_palette, linewidth=self.base_width)
+                    sns.lineplot(data=data_to_plot[self.base_name], palette=self.base_color, linewidth=self.base_width)
                     sns.lineplot(data=data_to_plot[columns_without_base], palette=custom_palette,
                                  linewidth=self.other_width,
                                  dashes=my_dashes)
@@ -81,7 +81,7 @@ class MemoryStateLines(Lines):
                         plot.set(yscale="log")
                     except:
                         plot.set(yscale="linear")
-                    plt.legend(loc='upper left', borderaxespad=0)
+                plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
                 plt.title(f"top {percentage * 100}% largest {metric}")
                 plt.savefig(
                     self.graph_dir + f'{metric}\\top_{percentage * 100}%.svg',

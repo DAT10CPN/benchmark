@@ -1,5 +1,5 @@
 from graph import Graph
-
+import numpy as np
 
 class Lines(Graph):
     def __init__(self, options):
@@ -16,9 +16,10 @@ class Lines(Graph):
             [3, 5, 1, 5, 1, 5],
             [1, 1, 3, 1, 6, 1],
             [3, 1, 1, 1, 1, 1]]
+        self.base_color = {'orig': np.array([0, 0.1, 0.7])}
         self.base_width = 3
         self.other_width = 1.5
-        self.base_name = 'base'
+        self.base_name = 'orig'
         if self.options.enable_graphs == 1:
             self.cutoff_times = [0, 2.5]
             self.keep_percentages = [0.05, 0.25]

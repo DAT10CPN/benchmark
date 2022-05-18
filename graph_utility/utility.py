@@ -35,8 +35,10 @@ def color(t):
 def cpn_get_total_time(row):
     return row['colored reduce time'] + row['unfold time'] + row['reduce time'] + row['verification time']
 
+
 def pt_get_total_time(row):
     return row['reduce time'] + row['verification time']
+
 
 def get_unfolded_size(row):
     return row['unfolded place count'] + row['unfolded transition count']
@@ -143,3 +145,17 @@ def pt_infer_errors(df):
     df = phase_3_errors(df)
     df = phase_4_errors(df)
     return df
+
+
+def get_col_names(columns):
+    col_names = [col for col in columns]
+    if not ('orig' in col_names):
+        return col_names
+
+    index_of_orig = col_names.index('orig')
+    if index_of_orig != 0:
+        col_at_index_0 = col_names[0]
+        col_names[0] = 'orig'
+        col_names[index_of_orig] = col_at_index_0
+
+    return col_names
