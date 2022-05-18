@@ -20,6 +20,7 @@ class Gui:
         self.max_test_in_column = 11
         self.unique_results = 0
         self.petri_net_type = ""
+        self.inhib = "Normal"
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -36,8 +37,11 @@ class Gui:
         # self.set_geometry(root, 250, 250)
 
         def set_and_continue():
-            self.category = category_var.get()
             self.folder = folder_var.get()
+            self.category = category_var.get()
+            self.inhib = inhib_var.get()
+            if (self.inhib == "Inhib"):
+                self.category = "inhib-" + self.category
             root.destroy()
 
         # Set all categories
@@ -63,8 +67,18 @@ class Gui:
                         bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1, column=1)
 
+        # Set inhib or normal
+        inhib_var = StringVar(root)
+        inhib_var.set("Normal")
+        Label(root, text="Inhib or normal:", bg=self.BACKGROUND,
+              fg=self.FOREGROUND).grid(row=0, column=2)
+        for index, category_name in enumerate(["Normal", "Inhib"]):
+            Radiobutton(root, text=category_name, value=category_name, variable=inhib_var, bg=self.BACKGROUND,
+                        fg=self.FOREGROUND).grid(row=index + 1, column=2)
+
         Button(root, text="Choose and continue", command=set_and_continue, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
             row=7, column=0)
+
         root.eval('tk::PlaceWindow . center')
         root.protocol("WM_DELETE_WINDOW", sys.exit)
         root.mainloop()
