@@ -46,7 +46,7 @@ fi
 if [ -z "$TEST_FOLDER" ] ; then
 	echo "No TEST_FOLDER given, using MCC2021-COL"
 	TEST_FOLDER="MCC2021"
-elif [ "$TEST_FOLDER" != "MCC2021-COL" ] && [ "$TEST_FOLDER" != "MCC2021-COL-PnmlTest" ]; then
+elif [ "$TEST_FOLDER" != "MCC2021-COL" ] && [ "$TEST_FOLDER" != "MCC2021-COL-PnmlTest" ] && [ "$TEST_FOLDER" != "MCC2021-COL-inhib" ]; then
 	echo "Err: TEST_FOLDER must be 'MCC2021-COL' or 'MCC2021-COL-PnmlTest'. It is '$TEST_FOLDER'"
 	exit 0
 fi
