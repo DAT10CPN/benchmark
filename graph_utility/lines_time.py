@@ -4,7 +4,6 @@ from dataclasses import dataclass
 
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 
 import utility
 from lines import Lines
@@ -88,28 +87,11 @@ class TimeLines(Lines):
                 self.times[metric.line_metric_name][cutoff_time] = combined_df
 
     def plot(self):
-        sns.set_theme(style="darkgrid")
         for cutoff_time in self.cutoff_times:
             for metric in self.time_metrics:
                 data_to_plot = self.times[metric.line_metric_name][cutoff_time]
 
-                if len(data_to_plot) == 0 or len(data_to_plot.columns) == 0:
-                    continue
-
-                custom_palette = {}
-                for column_index, column in enumerate(data_to_plot.columns):
-                    custom_palette[column] = utility.color((column_index + 1) / len(data_to_plot.columns))
-
-                my_dashes = self.linestyles[0:len(data_to_plot.columns) - 1]
-
-                columns_without_base = [column for column in data_to_plot.columns if column != self.base_name]
-                if self.base_name in self.options.test_names:
-                    sns.lineplot(data=data_to_plot[self.base_name], palette=custom_palette, linewidth=self.base_width)
-                    plot = sns.lineplot(data=data_to_plot[columns_without_base], palette=custom_palette,
-                                        linewidth=self.other_width,
-                                        dashes=my_dashes)
-                else:
-                    plot = sns.lineplot(data=data_to_plot, palette=custom_palette)
+                plot = self.create_lineplot(data_to_plot)
                 plot.set(
                     ylabel='seconds',
                     xlabel='queries')
@@ -118,7 +100,7 @@ class TimeLines(Lines):
                 except:
                     plot.set(yscale="linear")
                 plt.title(f'{metric.line_metric_name} over {cutoff_time} seconds')
-                plt.legend(loc='upper left', borderaxespad=0)
+                #plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
 
                 plt.savefig(
                     self.graph_dir + f'{metric.line_metric_name}\\above_{cutoff_time}_seconds.svg',
