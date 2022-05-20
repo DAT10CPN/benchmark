@@ -21,6 +21,8 @@ class Gui:
         self.unique_results = 0
         self.petri_net_type = ""
         self.inhib = "Normal"
+        self.search_strategy = "BFS"
+        self.all_options = False
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -209,7 +211,9 @@ class Gui:
             enable_graphs=self.enable_graphs,
             debug=bool(self.debug),
             unique_results=bool(self.unique_results),
-            petri_net_type=self.petri_net_type
+            petri_net_type=self.petri_net_type,
+            all_options=False,
+            search_strategy=self.search_strategy
         )
 
         if self.enable_graphs == 0:
@@ -228,17 +232,25 @@ class Gui:
         if len(options.results_to_plot) == 1 and (options.do_consistency_check or options.unique_results):
             raise Exception('You must choose at least two results to do consistency/unique results')
 
-        print("----------Options----------")
-        print(f"Selected folder: {options.folder}")
-        print(f"Selected category: {options.category}")
-        print(f"Selected tests: {options.test_names}")
-        print(f"Doing consistency check: {options.do_consistency_check}")
-        print(f"Comparing experiments to find unique results: {options.unique_results}")
-        print(f"Doing debug graph and errors: {options.debug}")
-        print(f"Creating graphs: {options.enable_graphs > 0}")
-        if self.enable_graphs == 1:
-            print(f"\tDoing quick graphs")
-        elif self.enable_graphs == 2:
-            print(f"\tDoing all graphs")
+        if self.all_options:
+            print("Doing fucking everything")
+        else:
+            print("---------------Options---------------")
+            print("-------Chosen tests-------")
+            print(f"Folder: {options.folder}")
+            print(f"Category: {options.category}")
+            print(f"Tests: {options.test_names}")
+            print(f"Search strategy: {options.search_strategy}")
+            print(f"Type of net: {options.petri_net_type}")
 
-        return options
+            print("-------Running-------")
+            print(f"Doing consistency check: {options.do_consistency_check}")
+            print(f"Comparing experiments to find unique results: {options.unique_results}")
+            print(f"Doing debug graph and errors: {options.debug}")
+            print(f"Creating graphs: {options.enable_graphs > 0}")
+            if self.enable_graphs == 1:
+                print(f"\tDoing quick graphs")
+            elif self.enable_graphs == 2:
+                print(f"\tDoing all graphs")
+
+        return [options]

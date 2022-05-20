@@ -21,7 +21,8 @@ class Options:
     debug: bool
     unique_results: bool
     petri_net_type: str
-
+    all_options: bool
+    search_strategy: str
 
 def color(t):
     a = np.array([0.5, 0.5, 0.5])
