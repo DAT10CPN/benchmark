@@ -22,7 +22,7 @@ class Lines(Graph):
             [3, 1, 1, 1, 1, 1]]
         self.base_width = 2.25
         self.other_width = 1.5
-        self.base_name = 'orig'
+        self.base_name = self.options.base_name
         self.base_color = np.array([0.1, 0.1, 0.1])
         if self.options.enable_graphs == 1:
             self.cutoff_times = [0, 2.5]
@@ -31,7 +31,7 @@ class Lines(Graph):
             self.cutoff_times = [0, 0.5, 1, 2.5, 5, 10, 20, 30, 60]
             self.keep_percentages = [0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1]
 
-    def create_lineplot(self, data_to_plot):
+    def create_lineplot_highlight_orig(self, data_to_plot):
         custom_palette = {}
         for column_index, column in enumerate(data_to_plot.columns):
             if (column == self.base_name):
@@ -48,5 +48,13 @@ class Lines(Graph):
                                 dashes=my_dashes)
         else:
             plot = sns.lineplot(data=data_to_plot, palette=custom_palette)
+
+        return plot
+
+    def create_lineplot(self, data_to_plot):
+        custom_palette = {}
+        for column_index, column in enumerate(data_to_plot.columns):
+            custom_palette[column] = utility.color((column_index + 1) / len(data_to_plot.columns))
+        plot = sns.lineplot(data=data_to_plot, palette=custom_palette)
 
         return plot

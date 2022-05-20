@@ -58,7 +58,7 @@ class MemoryStateLines(Lines):
                 else:
                     raise Exception("Something went wrong in lines memory state")
 
-                plot = self.create_lineplot(data_to_plot)
+                plot = self.create_lineplot_highlight_orig(data_to_plot)
 
                 plot.set(
                     ylabel=f'{unit}',

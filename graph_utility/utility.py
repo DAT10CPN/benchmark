@@ -23,6 +23,18 @@ class Options:
     petri_net_type: str
     all_options: bool
     search_strategy: str
+    base_name: str
+
+
+def combined_pd(read_results, test_names):
+    copy_results = copy.deepcopy(read_results)
+    for i, csv in enumerate(copy_results):
+        csv.set_index(["model name", "query index"], inplace=True)
+        csv.rename(columns={col: f"{test_names[i]}@{col}" for col in csv.columns}, inplace=True)
+    everything = pd.concat(copy_results, axis=1)
+    everything.sort_index(level=0, inplace=True)
+    return everything
+
 
 def color(t):
     a = np.array([0.5, 0.5, 0.5])
