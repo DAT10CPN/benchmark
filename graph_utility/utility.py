@@ -61,7 +61,8 @@ def sanitise_df_list(options):
         df['test name'] = options.test_names[index]
     sanitised_list = []
     for index, df in enumerate(result_list):
-        print(f"{(index + 1) / len(result_list) * 100:.2f}%")
+        if not options.all_options:
+            print(f"{(index + 1) / len(result_list) * 100:.2f}%")
         if options.petri_net_type == 'CPN':
             sanitised_list.append(cpn_infer_errors(df))
         elif options.petri_net_type == 'PT':

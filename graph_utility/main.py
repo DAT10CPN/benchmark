@@ -55,6 +55,8 @@ if __name__ == "__main__":
         print(f"Creating graphs for multiple directories: {len(options_list)}")
 
     for index, options in enumerate(options_list):
+        if len(options.results_to_plot) == 0:
+            continue
         if options.all_options:
             print(f"Starting work on: {index}/{len(options_list)}")
 

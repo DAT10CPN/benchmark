@@ -24,6 +24,10 @@ class Gui:
         self.search_strategy = ""
         self.all_options = False
         self.chosen_directory = ""
+        self.categories = ["ReachabilityCardinality", "ReachabilityFireability", "CTLCardinality", "CTLFireability",
+                           "LTLCardinality", "LTLFireability"]
+        self.types = ["Normal", "Inhib"]
+        self.search_strategies = ["HEUR", "DFS", "RDFS"]
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -51,11 +55,9 @@ class Gui:
 
         # Set all available directories to choose from
         folder_var = StringVar(root)
-        script_dir = os.path.dirname(__file__)
-        results_dir = os.path.join(script_dir, '..\\results\\')
         Label(root, text="Available test directories:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=0)
-        for index, test_folder in enumerate(glob.glob(results_dir + "/*/", recursive=False)):
+        for index, test_folder in enumerate(glob.glob(self.results_dir + "/*/", recursive=False)):
             test_folder_name = os.path.basename(os.path.normpath(test_folder))
             if index == 0:
                 folder_var.set(test_folder_name)
@@ -68,9 +70,7 @@ class Gui:
         category_var.set("ReachabilityCardinality")
         Label(root, text="Categories:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=1)
-        categories = ["ReachabilityCardinality", "ReachabilityFireability", "CTLCardinality", "CTLFireability",
-                      "LTLCardinality", "LTLFireability"]
-        for index, category_name in enumerate(categories):
+        for index, category_name in enumerate(self.categories):
             Radiobutton(root, text=category_name, value=category_name, variable=category_var, bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1, column=1)
 
@@ -79,7 +79,7 @@ class Gui:
         search_var.set("HEUR")
         Label(root, text="Search strategy:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=2)
-        for index, search_strategy_name in enumerate(["HEUR", "DFS", "RDFS"]):
+        for index, search_strategy_name in enumerate(self.search_strategies):
             Radiobutton(root, text=search_strategy_name, value=search_strategy_name, variable=search_var,
                         bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1, column=2)
@@ -89,16 +89,16 @@ class Gui:
         inhib_var.set("Normal")
         Label(root, text="Type:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=3)
-        for index, category_name in enumerate(["Normal", "Inhib"]):
+        for index, category_name in enumerate(self.types):
             Radiobutton(root, text=category_name, value=category_name, variable=inhib_var, bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1, column=3)
 
         Button(root, text="Absolutely everything", command=absolutely_everything, bg=self.BACKGROUND,
                fg=self.FOREGROUND).grid(
-            row=len(categories) + 1, column=0)
+            row=len(self.categories) + 1, column=0)
 
         Button(root, text="Choose and continue", command=set_and_continue, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
-            row=len(categories) + 1, column=3)
+            row=len(self.categories) + 1, column=3)
 
         root.eval('tk::PlaceWindow . center')
         root.protocol("WM_DELETE_WINDOW", sys.exit)
@@ -109,10 +109,12 @@ class Gui:
         root.configure(bg=self.BACKGROUND)
         root.title(f'{self.chosen_directory}')
 
-        all_csv_files_in_category_in_chosen_directory = [(filename.split(self.chosen_directory)[1]).replace('\\', '') for filename in
-                                                  [filename for filename in
-                                                   glob.glob(
-                                                       os.path.join(self.results_dir + self.chosen_directory, "*.csv"))]]
+        all_csv_files_in_category_in_chosen_directory = [(filename.split(self.chosen_directory)[1]).replace('\\', '')
+                                                         for filename in
+                                                         [filename for filename in
+                                                          glob.glob(
+                                                              os.path.join(self.results_dir + self.chosen_directory,
+                                                                           "*.csv"))]]
 
         if len(all_csv_files_in_category_in_chosen_directory) == 0:
             raise Exception(f"There are no results in selected directory: {self.chosen_directory}")
@@ -203,7 +205,6 @@ class Gui:
         if (enable_graphs.get() > 0) and (len(self.results) == 0):
             raise Exception('You did not choose any tests')
 
-        print(self.folder)
         if "CPN" in self.folder:
             self.petri_net_type = "CPN"
         elif "PT" in self.folder:
@@ -211,9 +212,54 @@ class Gui:
         else:
             raise Exception('Could not figure out if we have results from a CPN or PT. Check directory name')
 
+    def create_single_option(self, folder_path, category, search_strategy, type):
+        if "CPN" in folder_path:
+            petri_net_type = "CPN"
+        elif "PT" in folder_path:
+            petri_net_type = "PT"
+        else:
+            raise Exception('Could not figure out if we have results from a CPN or PT. Check directory name')
+
+        chosen_directory = folder_path + category + "\\" + search_strategy + "\\" + type
+
+        results = [(filename.split(chosen_directory)[1]).replace('\\', '') for filename in
+                   [filename for filename in
+                    glob.glob(
+                        os.path.join(chosen_directory, "*.csv"))]]
+
+        folder_name = folder_path.split('results')[1].replace('\\', '')
+
+        options = Options(
+            result_dir=chosen_directory,
+            graph_dir=os.path.join(os.path.dirname(__file__), f"..\\graphs\\{folder_name}"),
+            results_to_plot=results,
+            category=category,
+            folder=folder_path,
+            test_names=[os.path.split(os.path.splitext(csv)[0])[1] for csv in results],
+            chosen_graphs=['answers', 'rules', 'memory-state lines', 'time lines', 'size lines'],
+            read_results=[],
+            do_consistency_check=True,
+            enable_graphs=True,
+            debug=False,
+            unique_results=True,
+            petri_net_type=petri_net_type,
+            all_options=True,
+            search_strategy=search_strategy
+        )
+
+        return options
+
     def create_all_options(self):
-        # Todo
-        return []
+        all_options = []
+        folders = [path for path in glob.glob(f'{self.results_dir}/*/')]
+        for folder in folders:
+            for category in self.categories:
+                for search_strategy in self.search_strategies:
+                    for type in self.types:
+                        option = self.create_single_option(folder, category, search_strategy, type)
+                        all_options.append(option)
+
+        return all_options
 
     def get_options(self):
         self.choose_directory_category_search_type()
@@ -276,4 +322,4 @@ class Gui:
             return [options]
         else:
             print("Doing absolutely everything")
-            return create_all_options()
+            return self.create_all_options()
