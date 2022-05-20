@@ -239,7 +239,7 @@ class Gui:
             chosen_graphs=['answers', 'rules', 'memory-state lines', 'time lines', 'size lines'],
             read_results=[],
             do_consistency_check=True,
-            enable_graphs=True,
+            enable_graphs=2,
             debug=False,
             unique_results=True,
             petri_net_type=petri_net_type,
