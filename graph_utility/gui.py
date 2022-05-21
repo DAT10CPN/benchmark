@@ -28,6 +28,8 @@ class Gui:
                            "LTLCardinality", "LTLFireability"]
         self.types = ["Normal", "Inhib"]
         self.search_strategies = ["HEUR", "DFS", "RDFS"]
+        self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
+                            'ratios']
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -236,7 +238,7 @@ class Gui:
             category=category,
             folder=folder_path,
             test_names=[os.path.split(os.path.splitext(csv)[0])[1] for csv in results],
-            chosen_graphs=['answers', 'rules', 'memory-state lines', 'time lines', 'size lines'],
+            chosen_graphs=self.graph_names,
             read_results=[],
             do_consistency_check=True,
             enable_graphs=2,
@@ -244,7 +246,8 @@ class Gui:
             unique_results=True,
             petri_net_type=petri_net_type,
             all_options=True,
-            search_strategy=search_strategy
+            search_strategy=search_strategy,
+            base_name='orig'
         )
 
         return options
@@ -273,7 +276,7 @@ class Gui:
                 category=self.category,
                 folder=self.folder,
                 test_names=[os.path.split(os.path.splitext(csv)[0])[1] for csv in self.results],
-                chosen_graphs=['answers', 'rules', 'memory-state lines', 'time lines', 'size lines'],
+                chosen_graphs=self.graph_names,
                 read_results=[],
                 do_consistency_check=bool(self.do_consistency_check),
                 enable_graphs=self.enable_graphs,
@@ -281,7 +284,8 @@ class Gui:
                 unique_results=bool(self.unique_results),
                 petri_net_type=self.petri_net_type,
                 all_options=False,
-                search_strategy=self.search_strategy
+                search_strategy=self.search_strategy,
+                base_name='orig'
             )
 
             if self.enable_graphs == 0:

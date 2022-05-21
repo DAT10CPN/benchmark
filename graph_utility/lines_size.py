@@ -94,7 +94,7 @@ class SizeLines(Lines):
 
                 data_to_plot = self.computed_sizes[metric_name][keep_percentage]
 
-                plot = self.create_lineplot(data_to_plot)
+                plot = self.create_lineplot_highlight_orig(data_to_plot)
                 plot.set(
                     ylabel=f'Combined number of transition and places',
                     xlabel='queries')

@@ -91,7 +91,7 @@ class TimeLines(Lines):
             for metric in self.time_metrics:
                 data_to_plot = self.times[metric.line_metric_name][cutoff_time]
 
-                plot = self.create_lineplot(data_to_plot)
+                plot = self.create_lineplot_highlight_orig(data_to_plot)
                 plot.set(
                     ylabel='seconds',
                     xlabel='queries')

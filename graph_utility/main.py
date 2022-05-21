@@ -9,6 +9,7 @@ from graph_utility.debug import DebugGraph
 from graph_utility.lines_memory_state import MemoryStateLines
 from graph_utility.lines_size import SizeLines
 from graph_utility.lines_time import TimeLines
+from graph_utility.ratios import VerificationTimeRatio
 from graph_utility.rules import RuleUsage
 from gui import Gui
 from unique_results import find_unique_results
@@ -28,7 +29,8 @@ def plot_graphs(options):
         MemoryStateLines(options),
         TimeLines(options),
         SizeLines(options),
-        DebugGraph(options)
+        DebugGraph(options),
+        VerificationTimeRatio(options)
     ]
 
     if not options.all_options:
