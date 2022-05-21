@@ -29,7 +29,7 @@ class Gui:
         self.types = ["Normal", "Inhib"]
         self.search_strategies = ["HEUR", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
-                            'verification_time_ratio']
+                            'ratios']
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
