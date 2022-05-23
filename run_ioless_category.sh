@@ -143,8 +143,8 @@ for C in "${CATEGORY[@]}" ; do
         NAME="${SEQ%/*}"
         OPTIONS="${SEQ#*/}"
 
-        echo "Starting: sbatch ./run_ioless_pipeline.sh $NAME $BIN $OPTIONS $TF $C $PARTITION $SS $COL_RED_TIME_OUT $RED_TIME_OUT $COMB_TIME_OUT $EXPL_TIME_OUT"
-        sbatch ./run_ioless_pipeline.sh $NAME $BIN $OPTIONS $TF $C $PARTITION $SS $COL_RED_TIME_OUT $RED_TIME_OUT $COMB_TIME_OUT $EXPL_TIME_OUT
+        echo "Starting: sbatch ./run_ioless_pipeline.sh $NAME $BIN '$OPTIONS' $TF $C $PARTITION $SS $COL_RED_TIME_OUT $RED_TIME_OUT $COMB_TIME_OUT $EXPL_TIME_OUT"
+        sbatch ./run_ioless_pipeline.sh $NAME $BIN "$OPTIONS" $TF $C $PARTITION $SS $COL_RED_TIME_OUT $RED_TIME_OUT $COMB_TIME_OUT $EXPL_TIME_OUT
       done
     done
   done
