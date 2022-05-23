@@ -27,7 +27,7 @@ class Gui:
         self.categories = ["ReachabilityCardinality", "ReachabilityFireability", "CTLCardinality", "CTLFireability",
                            "LTLCardinality", "LTLFireability"]
         self.types = ["Normal", "Inhib"]
-        self.search_strategies = ["HEUR", "DFS", "RDFS"]
+        self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
                             'ratios']
 
@@ -78,7 +78,7 @@ class Gui:
 
         # Set Search strategy
         search_var = StringVar(root)
-        search_var.set("HEUR")
+        search_var.set("BestFS")
         Label(root, text="Search strategy:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=2)
         for index, search_strategy_name in enumerate(self.search_strategies):
