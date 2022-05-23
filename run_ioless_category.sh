@@ -35,7 +35,7 @@ fi
 if [ "$SEQUENCE" = "ALL" ] ; then
   SEQUENCE=("orig/-R 0" "I/-R 2 0" "S/-R 2 1" "D/-R 2 2" "C/-R 2 3" "E/-R 2 4" "F/-R 2 5" "Q/-R 2 6" "ISDCEFQ/-R 2 0,1,2,3,4,5,6")
 fi
-for SEQ in ${SEQUENCE[@]} ; do
+for SEQ in "${SEQUENCE[@]}" ; do
   OPTIONS="${SEQ#*/}"
 
   if [ -z "$OPTIONS" ] ; then
@@ -126,7 +126,7 @@ patReach="^Reachability"
 patLTL="^LTL"
 patCTL="^CTL"
 
-for C in ${CATEGORY[@]} ; do
+for C in "${CATEGORY[@]}" ; do
 
   PARTITION="naples"
   if [[ "$C" =~ $patReach ]] ; then
@@ -137,9 +137,9 @@ for C in ${CATEGORY[@]} ; do
     PARTITION="rome"
   fi
 
-  for TF in ${TEST_FOLDER[@]} ; do
-    for SS in ${SEARCH_STRAT[@]} ; do
-      for SEQ in ${SEQUENCE[@]} ; do
+  for TF in "${TEST_FOLDER[@]}" ; do
+    for SS in "${SEARCH_STRAT[@]}" ; do
+      for SEQ in "${SEQUENCE[@]}" ; do
         NAME="${SEQ%/*}"
         OPTIONS="${SEQ#*/}"
 
