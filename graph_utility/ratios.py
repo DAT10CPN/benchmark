@@ -26,6 +26,11 @@ class VerificationTimeRatio(Lines):
         os.makedirs(self.graph_dir + "csvs")
         os.makedirs(self.graph_dir + "figs")
 
+        for test_name in self.options.test_names:
+            if test_name == self.options.base_name:
+                continue
+            os.makedirs(self.graph_dir + f"\\csvs\\{test_name}")
+
         combined = utility.combined_pd(self.data_list, self.options.test_names)
         rule_columns = [col for col in combined.columns if 'rule' in col]
         combined.drop(columns=rule_columns, inplace=True)
@@ -46,7 +51,8 @@ class VerificationTimeRatio(Lines):
                                          np.nan), np.nan)
                 combined[f"{current_test_name}@{metric} ratio"] = temp
                 curr = combined[f"{current_test_name}@{metric} ratio"].sort_values(ascending=False)
-                curr.to_csv(self.graph_dir + f"csvs\\{current_test_name}@{metric} ratio sorted.csv")
+
+                curr.to_csv(self.graph_dir + f"csvs\\{current_test_name}\\{metric} ratio sorted.csv")
         columns_to_drop = [col for col in combined.columns if 'ratio' not in col]
         combined.drop(columns=columns_to_drop, inplace=True)
         self.plot_ready = combined
