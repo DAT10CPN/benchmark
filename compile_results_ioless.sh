@@ -12,7 +12,7 @@
 
 OUT_DIR=$1
 
-if [ -z "$DIR" ] ; then
+if [ -z "$OUT_DIR" ] ; then
 	echo "Missing out directory"
 	exit
 fi
