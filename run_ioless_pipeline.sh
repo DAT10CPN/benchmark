@@ -50,6 +50,10 @@ elif [ "$TEST_FOLDER" != "MCC2021-COL" ] && [ "$TEST_FOLDER" != "MCC2021-COL-Pnm
 	echo "Err: TEST_FOLDER must be 'MCC2021-COL' or 'MCC2021-COL-PnmlTest'. It is '$TEST_FOLDER'"
 	exit 0
 fi
+PETRI_TYPE="Normal"
+if [ "$TEST_FOLDER" = "MCC2021-COL-inhib" ] ; then
+  PETRI_TYPE="Inhib"
+fi
 
 if [ -z "$CATEGORY" ] ; then
 	echo "No CATEGORY given, using ReachabilityCardinality"
@@ -121,7 +125,7 @@ fi
 
 chmod u+x "$BIN"
 
-DIR="output/$(basename $BIN)/CPN-$COL_RED_TIME_OUT-$RED_TIME_OUT-$COMB_TIME_OUT-$EXPL_TIME_OUT/$CATEGORY/$SEARCH_STRAT/$NAME"
+DIR="output/$(basename $BIN)/CPN-$COL_RED_TIME_OUT-$RED_TIME_OUT-$COMB_TIME_OUT-$EXPL_TIME_OUT/$CATEGORY/$SEARCH_STRAT/$PETRI_TYPE/$NAME"
 rm -rf $DIR
 mkdir -p $DIR
 
