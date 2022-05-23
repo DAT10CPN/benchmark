@@ -1,6 +1,7 @@
 .idea/
 binaries/
 output/
+csvs/
 snippets/results.csv
 MCC2021
 mcc2021_inhib
