@@ -26,7 +26,7 @@ class Gui:
         self.chosen_directory = ""
         self.categories = ["ReachabilityCardinality", "ReachabilityFireability", "CTLCardinality", "CTLFireability",
                            "LTLCardinality", "LTLFireability"]
-        self.types = ["Normal", "Inhib"]
+        self.model_folder = ["MCC-2021", "MCC-2021-Inhib"]
         self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
                             'ratios']
@@ -89,9 +89,9 @@ class Gui:
         # Set inhib or normal
         inhib_var = StringVar(root)
         inhib_var.set("Normal")
-        Label(root, text="Type:", bg=self.BACKGROUND,
+        Label(root, text="Model Folder:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=3)
-        for index, category_name in enumerate(self.types):
+        for index, category_name in enumerate(self.model_folder):
             Radiobutton(root, text=category_name, value=category_name, variable=inhib_var, bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1, column=3)
 
@@ -258,7 +258,7 @@ class Gui:
         for folder in folders:
             for category in self.categories:
                 for search_strategy in self.search_strategies:
-                    for type in self.types:
+                    for type in self.model_folder:
                         option = self.create_single_option(folder, category, search_strategy, type)
                         all_options.append(option)
 
