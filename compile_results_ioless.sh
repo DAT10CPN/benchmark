@@ -43,14 +43,14 @@ echo "" >> $CSV
 for MODEL in $(ls $TEST_FOLDER) ; do
 	for Q in $(seq 1 16) ; do
 
-		echo "Collecting from $DIR/$MODEL.$Q"
+		echo "Collecting from $OUT_DIR/$MODEL.$Q"
 
 		ENTRY=""
 
 		# ----- Files and meta vars -------
 
-		RES_FILE="$DIR/$MODEL.$Q.out"
-		SIZE_FILE="$DIR/$MODEL.$Q.size"
+		RES_FILE="$OUT_DIR/$MODEL.$Q.out"
+		SIZE_FILE="$OUT_DIR/$MODEL.$Q.size"
 
 		# Get stdout of model, filter out transition and place-bound statistics, and replace new lines such that regex will work
 		IN=$([[ -f $RES_FILE ]] && cat "$RES_FILE" | grep -v "^<"  | grep -v "^Query before" | grep -v "^Query after" | tr '\n' '\r' || echo "")
