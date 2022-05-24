@@ -18,13 +18,14 @@ if [ -z "$OUT_DIR" ] ; then
 fi
 
 CSV="csvs/${OUT_DIR#*/}.csv"
+TEST_FOLDER="$(basename "$(dirname "$CSV")")"
 
 # ***** Setup CSV *****
 
 COL_RULE_NAMES=("Relevance" "AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces" "DeadTransitions" "RedundantPlaces" "PreemptiveFiring") # MUST MATCH NAMES AND ORDER IN VERIFYPN
 NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S")
 
-mkdir -p $(dirname $CSV)
+mkdir -p "$(dirname $CSV)"
 rm -f $CSV
 
 # Write header
