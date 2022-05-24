@@ -6,62 +6,52 @@
 #SBATCH --mem=15G
 #SBATCH -c 4
 
-# Args: <test-name> <binary> <test-folder>
+# Args: <out-dir>
 # This is the last step of `run_pipeline.sh`, but can also be run manually.
-# This script will collect the data from all the raw output and size files belonging to the given test into a single `<binary>/<binary>/<test-name>.csv`.
+# This script will collect the data from all the raw output and size files belonging to the given test into a single csv.
+# The <out-dir> should be the name of the folder where the raw output is store, but it may NOT end with a /
 
-NAME=$1
-BIN=$(basename $2)
-TEST_FOLDER=$3
+OUT_DIR=$1
 
-if [ -z "$NAME" ] ; then
-	echo "Missing benchmark name"
+if [ -z "$OUT_DIR" ] ; then
+	echo "Missing out directory"
 	exit
 fi
 
-if [ -z "$BIN" ] ; then
-	echo "Missing binary"
-	exit
-fi
-
-if [ -z "$TEST_FOLDER" ] ; then
-	echo "Missing test folder"
-	exit
-fi
-
-DIR="output/$BIN/$NAME"
-OUT="output/$BIN/$NAME.csv"
+CSV="csvs/${OUT_DIR#*/}.csv"
+TEST_FOLDER="$(basename "$(dirname "$CSV")")"
 
 # ***** Setup CSV *****
 
 COL_RULE_NAMES=("Relevance" "AtomicPreAgglomeration" "ParallelTransitions" "ParallelPlaces" "DeadTransitions" "RedundantPlaces" "PreemptiveFiring") # MUST MATCH NAMES AND ORDER IN VERIFYPN
 NORMAL_RULE_NAMES=("A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S")
 
-rm -f $OUT
+mkdir -p "$(dirname $CSV)"
+rm -f $CSV
 
 # Write header
-echo -n "model name,query index,answer,crash,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,colored reduce place count,colored reduce transition count,unfolded place count,unfolded transition count,reduced place count,reduced transition count" >> $OUT
+echo -n "model name,query index,answer,crash,colored reduce time,unfold time,reduce time,verification time,verification memory,solved by query simplification,state space size,original place count,original transition count,colored reduce place count,colored reduce transition count,unfolded place count,unfolded transition count,reduced place count,reduced transition count" >> $CSV
 for i in ${!NORMAL_RULE_NAMES[@]} ; do
-	echo -n ",rule ${NORMAL_RULE_NAMES[$i]}" >> $OUT
+	echo -n ",rule ${NORMAL_RULE_NAMES[$i]}" >> $CSV
 done
 for i in ${!COL_RULE_NAMES[@]} ; do
-	echo -n ",rule $i" >> $OUT
+	echo -n ",rule $i" >> $CSV
 done
-echo "" >> $OUT
+echo "" >> $CSV
 
 # ***** Analysis *****
 
 for MODEL in $(ls $TEST_FOLDER) ; do
 	for Q in $(seq 1 16) ; do
 
-		echo "Collecting from $DIR/$MODEL.$Q"
+		echo "Collecting from $OUT_DIR/$MODEL.$Q"
 
 		ENTRY=""
 
 		# ----- Files and meta vars -------
 
-		RES_FILE="$DIR/$MODEL.$Q.out"
-		SIZE_FILE="$DIR/$MODEL.$Q.size"
+		RES_FILE="$OUT_DIR/$MODEL.$Q.out"
+		SIZE_FILE="$OUT_DIR/$MODEL.$Q.size"
 
 		# Get stdout of model, filter out transition and place-bound statistics, and replace new lines such that regex will work
 		IN=$([[ -f $RES_FILE ]] && cat "$RES_FILE" | grep -v "^<"  | grep -v "^Query before" | grep -v "^Query after" | tr '\n' '\r' || echo "")
@@ -144,7 +134,7 @@ for MODEL in $(ls $TEST_FOLDER) ; do
 		done
 
 		# Add entry to CSV
-		echo $ENTRY >> $OUT
+		echo $ENTRY >> $CSV
 	done
 done
 

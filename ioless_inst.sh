@@ -5,7 +5,7 @@
 #SBATCH --mem=15G
 #SBATCH -c 1
 
-# Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <red-time-out> <comb-time-out> <expl-time-out> <bin-options>
+# Args: <test-name> <binary> <test-folder> <model> <category> <col-red-time-out> <red-time-out> <comb-time-out> <expl-time-out> <bin-options> <search-strat>
 
 echo "Arguments: $@"
 
@@ -19,6 +19,14 @@ RED_TIME_OUT=$7
 COMB_TIME_OUT=$8
 EXPL_TIME_OUT=$9
 OPTIONS="${10}"
+SEARCH_STRAT=${11}
+
+PETRI_TYPE="Normal"
+if [ "$TEST_FOLDER" = "MCC2021-COL-inhib" ] ; then
+  PETRI_TYPE="Inhib"
+fi
+
+OUT_DIR="output/$(basename $BIN)/CPN-$COL_RED_TIME_OUT-$RED_TIME_OUT-$COMB_TIME_OUT-$EXPL_TIME_OUT/$CATEGORY/$SEARCH_STRAT/$PETRI_TYPE/$NAME"
 
 SCRATCH="/scratch/$$/$NAME/$MODEL/$CATEGORY"
 mkdir -p $SCRATCH
@@ -42,8 +50,8 @@ for Q in $(seq 1 $NQ) ; do
 
 	echo "  Processing ..."
 
-	OUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.out"
-	CMD="./$BIN $OPTIONS -D $COL_RED_TIME_OUT -d $RED_TIME_OUT -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --write-reduced $RED_PNML"
+	OUT="$OUT_DIR/$MODEL.$Q.out"
+	CMD="./$BIN $OPTIONS -s $SEARCH_STRAT -D $COL_RED_TIME_OUT -d $RED_TIME_OUT -x $Q $LTLFLAG $TEST_FOLDER/$MODEL/model.pnml $TEST_FOLDER/$MODEL/$CATEGORY.xml --write-reduced $RED_PNML"
 
 	O=$(eval "/usr/bin/time -f '@@@%e,%M@@@' timeout ${COMB_TIME_OUT}m $CMD" 2>&1)
 	echo "$O" | grep -v "^<" | grep -v "^Query before" | grep -v "^Query after" > $OUT
@@ -56,8 +64,8 @@ for Q in $(seq 1 $NQ) ; do
 		echo "  Exploration ..."
 
 		ECMD="./$BIN -q 0 -r 0 $RED_PNML -e"
-		SOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.sout"
-		ZOUT="output/$(basename $BIN)/$NAME/$MODEL.$Q.size"
+		SOUT="$OUT_DIR/$MODEL.$Q.sout"
+		ZOUT="$OUT_DIR/$MODEL.$Q.size"
 
 		RES=$(eval "timeout ${EXPL_TIME_OUT}m $ECMD" 2>&1)
 		RES=$(echo $RES | grep -v "^<" | tr '\n' '\r')

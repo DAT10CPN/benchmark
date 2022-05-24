@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=cpu
 
-# Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [col-red-time-out] [red-time-out] [combined-time-out] [expl-time-out]
+# Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [search-strat] [col-red-time-out] [red-time-out] [combined-time-out] [expl-time-out]
 # Starts a number of slurm jobs each solving the queries of one model in the test folder.
 # Each of those jobs are then followed by another job running the reduced net too in order to determine the size of the state space.
 # When all jobs are done, the results are compiled into a single csv.
@@ -12,10 +12,11 @@ OPTIONS=$3
 TEST_FOLDER=$4
 CATEGORY=$5
 PARTITION=$6
-COL_RED_TIME_OUT=$7
-RED_TIME_OUT=$8
-COMB_TIME_OUT=$9
-EXPL_TIME_OUT=${10}
+SEARCH_STRAT=$7
+COL_RED_TIME_OUT=$8
+RED_TIME_OUT=$9
+COMB_TIME_OUT=${10}
+EXPL_TIME_OUT=${11}
 
 if [ -z "$NAME" ] ; then
 	echo "Missing benchmark name"
@@ -76,6 +77,14 @@ elif [ "$PARTITION" != "naples" ] && [ "$PARTITION" != "rome" ] && [ "$PARTITION
 	exit 0
 fi
 
+if [ -z "$SEARCH_STRAT" ] ; then
+	echo "No SEARCH_STRAT given, using BestFS"
+	SEARCH_STRAT="BestFS"
+elif [ "$SEARCH_STRAT" != "BestFS" ] && [ "$SEARCH_STRAT" != "BFS" ] && [ "$SEARCH_STRAT" != "DFS" ] && [ "$SEARCH_STRAT" != "RDFS" ] && [ "$SEARCH_STRAT" != "OverApprox" ] ; then
+	echo "Err: SEARCH_STRAT must be BestFS, BFS, DFS, RDFS, or OverApprox. It is '$SEARCH_STRAT'"
+	exit 0
+fi
+
 pat="^[0-9]+$"
 
 if [ -z "$COL_RED_TIME_OUT" ] ; then
@@ -112,16 +121,16 @@ fi
 
 chmod u+x "$BIN"
 
-DIR="output/$(basename $BIN)/$NAME"
+DIR="output/$(basename $BIN)/CPN-$COL_RED_TIME_OUT-$RED_TIME_OUT-$COMB_TIME_OUT-$EXPL_TIME_OUT/$CATEGORY/$SEARCH_STRAT/$TEST_FOLDER/$NAME"
 rm -rf $DIR
 mkdir -p $DIR
 
 for MODEL in $(ls $TEST_FOLDER) ; do
 	# Process model
 
-	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./ioless_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $RED_TIME_OUT $COMB_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" | sed 's/Submitted batch job //')
+	JOB_ID=$(sbatch --mail-user=$(whoami) --job-name=$NAME --partition=$PARTITION --exclude=${PARTITION}01 ./ioless_inst.sh $NAME $BIN $TEST_FOLDER $MODEL $CATEGORY $COL_RED_TIME_OUT $RED_TIME_OUT $COMB_TIME_OUT $EXPL_TIME_OUT "$OPTIONS" $SEARCH_STRAT | sed 's/Submitted batch job //')
 	echo "Submitted batch job $JOB_ID for $MODEL"
 
 done
 
-sbatch --partition=cpu --mail-type=FAIL --mail-user=$(whoami) --job-name=$NAME --dependency=singleton ./compile_results_ioless.sh $NAME $BIN $TEST_FOLDER
+sbatch --partition=cpu --mail-type=FAIL --mail-user=$(whoami) --job-name=$NAME --dependency=singleton ./compile_results_ioless.sh $DIR
