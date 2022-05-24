@@ -120,6 +120,7 @@ class AnswerSimplificationBars(Graph):
             simple_graph_data = {'answers': num_answered, 'not answered': num_test_cases - num_answered}
             simple_temp = pd.DataFrame(data=simple_graph_data, index=[self.options.test_names[index]])
             simple_combined = simple_combined.append(simple_temp)
+
         self.transformed_data = [
             Answers(
                 graph_name='answers_splits',
@@ -133,9 +134,18 @@ class AnswerSimplificationBars(Graph):
 
     def plot(self):
         os.makedirs(self.graph_dir)
+
         # Plot the plot
         sns.set_theme(style="darkgrid", palette="pastel")
         for answers in self.transformed_data:
+
+            if answers.graph_name == 'answers_simple':
+                answers_df = pd.DataFrame({'answers': answers.transformed_data['answers']})
+                answers_df = answers_df.T.set_index(pd.Index([self.options.category]))
+                latex = answers_df.to_latex(index=True)
+                with open(self.graph_dir + "\\answers.tex", mode='w') as file:
+                    file.write(latex)
+
             plot = answers.transformed_data.plot(kind='barh', width=0.75, linewidth=2, figsize=(10, 10), stacked=True)
 
             plt.legend(bbox_to_anchor=(0.35, 1.12), loc='upper left', borderaxespad=0)
