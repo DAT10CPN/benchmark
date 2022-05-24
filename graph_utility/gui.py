@@ -26,7 +26,7 @@ class Gui:
         self.chosen_directory = ""
         self.categories = ["ReachabilityCardinality", "ReachabilityFireability", "CTLCardinality", "CTLFireability",
                            "LTLCardinality", "LTLFireability"]
-        self.model_folder = ["MCC-2021", "MCC-2021-Inhib"]
+        self.model_folder = ["MCC2021-COL", "MCC2021-COL-inhib"]
         self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
                             'ratios']
@@ -88,7 +88,7 @@ class Gui:
 
         # Set inhib or normal
         inhib_var = StringVar(root)
-        inhib_var.set("MCC-2021")
+        inhib_var.set("MCC2021-COL")
         Label(root, text="Model Folder:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=3)
         for index, category_name in enumerate(self.model_folder):

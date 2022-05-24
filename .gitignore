@@ -4,15 +4,12 @@ output/
 csvs/
 snippets/results.csv
 MCC2021
-mcc2021_inhib
 MCC2021_inhib
-MCC2021-COL
+/MCC2021-COL/
+/MCC2021-COL-inhib/
 temp
 slurm-*
 __pycache__
 graphs/
 sizes/*
 !sizes/query.xml
-consistency/
-RC_types/*
-results/everything/
