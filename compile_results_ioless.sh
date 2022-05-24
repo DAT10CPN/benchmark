@@ -8,7 +8,8 @@
 
 # Args: <out-dir>
 # This is the last step of `run_pipeline.sh`, but can also be run manually.
-# This script will collect the data from all the raw output and size files belonging to the given test into a single `<binary>/<binary>/<test-name>.csv`.
+# This script will collect the data from all the raw output and size files belonging to the given test into a single csv.
+# The <out-dir> should be the name of the folder where the raw output is store, but it may NOT end with a /
 
 OUT_DIR=$1
 
