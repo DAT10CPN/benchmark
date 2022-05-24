@@ -25,6 +25,23 @@ class Options:
     search_strategy: str
     base_name: str
 
+def add_total_time(data, petri_net_type, remove_nones):
+    print(data)
+    if remove_nones:
+        data_to_extract_total_time_from = data[data['answer'] != 'NONE']
+    else:
+        data_to_extract_total_time_from = data
+    res_df = copy.deepcopy(data_to_extract_total_time_from)
+    #print(res_df)
+    if petri_net_type == 'CPN':
+        res_df['total time'] = data_to_extract_total_time_from.apply(
+            cpn_get_total_time,
+            axis=1)
+    elif petri_net_type == 'PT':
+        res_df['total time'] = data_to_extract_total_time_from.apply(
+            pt_get_total_time,
+            axis=1)
+    return res_df
 
 def combined_pd(read_results, test_names):
     copy_results = copy.deepcopy(read_results)

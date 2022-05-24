@@ -18,7 +18,7 @@ class VerificationTimeRatio(Lines):
         self.name = 'ratios'
         self.plot_ready = pd.DataFrame()
         self.metrics_to_do_ratios = ['unfold time', 'reduce time', 'verification time',
-                                     'verification memory', 'state space size']
+                                     'verification memory', 'state space size', 'total time']
 
     def prepare_data(self):
         if not self.options.base_name in self.options.test_names:
@@ -34,15 +34,26 @@ class VerificationTimeRatio(Lines):
         combined = utility.combined_pd(self.data_list, self.options.test_names)
         rule_columns = [col for col in combined.columns if 'rule' in col]
         combined.drop(columns=rule_columns, inplace=True)
+
+        # Lets first add total time column for all tests, will make it easier afterwards
+        for data in self.data_list:
+            data.set_index(["model name", "query index"], inplace=True)
+            test_name = data.iloc[0]['test name']
+            combined[f"{test_name}@total time"] = utility.add_total_time(data, self.options.petri_net_type, False)[
+                'total time']
+
         for metric in self.metrics_to_do_ratios:
             for data in self.data_list:
                 current_test_name = data.iloc[0]['test name']
                 if current_test_name == self.options.base_name:
                     continue
+
                 base_metric = self.options.base_name + f'@{metric}'
-                current_metric = current_test_name + f'@{metric}'
                 base_answer = self.options.base_name + '@answer'
+
+                current_metric = current_test_name + f'@{metric}'
                 current_answer = current_test_name + '@answer'
+
                 temp = np.where(combined[base_answer] != 'NONE',
                                 np.where(combined[current_answer] != 'NONE',
                                          np.where(

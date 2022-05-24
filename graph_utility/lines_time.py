@@ -62,14 +62,7 @@ class TimeLines(Lines):
                         continue
                     res_df = pd.DataFrame()
                     if metric.line_metric_name == 'total time':
-                        if self.options.petri_net_type == 'CPN':
-                            res_df['total time'] = data[data['answer'] != 'NONE'].apply(
-                                utility.cpn_get_total_time,
-                                axis=1)
-                        elif self.options.petri_net_type == 'PT':
-                            res_df['total time'] = data[data['answer'] != 'NONE'].apply(
-                                utility.pt_get_total_time,
-                                axis=1)
+                        res_df = utility.add_total_time(data, self.options.petri_net_type, True)
                     else:
                         res_df[metric.line_metric_name] = data[metric.line_metric_name]
 
