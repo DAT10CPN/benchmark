@@ -2,7 +2,7 @@
 #SBATCH --partition=cpu
 
 # Args: <binary> [sequence] [category] [test-folder] [search-strat] [col-red-time-out] [red-time-out] [combined-time-out] [expl-time-out]
-# - sequences DEFAULT is ALL, write "<name>/<options>" for specific sequence, e.g.: "orig/-R 0"
+# - sequences default is ALL, write "<name>/<options>" for specific sequence, e.g.: "orig/-R 0"
 # - category DEFAULT is ReachabilityCardinality (Reachability, LTL, CTL, and ALL is valid categories)
 # - test-folder DEFAULT is MCC2021-COL + MCC2021-COL-inhib
 # - search-start DEFAULT is BestFS + DFS
