@@ -88,7 +88,7 @@ class Gui:
 
         # Set inhib or normal
         inhib_var = StringVar(root)
-        inhib_var.set("Normal")
+        inhib_var.set("MCC-2021")
         Label(root, text="Model Folder:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=3)
         for index, category_name in enumerate(self.model_folder):
