@@ -32,7 +32,8 @@ def compare_two_results(exp_1, exp_1_index, data_list, options):
 
             f"{options.graph_dir}/consistency_matrix.csv"
         in_common = combined.loc[(combined[f"{exp_2_name}@answer"] == combined[f"{exp_1_name}@answer"])]
-        print(f"'{exp_1_name}' and '{exp_2_name}' has answers in common: {len(in_common)}")
+        if not options.all_options:
+            print(f"'{exp_1_name}' and '{exp_2_name}' has answers in common: {len(in_common)}")
     return consistency_row
 
 
@@ -56,4 +57,5 @@ def check_consistency(options):
         new_rows_indices[index] = name
     consistency_matrix = consistency_matrix.rename(index=new_rows_indices)
     consistency_matrix.to_csv(f"{options.graph_dir}/matrix.csv")
-    print("Done")
+    if not options.all_options:
+        print("Done")

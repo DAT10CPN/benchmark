@@ -13,7 +13,8 @@ def find_unique_results(options):
     for i, csv in enumerate(csvs):
         csv.set_index(["model name", "query index"], inplace=True)
 
-    print("Starting to compare individual results")
+    if not options.all_options:
+        print("Starting to compare individual results")
     # Individual comparisons
     unique_answers_matrix = pd.DataFrame()
     for index1, experiment1 in enumerate(csvs):
@@ -41,7 +42,8 @@ def find_unique_results(options):
                 combined.to_csv(
                     f"{graph_dir}/({experiment1.iloc[0]['test name']})-({experiment2.iloc[0]['test name']}).csv")
 
-        print(f"{(index1 + 1) / len(csvs) * 100:.2f}%")
+        if not options.all_options:
+            print(f"{(index1 + 1) / len(csvs) * 100:.2f}%")
 
         # Append row to matrix
         unique_answers_matrix = unique_answers_matrix.append(unique_answers_row, ignore_index=True)
