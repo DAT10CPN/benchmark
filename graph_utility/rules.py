@@ -85,6 +85,14 @@ class RuleUsage(Graph):
             self.save_fig(self.options.test_names[i], 'absolute applications')
             plt.clf()
 
+        all_applications = pd.DataFrame()
+        for index, data in enumerate(self.rules_summed):
+            data.set_index([pd.Index([self.new_test_names[index]])], inplace=True)
+            all_applications = all_applications.append(data, ignore_index=False)
+        latex = all_applications.to_latex(index=True)
+        with open(self.graph_dir + "applications.tex", mode='w') as file:
+            file.write(latex)
+
     def plot_percentages(self):
         # Plot the plot
         for i in range(len(self.options.test_names)):
@@ -105,14 +113,13 @@ class RuleUsage(Graph):
             self.save_fig(self.options.test_names[i], 'percentage models')
             plt.clf()
 
-            # todo, might not needed, was for big table in last paper of rule applications
-            # self.percentages[i].rename(index={
-            #    0: utility.rename_test_name_for_paper_presentation(self.test_names)[self.test_names[i]].replace("⃰",
-            #                                                                                                    "*")},
-            #   inplace=True)
-            # self.percentages[i].drop([' J', ' K'], axis=1, inplace=True)
-            # self.percentages[i] = self.percentages[i].round(1)
-            # self.all_percentages = self.all_percentages.append(self.percentages[i])
+        all_percentages = pd.DataFrame()
+        for index, data in enumerate(self.percentages):
+            data.set_index([pd.Index([self.new_test_names[index]])], inplace=True)
+            all_percentages = all_percentages.append(data, ignore_index=False)
+        latex = all_percentages.to_latex(index=True)
+        with open(self.graph_dir + "percentages.tex", mode='w') as file:
+            file.write(latex)
 
     def plot_models_using_rule(self):
         for i in range(len(self.options.test_names)):
