@@ -123,7 +123,12 @@ for model in models:
         pid = place.attrib.get('id')
 
         added_an_inhib = False
+        attempts = 0
         while not added_an_inhib:
+            attempts = attempts + 1
+            if attempts > 200:
+                added_an_inhib = True
+                break
             transition = random.sample(transitions, 1)[0]
             tid = transition.attrib.get('id')
 
@@ -184,7 +189,7 @@ for model in models:
 
     tree = ET.ElementTree(myroot)
     with open(model, 'w') as f:
-        #with open("inhib.pnml", 'w') as f:
+        # with open("inhib.pnml", 'w') as f:
         tree.write(f, xml_declaration=True, encoding='unicode')
 
     converted_models += 1
