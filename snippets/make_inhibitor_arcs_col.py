@@ -186,8 +186,8 @@ for model in models:
             arc.set('type', 'normal')"""
 
     tree = ET.ElementTree(myroot)
-    # with open(model, 'w') as f:
-    with open("inhib.pnml", 'w') as f:
+    with open(model, 'w') as f:
+        #with open("inhib.pnml", 'w') as f:
         tree.write(f, xml_declaration=True, encoding='unicode')
 
     converted_models += 1
