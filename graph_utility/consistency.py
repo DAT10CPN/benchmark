@@ -49,7 +49,7 @@ def check_consistency(options):
     consistency_matrix = pd.DataFrame()
     for index, exp_1 in enumerate(results):
         row = compare_two_results(exp_1, index, results, options)
-        consistency_matrix = consistency_matrix.append(row, ignore_index=True)
+        consistency_matrix = pd.concat([consistency_matrix, pd.DataFrame(row, index=[0])])
 
     new_rows_indices = dict()
     for index, name in enumerate(options.test_names):

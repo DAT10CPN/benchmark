@@ -32,7 +32,7 @@ def find_unique_results(options):
                                                                                       experiment1_answers.columns]
 
             experiment2_answers = compare_two_experiments(experiment2, experiment1)
-            combined = experiment1_answers.append(experiment2_answers)
+            combined = pd.concat([experiment1_answers, experiment2_answers])
 
             # experiment1_answers.to_csv(
             # f"{graph_dir}/({experiment1.iloc[0]['test name']})_answers_that_({experiment2.iloc[0]['test name']})_did_not_find.csv")
@@ -44,7 +44,7 @@ def find_unique_results(options):
         print(f"{(index1 + 1) / len(csvs) * 100:.2f}%")
 
         # Append row to matrix
-        unique_answers_matrix = unique_answers_matrix.append(unique_answers_row, ignore_index=True)
+        unique_answers_matrix = pd.concat([unique_answers_matrix, pd.DataFrame(unique_answers_row, index=[0])])
 
     # Write matrix
     new_rows_indices = dict()

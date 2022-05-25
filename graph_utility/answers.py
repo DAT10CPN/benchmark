@@ -55,7 +55,7 @@ class AnswerSimplificationBars(Graph):
             simplifications.rename(columns={'solved by query simplification': self.options.test_names[index]},
                                    inplace=True)
 
-            temp = answers.append(simplifications)
+            temp = pd.concat([answers, simplifications])
 
             # Might not have these columns, due to faulty test, so wrap in try-except
             try:
@@ -115,11 +115,11 @@ class AnswerSimplificationBars(Graph):
             ]]
 
             # Add data from this experiment, to results from other results
-            combined = combined.append(temp)
+            combined = pd.concat([combined, temp])
 
             simple_graph_data = {'answers': num_answered, 'not answered': num_test_cases - num_answered}
             simple_temp = pd.DataFrame(data=simple_graph_data, index=[self.options.test_names[index]])
-            simple_combined = simple_combined.append(simple_temp)
+            simple_combined = pd.concat([simple_combined, simple_temp])
         self.transformed_data = [
             Answers(
                 graph_name='answers_splits',
