@@ -51,8 +51,8 @@ done
 if [ -z "$CATEGORY" ] ; then
 	echo "No CATEGORY given, using ReachabilityCardinality"
 	CATEGORY="ReachabilityCardinality"
-elif [ "$CATEGORY" != "ALL" ] && [ "$CATEGORY" != "ReachabilityCardinality" ] && [ "$CATEGORY" != "LTLCardinality" ] && [ "$CATEGORY" != "CTLCardinality" ] && [ "$CATEGORY" != "ReachabilityFireability" ] && [ "$CATEGORY" != "LTLFireability" ] && [ "$CATEGORY" != "CTLFireability" ] ; then
-	echo "Err: CATEGORY must be ALL, ReachabilityCardinality, LTLCardinality, CTLCardinality, ReachabilityFireability, LTLFireability, or CTLFireability. It is '$CATEGORY'"
+elif [ "$CATEGORY" != "ALL" ] && [ "$CATEGORY" != "Reachability" ] && [ "$CATEGORY" != "LTL" ] && [ "$CATEGORY" != "CTL" ] && [ "$CATEGORY" != "ReachabilityCardinality" ] && [ "$CATEGORY" != "LTLCardinality" ] && [ "$CATEGORY" != "CTLCardinality" ] && [ "$CATEGORY" != "ReachabilityFireability" ] && [ "$CATEGORY" != "LTLFireability" ] && [ "$CATEGORY" != "CTLFireability" ] ; then
+	echo "Err: CATEGORY must be ALL, Reachability, LTL, CTL, ReachabilityCardinality, LTLCardinality, CTLCardinality, ReachabilityFireability, LTLFireability, or CTLFireability. It is '$CATEGORY'"
 	exit 0
 fi
 if [ "$CATEGORY" = "ALL" ] ; then
