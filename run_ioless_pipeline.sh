@@ -112,8 +112,8 @@ elif ! [[ "$COMB_TIME_OUT" =~ $pat ]] ; then
 fi
 
 if [ -z "$EXPL_TIME_OUT" ] ; then
-	echo "No EXPL_TIME_OUT given, using 4 minute per query"
-	EXPL_TIME_OUT=4
+	echo "No EXPL_TIME_OUT given, using 2 minute per query"
+	EXPL_TIME_OUT=2
 elif ! [[ "$EXPL_TIME_OUT" =~ $pat ]] ; then
 	echo "Err: EXPL_TIME_OUT must be a non-negative integer (minutes). It is '$EXPL_TIME_OUT'"
 	exit 0
