@@ -8,6 +8,7 @@ from pathlib import Path
 NAMESPACE = '{http://www.pnml.org/version-2009/grammar/pnml}'
 ET.register_namespace('', 'http://www.pnml.org/version-2009/grammar/pnml')
 INHIB_PERCENTAGE = 5
+INHIB_CARDINALITY = ['1', '2']
 MCC_DIRECTORY = os.path.join(os.path.dirname(__file__), sys.argv[1])
 
 if len(sys.argv) < 2:
@@ -159,7 +160,7 @@ for model in models:
     for new_inhibitor in new_inhibitor_arcs:
         arc = ET.Element('arc')
         colortype = findColorType(new_inhibitor[0])
-        cardinality = random.sample(['1', '2'], 1)[0]
+        cardinality = random.sample(INHIB_CARDINALITY, 1)[0]
         hlinscription = createHlinscription(colortype, cardinality)
         inscription = createInscription(cardinality)
         arc.set('source', new_inhibitor[0])
