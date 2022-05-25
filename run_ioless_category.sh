@@ -78,7 +78,7 @@ fi
 
 if [ -z "$SEARCH_STRAT" ] ; then
 	echo "No SEARCH_STRAT given, using DEFAULT (BestFS + DFS)"
-	SEARCH_STRAT="BestFS"
+	SEARCH_STRAT="DEFAULT"
 elif [ "$SEARCH_STRAT" != "DEFAULT" ] && [ "$SEARCH_STRAT" != "BestFS" ] && [ "$SEARCH_STRAT" != "BFS" ] && [ "$SEARCH_STRAT" != "DFS" ] && [ "$SEARCH_STRAT" != "RDFS" ] && [ "$SEARCH_STRAT" != "OverApprox" ] ; then
 	echo "Err: SEARCH_STRAT must be DEFAULT, BestFS, BFS, DFS, RDFS, or OverApprox. It is '$SEARCH_STRAT'"
 	exit 0
