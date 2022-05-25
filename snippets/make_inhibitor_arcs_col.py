@@ -97,7 +97,7 @@ def createInscription(cardinality):
 
 
 for model in models:
-    if converted_models % 10 == 0:
+    if converted_models % 5 == 0:
         print(f"Converted models: {converted_models}/{num_models}")
 
     mytree = ET.parse(model)
@@ -152,9 +152,6 @@ for model in models:
         arc.set('type', 'normal')
 
     for new_inhibitor in new_inhibitor_arcs:
-        print("adding inhibitor arc")
-        print(f"source: {new_inhibitor[0]}")
-        print(f"target: {new_inhibitor[1]}")
         arc = ET.Element('arc')
         colortype = findColorType(new_inhibitor[0])
         cardinality = random.sample(['1', '2'], 1)[0]
