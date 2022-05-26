@@ -59,15 +59,15 @@ if __name__ == "__main__":
     for index, options in enumerate(options_list):
         test_name = options.result_dir.split('results')[1].replace('\\', '-')[1:]
         if len(options.results_to_plot) == 0:
-            print(f"{index}/{len(options_list)} - {test_name} - SKIPPING, NO RESULTS")
+            print(f"{index}/{len(options_list)} - \033[93mSKIPPING, NO RESULTS\033[0m: {test_name}")
             continue
 
         if os.path.isdir(options.graph_dir) and not options.overwrite:
-            print(f"{index}/{len(options_list)} - {test_name} - SKIPPING, WONT OVERWRITE")
+            print(f"{index}/{len(options_list)} - \033[93mSKIPPING, WONT OVERWRITE\033[0m: {test_name}")
             continue
 
         if options.all_options:
-            print(f"{index}/{len(options_list)} - {test_name} - GENERATING GRAPHS")
+            print(f"{index}/{len(options_list)} - GENERATING GRAPHS: {test_name}")
 
         # Remove all graphs
         if os.path.isdir(options.graph_dir):
