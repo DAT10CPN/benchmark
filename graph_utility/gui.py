@@ -1,7 +1,6 @@
 import glob
 import os
 import random
-import sys
 from tkinter import *
 
 from graph_utility.utility import Options
@@ -9,8 +8,8 @@ from graph_utility.utility import Options
 
 class Gui:
     def __init__(self):
-        self.BACKGROUNDS = ['#C0C0C0', '#F7F']
-        self.FOREGROUNDS = ['#1923E8', '#3BE']
+        self.BACKGROUNDS = ['#101022', '#C0C0C0', '#F7F', '#EECF6D', '#230C0F', '#201E1F']
+        self.FOREGROUNDS = ['#90B0B0', '#1923E8', '#3BE', '#8B6220', '#CBA328', '#FF4000']
         self.category = ''
         self.folder = ''
         self.results = []
@@ -35,12 +34,23 @@ class Gui:
         self.overwrite = False
         self.current_widgets = []
         self.root = None
+        self.current_theme = 0
 
     def switch_color(self):
-        foreground = random.sample(self.FOREGROUNDS, 1)[0]
+        self.current_theme = (self.current_theme + 1) % len(self.FOREGROUNDS)
+        foreground = self.FOREGROUNDS[self.current_theme]
+        background = self.BACKGROUNDS[self.current_theme]
+        self.root.configure(bg=background)
+        for wid in self.current_widgets:
+            wid.configure(bg=background)
+            wid.configure(fg=foreground)
+
+    def switch_color_wacky(self):
         background = random.sample(self.BACKGROUNDS, 1)[0]
         self.root.configure(bg=background)
         for wid in self.current_widgets:
+            foreground = random.sample(self.FOREGROUNDS, 1)[0]
+            background = random.sample(self.BACKGROUNDS, 1)[0]
             wid.configure(bg=background)
             wid.configure(fg=foreground)
 
@@ -50,6 +60,13 @@ class Gui:
         x = (ws / 2) - (w / 2)
         y = (hs / 2) - (h / 2)
         root.geometry('%dx%d+%d+%d' % (w, h, x, y))
+
+    def create_button(self, type, text, value, variable, row, column):
+        btn = Radiobutton(self.root, text=text, value=value, variable=variable,
+                          bg=self.BACKGROUNDS[0],
+                          fg=self.FOREGROUNDS[0])
+        self.current_widgets.append(btn)
+        btn.grid(row=row, column=column)
 
     def choose_directory_category_search_type(self):
         root = Tk()
@@ -79,11 +96,8 @@ class Gui:
             test_folder_name = os.path.basename(os.path.normpath(test_folder))
             if index == 0:
                 folder_var.set(test_folder_name)
-            btn = Radiobutton(root, text=test_folder_name, value=test_folder_name, variable=folder_var,
-                              bg=self.BACKGROUNDS[0],
-                              fg=self.FOREGROUNDS[0])
-            self.current_widgets.append(btn)
-            btn.grid(row=index + 1, column=0)
+            self.create_button(type='radio', text=test_folder_name, value=test_folder_name, variable=folder_var,
+                               row=index + 1, column=0)
 
         # Set all categories column
         category_var = StringVar(root)
@@ -93,11 +107,8 @@ class Gui:
         self.current_widgets.append(lbl)
         lbl.grid(row=0, column=1)
         for index, category_name in enumerate(self.categories):
-            btn = Radiobutton(root, text=category_name, value=category_name, variable=category_var,
-                              bg=self.BACKGROUNDS[0],
-                              fg=self.FOREGROUNDS[0])
-            self.current_widgets.append(btn)
-            btn.grid(row=index + 1, column=1)
+            self.create_button(type='radio', text=category_name, value=category_name, variable=category_var,
+                               row=index + 1, column=1)
 
         # Set Search strategy
         search_var = StringVar(root)
@@ -107,11 +118,8 @@ class Gui:
         self.current_widgets.append(lbl)
         lbl.grid(row=0, column=2)
         for index, search_strategy_name in enumerate(self.search_strategies):
-            btn = Radiobutton(root, text=search_strategy_name, value=search_strategy_name, variable=search_var,
-                              bg=self.BACKGROUNDS[0],
-                              fg=self.FOREGROUNDS[0])
-            self.current_widgets.append(btn)
-            btn.grid(row=index + 1, column=2)
+            self.create_button(type='radio', text=search_strategy_name, value=search_strategy_name, variable=search_var,
+                               row=index + 1, column=2)
 
         # Set inhib or normal
         model_folder_var = StringVar(root)
@@ -121,11 +129,8 @@ class Gui:
         self.current_widgets.append(lbl)
         lbl.grid(row=0, column=3)
         for index, category_name in enumerate(self.col_model_folders + self.pt_model_folders):
-            btn = Radiobutton(root, text=category_name, value=category_name, variable=model_folder_var,
-                              bg=self.BACKGROUNDS[0],
-                              fg=self.FOREGROUNDS[0])
-            self.current_widgets.append(btn)
-            btn.grid(row=index + 1, column=3)
+            self.create_button(type='radio', text=category_name, value=category_name, variable=model_folder_var,
+                               row=index + 1, column=3)
 
         btn = Button(root, text="Absolutely everything", command=absolutely_everything, bg=self.BACKGROUNDS[0],
                      fg=self.FOREGROUNDS[0])
@@ -139,6 +144,11 @@ class Gui:
                           fg=self.FOREGROUNDS[0])
         self.current_widgets.append(btn)
         btn.grid(row=len(self.categories) + 1, column=1)
+
+        btn = Button(root, text="Party", command=self.switch_color_wacky, bg=self.BACKGROUNDS[0],
+                     fg=self.FOREGROUNDS[0])
+        self.current_widgets.append(btn)
+        btn.grid(row=len(self.categories), column=2)
 
         btn = Button(root, text="Switch color", command=self.switch_color, bg=self.BACKGROUNDS[0],
                      fg=self.FOREGROUNDS[0])
@@ -276,6 +286,11 @@ class Gui:
                      fg=self.FOREGROUNDS[0])
         self.current_widgets.append(btn)
         btn.grid(row=11, column=0)
+
+        btn = Button(root, text="Party", command=self.switch_color_wacky, bg=self.BACKGROUNDS[0],
+                     fg=self.FOREGROUNDS[0])
+        self.current_widgets.append(btn)
+        btn.grid(row=12, column=0)
 
         root.eval('tk::PlaceWindow . center')
 
