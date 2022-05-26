@@ -26,7 +26,8 @@ class Gui:
         self.chosen_directory = ""
         self.categories = ["ReachabilityCardinality", "ReachabilityFireability", "CTLCardinality", "CTLFireability",
                            "LTLCardinality", "LTLFireability"]
-        self.model_folder = ["MCC2021-COL", "MCC2021-COL-inhib"]
+        self.col_model_folders = ["MCC2021-COL", "MCC2021-COL-inhib"]
+        self.pt_model_folders = ["MCC2021", "MCC2021-inhib"]
         self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
                             'ratios']
@@ -47,7 +48,7 @@ class Gui:
         def set_and_continue():
             self.folder = folder_var.get()
             self.category = category_var.get()
-            self.inhib = inhib_var.get()
+            self.inhib = model_folder_var.get()
             self.search_strategy = search_var.get()
             self.chosen_directory = self.folder + "/" + self.category + "/" + self.search_strategy + "/" + self.inhib
             root.destroy()
@@ -89,12 +90,12 @@ class Gui:
                         fg=self.FOREGROUND).grid(row=index + 1, column=2)
 
         # Set inhib or normal
-        inhib_var = StringVar(root)
-        inhib_var.set("MCC2021-COL")
+        model_folder_var = StringVar(root)
+        model_folder_var.set("MCC2021-COL")
         Label(root, text="Model Folder:", bg=self.BACKGROUND,
               fg=self.FOREGROUND).grid(row=0, column=3)
-        for index, category_name in enumerate(self.model_folder):
-            Radiobutton(root, text=category_name, value=category_name, variable=inhib_var, bg=self.BACKGROUND,
+        for index, category_name in enumerate(self.col_model_folders + self.pt_model_folders):
+            Radiobutton(root, text=category_name, value=category_name, variable=model_folder_var, bg=self.BACKGROUND,
                         fg=self.FOREGROUND).grid(row=index + 1, column=3)
 
         Button(root, text="Absolutely everything", command=absolutely_everything, bg=self.BACKGROUND,
@@ -222,7 +223,7 @@ class Gui:
         else:
             raise Exception('Could not figure out if we have results from a CPN or PT. Check directory name')
 
-    def create_single_option(self, folder_path, category, search_strategy, type):
+    def create_single_option(self, folder_path, category, search_strategy, model_folder):
         if "CPN" in folder_path:
             petri_net_type = "CPN"
         elif "PT" in folder_path:
@@ -230,7 +231,7 @@ class Gui:
         else:
             raise Exception('Could not figure out if we have results from a CPN or PT. Check directory name')
 
-        chosen_directory = folder_path + category + "\\" + search_strategy + "\\" + type
+        chosen_directory = folder_path + category + "\\" + search_strategy + "\\" + model_folder
 
         results = [(filename.split(chosen_directory)[1]).replace('\\', '') for filename in
                    [filename for filename in
@@ -242,7 +243,7 @@ class Gui:
         options = Options(
             result_dir=chosen_directory,
             graph_dir=os.path.join(os.path.dirname(__file__),
-                                   f"..\\graphs\\{folder_name}\\{category}\\{search_strategy}\\{type}"),
+                                   f"..\\graphs\\{folder_name}\\{category}\\{search_strategy}\\{model_folder}"),
             results_to_plot=results,
             category=category,
             folder=folder_path,
@@ -265,12 +266,19 @@ class Gui:
     def create_all_options(self):
         all_options = []
         folders = [path for path in glob.glob(f'{self.results_dir}/*/')]
-        for folder in folders:
+        for folder_path in folders:
             for category in self.categories:
                 for search_strategy in self.search_strategies:
-                    for type in self.model_folder:
-                        option = self.create_single_option(folder, category, search_strategy, type)
+                    if "CPN" in folder_path:
+                        model_folders = self.col_model_folders
+                    elif "PT" in folder_path:
+                        model_folders = self.pt_model_folders
+                    else:
+                        raise Exception("Not found Petri net type from folder path")
+                    for model_folder in model_folders:
+                        option = self.create_single_option(folder_path, category, search_strategy, model_folder)
                         all_options.append(option)
+
 
         return all_options
 
