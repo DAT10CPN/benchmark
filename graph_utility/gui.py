@@ -32,7 +32,7 @@ class Gui:
         self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
                             'ratios']
-        self.overwrite = False
+        self.overwrite = True
         self.current_widgets = []
         self.root = None
 
@@ -86,6 +86,7 @@ class Gui:
             self.inhib = model_folder_var.get()
             self.search_strategy = search_var.get()
             self.chosen_directory = self.folder + "/" + self.category + "/" + self.search_strategy + "/" + self.inhib
+            self.overwrite = bool(overwrite_var.get())
             root.destroy()
 
         def absolutely_everything():
