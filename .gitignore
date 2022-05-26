@@ -3,8 +3,8 @@ binaries/
 output/
 csvs/
 snippets/results.csv
-MCC2021
-MCC2021_inhib
+/MCC2021/
+/MCC2021-inhib/
 /MCC2021-COL/
 /MCC2021-COL-inhib/
 temp
