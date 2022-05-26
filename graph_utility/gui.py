@@ -30,6 +30,7 @@ class Gui:
         self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
                             'ratios']
+        self.overwrite = False
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -53,6 +54,7 @@ class Gui:
 
         def absolutely_everything():
             self.all_options = True
+            self.overwrite = bool(overwrite_var.get())
             root.destroy()
 
         # Set all available directories to choose from
@@ -98,6 +100,12 @@ class Gui:
         Button(root, text="Absolutely everything", command=absolutely_everything, bg=self.BACKGROUND,
                fg=self.FOREGROUND).grid(
             row=len(self.categories) + 1, column=0)
+
+        overwrite_var = IntVar()
+        overwrite_var.set(1)
+        Checkbutton(root, text='Overwrite graphs', variable=overwrite_var,
+                    bg=self.BACKGROUND,
+                    fg=self.FOREGROUND).grid(row=len(self.categories) + 2, column=0)
 
         Button(root, text="Choose and continue", command=set_and_continue, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
             row=len(self.categories) + 1, column=3)
@@ -248,7 +256,8 @@ class Gui:
             petri_net_type=petri_net_type,
             all_options=True,
             search_strategy=search_strategy,
-            base_name='orig'
+            base_name='orig',
+            overwrite=self.overwrite
         )
 
         return options
@@ -286,7 +295,8 @@ class Gui:
                 petri_net_type=self.petri_net_type,
                 all_options=False,
                 search_strategy=self.search_strategy,
-                base_name='orig'
+                base_name='orig',
+                overwrite=self.overwrite
             )
 
             if self.enable_graphs == 0:

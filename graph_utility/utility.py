@@ -24,6 +24,7 @@ class Options:
     all_options: bool
     search_strategy: str
     base_name: str
+    overwrite: bool
 
 def add_total_time(data, petri_net_type, remove_nones):
     if remove_nones:
