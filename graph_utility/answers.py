@@ -24,6 +24,10 @@ class AnswerSimplificationBars(Graph):
         self.name = 'answers'
         self.answers = []
 
+    def sort_answers(self):
+        for data in self.transformed_data:
+            data.transformed_data.sort_values(by=['Answered'], ascending=True, inplace=True)
+
     def prepare_data(self):
         # data from each csv will become a row in the combined dataframe, such that row index is the test name,
         # and columns are 'not answered', 'simplified', and 'reduced'.
@@ -117,7 +121,7 @@ class AnswerSimplificationBars(Graph):
             # Add data from this experiment, to results from other results
             combined = combined.append(temp)
 
-            simple_graph_data = {'answers': num_answered, 'not answered': num_test_cases - num_answered}
+            simple_graph_data = {'Answered': num_answered, 'Not answered': num_test_cases - num_answered}
             simple_temp = pd.DataFrame(data=simple_graph_data, index=[self.options.test_names[index]])
             simple_combined = simple_combined.append(simple_temp)
 
@@ -132,6 +136,8 @@ class AnswerSimplificationBars(Graph):
             )
         ]
 
+        self.sort_answers()
+
     def plot(self):
         os.makedirs(self.graph_dir)
 
@@ -140,7 +146,7 @@ class AnswerSimplificationBars(Graph):
         for answers in self.transformed_data:
 
             if answers.graph_name == 'answers_simple':
-                answers_df = pd.DataFrame({'answers': answers.transformed_data['answers']})
+                answers_df = pd.DataFrame({'answers': answers.transformed_data['Answered']})
                 answers_df = answers_df.T.set_index(pd.Index([self.options.category]))
                 latex = answers_df.to_latex(index=True)
                 with open(self.graph_dir + "\\answers.tex", mode='w') as file:
