@@ -7,7 +7,8 @@ from pathlib import Path
 
 NAMESPACE = '{http://www.pnml.org/version-2009/grammar/pnml}'
 ET.register_namespace('', 'http://www.pnml.org/version-2009/grammar/pnml')
-INHIB_PERCENTAGE = 10
+INHIB_PERCENTAGE = 5
+INHIB_CARDINALITY = ['1', '2']
 MCC_DIRECTORY = os.path.join(os.path.dirname(__file__), sys.argv[1])
 
 if len(sys.argv) < 2:
@@ -18,10 +19,9 @@ num_models = len(models)
 converted_models = 0
 
 
-def findColorType(arc):
-    source = arc.attrib.get('source')
+def findColorType(pid):
     for node in page.findall(f'{NAMESPACE}' + 'place'):
-        if node.attrib['id'] == source:
+        if node.attrib['id'] == pid:
             type = node.find(f'{NAMESPACE}' + 'type')
             structure = type.find(f'{NAMESPACE}' + 'structure')
             usersort = structure.find(f'{NAMESPACE}' + 'usersort')
@@ -98,7 +98,7 @@ def createInscription(cardinality):
 
 
 for model in models:
-    if converted_models % 10 == 0:
+    if converted_models % 5 == 0:
         print(f"Converted models: {converted_models}/{num_models}")
 
     mytree = ET.parse(model)
@@ -108,15 +108,69 @@ for model in models:
     page = net.find(f'{NAMESPACE}' + 'page')
     arcs = page.findall(f'{NAMESPACE}' + 'arc')
     transitions = page.findall(f'{NAMESPACE}' + 'transition')
+    places = page.findall(f'{NAMESPACE}' + 'place')
 
     transition_ids = [transition.attrib.get('id') for transition in transitions]
     in_arcs = [arc for arc in arcs if arc.attrib.get('target') in transition_ids]
-    num_arcs_to_convert = round(len(in_arcs) * (INHIB_PERCENTAGE / 100.0))
-    print(f"Creating {num_arcs_to_convert} inhibitor. Candidates: {len(in_arcs)}")
+    num_arcs_to_create = round(len(in_arcs) * (INHIB_PERCENTAGE / 100.0))
+    print(f"Creating {num_arcs_to_create} inhibitor arc. Candidates: {len(in_arcs)}")
 
-    arcs_to_convert = random.sample(in_arcs, num_arcs_to_convert)
+    places_to_get_inhibitor_arc = random.sample(places, num_arcs_to_create)
+    places_ids = [place.attrib.get('id') for place in places_to_get_inhibitor_arc]
+    new_inhibitor_arcs = []
+
+    tids_we_added_inhibs_to = []
+    for place in places_to_get_inhibitor_arc:
+        pid = place.attrib.get('id')
+
+        added_an_inhib = False
+        attempts = 0
+        while not added_an_inhib:
+            attempts = attempts + 1
+            if attempts > 200:
+                added_an_inhib = True
+                break
+            transition = random.sample(transitions, 1)[0]
+            tid = transition.attrib.get('id')
+
+            # Dont create arc to another transition that we just added an inhibitor to
+            if tid in tids_we_added_inhibs_to:
+                continue
+            else:
+                tids_we_added_inhibs_to.append(tid)
+
+            # Dont create a new inhibitor arc between pair that already exists
+            not_valid_transition = False
+            for arc in arcs:
+                source = arc.attrib.get('source')
+                target = arc.attrib.get('target')
+                if pid == source and tid == target:
+                    not_valid_transition = True
+                    break
+
+            if not_valid_transition:
+                continue
+
+            added_an_inhib = True
+            new_inhibitor_arcs.append((pid, tid))
 
     for arc in arcs:
+        arc.set('type', 'normal')
+
+    for new_inhibitor in new_inhibitor_arcs:
+        arc = ET.Element('arc')
+        colortype = findColorType(new_inhibitor[0])
+        cardinality = random.sample(INHIB_CARDINALITY, 1)[0]
+        hlinscription = createHlinscription(colortype, cardinality)
+        inscription = createInscription(cardinality)
+        arc.set('source', new_inhibitor[0])
+        arc.set('target', new_inhibitor[1])
+        arc.append(inscription)
+        arc.append(hlinscription)
+        arc.set('type', 'inhibitor')
+        page.append(arc)
+
+    """for arc in arcs:
         if arc in arcs_to_convert:
             arc.set('type', 'inhibitor')
             oldHlinscription = arc.find(f'{NAMESPACE}' + 'hlinscription')
@@ -132,7 +186,7 @@ for model in models:
             arc.append(inscription)
             arc.append(hlinscription)
         else:
-            arc.set('type', 'normal')
+            arc.set('type', 'normal')"""
 
     tree = ET.ElementTree(myroot)
     with open(model, 'w') as f:
