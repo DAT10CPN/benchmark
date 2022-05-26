@@ -57,16 +57,17 @@ if __name__ == "__main__":
         print(f"Creating graphs for multiple directories: {len(options_list)}")
 
     for index, options in enumerate(options_list):
+        test_name = options.result_dir.split('results')[1].replace('\\', '-')[1:]
         if len(options.results_to_plot) == 0:
+            print(f"{index}/{len(options_list)} - {test_name} - SKIPPING, NO RESULTS")
             continue
 
-        test_name = options.result_dir.split('results')[1].replace('\\', '-')[1:]
         if os.path.isdir(options.graph_dir) and not options.overwrite:
-            print(f"Skipping, in order to not overwrite: {index}/{len(options_list)} - {test_name}")
+            print(f"{index}/{len(options_list)} - {test_name} - SKIPPING, WONT OVERWRITE")
             continue
 
         if options.all_options:
-            print(f"Working on: {index}/{len(options_list)} - {test_name}")
+            print(f"{index}/{len(options_list)} - {test_name} - GENERATING GRAPHS")
 
         # Remove all graphs
         if os.path.isdir(options.graph_dir):
