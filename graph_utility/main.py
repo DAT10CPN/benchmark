@@ -55,24 +55,30 @@ if __name__ == "__main__":
 
     if len(options_list) > 1:
         print(f"Creating graphs for multiple directories: {len(options_list)}")
+        print(f"\033[91mNeed to be run \033[0m- \033[93mProbalby not needed \033[0m- \033[92mWe have the results")
 
     for index, options in enumerate(options_list):
         folder = options.result_dir.split('results')[1].split("\\")[1]
         model_folder = options.result_dir.split("\\")[-1]
         test_name = "{:<25}".format(folder) + "{:<25}".format(options.category) + "{:<10}".format(options.search_strategy) + "{:<20}".format(model_folder)
         progress = f"{index}/{len(options_list)}"
-        if index < 10:
-            progress += " "
+        progress = "{:<7}".format(progress)
         if len(options.results_to_plot) == 0:
-            print(f"{progress} - \033[93mSKIPPING, NO RESULTS     \033[0m: {test_name}")
+            if "inhib" in model_folder:
+                print(f"{progress} - \033[93mSKIPPING, NO RESULTS     \033[0m: {test_name}")
+            else:
+                print(f"{progress} - \033[91mSKIPPING, NO RESULTS     \033[0m: {test_name}")
             continue
 
         if os.path.isdir(options.graph_dir) and not options.overwrite:
-            print(f"{progress} - \033[93mSKIPPING, WONT OVERWRITE \033[0m: {test_name}")
+            if "inhib" in model_folder:
+                print(f"{progress} - \033[92mSKIPPING, WONT OVERWRITE \033[0m: {test_name}")
+            else:
+                print(f"{progress} - \033[92mSKIPPING, WONT OVERWRITE \033[0m: {test_name}")
             continue
 
         if options.all_options:
-            print(f"{progress} - GENERATING GRAPHS        : {test_name}")
+            print(f"{progress} - \033[92mGENERATING GRAPHS        \033[0m: {test_name}")
 
         # Remove all graphs
         if os.path.isdir(options.graph_dir):
