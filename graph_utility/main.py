@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
     if len(options_list) > 1:
         print(f"Creating graphs for multiple directories: {len(options_list)}")
-        print(f"\033[91mNeed to be run \033[0m- \033[93mProbalby not needed \033[0m- \033[92mWe have the results")
+        print(f"\033[91mNeed to be run \033[0m- \033[93mProbalby not needed \033[0m- \033[92mWe have the results\033[0m")
 
     for index, options in enumerate(options_list):
         folder = options.result_dir.split('results')[1].split("\\")[1]
