@@ -233,7 +233,8 @@ class Gui:
 
         options = Options(
             result_dir=chosen_directory,
-            graph_dir=os.path.join(os.path.dirname(__file__), f"..\\graphs\\{folder_name}"),
+            graph_dir=os.path.join(os.path.dirname(__file__),
+                                   f"..\\graphs\\{folder_name}\\{category}\\{search_strategy}\\{type}"),
             results_to_plot=results,
             category=category,
             folder=folder_path,
