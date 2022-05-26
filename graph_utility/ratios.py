@@ -17,8 +17,10 @@ class VerificationTimeRatio(Lines):
         self.graph_dir = options.graph_dir + '\\ratios\\'
         self.name = 'ratios'
         self.plot_ready = pd.DataFrame()
-        self.metrics_to_do_ratios = ['unfold time', 'reduce time', 'verification time',
-                                     'verification memory', 'state space size', 'total time']
+        self.metrics_to_do_ratios = ['reduce time', 'verification time', 'verification memory', 'state space size',
+                                     'total time']
+        if self.options.petri_net_type == 'CPN':
+            self.metrics_to_do_ratios.append('unfold time')
 
     def prepare_data(self):
         if not self.options.base_name in self.options.test_names:
