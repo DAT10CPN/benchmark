@@ -1,5 +1,6 @@
 import glob
 import os
+import random
 import sys
 from tkinter import *
 
@@ -8,8 +9,8 @@ from graph_utility.utility import Options
 
 class Gui:
     def __init__(self):
-        self.BACKGROUND = '#C0C0C0'
-        self.FOREGROUND = '#1923E8'
+        self.BACKGROUNDS = ['#C0C0C0', '#F7F']
+        self.FOREGROUNDS = ['#1923E8', '#3BE']
         self.category = ''
         self.folder = ''
         self.results = []
@@ -32,6 +33,7 @@ class Gui:
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
                             'ratios']
         self.overwrite = False
+        self.current_widgets = []
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -43,7 +45,7 @@ class Gui:
     def choose_directory_category_search_type(self):
         root = Tk()
         root.title('Experiments')
-        root.configure(bg=self.BACKGROUND)
+        root.configure(bg=self.BACKGROUNDS[0])
 
         def set_and_continue():
             self.folder = folder_var.get()
@@ -58,57 +60,68 @@ class Gui:
             self.overwrite = bool(overwrite_var.get())
             root.destroy()
 
+        def switch_color():
+            foreground = random.sample(self.FOREGROUNDS, 1)[0]
+            background = random.sample(self.BACKGROUNDS, 1)[0]
+            for wid in self.current_widgets:
+                wid.configure(bg=background)
+                wid.configure(fg=foreground)
+
         # Set all available directories to choose from
         folder_var = StringVar(root)
-        Label(root, text="Available test directories:", bg=self.BACKGROUND,
-              fg=self.FOREGROUND).grid(row=0, column=0)
+        Label(root, text="Available test directories:", bg=self.BACKGROUNDS[0],
+              fg=self.FOREGROUNDS[0]).grid(row=0, column=0)
         for index, test_folder in enumerate(glob.glob(self.results_dir + "/*/", recursive=False)):
             test_folder_name = os.path.basename(os.path.normpath(test_folder))
             if index == 0:
                 folder_var.set(test_folder_name)
             Radiobutton(root, text=test_folder_name, value=test_folder_name, variable=folder_var,
-                        bg=self.BACKGROUND,
-                        fg=self.FOREGROUND).grid(row=index + 1, column=0)
+                        bg=self.BACKGROUNDS[0],
+                        fg=self.FOREGROUNDS[0]).grid(row=index + 1, column=0)
 
         # Set all categories column
         category_var = StringVar(root)
         category_var.set("ReachabilityCardinality")
-        Label(root, text="Categories:", bg=self.BACKGROUND,
-              fg=self.FOREGROUND).grid(row=0, column=1)
+        Label(root, text="Categories:", bg=self.BACKGROUNDS[0],
+              fg=self.FOREGROUNDS[0]).grid(row=0, column=1)
         for index, category_name in enumerate(self.categories):
-            Radiobutton(root, text=category_name, value=category_name, variable=category_var, bg=self.BACKGROUND,
-                        fg=self.FOREGROUND).grid(row=index + 1, column=1)
+            Radiobutton(root, text=category_name, value=category_name, variable=category_var, bg=self.BACKGROUNDS[0],
+                        fg=self.FOREGROUNDS[0]).grid(row=index + 1, column=1)
 
         # Set Search strategy
         search_var = StringVar(root)
         search_var.set("BestFS")
-        Label(root, text="Search strategy:", bg=self.BACKGROUND,
-              fg=self.FOREGROUND).grid(row=0, column=2)
+        Label(root, text="Search strategy:", bg=self.BACKGROUNDS[0],
+              fg=self.FOREGROUNDS[0]).grid(row=0, column=2)
         for index, search_strategy_name in enumerate(self.search_strategies):
             Radiobutton(root, text=search_strategy_name, value=search_strategy_name, variable=search_var,
-                        bg=self.BACKGROUND,
-                        fg=self.FOREGROUND).grid(row=index + 1, column=2)
+                        bg=self.BACKGROUNDS[0],
+                        fg=self.FOREGROUNDS[0]).grid(row=index + 1, column=2)
 
         # Set inhib or normal
         model_folder_var = StringVar(root)
         model_folder_var.set("MCC2021-COL")
-        Label(root, text="Model Folder:", bg=self.BACKGROUND,
-              fg=self.FOREGROUND).grid(row=0, column=3)
+        Label(root, text="Model Folder:", bg=self.BACKGROUNDS[0],
+              fg=self.FOREGROUNDS[0]).grid(row=0, column=3)
         for index, category_name in enumerate(self.col_model_folders + self.pt_model_folders):
-            Radiobutton(root, text=category_name, value=category_name, variable=model_folder_var, bg=self.BACKGROUND,
-                        fg=self.FOREGROUND).grid(row=index + 1, column=3)
+            Radiobutton(root, text=category_name, value=category_name, variable=model_folder_var, bg=self.BACKGROUNDS[0],
+                        fg=self.FOREGROUNDS[0]).grid(row=index + 1, column=3)
 
-        Button(root, text="Absolutely everything", command=absolutely_everything, bg=self.BACKGROUND,
-               fg=self.FOREGROUND).grid(
+        Button(root, text="Absolutely everything", command=absolutely_everything, bg=self.BACKGROUNDS[0],
+               fg=self.FOREGROUNDS[0]).grid(
             row=len(self.categories) + 1, column=0)
 
         overwrite_var = IntVar()
         overwrite_var.set(1)
         Checkbutton(root, text='Overwrite graphs', variable=overwrite_var,
-                    bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=len(self.categories) + 2, column=0)
+                    bg=self.BACKGROUNDS[0],
+                    fg=self.FOREGROUNDS[0]).grid(row=len(self.categories) + 1, column=1)
 
-        Button(root, text="Choose and continue", command=set_and_continue, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+        Button(root, text="Switch color", command=switch_color, bg=self.BACKGROUNDS[0],
+               fg=self.FOREGROUNDS[0]).grid(
+            row=len(self.categories) + 1, column=2)
+
+        Button(root, text="Choose and continue", command=set_and_continue, bg=self.BACKGROUNDS[0], fg=self.FOREGROUNDS[0]).grid(
             row=len(self.categories) + 1, column=3)
 
         root.eval('tk::PlaceWindow . center')
@@ -116,8 +129,9 @@ class Gui:
         root.mainloop()
 
     def choose_tests_and_graph_type(self):
+        self.current_widgets = []
         root = Tk()
-        root.configure(bg=self.BACKGROUND)
+        root.configure(bg=self.BACKGROUNDS[0])
         root.title(f'{self.chosen_directory}')
 
         all_csv_files_in_category_in_chosen_directory = [(filename.split(self.chosen_directory)[1]).replace('\\', '')
@@ -130,8 +144,8 @@ class Gui:
         if len(all_csv_files_in_category_in_chosen_directory) == 0:
             raise Exception(f"There are no results in selected directory: {self.chosen_directory}")
         results = {}
-        Label(root, text=f"{self.chosen_directory}:", bg=self.BACKGROUND,
-              fg=self.FOREGROUND).grid(row=0, column=1)
+        Label(root, text=f"{self.chosen_directory}:", bg=self.BACKGROUNDS[0],
+              fg=self.FOREGROUNDS[0]).grid(row=0, column=1)
 
         for index, test_name in enumerate(all_csv_files_in_category_in_chosen_directory):
             column = 1
@@ -140,8 +154,8 @@ class Gui:
                 column += 1
 
             var = IntVar()
-            Checkbutton(root, text=test_name.replace('.csv', ''), variable=var, bg=self.BACKGROUND,
-                        fg=self.FOREGROUND).grid(row=index + 1,
+            Checkbutton(root, text=test_name.replace('.csv', ''), variable=var, bg=self.BACKGROUNDS[0],
+                        fg=self.FOREGROUNDS[0]).grid(row=index + 1,
                                                  column=column,
                                                  padx=20)
             results[test_name] = var
@@ -153,28 +167,28 @@ class Gui:
         enable_graphs = IntVar()
         enable_graphs.set(1)
         unique_results = IntVar()
-        Label(root, text="Settings:", bg=self.BACKGROUND,
-              fg=self.FOREGROUND).grid(row=0, column=0)
+        Label(root, text="Settings:", bg=self.BACKGROUNDS[0],
+              fg=self.FOREGROUNDS[0]).grid(row=0, column=0)
         Radiobutton(root, text='No graphs', value=0, variable=enable_graphs,
-                    bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=1, column=0)
+                    bg=self.BACKGROUNDS[0],
+                    fg=self.FOREGROUNDS[0]).grid(row=1, column=0)
         Radiobutton(root, text='Fast graphs', value=1, variable=enable_graphs,
-                    bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=2, column=0)
+                    bg=self.BACKGROUNDS[0],
+                    fg=self.FOREGROUNDS[0]).grid(row=2, column=0)
         Radiobutton(root, text='All graphs', value=2, variable=enable_graphs,
-                    bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=3, column=0)
+                    bg=self.BACKGROUNDS[0],
+                    fg=self.FOREGROUNDS[0]).grid(row=3, column=0)
         Checkbutton(root, text='Check consistency', variable=check_consistency,
-                    bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=4, column=0)
+                    bg=self.BACKGROUNDS[0],
+                    fg=self.FOREGROUNDS[0]).grid(row=4, column=0)
         Checkbutton(root, text='Debug', variable=debug,
-                    bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=5, column=0)
+                    bg=self.BACKGROUNDS[0],
+                    fg=self.FOREGROUNDS[0]).grid(row=5, column=0)
         Checkbutton(root, text='Unique results', variable=unique_results,
-                    bg=self.BACKGROUND,
-                    fg=self.FOREGROUND).grid(row=6, column=0)
+                    bg=self.BACKGROUNDS[0],
+                    fg=self.FOREGROUNDS[0]).grid(row=6, column=0)
 
-        Button(root, text="Make graphs", command=root.destroy, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(row=7,
+        Button(root, text="Make graphs", command=root.destroy, bg=self.BACKGROUNDS[0], fg=self.FOREGROUNDS[0]).grid(row=7,
                                                                                                             column=0)
 
         def select_all_tests():
@@ -193,14 +207,14 @@ class Gui:
             unique_results.set(1)
             root.destroy()
 
-        Button(root, text="Select all tests", command=select_all_tests, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+        Button(root, text="Select all tests", command=select_all_tests, bg=self.BACKGROUNDS[0], fg=self.FOREGROUNDS[0]).grid(
             row=8,
             column=0)
-        Button(root, text="Deselect all tests", command=deselect_all_tests, bg=self.BACKGROUND,
-               fg=self.FOREGROUND).grid(
+        Button(root, text="Deselect all tests", command=deselect_all_tests, bg=self.BACKGROUNDS[0],
+               fg=self.FOREGROUNDS[0]).grid(
             row=9,
             column=0)
-        Button(root, text="EVERYTHING", command=EVERYTHING, bg=self.BACKGROUND, fg=self.FOREGROUND).grid(
+        Button(root, text="EVERYTHING", command=EVERYTHING, bg=self.BACKGROUNDS[0], fg=self.FOREGROUNDS[0]).grid(
             row=10,
             column=0)
         root.eval('tk::PlaceWindow . center')
