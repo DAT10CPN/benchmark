@@ -117,9 +117,9 @@ class Gui:
                     bg=self.BACKGROUNDS[0],
                     fg=self.FOREGROUNDS[0]).grid(row=len(self.categories) + 1, column=1)
 
-        Button(root, text="Switch color", command=switch_color, bg=self.BACKGROUNDS[0],
-               fg=self.FOREGROUNDS[0]).grid(
-            row=len(self.categories) + 1, column=2)
+        #Button(root, text="Switch color", command=switch_color, bg=self.BACKGROUNDS[0],
+               #fg=self.FOREGROUNDS[0]).grid(
+           # row=len(self.categories) + 1, column=2)
 
         Button(root, text="Choose and continue", command=set_and_continue, bg=self.BACKGROUNDS[0], fg=self.FOREGROUNDS[0]).grid(
             row=len(self.categories) + 1, column=3)
