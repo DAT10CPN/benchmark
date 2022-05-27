@@ -11,6 +11,7 @@ class Gui:
     def __init__(self):
         self.BACKGROUNDS = ['#101022', '#C0C0C0', '#F7F', '#EECF6D', '#230C0F', '#201E1F', '#4A412A', '#ff0000', '#0049B7']
         self.FOREGROUNDS = ['#90B0B0', '#1923E8', '#3BE', '#8B6220', '#CBA328', '#FF4000', '#2A324A', '#ffffff', '#ff1d58']
+        self.hexvalues = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
         self.category = ''
         self.folder = ''
         self.results = []
@@ -52,14 +53,26 @@ class Gui:
             wid.configure(bg=background)
             wid.configure(fg=foreground)
 
-    def switch_color_wacky(self):
-        background = random.sample(self.BACKGROUNDS, 1)[0]
+    def switch_color_random(self):
+        background = self.random_hex_color()
         self.root.configure(bg=background)
+        foreground = self.random_hex_color()
         for wid in self.current_widgets:
-            foreground = random.sample(self.FOREGROUNDS, 1)[0]
-            background = random.sample(self.BACKGROUNDS, 1)[0]
             wid.configure(bg=background)
             wid.configure(fg=foreground)
+
+    def random_hex_color(self):
+        col = "#"
+        while len(col) < 7:
+            col += random.sample(self.hexvalues, 1)[0]
+        return col
+
+    def switch_color_wacky(self):
+        self.root.configure(bg=self.random_hex_color())
+        for wid in self.current_widgets:
+            wid.configure(bg=self.random_hex_color())
+            wid.configure(fg=self.random_hex_color())
+
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -160,7 +173,8 @@ class Gui:
         self.create_check_button(text='Overwrite graphs', variable=overwrite_var,
                                  row=len(self.categories) + 1, column=1)
 
-        self.create_button(text="Party", command=self.switch_color_wacky, row=len(self.categories), column=2)
+        self.create_button(text="Party", command=self.switch_color_wacky, row=len(self.categories) - 1, column=2)
+        self.create_button(text="Random theme", command=self.switch_color_random, row=len(self.categories), column=2)
         self.create_button(text="Change theme", command=self.switch_color, row=len(self.categories) + 1, column=2)
         self.create_button(text="Choose and continue", command=set_and_continue, row=len(self.categories) + 1, column=3)
 
