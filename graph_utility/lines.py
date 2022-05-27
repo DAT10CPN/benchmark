@@ -9,17 +9,17 @@ class Lines(Graph):
     def __init__(self, options):
         super().__init__(options)
         self.graph_dir = options.graph_dir + '\\lines\\'
-        self.linestyles = [
-            [1, 1],
-            [2, 2, 10, 2],
-            [5, 5],
-            [6, 2],
-            [3, 1],
-            [3, 1, 3, 1, 1, 1],
-            [3, 1, 1, 1],
-            [3, 4, 2, 4, 2, 4],
-            [1, 1, 3, 1, 6, 1],
-            [3, 1, 1, 1, 1, 1]]
+        self.linestyles = [[1, 1],
+                           [2, 2, 10, 2],
+                           [5, 5],
+                           [6, 2],
+                           [3, 1],
+                           [3, 1, 3, 1, 1, 1],
+                           [3, 1, 1, 1],
+                           [3, 4, 2, 4, 2, 4],
+                           [1, 1, 3, 1, 6, 1],
+                           [3, 1, 1, 1, 1, 1],
+                           ] * 3
         self.base_width = 2.25
         self.other_width = 1.5
         self.base_name = self.options.base_name
