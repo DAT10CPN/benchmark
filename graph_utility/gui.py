@@ -9,8 +9,8 @@ from graph_utility.utility import Options
 
 class Gui:
     def __init__(self):
-        self.BACKGROUNDS = ['#101022', '#C0C0C0', '#F7F', '#EECF6D', '#230C0F', '#201E1F']
-        self.FOREGROUNDS = ['#90B0B0', '#1923E8', '#3BE', '#8B6220', '#CBA328', '#FF4000']
+        self.BACKGROUNDS = ['#101022', '#C0C0C0', '#F7F', '#EECF6D', '#230C0F', '#201E1F', '#4A412A']
+        self.FOREGROUNDS = ['#90B0B0', '#1923E8', '#3BE', '#8B6220', '#CBA328', '#FF4000', '#2A324A']
         self.category = ''
         self.folder = ''
         self.results = []
