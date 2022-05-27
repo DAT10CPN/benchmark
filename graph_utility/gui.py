@@ -1,5 +1,6 @@
 import glob
 import os
+import sys
 import random
 from tkinter import *
 
@@ -34,6 +35,7 @@ class Gui:
         self.overwrite = True
         self.current_widgets = []
         self.root = None
+        self.only_one_test_setup = False
 
         if os.path.exists('theme.txt'):
             with open("theme.txt", mode='r') as file:
@@ -109,6 +111,8 @@ class Gui:
         def absolutely_everything():
             self.all_options = True
             self.overwrite = bool(overwrite_var.get())
+            self.only_one_test_setup = bool(only_one_test_setup_var.get())
+            self.folder = folder_var.get()
             root.destroy()
 
         # Set all available directories to choose from
@@ -120,6 +124,13 @@ class Gui:
                 folder_var.set(test_folder_name)
             self.create_radio_button(text=test_folder_name, value=test_folder_name, variable=folder_var,
                                      row=index + 1, column=0)
+
+        model_folder_var = StringVar(root)
+        model_folder_var.set("MCC2021-COL")
+        self.create_label(text="Model Folder:", row=0, column=3)
+        for index, category_name in enumerate(self.col_model_folders + self.pt_model_folders):
+            self.create_radio_button(text=category_name, value=category_name, variable=model_folder_var,
+                                     row=index + 1, column=3)
 
         # Set all categories column
         category_var = StringVar(root)
@@ -137,14 +148,10 @@ class Gui:
             self.create_radio_button(text=search_strategy_name, value=search_strategy_name, variable=search_var,
                                      row=index + 1, column=2)
 
-        # Set inhib or normal
-        model_folder_var = StringVar(root)
-        model_folder_var.set("MCC2021-COL")
-        self.create_label(text="Model Folder:", row=0, column=3)
-        for index, category_name in enumerate(self.col_model_folders + self.pt_model_folders):
-            self.create_radio_button(text=category_name, value=category_name, variable=model_folder_var,
-                                     row=index + 1, column=3)
-
+        only_one_test_setup_var = IntVar(root)
+        only_one_test_setup_var.set(0)
+        self.create_check_button(text="Only one test setup", variable=only_one_test_setup_var, row=len(self.categories),
+                                 column=0)
         self.create_button(text="Absolutely everything", command=absolutely_everything, row=len(self.categories) + 1,
                            column=0)
 
@@ -309,6 +316,8 @@ class Gui:
         all_options = []
         folders = [path for path in glob.glob(f'{self.results_dir}/*/')]
         for folder_path in folders:
+            if self.only_one_test_setup and not self.folder in folder_path:
+                continue
             for category in self.categories:
                 for search_strategy in self.search_strategies:
                     if "CPN" in folder_path:
@@ -391,5 +400,8 @@ class Gui:
 
             return [options]
         else:
-            print("Doing absolutely everything")
+            if self.only_one_test_setup:
+                print(f"Doing absolutely everything for: {self.folder}")
+            else:
+                print(f"Doing absolutely everything")
             return self.create_all_options()
