@@ -22,7 +22,6 @@ class Gui:
         self.max_test_in_column = 11
         self.unique_results = 0
         self.petri_net_type = ""
-        self.inhib = ""
         self.search_strategy = ""
         self.all_options = False
         self.chosen_directory = ""
@@ -115,10 +114,17 @@ class Gui:
         def set_and_continue():
             self.folder = folder_var.get()
             self.category = category_var.get()
-            self.inhib = model_folder_var.get()
             self.search_strategy = search_var.get()
-            self.chosen_directory = self.folder + "/" + self.category + "/" + self.search_strategy + "/" + self.inhib
+            self.chosen_directory = self.folder + "/" + self.category + "/" + self.search_strategy
             self.overwrite = bool(overwrite_var.get())
+            root.destroy()
+
+        def set_and_continue_random():
+            self.folder = random.sample(self.col_model_folders + self.pt_model_folders, 1)[0]
+            self.category = random.sample(self.categories, 1)[0]
+            self.search_strategy = random.sample(self.search_strategies, 1)[0]
+            self.chosen_directory = self.folder + "/" + self.category + "/" + self.search_strategy
+            self.overwrite = True
             root.destroy()
 
         def absolutely_everything():
@@ -176,6 +182,7 @@ class Gui:
         self.create_button(text="Party", command=self.switch_color_wacky, row=len(self.categories) - 1, column=2)
         self.create_button(text="Random theme", command=self.switch_color_random, row=len(self.categories), column=2)
         self.create_button(text="Change theme", command=self.switch_color, row=len(self.categories) + 1, column=2)
+        self.create_button(text="I'm feeling lucky!", command=set_and_continue_random, row=len(self.categories), column=3)
         self.create_button(text="Choose and continue", command=set_and_continue, row=len(self.categories) + 1, column=3)
 
         root.eval('tk::PlaceWindow . center')
