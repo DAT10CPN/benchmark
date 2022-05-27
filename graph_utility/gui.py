@@ -115,15 +115,17 @@ class Gui:
             self.folder = folder_var.get()
             self.category = category_var.get()
             self.search_strategy = search_var.get()
-            self.chosen_directory = self.folder + "/" + self.category + "/" + self.search_strategy
+            self.model_folder = model_folder_var.get()
+            self.chosen_directory = self.folder + "/" + self.category + "/" + self.search_strategy + "/" + self.model_folder
             self.overwrite = bool(overwrite_var.get())
             root.destroy()
 
         def set_and_continue_random():
-            self.folder = random.sample(self.col_model_folders + self.pt_model_folders, 1)[0]
+            self.folder = random.sample(glob.glob(self.results_dir + "/*/", recursive=False), 1)[0].split("results")[1]
             self.category = random.sample(self.categories, 1)[0]
             self.search_strategy = random.sample(self.search_strategies, 1)[0]
-            self.chosen_directory = self.folder + "/" + self.category + "/" + self.search_strategy
+            self.model_folder = model_folder_var.get()
+            self.chosen_directory = self.folder + self.category + "\\" + self.search_strategy + "\\" + self.model_folder
             self.overwrite = True
             root.destroy()
 
@@ -204,7 +206,9 @@ class Gui:
                                                                            "*.csv"))]]
 
         if len(all_csv_files_in_category_in_chosen_directory) == 0:
-            raise Exception(f"There are no results in selected directory: {self.chosen_directory}")
+            print(f"\033[93mThere are no results in selected directory: \033[0m{self.chosen_directory}")
+            root.destroy()
+            return None
         results = {}
         self.create_label(text=f"{self.chosen_directory}:", row=0, column=1)
 
@@ -268,8 +272,6 @@ class Gui:
         self.create_button(text="Select all tests", command=select_all_tests, row=8, column=0)
         self.create_button(text="Deselect all tests", command=deselect_all_tests, row=9, column=0)
         self.create_button(text="EVERYTHING", command=EVERYTHING, row=10, column=0)
-        self.create_button(text="Change theme", command=self.switch_color, row=11, column=0)
-        self.create_button(text="Party", command=self.switch_color_wacky, row=12, column=0)
 
         root.eval('tk::PlaceWindow . center')
 
@@ -360,7 +362,9 @@ class Gui:
             file.write(str(self.current_theme))
 
         if not self.all_options:
-            self.choose_tests_and_graph_type()
+            while self.choose_tests_and_graph_type() is None:
+                self.choose_directory_category_search_type()
+
             model_folder = self.results_dir.split("\\")[-1]
             options = Options(
                 result_dir=self.results_dir + self.chosen_directory,
