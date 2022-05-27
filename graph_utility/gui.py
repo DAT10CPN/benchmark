@@ -354,7 +354,9 @@ class Gui:
             all_options=True,
             search_strategy=search_strategy,
             base_name='orig',
-            overwrite=self.overwrite
+            overwrite=self.overwrite,
+            folder_name=folder_name,
+            model_folder=model_folder
         )
 
         return options
@@ -385,7 +387,7 @@ class Gui:
 
         if not self.all_options:
             self.choose_tests_and_graph_type()
-
+            model_folder = self.results_dir.split("\\")[-1]
             options = Options(
                 result_dir=self.results_dir + self.chosen_directory,
                 graph_dir=os.path.join(os.path.dirname(__file__), f"..\\graphs\\{self.chosen_directory}"),
@@ -403,7 +405,9 @@ class Gui:
                 all_options=False,
                 search_strategy=self.search_strategy,
                 base_name='orig',
-                overwrite=self.overwrite
+                overwrite=self.overwrite,
+                folder_name=self.folder,
+                model_folder=model_folder
             )
 
             if self.enable_graphs == 0:

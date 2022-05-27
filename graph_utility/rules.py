@@ -87,6 +87,7 @@ class RuleUsage(Graph):
 
         all_applications = pd.DataFrame()
         for index, data in enumerate(self.rules_summed):
+            data = data.sort_index(key=lambda x: x.map(self.custom_sort_dict))
             data.set_index([pd.Index([self.new_test_names[index]])], inplace=True)
             all_applications = all_applications.append(data, ignore_index=False)
         latex = all_applications.to_latex(index=True)
@@ -115,6 +116,7 @@ class RuleUsage(Graph):
 
         all_percentages = pd.DataFrame()
         for index, data in enumerate(self.percentages):
+            data = data.sort_index(key=lambda x: x.map(self.custom_sort_dict))
             data.set_index([pd.Index([self.new_test_names[index]])], inplace=True)
             all_percentages = all_percentages.append(data, ignore_index=False)
         latex = all_percentages.to_latex(index=True)
