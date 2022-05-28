@@ -56,6 +56,7 @@ class Gui:
         background = self.random_hex_color()
         self.root.configure(bg=background)
         foreground = self.random_hex_color()
+        print(f"Background: {background}, Foreground: {foreground}")
         for wid in self.current_widgets:
             wid.configure(bg=background)
             wid.configure(fg=foreground)
