@@ -112,6 +112,17 @@ class Gui:
         root.configure(bg=self.BACKGROUNDS[self.current_theme])
         self.root = root
 
+
+        def are_there_results_in_dir():
+            all_csv_files_in_category_in_chosen_directory = [
+                (filename.split(self.chosen_directory)[1]).replace('\\', '')
+                for filename in
+                [filename for filename in
+                 glob.glob(
+                     os.path.join(self.results_dir + self.chosen_directory,
+                                  "*.csv"))]]
+            return len(all_csv_files_in_category_in_chosen_directory) > 0
+
         def set_and_continue():
             self.folder = folder_var.get()
             self.category = category_var.get()
@@ -192,6 +203,11 @@ class Gui:
         root.protocol("WM_DELETE_WINDOW", sys.exit)
         root.mainloop()
 
+        if not are_there_results_in_dir():
+            print(f"\033[93mThere are no results in selected directory: \033[0m{self.chosen_directory}")
+            return False
+        return True
+
     def choose_tests_and_graph_type(self):
         self.current_widgets = []
         root = Tk()
@@ -206,10 +222,6 @@ class Gui:
                                                               os.path.join(self.results_dir + self.chosen_directory,
                                                                            "*.csv"))]]
 
-        if len(all_csv_files_in_category_in_chosen_directory) == 0:
-            print(f"\033[93mThere are no results in selected directory: \033[0m{self.chosen_directory}")
-            root.destroy()
-            return None
         results = {}
         self.create_label(text=f"{self.chosen_directory}:", row=0, column=1)
 
@@ -292,7 +304,6 @@ class Gui:
             self.petri_net_type = "PT"
         else:
             raise Exception('Could not figure out if we have results from a CPN or PT. Check directory name')
-        return True
 
     def create_single_option(self, folder_path, category, search_strategy, model_folder):
         if "CPN" in folder_path:
@@ -357,7 +368,8 @@ class Gui:
         return all_options
 
     def get_options(self):
-        got_results_in_dir = self.choose_directory_category_search_type()
+        while not self.choose_directory_category_search_type():
+            self.choose_directory_category_search_type()
 
         with open("theme.txt", mode='w') as file:
             file.write(str(self.current_theme))
