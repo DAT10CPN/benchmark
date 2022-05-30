@@ -278,7 +278,6 @@ class Gui:
 
         root.protocol("WM_DELETE_WINDOW", sys.exit)
         root.mainloop()
-
         self.results = [csv_name for csv_name in results.keys() if results[csv_name].get() == 1]
         self.enable_graphs = enable_graphs.get()
         self.do_consistency_check = check_consistency.get()
@@ -293,6 +292,7 @@ class Gui:
             self.petri_net_type = "PT"
         else:
             raise Exception('Could not figure out if we have results from a CPN or PT. Check directory name')
+        return True
 
     def create_single_option(self, folder_path, category, search_strategy, model_folder):
         if "CPN" in folder_path:
@@ -357,14 +357,13 @@ class Gui:
         return all_options
 
     def get_options(self):
-        self.choose_directory_category_search_type()
+        got_results_in_dir = self.choose_directory_category_search_type()
 
         with open("theme.txt", mode='w') as file:
             file.write(str(self.current_theme))
 
         if not self.all_options:
-            while self.choose_tests_and_graph_type() is None:
-                self.choose_directory_category_search_type()
+            self.choose_tests_and_graph_type()
 
             model_folder = self.results_dir.split("\\")[-1]
             options = Options(
@@ -395,8 +394,7 @@ class Gui:
             if self.debug:
                 options.chosen_graphs.append('debug')
 
-            if not ((
-                            options.enable_graphs > 0) or options.do_consistency_check or options.debug or options.unique_results):
+            if not ((options.enable_graphs > 0) or options.do_consistency_check or options.debug or options.unique_results):
                 raise Exception(
                     'You chose to not do graphs, consistency or debug mode, you probably clicked something wrong')
 
