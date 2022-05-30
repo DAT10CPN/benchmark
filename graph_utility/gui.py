@@ -368,7 +368,7 @@ class Gui:
         return all_options
 
     def get_options(self):
-        while not self.choose_directory_category_search_type():
+        while not self.choose_directory_category_search_type() and not self.all_options:
             self.choose_directory_category_search_type()
 
         with open("theme.txt", mode='w') as file:
