@@ -147,6 +147,7 @@ class AnswerSimplificationBars(Graph):
 
             if answers.graph_name == 'answers_simple':
                 answers_df = pd.DataFrame({'answers': answers.transformed_data['Answered']})
+                answers_df = answers_df.sort_index(key=lambda x: x.map(self.custom_sort_dict))
                 answers_df = answers_df.T.set_index(pd.Index([self.options.category]))
                 latex = answers_df.to_latex(index=True)
                 with open(self.graph_dir + "\\answers.tex", mode='w') as file:
@@ -156,7 +157,8 @@ class AnswerSimplificationBars(Graph):
 
             plt.legend(bbox_to_anchor=(0.35, 1.12), loc='upper left', borderaxespad=0)
             plt.xlabel("test instances")
-            plot.set_ylabel(self.options.folder)
+            plot.set_ylabel(
+                self.options.folder_name + "-" + self.options.category + "-" + self.options.search_strategy + "-" + self.options.model_folder)
             plt.tight_layout()
 
             # Find max width, in order to move the very small numbers away from the bars

@@ -55,26 +55,26 @@ if __name__ == "__main__":
 
     if len(options_list) > 1:
         print(f"Creating graphs for multiple directories: {len(options_list)}")
-        print(f"\033[91mNeed to be run \033[0m- \033[93mProbalby not needed \033[0m- \033[92mWe have the results\033[0m")
+        print(
+            f"\033[91mNeed to be run \033[0m- \033[93mProbalby not needed \033[0m- \033[92mWe have the results\033[0m")
 
     for index, options in enumerate(options_list):
-        folder = options.result_dir.split('results')[1].split("\\")[1]
-        model_folder = options.result_dir.split("\\")[-1]
-        test_name = "{:<25}".format(folder) + "{:<25}".format(options.category) + "{:<10}".format(options.search_strategy) + "{:<20}".format(model_folder)
+        test_name = "{:<25}".format(options.folder_name) + "{:<25}".format(options.category) + "{:<10}".format(
+            options.search_strategy) + "{:<20}".format(options.model_folder)
         progress = f"{index}/{len(options_list)}"
         progress = "{:<7}".format(progress)
         if len(options.results_to_plot) == 0:
-            if "inhib" in model_folder:
+            if "inhib" in options.model_folder or options.folder_name != 'CPN-4-30-4-2-ioless':
                 print(f"{progress} - \033[93mSKIPPING, NO RESULTS     \033[0m: {test_name}")
             else:
                 print(f"{progress} - \033[91mSKIPPING, NO RESULTS     \033[0m: {test_name}")
+                graph_dir = os.path.join(os.path.dirname(__file__), f"..\\graphs\\")
+                with open(graph_dir + "\\tests_to_run.txt", mode='a') as file:
+                    file.write(test_name + "\n")
             continue
 
         if os.path.isdir(options.graph_dir) and not options.overwrite:
-            if "inhib" in model_folder:
-                print(f"{progress} - \033[92mSKIPPING, WONT OVERWRITE \033[0m: {test_name}")
-            else:
-                print(f"{progress} - \033[92mSKIPPING, WONT OVERWRITE \033[0m: {test_name}")
+            print(f"{progress} - \033[92mSKIPPING, WONT OVERWRITE \033[0m: {test_name}")
             continue
 
         if options.all_options:

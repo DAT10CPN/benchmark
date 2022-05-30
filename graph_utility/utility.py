@@ -25,6 +25,9 @@ class Options:
     search_strategy: str
     base_name: str
     overwrite: bool
+    folder_name: str
+    model_folder: str
+
 
 def add_total_time(data, petri_net_type, remove_nones):
     if remove_nones:
@@ -41,6 +44,7 @@ def add_total_time(data, petri_net_type, remove_nones):
             pt_get_total_time,
             axis=1)
     return res_df
+
 
 def combined_pd(read_results, test_names):
     copy_results = copy.deepcopy(read_results)
