@@ -68,8 +68,8 @@ fi
 if [ -z "$TEST_FOLDER" ] ; then
 	echo "No TEST_FOLDER given, using DEFAULT (MCC2021-COL + MCC2021-COL-inhib)"
 	TEST_FOLDER="DEFAULT"
-elif [ "$TEST_FOLDER" != "DEFAULT" ] && [ "$TEST_FOLDER" != "MCC2021-COL" ] && [ "$TEST_FOLDER" != "MCC2021-COL-PnmlTest" ] && [ "$TEST_FOLDER" != "MCC2021-COL-inhib" ]; then
-	echo "Err: TEST_FOLDER must be 'DEFAULT', 'MCC2021-COL', 'MCC2021-COL-inhib', or 'MCC2021-COL-PnmlTest'. It is '$TEST_FOLDER'"
+elif [ "$TEST_FOLDER" != "DEFAULT" ] && [ "$TEST_FOLDER" != "MCC2021-COL" ] && [ "$TEST_FOLDER" != "MCC2021-COL-PnmlTest" ] && [ "$TEST_FOLDER" != "MCC2021-COL-inhib" ] && [ "$TEST_FOLDER" != "MCC2021" ]; then
+	echo "Err: TEST_FOLDER must be 'DEFAULT', 'MCC2021-COL', 'MCC2021-COL-inhib', 'MCC2021-COL-PnmlTest', or 'MCC2021'. It is '$TEST_FOLDER'"
 	exit 0
 fi
 if [ "$TEST_FOLDER" = "DEFAULT" ] ; then
