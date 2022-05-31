@@ -21,6 +21,7 @@ search_strategies = [
 ]
 
 for ss in search_strategies:
+    print(f" ========= {ss} ==========")
     df_ss = pd.DataFrame(columns=["category", "experiment", "answers"])
     for category in categories:
         df_cat = pd.DataFrame(columns=["category", "experiment", "answers"])
@@ -31,18 +32,24 @@ for ss in search_strategies:
             if csv.stem == "orig":
                 orig_answers = answers
             else:
-                df_cat = df_cat.append({
+                entry = {
                     "category": category,
                     "experiment": csv.stem,
                     "answers": answers,
-                }, ignore_index=True)
-        df_cat["answers"] = df_cat["answers"] - orig_answers
+                }
+                df_cat = df_cat.append(entry, ignore_index=True)
+                print(entry)
+        df_cat["diff"] = df_cat["answers"] - orig_answers
         df_ss = pd.concat([df_ss, df_cat])
-    print(df_ss)
+    with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+        print("Everything:")
+        print(df_ss)
+        print("Aggregate:")
+        print(df_ss.groupby(["experiment"])[["answers", "diff"]].sum())
 
     sns.set(rc={'figure.figsize': (11, 12)})
     sns.set_theme(style="darkgrid", palette="pastel")
-    g = sns.barplot(data=df_ss, x="answers", y="experiment", hue="category")
+    g = sns.barplot(data=df_ss, x="diff", y="experiment", hue="category")
     for container in g.containers:
         g.bar_label(container, fmt="%+g", padding=3)
     g.set_xlabel(f"Answers relative to orig experiment ({ss})")
