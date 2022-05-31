@@ -37,7 +37,7 @@ class AnswerSimplificationBars(Graph):
             num_test_cases = len(data)
             errors = data['error'].value_counts()
 
-            data.drop(data[data['error'] <= 3].index, inplace=True)
+            #data.drop(data[data['error'] <= 3].index, inplace=True)
 
             # Change 'NONE' value to 'not answered', and 'TRUE' and 'FALSE' to 'answered'
             data['answer'] = data['answer'].replace(['TRUE', 'FALSE'], 'answered')
