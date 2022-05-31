@@ -43,8 +43,11 @@ for ss in search_strategies:
     sns.set(rc={'figure.figsize': (11, 12)})
     sns.set_theme(style="darkgrid", palette="pastel")
     g = sns.barplot(data=df_ss, x="answers", y="experiment", hue="category")
+    for container in g.containers:
+        g.bar_label(container, fmt="%+g", padding=3)
     g.set_xlabel(f"Answers relative to orig experiment ({ss})")
     g.set_ylabel("Experiment")
+    plt.pyplot.tight_layout()
 
     plt.pyplot.savefig(root / "graphs" / "CPN-4-30-4-2-ioless" / f"{ss}_answers.svg", dpi=600, format="svg")
     plt.pyplot.close()
