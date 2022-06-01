@@ -56,12 +56,20 @@ class VerificationTimeRatio(Lines):
                 current_metric = current_test_name + f'@{metric}'
                 current_answer = current_test_name + '@answer'
 
-                temp = np.where(combined[base_answer] != 'NONE',
-                                np.where(combined[current_answer] != 'NONE',
-                                         np.where(
-                                             combined[base_metric] == combined[current_metric], 1,
-                                             combined[base_metric] / combined[current_metric]),
-                                         np.nan), np.nan)
+                if metric == 'verification time':
+                    temp = np.where(combined[base_answer] != 'NONE',
+                                    np.where(combined[current_answer] != 'NONE',
+                                             np.where(
+                                                 combined[base_metric] == combined[current_metric], 1,
+                                                 combined[base_metric] / combined[current_metric]),
+                                             np.nan),
+                                    np.nan)
+                else:
+                    temp = np.where(combined[base_metric] != 0,
+                                    np.where(combined[current_metric] != 0,
+                                             combined[base_metric] / combined[current_metric],
+                                             np.nan),
+                                    np.nan)
                 combined[f"{current_test_name}@{metric} ratio"] = temp
                 curr = combined[f"{current_test_name}@{metric} ratio"].sort_values(ascending=False)
 
