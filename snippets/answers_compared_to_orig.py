@@ -31,6 +31,7 @@ for ss in search_strategies:
             answers = len(df_ex.index) - df_ex["answer"].value_counts()["NONE"]
             if csv.stem == "orig":
                 orig_answers = answers
+                print("orig answers:", orig_answers)
             else:
                 entry = {
                     "category": category,
@@ -46,6 +47,17 @@ for ss in search_strategies:
         print(df_ss)
         print("Aggregate:")
         print(df_ss.groupby(["experiment"])[["answers", "diff"]].sum())
+
+    for category in categories:
+        print(category, end=" ")
+        for experiment in ["C", "D", "E", "F", "I", "S", "T", "Q", "ISC", "ITC", "ISDCEFQ", "ITDCEFQ"]:
+            print(df_ss[(df_ss["category"] == category) & (df_ss["experiment"] == experiment)].iloc[0]["answers"], "& ", end="")
+        print("")
+    for category in categories:
+        print(category, end=" ")
+        for experiment in ["C", "D", "E", "F", "I", "S", "T", "Q", "ISC", "ITC", "ISDCEFQ", "ITDCEFQ"]:
+            print(f'{int(df_ss[(df_ss["category"] == category) & (df_ss["experiment"] == experiment)].iloc[0]["diff"]):+}', "& ", end="")
+        print("")
 
     sns.set(rc={'figure.figsize': (11, 12)})
     sns.set_theme(style="darkgrid", palette="pastel")
