@@ -27,6 +27,7 @@ class Options:
     overwrite: bool
     folder_name: str
     model_folder: str
+    chosen_directory: str
 
 
 def add_total_time(data, petri_net_type, remove_nones):
@@ -193,3 +194,29 @@ def get_col_names(columns):
         col_names[index_of_orig] = col_at_index_0
 
     return col_names
+
+
+def sanity_check_is_rule_used(options):
+    rule_to_index_mapping = {
+        'I': 0,
+        'T': 1,
+        'S': 1,
+        'D': 2,
+        'C': 3,
+        'E': 4,
+        'F': 5,
+        'Q': 6
+    }
+
+    for result in options.read_results:
+        test_name = result.iloc[0]['test name']
+        if test_name == options.base_name:
+            continue
+
+        rule_indices = [rule_to_index_mapping[rule] for rule in list(test_name)]
+        for rule in rule_indices:
+            num_applications = result[f"rule {rule}"].sum()
+            if num_applications == 0:
+                print(f"\033[91mCHECK '{test_name}' RESULTS IN {options.chosen_directory}\033[0m")
+                with open(options.graph_dir + "/meta.txt", mode='a') as file:
+                    file.write(f"{test_name} rule {rule} was used: {num_applications} times. Check results")
