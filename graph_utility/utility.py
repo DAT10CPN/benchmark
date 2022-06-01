@@ -219,4 +219,4 @@ def sanity_check_is_rule_used(options):
             if num_applications == 0:
                 print(f"\033[91mCHECK '{test_name}' RESULTS IN {options.chosen_directory}\033[0m")
                 with open(options.graph_dir + "/meta.txt", mode='a') as file:
-                    file.write(f"{test_name} rule {rule} was used: {num_applications} times. Check results")
+                    file.write(f"{test_name} rule {rule} was used: {num_applications} times. Check results\n")
