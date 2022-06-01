@@ -9,5 +9,5 @@ if [ -z "$DIR" ] ; then
   rm slurm*
 fi
 
-rm -r "DIR"
+rm -r "$DIR"
 
