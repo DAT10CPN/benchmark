@@ -11,16 +11,17 @@ from lines import Lines
 warnings.filterwarnings("error")
 
 
-class VerificationTimeRatio(Lines):
+class Ratios(Lines):
     def __init__(self, options):
         super().__init__(options)
-        self.graph_dir = options.graph_dir + '\\ratios\\'
+        self.graph_dir = options.graph_dir + '\\ratios\\individual\\'
         self.name = 'ratios'
         self.plot_ready = pd.DataFrame()
         self.metrics_to_do_ratios = ['reduce time', 'verification time', 'verification memory', 'state space size',
                                      'total time']
         if self.options.petri_net_type == 'CPN':
             self.metrics_to_do_ratios.append('unfold time')
+        self.min_value = 5
 
     def prepare_data(self):
         if not self.options.base_name in self.options.test_names:
@@ -57,18 +58,26 @@ class VerificationTimeRatio(Lines):
                 current_answer = current_test_name + '@answer'
 
                 if metric == 'verification time':
-                    temp = np.where(combined[base_answer] != 'NONE',
-                                    np.where(combined[current_answer] != 'NONE',
-                                             np.where(
-                                                 combined[base_metric] == combined[current_metric], 1,
-                                                 combined[base_metric] / combined[current_metric]),
-                                             np.nan),
-                                    np.nan)
+                    temp = np.where(combined[base_metric] > self.min_value, np.where(combined[base_answer] != 'NONE',
+                                                                                     np.where(combined[
+                                                                                                  current_answer] != 'NONE',
+                                                                                              np.where(
+                                                                                                  combined[
+                                                                                                      base_metric] ==
+                                                                                                  combined[
+                                                                                                      current_metric],
+                                                                                                  1,
+                                                                                                  combined[
+                                                                                                      base_metric] /
+                                                                                                  combined[
+                                                                                                      current_metric]),
+                                                                                              np.nan),
+                                                                                     np.nan), np.nan)
                 else:
-                    temp = np.where(combined[base_metric] != 0,
-                                    np.where(combined[current_metric] != 0,
-                                             combined[base_metric] / combined[current_metric],
-                                             np.nan),
+                    temp = np.where(combined[base_metric] > self.min_value,
+                                    np.where(
+                                        0 == combined[current_metric], 100,
+                                        combined[base_metric] / combined[current_metric]),
                                     np.nan)
                 combined[f"{current_test_name}@{metric} ratio"] = temp
                 curr = combined[f"{current_test_name}@{metric} ratio"].sort_values(ascending=False)
