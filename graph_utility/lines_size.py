@@ -103,7 +103,7 @@ class SizeLines(Lines):
                 except:
                     plot.set(yscale="linear")
                 #plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
-
+                plt.legend(loc='upper left')
                 plt.savefig(
                     self.graph_dir + f'{metric_name}\\largest_{keep_percentage * 100}%.svg',
                     bbox_inches='tight', dpi=600, format="svg")
