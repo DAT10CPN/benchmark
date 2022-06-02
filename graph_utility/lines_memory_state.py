@@ -68,6 +68,7 @@ class MemoryStateLines(Lines):
                 except:
                     plot.set(yscale="linear")
                 #plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
+                plt.legend(loc='upper left')
                 plt.title(f"top {percentage * 100}% largest {metric}")
                 plt.savefig(
                     self.graph_dir + f'{metric}\\top_{percentage * 100}%.svg',

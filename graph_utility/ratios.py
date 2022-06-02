@@ -102,7 +102,7 @@ class VerificationTimeRatio(Lines):
             except:
                 plot.set(yscale="linear")
             plt.title(f'{self.options.base_name}-{metric}/ other tests')
-
+            plt.legend(loc='upper left')
             plt.savefig(
                 self.graph_dir + f'figs\\{metric}.svg',
                 bbox_inches='tight', dpi=600, format="svg")
