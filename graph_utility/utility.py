@@ -201,6 +201,7 @@ def sanity_check_is_rule_used(options):
         'I': 0,
         'T': 1,
         'S': 1,
+        'U': 1,
         'D': 2,
         'C': 3,
         'E': 4,
