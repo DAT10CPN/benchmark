@@ -26,14 +26,14 @@ def plot_graphs(options):
     if not options.all_options:
         print("Creating graph objects")
     graph_objects = [
-        #AnswerSimplificationBars(options),
-        #RuleUsage(options),
-        #MemoryStateLines(options),
-        #TimeLines(options),
-        #SizeLines(options),
-        #DebugGraph(options),
+        AnswerSimplificationBars(options),
+        RuleUsage(options),
+        MemoryStateLines(options),
+        TimeLines(options),
+        SizeLines(options),
+        DebugGraph(options),
         Ratios(options),
-        #ModelRatios(options),
+        ModelRatios(options),
         ModelRatiosAverages(options)
     ]
 
