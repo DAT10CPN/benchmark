@@ -4,8 +4,8 @@
 # Args: <binary> [sequence] [category] [test-folder] [search-strat] [col-red-time-out] [red-time-out] [combined-time-out] [expl-time-out]
 # - sequences default is ALL, write "<name>/<options>" for specific sequence, e.g.: "orig/-R 0"
 # - category DEFAULT is ReachabilityCardinality (Reachability, LTL, CTL, and ALL is valid categories)
-# - test-folder DEFAULT is MCC2021-COL + MCC2021-COL-inhib
-# - search-start DEFAULT is BestFS + DFS
+# - test-folder DEFAULT is MCC2021-COL
+# - search-start DEFAULT is DFS
 # This starts multiple pipelines using the given rule sequences, categories, test folder, and search strategy
 
 BIN=$1
@@ -66,25 +66,25 @@ elif [ "$CATEGORY" = "CTL" ]; then
 fi
 
 if [ -z "$TEST_FOLDER" ] ; then
-	echo "No TEST_FOLDER given, using DEFAULT (MCC2021-COL + MCC2021-COL-inhib)"
+	echo "No TEST_FOLDER given, using DEFAULT (MCC2021-COL)"
 	TEST_FOLDER="DEFAULT"
 elif [ "$TEST_FOLDER" != "DEFAULT" ] && [ "$TEST_FOLDER" != "MCC2021-COL" ] && [ "$TEST_FOLDER" != "MCC2021-COL-PnmlTest" ] && [ "$TEST_FOLDER" != "MCC2021-COL-inhib" ] && [ "$TEST_FOLDER" != "MCC2021" ]; then
 	echo "Err: TEST_FOLDER must be 'DEFAULT', 'MCC2021-COL', 'MCC2021-COL-inhib', 'MCC2021-COL-PnmlTest', or 'MCC2021'. It is '$TEST_FOLDER'"
 	exit 0
 fi
 if [ "$TEST_FOLDER" = "DEFAULT" ] ; then
-  TEST_FOLDER=("MCC2021-COL" "MCC2021-COL-inhib")
+  TEST_FOLDER="MCC2021-COL"
 fi
 
 if [ -z "$SEARCH_STRAT" ] ; then
-	echo "No SEARCH_STRAT given, using DEFAULT (BestFS + DFS)"
+	echo "No SEARCH_STRAT given, using DEFAULT (DFS)"
 	SEARCH_STRAT="DEFAULT"
 elif [ "$SEARCH_STRAT" != "DEFAULT" ] && [ "$SEARCH_STRAT" != "BestFS" ] && [ "$SEARCH_STRAT" != "BFS" ] && [ "$SEARCH_STRAT" != "DFS" ] && [ "$SEARCH_STRAT" != "RDFS" ] && [ "$SEARCH_STRAT" != "OverApprox" ] ; then
 	echo "Err: SEARCH_STRAT must be DEFAULT, BestFS, BFS, DFS, RDFS, or OverApprox. It is '$SEARCH_STRAT'"
 	exit 0
 fi
 if [ "$SEARCH_STRAT" = "DEFAULT" ] ; then
-  SEARCH_STRAT=("BestFS" "DFS")
+  SEARCH_STRAT="DFS"
 fi
 
 pat="^[0-9]+$"
