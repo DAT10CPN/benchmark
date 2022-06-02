@@ -119,8 +119,9 @@ def phase_1_errors(df, petri_net_type):
         df['error'] = df.apply(
             lambda row: 1 if row['original place count'] == 0 else 500, axis=1)
     elif petri_net_type == 'PT':
-        df['error'] = df.apply(
-            lambda row: 1 if row['prev place count'] == 0 else 500, axis=1)
+        df['error'] = 500
+        # df['error'] = df.apply(
+        #     lambda row: 1 if row['prev place count'] == 0 else 500, axis=1)
     return df
 
 
