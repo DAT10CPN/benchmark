@@ -98,6 +98,7 @@ if __name__ == "__main__":
                 print("---------Printing errors graphs---------")
             os.makedirs(options.graph_dir + "\\errors")
             utility.write_results_with_errors(options)
+        utility.sanity_check_is_rule_used(options)
 
         if (options.enable_graphs > 0) or options.debug:
             if not options.all_options:

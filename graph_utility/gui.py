@@ -9,8 +9,10 @@ from graph_utility.utility import Options
 
 class Gui:
     def __init__(self):
-        self.BACKGROUNDS = ['#101022', '#C0C0C0', '#F7F', '#EECF6D', '#230C0F', '#201E1F', '#4A412A', '#ff0000', '#0049B7']
-        self.FOREGROUNDS = ['#90B0B0', '#1923E8', '#3BE', '#8B6220', '#CBA328', '#FF4000', '#2A324A', '#ffffff', '#ff1d58']
+        self.BACKGROUNDS = ['#101022', '#C0C0C0', '#F7F', '#EECF6D', '#230C0F', '#201E1F', '#4A412A', '#ff0000',
+                            '#0049B7']
+        self.FOREGROUNDS = ['#90B0B0', '#1923E8', '#3BE', '#8B6220', '#CBA328', '#FF4000', '#2A324A', '#ffffff',
+                            '#ff1d58']
         self.hexvalues = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
         self.category = ''
         self.folder = ''
@@ -36,6 +38,7 @@ class Gui:
         self.current_widgets = []
         self.root = None
         self.only_one_test_setup = False
+        self.base_name = 'orig'
 
         if os.path.exists('theme.txt'):
             with open("theme.txt", mode='r') as file:
@@ -72,7 +75,6 @@ class Gui:
         for wid in self.current_widgets:
             wid.configure(bg=self.random_hex_color())
             wid.configure(fg=self.random_hex_color())
-
 
     def set_geometry(self, root, w, h):
         ws = root.winfo_screenwidth()
@@ -111,7 +113,6 @@ class Gui:
         root.title('Experiments')
         root.configure(bg=self.BACKGROUNDS[self.current_theme])
         self.root = root
-
 
         def are_there_results_in_dir():
             all_csv_files_in_category_in_chosen_directory = [
@@ -196,7 +197,8 @@ class Gui:
         self.create_button(text="Party", command=self.switch_color_wacky, row=len(self.categories) - 1, column=2)
         self.create_button(text="Random theme", command=self.switch_color_random, row=len(self.categories), column=2)
         self.create_button(text="Change theme", command=self.switch_color, row=len(self.categories) + 1, column=2)
-        self.create_button(text="I'm feeling lucky!", command=set_and_continue_random, row=len(self.categories), column=3)
+        self.create_button(text="I'm feeling lucky!", command=set_and_continue_random, row=len(self.categories),
+                           column=3)
         self.create_button(text="Choose and continue", command=set_and_continue, row=len(self.categories) + 1, column=3)
 
         root.eval('tk::PlaceWindow . center')
@@ -339,10 +341,11 @@ class Gui:
             petri_net_type=petri_net_type,
             all_options=True,
             search_strategy=search_strategy,
-            base_name='orig',
+            base_name=self.base_name,
             overwrite=self.overwrite,
             folder_name=folder_name,
-            model_folder=model_folder
+            model_folder=model_folder,
+            chosen_directory=f"{folder_name}\\{category}\\{search_strategy}\\{model_folder}"
         )
 
         return options
@@ -394,10 +397,11 @@ class Gui:
                 petri_net_type=self.petri_net_type,
                 all_options=False,
                 search_strategy=self.search_strategy,
-                base_name='orig',
+                base_name=self.base_name,
                 overwrite=self.overwrite,
                 folder_name=self.folder,
-                model_folder=model_folder
+                model_folder=model_folder,
+                chosen_directory=self.chosen_directory
             )
 
             if self.enable_graphs == 0:
@@ -406,7 +410,8 @@ class Gui:
             if self.debug:
                 options.chosen_graphs.append('debug')
 
-            if not ((options.enable_graphs > 0) or options.do_consistency_check or options.debug or options.unique_results):
+            if not ((
+                            options.enable_graphs > 0) or options.do_consistency_check or options.debug or options.unique_results):
                 raise Exception(
                     'You chose to not do graphs, consistency or debug mode, you probably clicked something wrong')
 
