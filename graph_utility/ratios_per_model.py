@@ -71,7 +71,7 @@ class ModelRatios(Lines):
                 base_metric = self.options.base_name + f'@{metric}'
                 current_metric = test_name + f'@{metric}'
 
-                temp = np.where(orig_and_current[base_metric] == orig_and_current[current_metric], 1, orig_and_current[base_metric] / orig_and_current[current_metric])
+                temp = orig_and_current[base_metric] / orig_and_current[current_metric]
                 curr = pd.DataFrame()
                 curr[metric] = temp.round(3)
 
