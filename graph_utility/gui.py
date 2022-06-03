@@ -42,6 +42,7 @@ class Gui:
         self.results_for_exam = ['C.csv', 'D.csv', 'E.csv', 'F.csv', 'I.csv', 'Q.csv', 'U.csv', 'IUC.csv',
                                  'IUDCEFQ.csv', 'base.csv']
         self.ss_for_exam = ["DFS"]
+        self.model_folders_for_exam = ['MCC2021-COL']
 
         if os.path.exists('theme.txt'):
             with open("theme.txt", mode='r') as file:
@@ -368,7 +369,7 @@ class Gui:
                         model_folders = self.pt_model_folders
                     else:
                         raise Exception("Not found Petri net type from folder path")
-                    for model_folder in model_folders:
+                    for model_folder in self.model_folders_for_exam:
                         option = self.create_single_option(folder_path, category, search_strategy, model_folder)
                         all_options.append(option)
 
