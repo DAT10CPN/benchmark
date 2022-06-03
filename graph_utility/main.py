@@ -1,7 +1,7 @@
 import datetime
 import os
 import shutil
-
+import seaborn as sns
 import utility
 from answers import AnswerSimplificationBars
 from consistency import check_consistency
@@ -25,6 +25,8 @@ def plot_graphs(options):
 
     if not options.all_options:
         print("Creating graph objects")
+
+    sns.set_theme(style="darkgrid")
     graph_objects = [
         AnswerSimplificationBars(options),
         RuleUsage(options),
@@ -107,6 +109,7 @@ if __name__ == "__main__":
         if (options.enable_graphs > 0) or options.debug:
             if not options.all_options:
                 print("---------Creating graphs---------")
+            os.makedirs(options.graph_dir + "\\for_exam")
             plot_graphs(options)
 
         if options.unique_results:
