@@ -33,7 +33,7 @@ class Gui:
         self.pt_model_folders = ["MCC2021", "MCC2021-inhib"]
         self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
-                            'ratios', 'model-ratios', 'model-ratios-average']
+                            'ratios', 'model-ratios', 'model-ratios-average', 'time-saved']
         self.overwrite = True
         self.current_widgets = []
         self.root = None
@@ -155,11 +155,10 @@ class Gui:
 
         # Set all available directories to choose from
         folder_var = StringVar(root)
+        folder_var.set('CPN-4-30-4-2-ioless')
         self.create_label(text="Available test directories:", row=0, column=0)
         for index, test_folder in enumerate(glob.glob(self.results_dir + "/*/", recursive=False)):
             test_folder_name = os.path.basename(os.path.normpath(test_folder))
-            if index == 0:
-                folder_var.set(test_folder_name)
             self.create_radio_button(text=test_folder_name, value=test_folder_name, variable=folder_var,
                                      row=index + 1, column=0)
 
@@ -180,7 +179,7 @@ class Gui:
 
         # Set Search strategy
         search_var = StringVar(root)
-        search_var.set("BestFS")
+        search_var.set("DFS")
         self.create_label(text="Search Strategy:", row=0, column=2)
         for index, search_strategy_name in enumerate(self.search_strategies):
             self.create_radio_button(text=search_strategy_name, value=search_strategy_name, variable=search_var,

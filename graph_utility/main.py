@@ -13,6 +13,7 @@ from graph_utility.ratios import Ratios
 from graph_utility.rules import RuleUsage
 from graph_utility.ratios_per_model import ModelRatios
 from graph_utility.ratios_per_model_averages_first import ModelRatiosAverages
+from graph_utility.time_saved import TimeSaved
 from gui import Gui
 from unique_results import find_unique_results
 
@@ -36,7 +37,9 @@ def plot_graphs(options):
         DebugGraph(options),
         Ratios(options),
         ModelRatios(options),
-        ModelRatiosAverages(options)
+        ModelRatiosAverages(options),
+        TimeSaved(options)
+
     ]
 
     if not options.all_options:
