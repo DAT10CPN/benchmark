@@ -12,6 +12,7 @@ class DebugGraph(Graph):
         self.name = 'debug'
 
     def prepare_data(self):
+        return
         csvs = self.options.read_results
         for i, csv in enumerate(csvs):
             csv.set_index(["model name", "query index"], inplace=True)
@@ -26,4 +27,5 @@ class DebugGraph(Graph):
 
 
     def plot(self):
+        return
         self.everything.to_csv(self.options.graph_dir + f"\\{self.name}.csv")
