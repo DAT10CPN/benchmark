@@ -25,11 +25,11 @@ class Lines(Graph):
         self.base_name = self.options.base_name
         self.base_color = np.array([0.1, 0.1, 0.1])
         if self.options.enable_graphs == 1:
-            self.cutoff_times = [0, 2.5, 30]
-            self.keep_percentages = [0.05, 0.15, 0.25]
+            self.cutoff_times = [3, 30]
+            self.keep_percentages = [0.05, 0.15]
         elif self.options.enable_graphs == 2:
-            self.cutoff_times = [0, 0.5, 1, 2.5, 5, 10, 20, 30, 60]
-            self.keep_percentages = [0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1]
+            self.cutoff_times = [0, 2.5, 5, 12, 30, 60]
+            self.keep_percentages = [0.01, 0.05, 0.12, 0.25, 0.8]
 
     def create_lineplot_highlight_orig(self, data_to_plot):
         custom_palette = {}
