@@ -107,7 +107,7 @@ class SizeLines(Lines):
                 plt.savefig(
                     self.graph_dir + f'{metric_name}\\largest_{keep_percentage * 100}%.svg',
                     bbox_inches='tight', dpi=600, format="svg")
-                if keep_percentage == 0.25 and metric == 'color reduced size':
+                if keep_percentage == 0.25 and metric.size_metric_name == 'color reduced size':
                     plt.savefig(
                         self.graph_dir + f'..\\for_exam\\color_reduce_size_largest_{keep_percentage*100}.svg',
                         bbox_inches='tight', dpi=600, format="svg")

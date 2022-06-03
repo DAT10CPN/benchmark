@@ -98,7 +98,7 @@ class TimeLines(Lines):
                 plt.savefig(
                     self.graph_dir + f'{metric.line_metric_name}\\above_{cutoff_time}_seconds.svg',
                     bbox_inches='tight', dpi=600, format="svg")
-                if (cutoff_time == 30 and metric.line_metric_name != 'reduce time') or (cutoff_time == 5 and metric.line_metric_name == 'reduce time'):
+                if (cutoff_time == 30 and not metric.line_metric_name in ['colored reduce time','reduce time']) or (cutoff_time == 5 and metric.line_metric_name == 'reduce time'):
                     plt.savefig(
                         self.graph_dir + f'..\\for_exam\\{metric.line_metric_name.replace(" ", "_")}_above_{cutoff_time}_seconds.svg',
                         bbox_inches='tight', dpi=600, format="svg")
