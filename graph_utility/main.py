@@ -107,6 +107,7 @@ if __name__ == "__main__":
         if (options.enable_graphs > 0) or options.debug:
             if not options.all_options:
                 print("---------Creating graphs---------")
+            os.makedirs(options.graph_dir + "\\for_exam")
             plot_graphs(options)
 
         if options.unique_results:

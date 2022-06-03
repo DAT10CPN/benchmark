@@ -69,8 +69,12 @@ class MemoryStateLines(Lines):
                     plot.set(yscale="linear")
                 #plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
                 plt.legend(loc='upper left')
-                plt.title(f"top {percentage * 100}% largest {metric}")
+                #plt.title(f"top {percentage * 100}% largest {metric}")
                 plt.savefig(
                     self.graph_dir + f'{metric}\\top_{percentage * 100}%.svg',
                     bbox_inches='tight', dpi=600, format="svg")
+                if percentage == 0.05 and metric == 'state space size':
+                    plt.savefig(
+                        self.graph_dir + f'..\\for_exam\\state_space_size_largest_{percentage*100}.svg',
+                        bbox_inches='tight', dpi=600, format="svg")
                 plt.close()

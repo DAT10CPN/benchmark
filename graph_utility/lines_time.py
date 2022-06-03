@@ -92,10 +92,14 @@ class TimeLines(Lines):
                     plot.set(yscale="log")
                 except:
                     plot.set(yscale="linear")
-                plt.title(f'{metric.line_metric_name} over {cutoff_time} seconds')
+                #plt.title(f'{metric.line_metric_name} over {cutoff_time} seconds')
                 #plt.legend(labels=utility.get_col_names(data_to_plot.columns), loc='upper left', borderaxespad=0)
                 plt.legend(loc='upper left')
                 plt.savefig(
                     self.graph_dir + f'{metric.line_metric_name}\\above_{cutoff_time}_seconds.svg',
                     bbox_inches='tight', dpi=600, format="svg")
+                if (cutoff_time == 30 and metric.line_metric_name != 'reduce time') or (cutoff_time == 5 and metric.line_metric_name == 'reduce time'):
+                    plt.savefig(
+                        self.graph_dir + f'..\\for_exam\\{metric.line_metric_name.replace(" ", "_")}_above_{cutoff_time}_seconds.svg',
+                        bbox_inches='tight', dpi=600, format="svg")
                 plt.close()
