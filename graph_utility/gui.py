@@ -208,7 +208,7 @@ class Gui:
         root.protocol("WM_DELETE_WINDOW", sys.exit)
         root.mainloop()
 
-        if not are_there_results_in_dir():
+        if not are_there_results_in_dir() and not self.all_options:
             print(f"\033[93mThere are no results in selected directory: \033[0m{self.chosen_directory}")
             return False
         return True
