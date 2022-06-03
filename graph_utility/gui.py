@@ -38,7 +38,10 @@ class Gui:
         self.current_widgets = []
         self.root = None
         self.only_one_test_setup = False
-        self.base_name = 'orig'
+        self.base_name = 'base'
+        self.results_for_exam = ['C.csv', 'D.csv', 'E.csv', 'F.csv', 'I.csv', 'Q.csv', 'U.csv', 'IUC.csv',
+                                 'IUDCEFQ.csv', 'base.csv']
+        self.ss_for_exam = ["DFS"]
 
         if os.path.exists('theme.txt'):
             with open("theme.txt", mode='r') as file:
@@ -186,7 +189,7 @@ class Gui:
         only_one_test_setup_var.set(0)
         self.create_check_button(text="Only one test setup", variable=only_one_test_setup_var, row=len(self.categories),
                                  column=0)
-        self.create_button(text="Absolutely everything", command=absolutely_everything, row=len(self.categories) + 1,
+        self.create_button(text="Absolutely everything (DFS)", command=absolutely_everything, row=len(self.categories) + 1,
                            column=0)
 
         overwrite_var = IntVar()
@@ -317,10 +320,11 @@ class Gui:
 
         chosen_directory = folder_path + category + "\\" + search_strategy + "\\" + model_folder
 
-        results = [(filename.split(chosen_directory)[1]).replace('\\', '') for filename in
-                   [filename for filename in
-                    glob.glob(
-                        os.path.join(chosen_directory, "*.csv"))]]
+        # results = [(filename.split(chosen_directory)[1]).replace('\\', '') for filename in
+        #           [filename for filename in
+        #            glob.glob(
+        #                os.path.join(chosen_directory, "*.csv"))]]
+        results = self.results_for_exam
 
         folder_name = folder_path.split('results')[1].replace('\\', '')
 
@@ -357,7 +361,7 @@ class Gui:
             if self.only_one_test_setup and not self.folder in folder_path:
                 continue
             for category in self.categories:
-                for search_strategy in self.search_strategies:
+                for search_strategy in self.ss_for_exam:
                     if "CPN" in folder_path:
                         model_folders = self.col_model_folders
                     elif "PT" in folder_path:
