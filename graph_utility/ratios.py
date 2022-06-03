@@ -52,33 +52,26 @@ class Ratios(Lines):
                     continue
 
                 base_metric = self.options.base_name + f'@{metric}'
-                base_answer = self.options.base_name + '@answer'
 
                 current_metric = current_test_name + f'@{metric}'
-                current_answer = current_test_name + '@answer'
 
-                if metric == 'verification time':
-                    temp = np.where(combined[base_metric] > self.min_value, np.where(combined[base_answer] != 'NONE',
-                                                                                     np.where(combined[
-                                                                                                  current_answer] != 'NONE',
-                                                                                              np.where(
-                                                                                                  combined[
-                                                                                                      base_metric] ==
-                                                                                                  combined[
-                                                                                                      current_metric],
-                                                                                                  1,
-                                                                                                  combined[
-                                                                                                      base_metric] /
-                                                                                                  combined[
-                                                                                                      current_metric]),
-                                                                                              np.nan),
-                                                                                     np.nan), np.nan)
-                else:
-                    temp = np.where(combined[base_metric] > self.min_value,
-                                    np.where(
-                                        0 == combined[current_metric], 100,
-                                        combined[base_metric] / combined[current_metric]),
-                                    np.nan)
+                combined = combined[combined[f'{self.options.base_name}@answer'] != 'NONE']
+                combined = combined[combined[f'{current_test_name}@answer'] != 'NONE']
+
+                def get_ratio(row):
+                    if row[base_metric] == row[current_metric]:
+                        return 1
+                    elif row[current_metric] == 0 and metric == 'verification time':
+                        return (row[base_metric] + 0.1) / 0.1
+                    elif row[base_metric] < 2 and row[current_metric] < 2:
+                        return 1
+                    elif row[current_metric] == 0:
+                        return np.nan
+                    else:
+                        return row[base_metric] / row[current_metric]
+
+                temp = combined.apply(lambda row: get_ratio(row), axis=1)
+
                 combined[f"{current_test_name}@{metric} ratio"] = temp
                 curr = combined[f"{current_test_name}@{metric} ratio"].sort_values(ascending=False)
 

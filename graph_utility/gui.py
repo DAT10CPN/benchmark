@@ -33,7 +33,7 @@ class Gui:
         self.pt_model_folders = ["MCC2021", "MCC2021-inhib"]
         self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
-                            'ratios', 'model-ratios']
+                            'ratios', 'model-ratios', 'model-ratios-average']
         self.overwrite = True
         self.current_widgets = []
         self.root = None

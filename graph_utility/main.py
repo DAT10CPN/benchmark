@@ -12,6 +12,7 @@ from graph_utility.lines_time import TimeLines
 from graph_utility.ratios import Ratios
 from graph_utility.rules import RuleUsage
 from graph_utility.ratios_per_model import ModelRatios
+from graph_utility.ratios_per_model_averages_first import ModelRatiosAverages
 from gui import Gui
 from unique_results import find_unique_results
 
@@ -32,7 +33,8 @@ def plot_graphs(options):
         SizeLines(options),
         DebugGraph(options),
         Ratios(options),
-        ModelRatios(options)
+        ModelRatios(options),
+        ModelRatiosAverages(options)
     ]
 
     if not options.all_options:
@@ -42,11 +44,11 @@ def plot_graphs(options):
             if not options.all_options:
                 print("-----------")
                 print(f"Making graph: {graph.name}")
-            try:
-                graph.prepare_data()
-                graph.plot()
-            except Exception as e:
-               print(f"\033[93mGraph failed with exception: {e}\033[0m")
+            #try:
+            graph.prepare_data()
+            graph.plot()
+            #except Exception as e:
+            #   print(f"\033[93mGraph failed with exception: {e}\033[0m")
             graphs_made += 1
             if not options.all_options:
                 print(f"graphs made: {graphs_made}/{num_graphs}")
