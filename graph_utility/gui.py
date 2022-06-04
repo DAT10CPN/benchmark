@@ -39,10 +39,12 @@ class Gui:
         self.root = None
         self.only_one_test_setup = False
         self.base_name = 'base'
-        self.results_for_exam = ['C.csv', 'D.csv', 'E.csv', 'F.csv', 'I.csv', 'Q.csv', 'U.csv', 'IUC.csv',
+        self.results_for_exam_cpn = ['C.csv', 'D.csv', 'E.csv', 'F.csv', 'I.csv', 'Q.csv', 'U.csv', 'IUC.csv',
                                  'IUDCEFQ.csv', 'base.csv']
+        self.results_for_exam_pt = ['base.csv', 'newC.csv', 'withS.csv']
         self.ss_for_exam = ["DFS"]
-        self.model_folders_for_exam = ['MCC2021-COL']
+        self.model_folders_for_exam_cpn = ['MCC2021-COL']
+        self.model_folders_for_exam_pt = ['MCC2021']
 
         if os.path.exists('theme.txt'):
             with open("theme.txt", mode='r') as file:
@@ -315,8 +317,10 @@ class Gui:
     def create_single_option(self, folder_path, category, search_strategy, model_folder):
         if "CPN" in folder_path:
             petri_net_type = "CPN"
+            results = self.results_for_exam_cpn
         elif "PT" in folder_path:
             petri_net_type = "PT"
+            results = self.results_for_exam_pt
         else:
             raise Exception('Could not figure out if we have results from a CPN or PT. Check directory name')
 
@@ -326,7 +330,8 @@ class Gui:
         #           [filename for filename in
         #            glob.glob(
         #                os.path.join(chosen_directory, "*.csv"))]]
-        results = self.results_for_exam
+
+
 
         folder_name = folder_path.split('results')[1].replace('\\', '')
 
@@ -365,14 +370,13 @@ class Gui:
             for category in self.categories:
                 for search_strategy in self.ss_for_exam:
                     if "CPN" in folder_path:
-                        model_folders = self.col_model_folders
+                        for model_folder in self.model_folders_for_exam_cpn:
+                            option = self.create_single_option(folder_path, category, search_strategy, model_folder)
+                            all_options.append(option)
                     elif "PT" in folder_path:
-                        model_folders = self.pt_model_folders
-                    else:
-                        raise Exception("Not found Petri net type from folder path")
-                    for model_folder in self.model_folders_for_exam:
-                        option = self.create_single_option(folder_path, category, search_strategy, model_folder)
-                        all_options.append(option)
+                        for model_folder in self.model_folders_for_exam_pt:
+                            option = self.create_single_option(folder_path, category, search_strategy, model_folder)
+                            all_options.append(option)
 
         return all_options
 
