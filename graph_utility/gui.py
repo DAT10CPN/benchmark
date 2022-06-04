@@ -33,7 +33,7 @@ class Gui:
         self.pt_model_folders = ["MCC2021", "MCC2021-inhib"]
         self.search_strategies = ["BestFS", "DFS", "RDFS"]
         self.graph_names = ['answers', 'rules', 'memory-state lines', 'time lines', 'size lines',
-                            'ratios', 'model-ratios', 'model-ratios-average', 'time-saved']
+                            'ratios', 'model-ratios', 'model-ratios-average', 'time-saved', 'answers by model']
         self.overwrite = True
         self.current_widgets = []
         self.root = None
@@ -112,21 +112,23 @@ class Gui:
                      fg=self.FOREGROUNDS[self.current_theme])
         self.add_to_grid_and_current_widget(btn, row, column)
 
+    def are_there_results_in_dir(self):
+        all_csv_files_in_category_in_chosen_directory = [
+            (filename.split(self.chosen_directory)[1]).replace('\\', '')
+            for filename in
+            [filename for filename in
+             glob.glob(
+                 os.path.join(self.results_dir + self.chosen_directory,
+                              "*.csv"))]]
+        return len(all_csv_files_in_category_in_chosen_directory) > 0
+
     def choose_directory_category_search_type(self):
         root = Tk()
         root.title('Experiments')
         root.configure(bg=self.BACKGROUNDS[self.current_theme])
         self.root = root
 
-        def are_there_results_in_dir():
-            all_csv_files_in_category_in_chosen_directory = [
-                (filename.split(self.chosen_directory)[1]).replace('\\', '')
-                for filename in
-                [filename for filename in
-                 glob.glob(
-                     os.path.join(self.results_dir + self.chosen_directory,
-                                  "*.csv"))]]
-            return len(all_csv_files_in_category_in_chosen_directory) > 0
+
 
         def set_and_continue():
             self.folder = folder_var.get()
@@ -208,7 +210,7 @@ class Gui:
         root.protocol("WM_DELETE_WINDOW", sys.exit)
         root.mainloop()
 
-        if not are_there_results_in_dir() and not self.all_options:
+        if not self.are_there_results_in_dir() and not self.all_options:
             print(f"\033[93mThere are no results in selected directory: \033[0m{self.chosen_directory}")
             return False
         return True

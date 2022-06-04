@@ -60,7 +60,10 @@ class ModelRatiosAverages(Lines):
                 orig_and_current = orig_and_current[orig_and_current[f'{self.options.base_name}@answer'] != 'NONE']
                 orig_and_current = orig_and_current[orig_and_current[f'{test_name}@answer'] != 'NONE']
                 orig_and_current.reset_index(inplace=True)
-                orig_and_current['model name'] = orig_and_current['model name'].str.split(r'-COL').str.get(0)
+                if self.options.petri_net_type == 'CPN':
+                    orig_and_current['model name'] = orig_and_current['model name'].str.split(r'-COL').str.get(0)
+                else:
+                    orig_and_current['model name'] = orig_and_current['model name'].str.split(r'-PT').str.get(0)
 
                 base_metric = self.options.base_name + f'@{metric}'
                 current_metric = test_name + f'@{metric}'

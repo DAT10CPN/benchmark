@@ -4,7 +4,6 @@ from dataclasses import dataclass
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-
 from graph import Graph
 
 pd.options.mode.chained_assignment = None
@@ -139,7 +138,8 @@ class AnswerSimplificationBars(Graph):
         self.sort_answers()
 
     def plot(self):
-        os.makedirs(self.graph_dir)
+        if not os.path.exists(self.graph_dir):
+            os.makedirs(self.graph_dir)
 
         # Plot the plot
         sns.set_theme(style="darkgrid", palette="pastel")

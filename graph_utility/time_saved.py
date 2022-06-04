@@ -45,7 +45,10 @@ class TimeSaved(Lines):
 
             model_sums = comparison
             model_sums.reset_index(inplace=True)
-            model_sums['model name'] = model_sums['model name'].str.split(r'-COL').str.get(0)
+            if self.options.petri_net_type == 'CPN':
+                model_sums['model name'] = model_sums['model name'].str.split(r'-COL').str.get(0)
+            else:
+                model_sums['model name'] = model_sums['model name'].str.split(r'-PT').str.get(0)
             model_sums = model_sums.groupby(['model name']).sum()
 
             temp = pd.DataFrame()

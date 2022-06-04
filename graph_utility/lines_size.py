@@ -41,7 +41,7 @@ class SizeLines(Lines):
             self.size_metrics = [
                 SizeMetric(
                     size_metric_name='reduced size',
-                    relevant_size_columns=['post place count', 'post transition count'],
+                    relevant_size_columns=['reduced place count', 'reduced transition count'],
                     is_in_phase=3
                 ),
             ]

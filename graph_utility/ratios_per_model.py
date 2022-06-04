@@ -63,7 +63,10 @@ class ModelRatios(Lines):
                 orig_and_current = orig_and_current[orig_and_current[f'{test_name}@answer'] != 'NONE']
 
                 orig_and_current.reset_index(inplace=True)
-                orig_and_current['model name'] = orig_and_current['model name'].str.split(r'-COL').str.get(0)
+                if self.options.petri_net_type == 'CPN':
+                    orig_and_current['model name'] = orig_and_current['model name'].str.split(r'-COL').str.get(0)
+                else:
+                    orig_and_current['model name'] = orig_and_current['model name'].str.split(r'-PT').str.get(0)
                 orig_and_current = orig_and_current.groupby(['model name']).sum()
                 # orig_and_current.to_csv(self.graph_dir + f"{test_name}\\grouped_and_summed.csv")
 
