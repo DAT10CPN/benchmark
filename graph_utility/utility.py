@@ -215,7 +215,7 @@ def sanity_check_is_rule_used(options):
         if test_name == options.base_name:
             continue
 
-        rule_indices = [rule_to_index_mapping[rule] for rule in list(test_name)]
+        rule_indices = [rule_to_index_mapping[rule] for rule in list(test_name) if rule.isupper()]
         for rule in rule_indices:
             num_applications = result[f"rule {rule}"].sum()
             if num_applications == 0:
