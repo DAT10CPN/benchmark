@@ -84,6 +84,9 @@ class TimeSaved(Lines):
                                                        total_time_saved_per_model[col])
             total_time_saved_per_model.rename(columns={col: col.split(r'_total')[0]}, inplace=True)
         total_time_saved_per_model.to_csv(self.graph_dir + f'time_saved_all_per_model_just_total.csv')
+        latex = total_time_saved_per_model.to_latex(index=True)
+        with open(self.graph_dir + "\\time_saved_all_per_model_just_total.tex", mode='w') as file:
+            file.write(latex)
 
     def plot(self):
         pass
