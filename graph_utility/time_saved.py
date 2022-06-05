@@ -58,9 +58,9 @@ class TimeSaved(Lines):
                 base_metric = self.options.base_name + f'@{metric}'
                 current_metric = current_test_name + f'@{metric}'
 
-                model_temp[f"{current_test_name}_{metric}"] = model_sums[current_metric] - model_sums[base_metric]
+                model_temp[f"{current_test_name}_{metric}"] = model_sums[base_metric] - model_sums[current_metric]
                 temp[metric] = pd.Series(sums[base_metric] - sums[current_metric])
-                percentage_temp[metric] = pd.Series(sums[current_metric] / sums[base_metric])
+                percentage_temp[metric] = pd.Series(sums[base_metric] / sums[current_metric])
             total_time_saved[current_test_name] = temp.T
             total_time_saved_percentage[current_test_name] = percentage_temp.T
             if len(total_time_saved_per_model) == 0:
