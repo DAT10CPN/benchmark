@@ -1,6 +1,7 @@
 import os
 import warnings
 
+import numpy as np
 import pandas as pd
 
 import utility
@@ -66,11 +67,23 @@ class TimeSaved(Lines):
             if len(total_time_saved_per_model) == 0:
                 total_time_saved_per_model = model_temp
             else:
-                total_time_saved_per_model = total_time_saved_per_model.merge(model_temp, left_index=True, right_index=True)
+                total_time_saved_per_model = total_time_saved_per_model.merge(model_temp, left_index=True,
+                                                                              right_index=True)
 
         total_time_saved_percentage.round(3).to_csv(self.graph_dir + f'time_saved_all_percentage.csv')
         total_time_saved.round(3).to_csv(self.graph_dir + f'time_saved_all.csv')
         total_time_saved_per_model.round(3).to_csv(self.graph_dir + f'time_saved_all_per_model.csv')
+        irrelevant_columns = [col for col in total_time_saved_per_model.columns if not 'total' in col]
+        total_time_saved_per_model.drop(columns=irrelevant_columns, inplace=True)
+        for col in total_time_saved_per_model.columns:
+            total_time_saved_per_model[col] = np.where((np.abs(total_time_saved_per_model[col]) < 10), np.nan,
+                                                       total_time_saved_per_model[col])
+        total_time_saved_per_model = total_time_saved_per_model.round(0)
+        for col in total_time_saved_per_model.columns:
+            total_time_saved_per_model[col] = np.where((np.isnan(total_time_saved_per_model[col])), "-",
+                                                       total_time_saved_per_model[col])
+            total_time_saved_per_model.rename(columns={col: col.split(r'_total')[0]}, inplace=True)
+        total_time_saved_per_model.to_csv(self.graph_dir + f'time_saved_all_per_model_just_total.csv')
 
     def plot(self):
         pass
