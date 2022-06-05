@@ -4,13 +4,13 @@ import pandas as pd
 import matplotlib as plt
 import seaborn as sns
 
-# experiment_dir = "CPN-4-30-4-2-ioless"
-# relevant_experiments = ["base", "C", "D", "E", "F", "I", "Q", "U", "IUC", "IUDCEFQ"]
-# relevant_rules = ["C", "D", "E", "F", "I", "Q", "U"]
+experiment_dir = "CPN-4-30-4-2-ioless"
+relevant_experiments = ["base", "C", "D", "E", "F", "I", "Q", "U", "IUC", "IUDCEFQ"]
+relevant_rules = ["C", "D", "E", "F", "I", "Q", "U"]
 
-experiment_dir = "PT-4-30-4-2-ioless"
-relevant_experiments = ["base", "newC", "withS"]
-relevant_rules = ["C", "S"]
+# experiment_dir = "PT-4-30-4-2-ioless"
+# relevant_experiments = ["base", "newC", "withS"]
+# relevant_rules = ["C", "S"]
 
 root = Path(__file__).parent.parent
 data_dir = root / "results" / experiment_dir
@@ -63,12 +63,14 @@ for ss in search_strategies:
     # Absolute applications
     for category in categories:
         for experiment in relevant_experiments:
-            for rule in relevant_rules:
+            if experiment == "base":
+                continue
+            for rule in experiment:
                 applications = df_ss[(df_ss["category"] == category) & (df_ss["experiment"] == experiment)].iloc[0][rule]
-                # if len(experiment) > 1:
-                #     print(f"\multicolumn{{1}}{{c|}}{{{applications:>8}}} & ", end="")
-                # else:
-                print(f"{applications:>8} & ", end="")
+                if len(experiment) > 1:
+                    print(f"\multicolumn{{1}}{{c|}}{{{applications:>8}}} & ", end="")
+                else:
+                    print(f"{applications:>8} & ", end="")
         print("")
 
     print("\n")
@@ -76,10 +78,12 @@ for ss in search_strategies:
     # Percentage of queries with at least one applications
     for category in categories:
         for experiment in relevant_experiments:
-            for rule in relevant_rules:
+            if experiment == "base":
+                continue
+            for rule in experiment:
                 applications = 100 * df_ss[(df_ss["category"] == category) & (df_ss["experiment"] == experiment)].iloc[0][rule + "%"]
-                # if len(experiment) > 1:
-                #     print(f"\multicolumn{{1}}{{c|}}{{{applications:>6.1f}\\%}} & ", end="")
-                # else:
-                print(f"{applications:>6.1f}\\% & ", end="")
+                if len(experiment) > 1:
+                    print(f"\multicolumn{{1}}{{c|}}{{{applications:>6.1f}\\%}} & ", end="")
+                else:
+                    print(f"{applications:>6.1f}\\% & ", end="")
         print("")
