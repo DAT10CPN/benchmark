@@ -30,17 +30,17 @@ def plot_graphs(options):
 
     sns.set_theme(style="darkgrid")
     graph_objects = [
-        #AnswerSimplificationBars(options),
-        #RuleUsage(options),
-        #MemoryStateLines(options),
-        #TimeLines(options),
-        #SizeLines(options),
-        #DebugGraph(options),
-        #Ratios(options),
-        #ModelRatios(options),
-        #ModelRatiosAverages(options),
-        TimeSaved(options)
-        #AnswersByModel(options)
+        AnswerSimplificationBars(options),
+        RuleUsage(options),
+        MemoryStateLines(options),
+        TimeLines(options),
+        SizeLines(options),
+        DebugGraph(options),
+        Ratios(options),
+        ModelRatios(options),
+        ModelRatiosAverages(options),
+        TimeSaved(options),
+        AnswersByModel(options)
     ]
 
     if not options.all_options:
@@ -50,11 +50,11 @@ def plot_graphs(options):
             if not options.all_options:
                 print("-----------")
                 print(f"Making graph: {graph.name}")
-            #try:
-            graph.prepare_data()
-            graph.plot()
-            #except Exception as e:
-             #   print(f"\033[93mGraph failed with exception: {e}\033[0m")
+            try:
+                graph.prepare_data()
+                graph.plot()
+            except Exception as e:
+                print(f"\033[93mGraph failed with exception: {e}\033[0m")
             graphs_made += 1
             if not options.all_options:
                 print(f"graphs made: {graphs_made}/{num_graphs}")
