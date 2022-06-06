@@ -26,7 +26,8 @@ class TimeSaved(Lines):
 
     def get_common(self, combined, metric, current_test_name):
         df = copy.deepcopy(combined)
-        if metric == 'answer':
+        if 'time' in metric:
+        #if metric == 'answer':
             common_rows = df[df[f'{self.options.base_name}@{metric}'] != 'NONE']
             common_rows = common_rows[common_rows[f'{current_test_name}@{metric}'] != 'NONE']
         else:
@@ -175,19 +176,6 @@ class TimeSaved(Lines):
         for metric in self.metrics_to_do_saved:
             data_metric_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual.csv")
             data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped.csv")
-
-        # for metric in self.metrics_to_do_saved:
-        # for col in with_removed_cols.columns:
-        #    with_removed_cols[col] = np.where((np.abs(with_removed_cols[col]) < 10), np.nan,
-        #                                      with_removed_cols[col])
-        # for col in with_removed_cols.columns:
-        # with_removed_cols[col] = np.where((np.isnan(with_removed_cols[col])), "-",
-        # with_removed_cols[col])
-        #    with_removed_cols.rename(columns={col: col.split(rf'_{metric}')[0]}, inplace=True)
-        # with_removed_cols.to_csv(self.graph_dir + f'{metric}_per_model.csv')
-        # latex = with_removed_cols.to_latex(index=True)
-        # with open(self.graph_dir + f"\\time_saved_all_per_model_{metric}.tex", mode='w') as file:
-        #  file.write(latex)
 
     def plot(self):
         pass
