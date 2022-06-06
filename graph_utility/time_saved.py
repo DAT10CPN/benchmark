@@ -17,7 +17,12 @@ class TimeSaved(Lines):
         self.name = 'time-saved'
         self.plot_ready = pd.DataFrame()
         os.makedirs(self.graph_dir)
-        self.metrics_to_do_saved = ['verification time', 'total time', 'reduce time', 'unfold time']
+        self.metrics_to_do_saved = ['verification time', 'total time', 'reduce time', 'state space size',
+                                    'reduced size']
+        if options.petri_net_type == 'CPN':
+            cpn_metrics = ['unfold time', 'color reduce size', 'unfold size']
+            for cpn_metric in cpn_metrics:
+                self.metrics_to_do_saved.append(cpn_metric)
 
     def prepare_data(self):
         combined = utility.combined_pd(self.data_list, self.options.test_names)
@@ -31,8 +36,18 @@ class TimeSaved(Lines):
             combined[f"{test_name}@total time"] = utility.add_total_time(data, self.options.petri_net_type, False)[
                 'total time']
 
-        total_time_saved = pd.DataFrame()
-        total_time_saved_percentage = pd.DataFrame()
+            combined[f"{test_name}@reduced size"] = data.apply(
+                utility.get_reduced_size,
+                axis=1)
+            if self.options.petri_net_type == 'CPN':
+                combined[f"{test_name}@color reduce size"] = data.apply(
+                    utility.get_colored_reduced_size,
+                    axis=1)
+
+                combined[f"{test_name}@unfold size"] = data.apply(
+                    utility.get_unfolded_size,
+                    axis=1)
+
         total_time_saved_per_model = pd.DataFrame()
         for data in self.data_list:
             current_test_name = data.iloc[0]['test name']
@@ -42,51 +57,55 @@ class TimeSaved(Lines):
             comparison = combined[combined[f'{self.options.base_name}@answer'] != 'NONE']
             comparison = comparison[comparison[f'{current_test_name}@answer'] != 'NONE']
 
-            sums = comparison.sum()
+            comparison_sps = combined[combined[f'{self.options.base_name}@state space size'] > 0]
+            comparison_sps = comparison_sps[comparison_sps[f'{current_test_name}@state space size'] > 0]
 
             model_sums = comparison
             model_sums.reset_index(inplace=True)
+            model_sums_sps = comparison_sps
+            model_sums_sps.reset_index(inplace=True)
             if self.options.petri_net_type == 'CPN':
-                model_sums['model name'] = model_sums['model name'].str.split(r'-COL').str.get(0)
+                model_sums['model name'] = model_sums['model name'].str.replace(r'-COL.*', "", regex=True)
+                model_sums_sps['model name'] = model_sums_sps['model name'].str.replace(r'-COL.*', "", regex=True)
             else:
-                model_sums['model name'] = model_sums['model name'].str.split(r'-PT').str.get(0)
+                model_sums['model name'] = model_sums['model name'].str.replace(r'-PT*', "", regex=True)
+                model_sums_sps['model name'] = model_sums_sps['model name'].str.replace(r'-PT*', "", regex=True)
             model_sums = model_sums.groupby(['model name']).sum()
+            model_sums_sps = model_sums_sps.groupby(['model name']).sum()
 
-            temp = pd.DataFrame()
             model_temp = pd.DataFrame()
-            percentage_temp = pd.DataFrame()
             for metric in self.metrics_to_do_saved:
                 base_metric = self.options.base_name + f'@{metric}'
                 current_metric = current_test_name + f'@{metric}'
 
-                model_temp[f"{current_test_name}_{metric}"] = model_sums[base_metric] - model_sums[current_metric]
-                temp[metric] = pd.Series(sums[base_metric] - sums[current_metric])
-                percentage_temp[metric] = pd.Series(sums[base_metric] / sums[current_metric])
-            total_time_saved[current_test_name] = temp.T
-            total_time_saved_percentage[current_test_name] = percentage_temp.T
+                if metric == 'state space size':
+                    model_temp[f"{current_test_name}_{metric}"] = model_sums_sps[base_metric] - model_sums_sps[current_metric]
+                else:
+                    model_temp[f"{current_test_name}_{metric}"] = model_sums[base_metric] - model_sums[current_metric]
             if len(total_time_saved_per_model) == 0:
                 total_time_saved_per_model = model_temp
             else:
                 total_time_saved_per_model = total_time_saved_per_model.merge(model_temp, left_index=True,
                                                                               right_index=True)
 
-        total_time_saved_percentage.round(3).to_csv(self.graph_dir + f'time_saved_all_percentage.csv')
-        total_time_saved.round(3).to_csv(self.graph_dir + f'time_saved_all.csv')
         total_time_saved_per_model.round(3).to_csv(self.graph_dir + f'time_saved_all_per_model.csv')
-        irrelevant_columns = [col for col in total_time_saved_per_model.columns if not 'total' in col]
-        total_time_saved_per_model.drop(columns=irrelevant_columns, inplace=True)
-        for col in total_time_saved_per_model.columns:
-            total_time_saved_per_model[col] = np.where((np.abs(total_time_saved_per_model[col]) < 10), np.nan,
-                                                       total_time_saved_per_model[col])
-        total_time_saved_per_model = total_time_saved_per_model.round(0)
-        for col in total_time_saved_per_model.columns:
-            total_time_saved_per_model[col] = np.where((np.isnan(total_time_saved_per_model[col])), "-",
-                                                       total_time_saved_per_model[col])
-            total_time_saved_per_model.rename(columns={col: col.split(r'_total')[0]}, inplace=True)
-        total_time_saved_per_model.to_csv(self.graph_dir + f'time_saved_all_per_model_just_total.csv')
-        latex = total_time_saved_per_model.to_latex(index=True)
-        with open(self.graph_dir + "\\time_saved_all_per_model_just_total.tex", mode='w') as file:
-            file.write(latex)
+
+        for metric in self.metrics_to_do_saved:
+            # do the just total time, with small values removed
+            irrelevant_columns = [col for col in total_time_saved_per_model.columns if not metric in col]
+            with_removed_cols = total_time_saved_per_model.drop(columns=irrelevant_columns)
+            #for col in with_removed_cols.columns:
+            #    with_removed_cols[col] = np.where((np.abs(with_removed_cols[col]) < 10), np.nan,
+            #                                      with_removed_cols[col])
+            with_removed_cols = with_removed_cols.round(5)
+            for col in with_removed_cols.columns:
+                #with_removed_cols[col] = np.where((np.isnan(with_removed_cols[col])), "-",
+                                                  #with_removed_cols[col])
+                with_removed_cols.rename(columns={col: col.split(rf'_{metric}')[0]}, inplace=True)
+            with_removed_cols.to_csv(self.graph_dir + f'{metric}_per_model.csv')
+            #latex = with_removed_cols.to_latex(index=True)
+            #with open(self.graph_dir + f"\\time_saved_all_per_model_{metric}.tex", mode='w') as file:
+              #  file.write(latex)
 
     def plot(self):
         pass
