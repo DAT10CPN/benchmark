@@ -164,13 +164,14 @@ class TimeSaved(Lines):
 
                 data_metric_pd_map[metric] = pd.concat(
                     [data_metric_pd_map[metric], individual_comparison], axis=1)
-                # data_metric_sum_pd_map[metric] = pd.concat(
-                #   [data_metric_sum_pd_map[metric], sum_comparison], axis=1)
+                data_metric_sum_pd_map[metric] = pd.concat(
+                    [data_metric_sum_pd_map[metric], sum_comparison], axis=1)
 
             all_metric_for_this_experiment_sum.to_csv(self.graph_dir + f"{current_test_name}\\all_metrics_grouped.csv")
             all_metric_for_this_experiment_individual.to_csv(
                 self.graph_dir + f"{current_test_name}\\all_metrics_individual.csv")
 
+        os.makedirs(self.graph_dir + "by_metric")
         for metric in self.metrics_to_do_saved:
             data_metric_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual.csv")
             data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped.csv")
