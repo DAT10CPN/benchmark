@@ -28,9 +28,14 @@ class TimeSaved(Lines):
     def get_common(self, combined, metric, current_test_name):
         df = copy.deepcopy(combined)
         if metric in ['verification time', 'total time']:
-            # if metric == 'answer':
             common_rows = df[df[f'{self.options.base_name}@answer'] != 'NONE']
             common_rows = common_rows[common_rows[f'{current_test_name}@answer'] != 'NONE']
+        elif 'time' in metric:
+            common_rows = df[
+                (df[f'{self.options.base_name}@{metric}'] > 0) | (df[f'{self.options.base_name}@answer'] != 'NONE')]
+            common_rows = common_rows[(common_rows[f'{current_test_name}@{metric}'] > 0) | (
+                        common_rows[f'{current_test_name}@answer'] != 'NONE')]
+            # common_rows = common_rows[common_rows[f'{current_test_name}@{metric}'] > 0]
         else:
             common_rows = df[df[f'{self.options.base_name}@{metric}'] > 0]
             common_rows = common_rows[common_rows[f'{current_test_name}@{metric}'] > 0]
@@ -93,7 +98,7 @@ class TimeSaved(Lines):
         df = copy.deepcopy(df)
         if 'time' in metric:
             df = df[np.abs(df['diff']) > 2]
-        df = df.sort_values(by='diff %', ascending=True).round(3)
+        df = df.sort_values(by='diff %', ascending=True).round(2)
         return df
 
     def model_summed_comparisons(self, common_answers_rows, metric, current_test_name):
@@ -194,7 +199,7 @@ class TimeSaved(Lines):
             super_summed[metric] = df
         super_summed.T.to_csv(self.graph_dir + f"summed_all.csv")
         super_summed.T.to_csv(self.graph_dir + f"summed_all-latex-friendly.csv", sep='&',
-                            line_terminator="\\\\ \\hline\n", index=True, header=True)
+                              line_terminator="\\\\ \\hline\n", index=True, header=True)
 
     def plot(self):
         pass
