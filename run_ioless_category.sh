@@ -1,5 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=cpu
+#SBATCH --mem=15G
+#SBATCH -c 1
 
 # Args: <binary> [sequence] [category] [test-folder] [search-strat] [col-red-time-out] [red-time-out] [combined-time-out] [expl-time-out]
 # - sequences default is ALL, write "<name>/<options>" for specific sequence, e.g.: "orig/-R 0"

@@ -1,5 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=cpu
+#SBATCH --mem=15G
+#SBATCH -c 1
 
 # Args: <test-name> <binary> <bin-options> [test-folder] [category] [partition] [search-strat] [col-red-time-out] [red-time-out] [combined-time-out] [expl-time-out]
 # Starts a number of slurm jobs each solving the queries of one model in the test folder.
