@@ -192,8 +192,8 @@ class TimeSaved(Lines):
             df = copy.deepcopy(data_metric_pd_map[metric])
             df = df.sum().drop(columns=['model name']).round(2)
             super_summed[metric] = df
-        super_summed.to_csv(self.graph_dir + f"summed_all.csv")
-        super_summed.to_csv(self.graph_dir + f"summed_all-latex-friendly.csv", sep='&',
+        super_summed.T.to_csv(self.graph_dir + f"summed_all.csv")
+        super_summed.T.to_csv(self.graph_dir + f"summed_all-latex-friendly.csv", sep='&',
                             line_terminator="\\\\ \\hline\n", index=False, header=False)
 
     def plot(self):
