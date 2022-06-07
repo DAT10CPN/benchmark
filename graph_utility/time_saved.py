@@ -194,7 +194,7 @@ class TimeSaved(Lines):
             super_summed[metric] = df
         super_summed.T.to_csv(self.graph_dir + f"summed_all.csv")
         super_summed.T.to_csv(self.graph_dir + f"summed_all-latex-friendly.csv", sep='&',
-                            line_terminator="\\\\ \\hline\n", index=False, header=False)
+                            line_terminator="\\\\ \\hline\n", index=True, header=True)
 
     def plot(self):
         pass
