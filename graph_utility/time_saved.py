@@ -190,7 +190,7 @@ class TimeSaved(Lines):
                                                   sep='&', line_terminator="\\\\ \\hline\n", index=False, header=False)
 
             df = copy.deepcopy(data_metric_pd_map[metric])
-            df = df.sum().drop(columns=['model name']).round(2)
+            df = df.sum().drop(columns=['model name']).round(0).astype(int)
             super_summed[metric] = df
         super_summed.T.to_csv(self.graph_dir + f"summed_all.csv")
         super_summed.T.to_csv(self.graph_dir + f"summed_all-latex-friendly.csv", sep='&',
