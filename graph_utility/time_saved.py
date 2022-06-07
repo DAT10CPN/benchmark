@@ -1,6 +1,7 @@
 import copy
 import os
 import warnings
+
 import numpy as np
 import pandas as pd
 
@@ -27,7 +28,7 @@ class TimeSaved(Lines):
     def get_common(self, combined, metric, current_test_name):
         df = copy.deepcopy(combined)
         if metric in ['verification time', 'total time']:
-        #if metric == 'answer':
+            # if metric == 'answer':
             common_rows = df[df[f'{self.options.base_name}@answer'] != 'NONE']
             common_rows = common_rows[common_rows[f'{current_test_name}@answer'] != 'NONE']
         else:
@@ -169,19 +170,31 @@ class TimeSaved(Lines):
                     [data_metric_sum_pd_map[metric], sum_comparison], axis=1)
 
             all_metric_for_this_experiment_sum.to_csv(self.graph_dir + f"{current_test_name}\\all_metrics_grouped.csv")
+            all_metric_for_this_experiment_sum.to_csv(
+                self.graph_dir + f"{current_test_name}\\all_metrics_grouped-latex-friendly.csv", sep='&',
+                line_terminator="\\\\ \\hline\n", index=False, header=False)
             all_metric_for_this_experiment_individual.to_csv(
                 self.graph_dir + f"{current_test_name}\\all_metrics_individual.csv")
+            all_metric_for_this_experiment_individual.to_csv(
+                self.graph_dir + f"{current_test_name}\\all_metrics_individual-latex-friendly.csv", sep='&',
+                line_terminator="\\\\ \\hline\n", index=False, header=False)
 
         os.makedirs(self.graph_dir + "by_metric")
         super_summed = pd.DataFrame()
         for metric in self.metrics_to_do_saved:
             data_metric_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual.csv")
+            data_metric_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual-latex-friendly.csv",
+                                              sep='&', line_terminator="\\\\ \\hline\n", index=False, header=False)
             data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped.csv")
+            data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped-latex-friendly.csv",
+                                                  sep='&', line_terminator="\\\\ \\hline\n", index=False, header=False)
 
             df = copy.deepcopy(data_metric_pd_map[metric])
             df = df.sum().drop(columns=['model name']).round(2)
             super_summed[metric] = df
         super_summed.to_csv(self.graph_dir + f"summed_all.csv")
+        super_summed.to_csv(self.graph_dir + f"summed_all-latex-friendly.csv", sep='&',
+                            line_terminator="\\\\ \\hline\n", index=False, header=False)
 
     def plot(self):
         pass
