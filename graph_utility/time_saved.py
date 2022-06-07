@@ -1,7 +1,7 @@
 import copy
 import os
 import warnings
-
+import numpy as np
 import pandas as pd
 
 import utility
@@ -26,10 +26,10 @@ class TimeSaved(Lines):
 
     def get_common(self, combined, metric, current_test_name):
         df = copy.deepcopy(combined)
-        if 'time' in metric:
+        if metric in ['verification time', 'total time']:
         #if metric == 'answer':
-            common_rows = df[df[f'{self.options.base_name}@{metric}'] != 'NONE']
-            common_rows = common_rows[common_rows[f'{current_test_name}@{metric}'] != 'NONE']
+            common_rows = df[df[f'{self.options.base_name}@answer'] != 'NONE']
+            common_rows = common_rows[common_rows[f'{current_test_name}@answer'] != 'NONE']
         else:
             common_rows = df[df[f'{self.options.base_name}@{metric}'] > 0]
             common_rows = common_rows[common_rows[f'{current_test_name}@{metric}'] > 0]
@@ -91,7 +91,7 @@ class TimeSaved(Lines):
     def filter_by_time_and_sort(self, df, metric):
         df = copy.deepcopy(df)
         if 'time' in metric:
-            df = df[df['base'] > 2]
+            df = df[np.abs(df['diff']) > 2]
         df = df.sort_values(by='diff %', ascending=True).round(3)
         return df
 
@@ -173,9 +173,15 @@ class TimeSaved(Lines):
                 self.graph_dir + f"{current_test_name}\\all_metrics_individual.csv")
 
         os.makedirs(self.graph_dir + "by_metric")
+        super_summed = pd.DataFrame()
         for metric in self.metrics_to_do_saved:
             data_metric_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual.csv")
             data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped.csv")
+
+            df = copy.deepcopy(data_metric_pd_map[metric])
+            df = df.sum().drop(columns=['model name']).round(2)
+            super_summed[metric] = df
+        super_summed.to_csv(self.graph_dir + f"summed_all.csv")
 
     def plot(self):
         pass
