@@ -89,7 +89,7 @@ class TimeSaved(Lines):
         metric_compare = self.get_individual_model_query_comparisons(common_answers_rows, metric,
                                                                      current_test_name)
         metric_compare_filtered = self.filter_by_time_and_sort(metric_compare, metric)
-        metric_compare_filtered.to_csv(self.graph_dir + f"{current_test_name}\\{metric}-individual-ratio.csv")
+        #metric_compare_filtered.to_csv(self.graph_dir + f"{current_test_name}\\{metric}-individual-ratio.csv")
         metric_compare_with_index = copy.deepcopy(metric_compare)
         metric_compare_with_index.set_index(['model name', 'query index'], inplace=True)
         return pd.DataFrame(metric_compare_with_index['diff %'])
@@ -116,8 +116,8 @@ class TimeSaved(Lines):
                                                                              metric, current_test_name)
         metric_compare_sum_by_model_name_filtered = self.filter_by_time_and_sort(metric_compare_sum_by_model_name,
                                                                                  metric)
-        metric_compare_sum_by_model_name_filtered.to_csv(
-            self.graph_dir + f"{current_test_name}\\{metric}-grouped-ratio.csv")
+        #metric_compare_sum_by_model_name_filtered.to_csv(
+         #   self.graph_dir + f"{current_test_name}\\{metric}-grouped-ratio.csv")
         return pd.DataFrame(metric_compare_sum_by_model_name['diff %'])
 
     def model_summed_comparisons(self, common_answers_rows, metric, current_test_name):
