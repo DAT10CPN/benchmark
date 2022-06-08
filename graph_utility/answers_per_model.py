@@ -2,7 +2,7 @@ import os
 from dataclasses import dataclass
 
 import pandas as pd
-
+import numpy as np
 from graph import Graph
 
 pd.options.mode.chained_assignment = None
@@ -52,8 +52,8 @@ class AnswersByModel(Graph):
             total_answers[current_test_name] = df - total_answers[self.options.base_name]
 
         #if self.options.petri_net_type == 'PT':
-         #   total_answers = total_answers[(total_answers['newC'] > 0) | (total_answers['withS'] > 0)]
-         #   total_answers.sort_values(by=['newC', 'withS'], inplace=True, ascending=False)
+        #    total_answers = total_answers[(np.abs(total_answers['newC']) > 0) | (np.abs(total_answers['withS']) > 0)]
+        #    total_answers.sort_values(by=['newC', 'withS'], inplace=True, ascending=False)
         total_answers.to_csv(self.graph_dir + "\\answers_by_model.csv")
         total_answers.to_csv(self.graph_dir + "\\answers_by_model-latex.csv", sep='&', line_terminator="\\\\ \\hline\n")
 
