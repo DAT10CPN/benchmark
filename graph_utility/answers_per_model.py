@@ -51,10 +51,11 @@ class AnswersByModel(Graph):
             df = remove_non_answers.groupby(['model name'])['model name'].count()
             total_answers[current_test_name] = df - total_answers[self.options.base_name]
 
+        #if self.options.petri_net_type == 'PT':
+         #   total_answers = total_answers[(total_answers['newC'] > 0) | (total_answers['withS'] > 0)]
+         #   total_answers.sort_values(by=['newC', 'withS'], inplace=True, ascending=False)
         total_answers.to_csv(self.graph_dir + "\\answers_by_model.csv")
-        latex = total_answers.to_latex(index=True)
-        with open(self.graph_dir + "\\answers_by_model.tex", mode='w') as file:
-            file.write(latex)
+        total_answers.to_csv(self.graph_dir + "\\answers_by_model-latex.csv", sep='&', line_terminator="\\\\ \\hline\n")
 
     def plot(self):
         pass
