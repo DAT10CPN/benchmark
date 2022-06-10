@@ -35,11 +35,11 @@ def plot_graphs(options):
         MemoryStateLines(options),
         TimeLines(options),
         SizeLines(options),
-        DebugGraph(options),
-        Ratios(options),
-        ModelRatios(options),
-        ModelRatiosAverages(options),
-        TimeSaved(options),
+        #DebugGraph(options),
+        #Ratios(options),
+        #ModelRatios(options),
+        #ModelRatiosAverages(options),
+        #TimeSaved(options),
         AnswersByModel(options)
     ]
 
@@ -113,7 +113,7 @@ if __name__ == "__main__":
         if (options.enable_graphs > 0) or options.debug:
             if not options.all_options:
                 print("---------Creating graphs---------")
-            os.makedirs(options.graph_dir + "\\for_exam")
+            os.makedirs(options.graph_dir + "\\shown_in_thesis")
             plot_graphs(options)
 
         if options.unique_results:

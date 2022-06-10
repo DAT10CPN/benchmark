@@ -75,6 +75,6 @@ class MemoryStateLines(Lines):
                     bbox_inches='tight', dpi=600, format="svg")
                 if percentage == 0.05 and metric == 'state space size':
                     plt.savefig(
-                        self.graph_dir + f'..\\for_exam\\state_space_size_largest_{percentage*100}.svg',
+                        self.graph_dir + f'..\\shown_in_thesis\\state_space_size_largest_{percentage*100}.svg',
                         bbox_inches='tight', dpi=600, format="svg")
                 plt.close()

@@ -100,6 +100,6 @@ class TimeLines(Lines):
                     bbox_inches='tight', dpi=600, format="svg")
                 if (cutoff_time == 30 and not metric.line_metric_name in ['colored reduce time','reduce time']) or (cutoff_time == 5 and metric.line_metric_name == 'reduce time'):
                     plt.savefig(
-                        self.graph_dir + f'..\\for_exam\\{metric.line_metric_name.replace(" ", "_")}_above_{cutoff_time}_seconds.svg',
+                        self.graph_dir + f'..\\shown_in_thesis\\{metric.line_metric_name.replace(" ", "_")}_above_{cutoff_time}_seconds.svg',
                         bbox_inches='tight', dpi=600, format="svg")
                 plt.close()

@@ -42,8 +42,8 @@ class Gui:
         self.results_for_exam_cpn = ['C.csv', 'D.csv', 'E.csv', 'F.csv', 'I.csv', 'Q.csv', 'U.csv', 'IUC.csv',
                                  'IUDCEFQ.csv', 'base.csv']
         self.results_for_exam_pt = ['base.csv', 'newC.csv', 'withS.csv']
-        self.ss_for_exam = ["DFS"]
-        self.model_folders_for_exam_cpn = ['MCC2021-COL']
+        self.ss_for_exam = ["DFS", 'BestFS', 'RDFS']
+        self.model_folders_for_exam_cpn = ['MCC2021-COL', "MCC2021-COL-inhib"]
         self.model_folders_for_exam_pt = ['MCC2021']
 
         if os.path.exists('theme.txt'):
@@ -193,7 +193,7 @@ class Gui:
         only_one_test_setup_var.set(0)
         self.create_check_button(text="Only one test setup", variable=only_one_test_setup_var, row=len(self.categories),
                                  column=0)
-        self.create_button(text="Absolutely everything (DFS)", command=absolutely_everything, row=len(self.categories) + 1,
+        self.create_button(text="Absolutely everything", command=absolutely_everything, row=len(self.categories) + 1,
                            column=0)
 
         overwrite_var = IntVar()
@@ -326,10 +326,7 @@ class Gui:
 
         chosen_directory = folder_path + category + "\\" + search_strategy + "\\" + model_folder
 
-        # results = [(filename.split(chosen_directory)[1]).replace('\\', '') for filename in
-        #           [filename for filename in
-        #            glob.glob(
-        #                os.path.join(chosen_directory, "*.csv"))]]
+        results = [(filename.split(chosen_directory)[1]).replace('\\', '') for filename in [filename for filename in glob.glob(os.path.join(chosen_directory, "*.csv"))]]
 
 
 

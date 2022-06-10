@@ -32,10 +32,18 @@ class Lines(Graph):
             self.keep_percentages = [0.01, 0.05, 0.12, 0.25, 0.8]
 
     def create_lineplot_highlight_orig(self, data_to_plot):
+        col_1 = np.array([0.9, 0.2, 0.3])
+        col_2 = np.array([0.15, 0.65, 0.2])
         custom_palette = {}
         for column_index, column in enumerate(data_to_plot.columns):
             if (column == self.base_name):
                 custom_palette[column] = self.base_color
+                continue
+            if column == "base+C":
+                custom_palette[column] = col_1
+                continue
+            if column == "base+CS":
+                custom_palette[column] = col_2
                 continue
             custom_palette[column] = utility.color((column_index + 1) / len(data_to_plot.columns))
 
