@@ -87,6 +87,7 @@ def get_reduced_size(row):
 
 
 def sanitise_df_list(options):
+    print(options.test_names)
     result_list = [pd.read_csv(options.result_dir + "\\" + csv) for csv in
                    options.results_to_plot]
 

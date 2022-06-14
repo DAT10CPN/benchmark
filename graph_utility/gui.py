@@ -42,7 +42,7 @@ class Gui:
         self.results_for_exam_cpn = ['C.csv', 'D.csv', 'E.csv', 'F.csv', 'I.csv', 'Q.csv', 'U.csv', 'IUC.csv',
                                  'IUDCEFQ.csv', 'base.csv']
         self.results_for_exam_pt = ['base.csv', 'newC.csv', 'withS.csv']
-        self.ss_for_exam = ["DFS", 'BestFS', 'RDFS']
+        self.ss_for_exam = ["DFS"]
         self.model_folders_for_exam_cpn = ['MCC2021-COL', "MCC2021-COL-inhib"]
         self.model_folders_for_exam_pt = ['MCC2021']
 

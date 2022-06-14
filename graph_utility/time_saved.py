@@ -35,7 +35,6 @@ class TimeSaved(Lines):
                 (df[f'{self.options.base_name}@{metric}'] > 0) | (df[f'{self.options.base_name}@answer'] != 'NONE')]
             common_rows = common_rows[(common_rows[f'{current_test_name}@{metric}'] > 0) | (
                     common_rows[f'{current_test_name}@answer'] != 'NONE')]
-            # common_rows = common_rows[common_rows[f'{current_test_name}@{metric}'] > 0]
         else:
             common_rows = df[df[f'{self.options.base_name}@{metric}'] > 0]
             common_rows = common_rows[common_rows[f'{current_test_name}@{metric}'] > 0]
@@ -88,8 +87,6 @@ class TimeSaved(Lines):
     def individual_comparisons_ratio(self, common_answers_rows, metric, current_test_name):
         metric_compare = self.get_individual_model_query_comparisons(common_answers_rows, metric,
                                                                      current_test_name)
-        metric_compare_filtered = self.filter_by_time_and_sort(metric_compare, metric)
-        #metric_compare_filtered.to_csv(self.graph_dir + f"{current_test_name}\\{metric}-individual-ratio.csv")
         metric_compare_with_index = copy.deepcopy(metric_compare)
         metric_compare_with_index.set_index(['model name', 'query index'], inplace=True)
         return pd.DataFrame(metric_compare_with_index['diff %'])
@@ -114,10 +111,6 @@ class TimeSaved(Lines):
         common_answers_summed_by_models = self.sum_by_model_name(common_answers_rows)
         metric_compare_sum_by_model_name = self.get_summed_model_comparisons(common_answers_summed_by_models,
                                                                              metric, current_test_name)
-        metric_compare_sum_by_model_name_filtered = self.filter_by_time_and_sort(metric_compare_sum_by_model_name,
-                                                                                 metric)
-        #metric_compare_sum_by_model_name_filtered.to_csv(
-         #   self.graph_dir + f"{current_test_name}\\{metric}-grouped-ratio.csv")
         return pd.DataFrame(metric_compare_sum_by_model_name['diff %'])
 
     def model_summed_comparisons(self, common_answers_rows, metric, current_test_name):
@@ -223,14 +216,8 @@ class TimeSaved(Lines):
                     [data_metric_sum_pd_map[metric], sum_comparison], axis=1)
 
             all_metric_for_this_experiment_sum.to_csv(self.graph_dir + f"{current_test_name}\\all_metrics_grouped.csv")
-            # all_metric_for_this_experiment_sum.to_csv(
-            #    self.graph_dir + f"{current_test_name}\\all_metrics_grouped-latex-friendly.csv", sep='&',
-            #   line_terminator="\\\\ \\hline\n")
             all_metric_for_this_experiment_individual.to_csv(
                 self.graph_dir + f"{current_test_name}\\all_metrics_individual.csv")
-            # all_metric_for_this_experiment_individual.to_csv(
-            #   self.graph_dir + f"{current_test_name}\\all_metrics_individual-latex-friendly.csv", sep='&',
-            #  line_terminator="\\\\ \\hline\n")
 
         os.makedirs(self.graph_dir + "by_metric")
         super_summed = pd.DataFrame()
@@ -238,19 +225,12 @@ class TimeSaved(Lines):
 
         for metric in self.metrics_to_do_saved:
             data_metric_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual.csv")
-            # data_metric_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual-latex-friendly.csv",
-            #                              sep='&', line_terminator="\\\\ \\hline\n")
 
             data_metric_sum_pd_map[metric] = self.change_low_values_to_nan(data_metric_sum_pd_map[metric])
             data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped.csv")
-            # data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped-latex-friendly.csv",
-            #                                      sep='&', line_terminator="\\\\ \\hline\n")
 
             data_metric_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual-ratio.csv")
             data_metric_sum_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped-ratio.csv")
-            # data_metric_sum_pd_map_ratio[metric].to_csv(
-            #    self.graph_dir + f"by_metric\\{metric}_grouped-ratio-latex-friendly.csv",
-            #  sep='&', line_terminator="\\\\ \\hline\n")
             if metric == 'total time':
                 data_metric_sum_pd_map[metric].to_csv(
                     self.graph_dir + f"{self.options.category}\\grouped-latex-friendly.csv",
