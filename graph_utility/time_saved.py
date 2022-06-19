@@ -232,7 +232,7 @@ class TimeSaved(Lines):
 
             #data_metric_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual-ratio.csv")
             #data_metric_sum_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped-ratio.csv")
-            if metric == 'total time':
+            #if metric == 'total time':
                # data_metric_sum_pd_map[metric].to_csv(
                 #    self.graph_dir + f"{self.options.category}\\grouped-latex-friendly.csv",
                 #    sep='&', line_terminator="\\\\ \\hline\n")
