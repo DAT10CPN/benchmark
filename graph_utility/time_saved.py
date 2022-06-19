@@ -13,6 +13,7 @@ warnings.filterwarnings("error")
 
 class TimeSaved(Lines):
     def __init__(self, options):
+        #pd.set_option('display.float_format', '{:.2E}'.format)
         super().__init__(options)
         self.graph_dir = options.graph_dir + '\\time_saved\\'
         self.name = 'time-saved'

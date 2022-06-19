@@ -30,11 +30,11 @@ def plot_graphs(options):
 
     sns.set_theme(style="darkgrid")
     graph_objects = [
-        #AnswerSimplificationBars(options),
-        #RuleUsage(options),
-        #MemoryStateLines(options),
-        #TimeLines(options),
-        #SizeLines(options),
+        AnswerSimplificationBars(options),
+        RuleUsage(options),
+        MemoryStateLines(options),
+        TimeLines(options),
+        SizeLines(options),
         #DebugGraph(options),
         #Ratios(options),
         #ModelRatios(options),
