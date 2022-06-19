@@ -230,15 +230,15 @@ class TimeSaved(Lines):
             data_metric_sum_pd_map[metric] = self.change_low_values_to_nan(data_metric_sum_pd_map[metric])
             data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped.csv")
 
-            data_metric_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual-ratio.csv")
-            data_metric_sum_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped-ratio.csv")
+            #data_metric_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual-ratio.csv")
+            #data_metric_sum_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped-ratio.csv")
             if metric == 'total time':
-                data_metric_sum_pd_map[metric].to_csv(
-                    self.graph_dir + f"{self.options.category}\\grouped-latex-friendly.csv",
-                    sep='&', line_terminator="\\\\ \\hline\n")
-                data_metric_sum_pd_map_ratio[metric].to_csv(
-                    self.graph_dir + f"{self.options.category}\\grouped-latex-ratio-friendly.csv",
-                    sep='&', line_terminator="\\\\ \\hline\n")
+               # data_metric_sum_pd_map[metric].to_csv(
+                #    self.graph_dir + f"{self.options.category}\\grouped-latex-friendly.csv",
+                #    sep='&', line_terminator="\\\\ \\hline\n")
+                #data_metric_sum_pd_map_ratio[metric].to_csv(
+                #    self.graph_dir + f"{self.options.category}\\grouped-latex-ratio-friendly.csv",
+                 #   sep='&', line_terminator="\\\\ \\hline\n")
 
             df = copy.deepcopy(data_metric_pd_map[metric])
             df = df.sum().drop(columns=['model name']).round(0).astype(int)
@@ -251,13 +251,13 @@ class TimeSaved(Lines):
 
         super_summed = self.change_low_values_to_nan(super_summed)
         super_summed.T.to_csv(self.graph_dir + f"summed_all.csv")
-        super_summed.T.to_csv(self.graph_dir + f"{self.options.category}\\summed_all-latex-friendly.csv", sep='&',
-                              line_terminator="\\\\ \\hline\n")
+        #super_summed.T.to_csv(self.graph_dir + f"{self.options.category}\\summed_all-latex-friendly.csv", sep='&',
+                     #         line_terminator="\\\\ \\hline\n")
 
-        super_summed_ratio.T.to_csv(self.graph_dir + f"summed_all_ratio.csv")
-        super_summed_ratio.T.to_csv(self.graph_dir + f"{self.options.category}\\summed_all-ratio-latex-friendly.csv",
-                                    sep='&',
-                                    line_terminator="\\\\ \\hline\n")
+        #super_summed_ratio.T.to_csv(self.graph_dir + f"summed_all_ratio.csv")
+        #super_summed_ratio.T.to_csv(self.graph_dir + f"{self.options.category}\\summed_all-ratio-latex-friendly.csv",
+                  #                  sep='&',
+                   #                 line_terminator="\\\\ \\hline\n")
 
     def plot(self):
         pass
