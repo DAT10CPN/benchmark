@@ -204,8 +204,8 @@ class Gui:
         self.create_button(text="Party", command=self.switch_color_wacky, row=len(self.categories) - 1, column=2)
         self.create_button(text="Random theme", command=self.switch_color_random, row=len(self.categories), column=2)
         self.create_button(text="Change theme", command=self.switch_color, row=len(self.categories) + 1, column=2)
-        self.create_button(text="I'm feeling lucky!", command=set_and_continue_random, row=len(self.categories),
-                           column=3)
+        #self.create_button(text="I'm feeling lucky!", command=set_and_continue_random, row=len(self.categories),
+         #                  column=3)
         self.create_button(text="Choose and continue", command=set_and_continue, row=len(self.categories) + 1, column=3)
 
         root.eval('tk::PlaceWindow . center')

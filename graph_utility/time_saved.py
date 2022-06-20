@@ -69,7 +69,7 @@ class TimeSaved(Lines):
         metric_compare[current_test_name] = common_answers[current_metric]
         metric_compare["diff"] = common_answers[base_metric] - common_answers[
             current_metric]
-        metric_compare["diff %"] = common_answers[current_metric] / common_answers[
+        metric_compare["ratio"] = common_answers[current_metric] / common_answers[
             base_metric]
         return metric_compare
 
@@ -81,7 +81,7 @@ class TimeSaved(Lines):
         metric_compare_sum_by_model_name[current_test_name] = common_answers_summed[current_metric]
         metric_compare_sum_by_model_name["diff"] = common_answers_summed[base_metric] - common_answers_summed[
             current_metric]
-        metric_compare_sum_by_model_name["diff %"] = common_answers_summed[current_metric] / common_answers_summed[
+        metric_compare_sum_by_model_name["ratio"] = common_answers_summed[current_metric] / common_answers_summed[
             base_metric]
         return metric_compare_sum_by_model_name
 
@@ -90,7 +90,7 @@ class TimeSaved(Lines):
                                                                      current_test_name)
         metric_compare_with_index = copy.deepcopy(metric_compare)
         metric_compare_with_index.set_index(['model name', 'query index'], inplace=True)
-        return pd.DataFrame(metric_compare_with_index['diff %'])
+        return pd.DataFrame(metric_compare_with_index['ratio'])
 
     def individual_comparisons(self, common_answers_rows, metric, current_test_name):
         metric_compare = self.get_individual_model_query_comparisons(common_answers_rows, metric,
@@ -105,14 +105,14 @@ class TimeSaved(Lines):
         df = copy.deepcopy(df)
         if 'time' in metric:
             df = df[np.abs(df['diff']) > 2]
-        df = df.sort_values(by='diff %', ascending=True).round(2)
+        df = df.sort_values(by='ratio', ascending=True).round(2)
         return df
 
     def model_summed_comparisons_ratio(self, common_answers_rows, metric, current_test_name):
         common_answers_summed_by_models = self.sum_by_model_name(common_answers_rows)
         metric_compare_sum_by_model_name = self.get_summed_model_comparisons(common_answers_summed_by_models,
                                                                              metric, current_test_name)
-        return pd.DataFrame(metric_compare_sum_by_model_name['diff %'])
+        return pd.DataFrame(metric_compare_sum_by_model_name['ratio'])
 
     def model_summed_comparisons(self, common_answers_rows, metric, current_test_name):
         common_answers_summed_by_models = self.sum_by_model_name(common_answers_rows)
@@ -192,8 +192,8 @@ class TimeSaved(Lines):
 
                 individual_comparison.rename(columns={'diff': metric}, inplace=True)
                 sum_comparison.rename(columns={'diff': metric}, inplace=True)
-                individual_comparison_ratio.rename(columns={'diff %': metric}, inplace=True)
-                sum_comparison_ratio.rename(columns={'diff %': metric}, inplace=True)
+                individual_comparison_ratio.rename(columns={'ratio': metric}, inplace=True)
+                sum_comparison_ratio.rename(columns={'ratio': metric}, inplace=True)
 
                 all_metric_for_this_experiment_individual = pd.concat(
                     [all_metric_for_this_experiment_individual, individual_comparison], axis=1)
@@ -230,7 +230,7 @@ class TimeSaved(Lines):
             data_metric_sum_pd_map[metric] = self.change_low_values_to_nan(data_metric_sum_pd_map[metric])
             data_metric_sum_pd_map[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped.csv")
 
-            #data_metric_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual-ratio.csv")
+            data_metric_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_individual-ratio.csv")
             #data_metric_sum_pd_map_ratio[metric].to_csv(self.graph_dir + f"by_metric\\{metric}_grouped-ratio.csv")
             #if metric == 'total time':
                # data_metric_sum_pd_map[metric].to_csv(
